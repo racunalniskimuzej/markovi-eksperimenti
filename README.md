@@ -1,2 +1,1 @@
-# muzej.si
-Štamcarjevi muzejski eksperimenti
+#Štamcarjevi muzejski eksperimenti
