@@ -1,0 +1,162 @@
+                 HOW TO USE THE MOO MENU SYSTEM
+
+1.  LAUNCHING PROGRAMS
+
+MOO is a menu system to help you launch programs.
+
+Click your mouse on the program that you want to run.  Or
+highlight the program (using the arrow keys -- or typing the
+item's first letter), and then hit ENTER.
+
+If there's more items than fit on the screen, hit one of the
+keys listed at the bottom of the menu (- PgUp Home End PgDn +)
+to see more items.  Or click on a key-name with your mouse.
+Or use your mouse to click or drag on the scrollbar.
+
+2.  MOO FILES
+
+MOO consists of some program/help files starting with "MOO,"
+plus any number of menu files ending in ".MOO" (like
+"MAINMENU.MOO").  Each menu file can hold 500 items.  These
+files should be in some subdirectory on your PATH.
+
+There's "MOO for DOS" and "MOO for Windows."  Either can set up
+MOO menus for your programs, or run programs from existing MOO
+menus.  Both use the same menu format.
+
+MOO for DOS uses files MOO1.EXE and MOO2.BAT (don't rename
+either), a startup file (usually called MOO.BAT), and three help
+files that display within MOO (MOO.DOC, MOO-ED.DOC, and
+MOO-LITE.DOC).  To load or create a MOO menu from the DOS
+prompt, enter "MOO" followed by the menu name (1 to 8 characters
+-- you may omit ".MOO").  Entering "MOO" alone is the same as
+typing "MOO MAINMENU"; this loads MAINMENU.MOO.
+
+MOO for Windows uses files MOOW.EXE, MOOWEDIT.EXE, MOOW.HLP,
+and MOOWEDIT.HLP (don't rename the last three).  You can start
+MOOW.EXE from Windows in the normal ways; you can install it on
+the Program Manager, for example, or double-click on it from
+the Windows File Manager.  Run "MOOW MENUNAME" to load a
+specific menu.
+
+You're now reading MOO.DOC.  The three DOC files focus on MOO
+for DOS.  For info on MOO for Windows, start MOOW.EXE from
+Windows.
+
+MOO comes with two sample MOO menus to explore (MAINMENU.MOO and
+SAMPLE.MOO), three files for customizing MOO (MOO-FULL.BAT,
+MOO-LITE.BAT, and MOO-NET.BAT), a short FREERAM.COM to help you
+see the memory demands of MOO's execution modes, and a
+README.TXT file.  MOO may produce temporary MOO$...BAT files
+for executing programs.
+
+3.  THE FILE MENU
+
+NEW MENU creates a blank untitled menu.  Add the items that you
+want, and then save the menu to the disk.
+
+OPEN OLD MENU displays your MOO menus, and lets you open one.
+
+You might want to keep copies on your disk of MOO menus that you
+set up for friends, relatives, or clients.  You can display the
+menus if they phone for help.
+
+SAVE MENU TO DISK (Alt-S) saves menu changes, so that you don't
+lose them.  As you edit a menu, save it frequently.
+
+SAVE MENU AS saves the current menu under a different name.  You
+can use this to make backups of your menus.
+
+REVERT TO MENU ON DISK cancels changes to a menu since your last
+save.  Use this when you mess things up.
+
+FIND FILE (Alt-I) locates files on the hard disk, so you can add
+them to the menu.
+
+CREATE MENU AUTOMATICALLY puts all the programs on your disk
+into a menu.  You can include DOS programs, or Windows programs,
+or both.  MOO may sometimes guess wrong on whether a program
+runs under DOS or Windows.
+
+This gives a quick way to set up a hard disk.  You'll have to
+clean up the menu a bit -- replacing "Wp" with a title like
+"WordPerfect 5.1 for DOS," for example.
+
+PRUNE OFF NONEXISTENT ITEMS marks items that refer to
+nonexistent programs or directories.  You can then erase the
+items, or correct the program or directory names.
+
+Use this to check a menu's accuracy -- after you create it or
+after you've erased or relocated programs.
+
+EXIT PROGRAM (F5 or Alt-Q) quits the MOO menu program.
+
+4.  THE EDIT MENU
+
+MODIFY MENU ITEMS (Alt-M) lets you add, modify, or drop menu
+items.  DEFAULT MODE changes execution modes.  For more info,
+pick "How to edit menu items" from the "Help" menu.
+
+SWITCH TO LIMITED MENUS turns off options that modify MOO menus.
+Use this to make MOO easier for novice users -- or to keep
+children or employees from changing menus.
+
+You can start MOO from the DOS prompt in three ways.  Entering
+"MOO-FULL" puts you into full-menu mode.  "MOO-LITE" puts you
+into limited-menu mode.  And "MOO-NET" puts you into a
+limited-menu mode for network use which gives each user an
+individual temporary MOO$...BAT file for executing programs.
+
+To have the "MOO" command from DOS start in one of these ways,
+copy "MOO-FULL.BAT" or "MOO-LITE.BAT" or "MOO-NET.BAT" to
+overwrite "MOO.BAT."  You can rename this startup file to
+whatever you like (e.g., "MENU.BAT").
+
+If you don't want to add the MOO-directory to your PATH, you can
+put the startup file (e.g., MOO.BAT) in some directory on your
+path, and then add commands to switch drive and directory (e.g.,
+"C:" and "CD \MOO") after its third line.  Or you can switch to
+the MOO-directory before starting MOO.
+
+SET PASSWORD FOR USING FULL MENUS lets you require that only
+users who know your password be allowed to switch to full menus.
+Use this (with the MOO-LITE or MOO-NET sign on) to provide
+security against the menus begin modified.  For even greater
+security, remove the MOO-FULL.BAT, MOO.DOC, and MOO-ED.DOC files
+from the disk -- or make your MOO menu files read-only.
+
+5.  THE ADAPT MENU
+
+This has eleven options for customizing menu appearance, sound
+effects, the screen blanker, etc.  MOO for Windows has further
+options (e.g., font and Windows colors) for how the same menu
+displays under MOO for Windows.
+
+6.  THE HELP MENU
+
+HOW TO USE THIS PROGRAM (F1) displays the MOO.DOC file that
+you're now reading.
+
+HOW TO EDIT MENU ITEMS (F2) displays the MOO-ED.DOC file.
+
+ABOUT MOO gives an "About" box.
+
+If you're in limited-menu mode, the first option will display
+MOO-LITE.DOC, and the second option won't exist.
+
+You can modify these MOO...DOC files, if you save them in a text
+(ASCII) format and keep under 8000 bytes.  You can use
+MOO-LITE.DOC to tell users about the programs on the computer,
+hours of operation, who to contact in case of trouble, etc.
+
+Or you could print these files (enter "COPY MOO*.DOC PRN" from
+the DOS prompt) and then erase them.
+
+7.  TECHNICAL DETAILS
+
+I wrote MOO 3.1 in Borland's Turbo Pascal.  I used Teddy
+Matsumoto's DIET to compress MOO1.EXE.  MOO for DOS requires DOS
+3.0 or later, and 200-K available RAM (but can use 0-K RAM when
+running a program).  MOO for Windows MOO requires Windows 3.0 or
+later (standard or enhanced mode only), and about 60-K available
+RAM (plus 150-K more RAM when editing menus).

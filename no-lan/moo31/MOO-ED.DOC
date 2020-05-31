@@ -1,0 +1,189 @@
+                   HOW TO EDIT MOO MENU ITEMS
+
+1.  MOO MENU ITEMS
+
+Menus contain programs, comments/titles, and links to other
+menus.  MOO alphabetizes the items after you change them. 
+Spaces alphabetize before numbers, and numbers before letters.
+
+Start an item with a space ("  HARRY'S PROGRAMS") or a number
+("1.  Go to WINDOWS menu") to put it at the beginning.  Space
+out an item ("A M I  --  Ami Pro") to make it go first under a
+given letter; you can then hit that letter plus ENTER to execute
+the program.
+
+2.  HOW MANY MENUS?
+
+You may prefer to keep your programs on a single MOO menu.  If
+you call it MAINMENU, you can sign on using just "MOO."
+
+Or you could use several menus -- MAINMENU, UTILITY, GAMES,
+WINDOWS, etc. -- plus maybe a KATHY menu for your daughter's
+programs.  You'd want to add links between your menus.  So
+MAINMENU would have a "Go to UTILITY menu" item, and UTILITY
+would have "Go to MAINMENU."
+
+3.  MODIFYING MENU ITEMS
+
+"Modify menu items" (Alt-M) on the "Edit" menu lets you modify,
+add, or drop menu items.  For each item, you specify a NAME
+(that displays in the menu), a PASSWORD (optional), and COMMANDS
+(for executing the program).  The screen gives basic directions.
+Here are further hints:
+
+Save your work often, using "Save" (Alt-S) on the "File" menu. 
+
+When you mess things up, use "Revert to menu on disk" on the
+"File" menu.  This cancels changes since your last save.
+
+Ctrl+END deletes to the end of the line.
+
+Use upper ASCII characters (Alt + numlock-numbers) to type
+special characters.  If you want these to display correctly in
+MOO for Windows, you may have to use the Windows "DOS font."
+
+4.  BASIC PROGRAM COMMANDS
+
+Most of your item commands will look like one of these:
+
+  c:~cd\wp~wp.exe
+
+  c:\wp\wp.exe
+
+Both execute identically.  Each switches to the "C:" drive,
+makes "\WP" the current directory, and starts "WP.EXE"
+(WordPerfect).  The tilde ("~") separates lines.
+
+Here's a more complex example:
+
+  c:~cd\letters~c:\wp\wp.exe business.ltr
+
+This switches to the "C:" drive, makes "\LETTERS" the current
+directory, and starts "WP.EXE" with the file "BUSINESS.LTR."  If
+you omit the ".exe" in "wp.exe," these examples will still work.
+But the "Prune nonexistent items" command may not work as well.
+
+Here's a technical definition.  A "BASIC program command" ends
+with the name of an executable program (a file ending in ".EXE"
+or ".COM" or ".BAT"), only includes ONE such program, and may
+have prior lines that change a drive or directory.
+
+5.  EXTENDED PROGRAM COMMANDS
+
+"EXTENDED program commands" may also contain internal DOS
+commands (like "DIR" and "COPY") and batch file commands (like
+"ECHO" and "PAUSE") -- and may execute more than one program. 
+Here's an example:
+
+  echo Put backup disk in drive A.~pause~copy c:\moo\*.moo a:
+
+This displays "Put backup disk in drive A.  Press any key to
+continue . . ." and waits for you to hit a key.  Then it copies
+your MOO menus from directory C:\MOO to a floppy in drive A.
+
+EXTENDED commands always execute using a temporary MOO$...BAT
+file.  Except in no-ram mode 1, BASIC commands execute directly
+(and hence more quickly).  Keep to the BASIC format when running
+Windows programs.
+
+6.  SPECIAL COMMANDS
+
+For comments or titles (which don't execute anything), leave
+"COMMANDS" blank.  Here are some other special COMMANDS (which
+you can type in upper or lower case):
+
+  game.moo
+
+This loads the "GAME.MOO" menu.  To switch to another menu, type
+its full name (including ".MOO").
+
+  c:\util\whereis.com ^Give filenames (wildcards OK)^
+
+This displays the "^...^" message (of up to 70 characters), asks
+for a response, replaces the message with what you type, and
+then executes the command.  You can include as many "^...^"
+messages as you like.
+
+  rem This is a comment for your own use.~c:\wp\wp.exe
+
+"REM" (short for "remark") tells MOO to ignore everything up to
+the next tilde.  Any kind of item (except comments/titles) can
+have any number of remarks.
+
+  dos
+
+This gives a DOS prompt (a temporary exit to DOS).
+
+  quit
+
+DOS MOO will ignore this, while Windows MOO will end your
+current Windows session and put you back in DOS.
+
+  win
+
+Windows MOO will ignore this, while DOS MOO will start Windows
+(if it's on your PATH).
+
+The "moo" and "moolite" commands from version 2.0 of MOO are
+obsolete.  You now use the "Edit" menu to switch between
+full-moo and moo-lite.  And "~~~~" is now "dos."
+
+For further examples, explore the sample MOO menus.
+
+7.  EXECUTION MODES
+
+NOTE:  This section is for MOO power users.  If you are a MOO
+novice, stay with mode 1 (no-ram) and skip this section.
+
+Mode 1 is No-ram.  MOO unloads and runs the program from a batch
+file, taking 0-K RAM from your program.  Use mode 1 when running
+programs that are memory-resident -- or don't run correctly in
+the other modes -- or need all of your RAM.
+
+Mode 2 is Piggyback.  MOO remains loaded, taking about 186-K RAM
+from your program.  Use mode 2 for faster execution of small
+programs (like "FORMAT.COM") that don't use much RAM.  Skip mode
+2 if you have less than 384-K RAM.
+
+Mode 3 is Swap.  MOO swaps to EMS, taking 2- to 5-K RAM from
+your program.  Use mode 3 for faster execution of large programs
+(like WordPerfect) that need all your lower RAM.  Mode 3
+requires 176-K of expanded memory; if you don't have this, MOO
+uses mode 1 instead.  Mode 3 uses TurboPower's EXECSWAP routine.
+
+Mode 4 is Windows.  MOO unloads completely (since Windows needs
+all your RAM), loads Windows, and then runs you program through
+MOO for Windows.  Use mode 4 if you want to execute Windows
+programs from MOO for DOS.  (Mode 5 is like mode 4, but runs the
+Windows program as an icon.)
+
+You set the default execution mode from the "Edit" menu.  You
+can override the default mode for particular programs, by
+starting the COMMANDS line with 1-5 tildes ("~") for modes 1-5. 
+Here's an example:
+
+  ~~c:\dos\format.com a:
+
+This runs in mode 2 (piggyback) regardless of the default mode.
+
+  ~~~~c:\windows\ami\amipro.exe
+
+This runs in mode 4 (Windows) regardless of the default mode. 
+MOO for DOS will ask if you want to load Windows and Ami Pro
+(AMIPRO.EXE) at the same time.  MOO marks your Windows programs
+with "~~~~" when you have it automatically create a menu.
+
+Execution modes apply mainly to MOO for DOS.
+
+8.  EDITING MENUS USING A WORD PROCESSOR
+
+Sometimes it's more convenient to edit a MOO menu using a word
+processor or text editor -- to use search and replace, for
+example, or to cut and paste between files.  Retrieve and save
+the MOO menu as an text (ASCII) file, and avoid splitting
+COMMANDS (which contain up to 128 characters) between lines.
+
+MOO menus follow a simple format.  The first two lines contain
+settings that you should change only within MOO.  After that,
+you have editable three-line units consisting of NAME OF ITEM
+(on lines divisible by 3) + COMMANDS + PASSWORD.
