@@ -1,0 +1,5 @@
+device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+Country=386,852,C:\WINDOWS\COMMAND\country.sys
+DOS=high,umb
+device=c:\windows\himem.sys
+devicehigh=c:\windows\emm386.exe ram auto
