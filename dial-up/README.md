@@ -1,4 +1,4 @@
-Z dvema zunanjima US Robotics modema simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom
+Z dvema zunanjima US Robotics modemoma simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom
 
 Viri:
 - https://www.vogons.org/viewtopic.php?t=68514
