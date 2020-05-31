@@ -5,3 +5,4 @@ Postavitev:
 
 Viri:
 - http://web.archive.org/web/20060924093236/http://members.aol.com/rg3294/dos/moo31.zip
+- https://www.dosgamesarchive.com/
