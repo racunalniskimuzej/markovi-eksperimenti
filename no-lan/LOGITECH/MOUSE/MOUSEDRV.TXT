@@ -1,0 +1,1154 @@
+MOUSEDRV.TXT - MouseWare 7.20
+Copyright 1993-1995 Logitech, Inc.  All Rights Reserved
+************************************************************
+This file documents the parameters used in MOUSEDRV.INI CURSOR.INI and
+MOUSECC.INI files and the Windows 95 registry.
+
+To view or print this file under DOS, use README.EXE which is supplied on
+the installation disks. At the DOS prompt type the following:
+
+   README MOUSEDRV.TXT
+************************************************************
+
+TABLE OF CONTENTS
+
+1. PURPOSE AND INTRODUCTION                                               3
+
+2. FORMAT OF MOUSEDRV.INI FILE                                            3
+
+2. CONFIGURATION IN WINDOWS 95                                            3
+
+3. MOUSEDRV.INI FILE PARAMETERS                                           4
+ 
+ 3.1. [GLOBAL] SECTION                                                   4
+  3.1.1. FORCEDCONNECTION=                                               4
+  3.1.2. SEARCHORDER=                                                    4
+  3.1.3. PORTSEARCHORDER=                                                4
+  3.1.4. ACTIVEMOUSE#=                                                   5
+  3.1.5. CONNECTIONPORT#=                                                5
+  3.1.6. CONNECTION#=                                                    5
+  3.1.7. MAXIMUMDEVICES=                                                 6
+  3.1.8. MAXIMUMCONNECTIONS=                                             6
+ 
+ 3.2. [TECHNICAL] SECTION                                                6
+  3.2.1. FORCEPS2EQUIPMENTFLAG=                                          6
+  3.2.2. DETECTIPDEVICE=                                                 6
+  3.2.3. TIMING=                                                         6
+  3.2.4. PS2SYNCHRONIZATION=                                             7
+  3.2.5. CYCLEIRQ=                                                       7
+  3.2.6. SHAREIRQ=                                                       7
+  3.2.7. PS2DEVICE=                                                      7
+  3.2.8. APMMODE=                                                        8
+  3.2.9. SEARCHCSERIES=                                                  8
+  3.2.10. DEBUGTIMING=                                                   8
+  3.2.11. APMPOWERDOWN=                                                  8
+  3.2.12. QUICKSEARCH=                                                   9
+  3.2.13. RESETWINMODIF=                                                 9
+  3.2.14. BOOTSEARCH=                                                    9
+  3.2.15. MONITORUNPLUG=                                                 9
+  3.2.16. SBOARDFLAGS=                                                  10
+  3.2.17. SBOARDIOBASE=                                                 10
+  3.2.18. SBOARDIRQ=                                                    10
+  3.2.19. SBOARDID=                                                     10
+  3.2.20. PNPREADPORT=                                                  10
+  3.2.21. RUNTIMECOMMAND=                                               10
+  3.2.22. PS2BIOSERRORCHECK=                                            11
+ 
+ 3.3. [DOSGLOBAL] SECTION                                               11
+  3.3.1. CURSORENHANCEMENT=                                             11
+  3.3.2. CURSORLOCK=                                                    11
+  3.3.3. CURSORTRAILS=                                                  12
+  3.3.4. CORDLESSREMINDER=                                              12
+  3.3.5. POWERMANAGEMENT=                                               12
+  3.3.6. MEMORY=                                                        12
+  3.3.7. MEMORYSTUB=                                                    13
+  3.3.8. DRIVERVERSION=                                                 13
+  3.3.9. PS2ACCESS=                                                     13
+  3.3.10. PS2APIEMULATION=                                              13
+  3.3.10. LANGUAGEID=                                                   14
+ 
+ 3.4. [DEVICETYPE] SECTION                                              14
+ 
+ 3.5. [COMX] SECTION                                                    15
+  3.5.1 BASEADDRESS=                                                    15
+  3.5.2 IRQVALUE=                                                       15
+  3.5.3 DEVICEMODEL=                                                    16
+ 
+ 3.6. [DISPLAY]                                                         16
+  3.6.1. USEVCIOVERLAY=                                                 16
+  3.6.2. VIDEOMODULE=                                                   17
+ 
+ 3.7. [WINGLOBAL] SECTION                                               17
+  3.7.1. USEDOSDRIVER=                                                  17
+  3.7.2. DRIVERVERSION=                                                 17
+  3.7.3. WINCC=                                                         17
+
+4. MOUSECC.INI FILE                                                      17
+ 
+ 4.1. [DIRECTORIES] SECTION                                             18
+  4.1.1 CURSORENHDIR=                                                   18
+  4.1.2 BUTTONASGNDIR=                                                  18
+ 
+ 4.2. [DEVICETYPE] SECTION(S)                                           18
+  4.2.1 MIDDLEBUTTON=                                                   18
+  4.2.2 RIGHTBUTTON=                                                    18
+  4.2.3 SMARTMOVE=                                                      18
+  4.2.4 DEVICEMODEL=                                                    18
+  4.2.5 TAPANDDRAGLOCK=                                                 18
+  4.2.6 VIRTUALEDGE=                                                    19
+  4.2.7 MULTIPLEFINGER=                                                 19
+  4.2.8 TOUCHTHRESHOLD=                                                 19
+  4.2.9 EDGEWIDTH=                                                      19
+ 
+ 4.3. [BUTTON ASSIGNMENTS] SECTION                                      20
+
+5. CURSOR.INI FILE                                                       20
+ 
+ 5.1. [CONFIGURATION] SECTION                                           20
+  5.1.1 HIDECURSORICON=                                                 20
+  5.1.2 COLOR=                                                          20
+ 
+ 5.2. [SYSTEM] SECTION                                                  20
+  5.2.1 DIR=                                                            20
+  5.2.2 VERSION=                                                        20
+  
+
+************************************************************
+
+
+1. Purpose and Introduction
+     
+     The purpose of this document is to explain the functionality of the
+     INI files (MOUSEDRV.INI, CURSOR.INI and MOUSECC.INI) and the Windows
+     95 registry. This document provides a detailed explanation of the
+     parameters contained within these files and how they can be modified.
+     Many of the parameters which are stored in the INI files can be set
+     from the DOS command line or from the Windows and DOS mouse control
+     center; these include all mouse parameters that most users would want
+     to modify. This document is intended, therefore, for advanced users
+     with a need to alter these other parameters or who need to understand
+     the mouse driver in greater detail. Since modification of some of
+     these parameters can adversely affect the operation of your mouse,
+     changes to the INI files or registry should be made with extreme care.
+     Do not attempt to modify any of the INI file parameters without
+     reading and thoroughly understanding the relevant section in this
+     file.
+     
+     The INI files store any changes made to the default mouse settings
+     from the Windows and DOS mouse control center, as well as some other
+     more technical parameters. This insures that changes made from either
+     control center will be maintained when the system is rebooted. It also
+     allows for changes made from the DOS mouse control center to be
+     reflected in the Windows environment and vice versa.
+     Under Windows 95, the configuration information is stored the registry
+     instead of INI files.
+
+
+2. Format of MOUSEDRV.INI File
+
+     The parameters in the MOUSEDRV.INI file are grouped in sections under
+     a section header in the following format:
+
+                   [section name]
+                   parameter=value
+
+     The square brackets ([]) in the [section name] are required. Section
+     names must start in the leftmost column. Within each section are one
+     or more "parameter=value" statements. Initially, all of these values
+     will be default values set by the mouse driver itself. If the
+     MOUSEDRV.INI file is deleted, the driver will recreate this file with
+     the default values. This can be useful if the MOUSEDRV.INI file
+     becomes corrupted and you wish to return to default values.
+
+
+2. Configuration in Windows 95
+
+     The information in the registry must be accessed with the 'REGEDIT'
+     application located in the Windows directory. The information is
+     stored in a similar way as INI files except that sections are
+     organized in a tree format.
+     
+     Configuration information for the driver is located under:
+     
+        HKEY_LOCAL_MACHINE\SOFTWARE\Logitech\MouseWare\CurrentVersion
+     
+     
+
+3. MOUSEDRV.INI File Parameters
+
+     The MOUSEDRV.INI parameters are described below in roughly the same
+     order as they appear in the MOUSEDRV.INI file itself. The order of
+     entries can change based on the number of devices connected to the
+     system.
+
+
+3.1. [Global] Section
+     
+     When the mouse driver initializes in searches for a pointing device
+     among possible ports. This section contains parameters which pertain
+     to this search.
+     
+     
+     3.1.1. ForcedConnection=
+     Determines if the mouse driver will search for the mouse first on the
+     port specified by 'Connection' and/or 'ConnectionPort' parameters or
+     will use the 'PortSearchOrder' parameter.
+     
+          Valid values:
+     
+          On            Use Connection information to find the mouse
+          
+          Off           Perform a full search for mouse each launch time
+                        using the search order given below.
+          
+          Default value = on
+     
+     
+     3.1.2. SearchOrder=
+     The driver searches the computer's ports for the connected mouse
+     (mice) in the order given.
+     
+          Valid values:
+
+          Bus           Search for a bus mouse
+          
+          Inport        Search for a Microsoft Inport mouse
+          
+          PS2           Search for a PS/2 mouse
+          
+          Serial        Search for a Serial mouse (M-series and C-series)
+     
+          Default value = PS2, Serial, Bus, Inport.
+     
+     
+     3.1.3. PortSearchOrder=
+     Lists the order the serial ports are searched. This is valid only for
+     a Serial device.
+     
+          Valid values:
+
+          COM1          search on comport 1
+          COM2          search on comport 2
+          COM3          search on comport 3
+          COM4          search on comport 4
+          
+          Default value = COM1, COM2.
+     
+     
+     3.1.4. ActiveMouse#=
+     This parameter indicates which [DeviceType] section is used. The
+     number sign indicates which device this refers to. If there is only
+     one mouse connected no number will appear (value of zero). If there is
+     a second device this will be number one, two for the third device,
+     etc.
+     
+          Valid values:
+     
+          please refer to the '[DeviceType]' section below
+          
+          Default value is determined by the connected mouse
+     
+     
+     3.1.5. ConnectionPort#=
+     Current comport used by mouse. This is valid only for a serial device.
+     The number sign indicates which device this refers to. If there is
+     only one mouse connected no number will appear (value of zero). If
+     there is a second device this will be number one, two for the third
+     device, etc.
+     
+          Valid values:
+          
+          None          mouse not on a serial port
+          COM1          Serial COM port 1
+          COM2          Serial COM port 2
+          COM3          Serial COM port 3
+          COM4          Serial COM port 4
+          
+          Default value is determined by connected mouse
+     
+     
+     3.1.6. Connection#=
+     This indicates the type of hardware port the mouse is connected to.
+     The number sign indicates which device this refers to. If there is
+     only one mouse connected no number will appear (value of zero). If
+     there is a second device this will be number one, two for the third
+     device, etc.
+     
+          Valid values:
+          
+          BUS          Search for a BUS mouse
+          Inport       Search for a Microsoft Inport mouse
+          PS2          Search for a PS/2 mouse
+          Serial       Search for a Serial mouse
+          
+          Default value is determined by connected mouse
+     
+     
+     3.1.7. MaximumDevices=
+     Indicates the maximum number of pointing devices which can be detected
+     under Windows.
+     
+          Valid values:
+          
+          to approx. 20. Limited by memory allocation.
+          
+          Default value = 4 (16 for Windows 95)
+     
+     
+     3.1.8. MaximumConnections=
+     Indicates the maximum number of hardware connections under Windows.
+     For example: two cordless mice sharing one receiver would constitue
+     two devices and one connection.
+     
+          Valid values:
+          
+          1 through 16
+          
+          Default value = 2 (16 for Windows 95)
+          
+     
+
+3.2. [Technical] Section
+     This section describes technical settings used by the mouse drivers.
+     These settings might help to solve compatibility problems with certain
+     types of hardware or BIOS versions.
+     
+     
+     3.2.1. ForcePS2EquipmentFlag=
+     Indicates if the driver should force the detection of a PS2 mouse.
+     
+          Valid values:
+          
+          On            Simulate a PS2 mouse found during boot time.
+          Off           The flag is set by the BIOS during boot time
+          
+          Default value = Off
+     
+     
+     3.2.2. DetectIPDevice=
+     Indicates if the driver should use the BIOS integrated pointing device
+     interface to identify a device.
+     
+          Valid values:
+          
+          On            Use the BIOS interface.
+          Off           Ignore the BIOS interface.
+          
+          Default value = Off
+     
+     
+     3.2.3. Timing=
+     Indicates which timing procedure the driver should use for
+     synchronizing a PS2 type mouse.
+     
+          Valid values:
+          
+          Software      Use software loops to compute timing.
+          Hardware      Use the PC timer chip to compute timing.
+          
+          Default value = Software
+     
+     The remaining entries in this section are valid in the Windows
+     environment.
+     
+     
+     3.2.4. PS2Synchronization=
+     Enable/disable re-synchronization on PS/2 reports. This can solve some
+     problems with erratic cursor motion when using a PS2 mouse.
+     
+          Valid values:
+          
+          On            re-synchronization is enabled.
+          Off           re-synchronization is disabled.
+          
+          Default value = On
+     
+     
+     3.2.5. CycleIrq=
+     Entry point for the IRQ manager from an interrupt. The IrqCycling flag
+     allows the interrupt handler to be cycled until no more interrupts are
+     pending. This is to allow for ISA boards that share IRQs internally
+     and must have all interrupts cleared before leaving the handler.
+     Normally there will be only one handler that will service the
+     interrupt. This parameter is necessary only on ISA boards.
+     
+          Valid values:
+          
+          0 through F (hexadecimal)
+          
+          Default value = 0
+     
+     
+     3.2.6. ShareIrq=
+     The IRQ is named is externally shareable and the IRQ is forwarded to
+     external software if not handled internally.
+     Note: The driver automatically shares all IRQs internally for devices
+     it handles.
+     
+          Valid values:
+          
+          0 through F (hexadecimal)
+          
+          Default value = 0
+          
+     
+     3.2.7. PS2Device=
+     In case more than one PS/2 device is attached to the computer but
+     cannot be detected, the driver can create additional devices so that
+     settings can be saved for each device.
+     
+          Default value = 1
+     
+     
+     3.2.8. APMMode=
+     Define the action that the driver will perform upon power management
+     suspend/resume commands. See also the `APMPowerDown' parameter.
+     
+          Valid values:
+          
+          Off           Nothing will be done.
+          
+          Standard      The device(s) will only be disabled/enabled.
+          
+          SearchCurrent The device(s) will be de-initialized upon suspend.
+                        After resume, a search will be performed only for
+                        the connections that were in use prior to the
+                        suspend command.
+          
+          SearchAll     The device(s) will be de-initialized upon suspend.
+                        After resume, a full search will be performed for
+                        devices in accordance with the `SearchOrder'
+                        parameter.
+          
+          Default       The driver will determine which mode is suitable
+                        depending on the machine
+          
+          Default value = Default
+     
+     
+     3.2.9. SearchCSeries=
+     Enable/disable the search of serial "C-series" type of mouse. This
+     device takes some time to be looked for. If you don't use such
+     devices, turning this flag off will speed-up the overall search
+     process.
+     
+          Valid values:
+          
+          Off           Disable C-series search.
+          On            Enable C-series search.
+          
+          Default value = On
+     
+     
+     3.2.10. DebugTiming=
+     This flag enables a special timing specification for use by technical
+     support. Please do not alter it.
+     
+          Valid values:
+          
+          On            Allow special timing specification.
+          Off           Use normal timing.
+          
+          Default value = Off
+     
+     
+     3.2.11. APMPowerDown=
+     Determines if the mouse will power down on an APM suspend command.
+     
+          Valid values:
+          
+          On            Execute `APMMode' parameter instructions.
+          Off           Ignore all APM commands.
+          
+          Default value = Off
+     
+     
+     3.2.12. QuickSearch=
+     The driver will skip lenghty device initialization steps.
+     
+          Valid values:
+          
+          On            Speed up search.
+          Off           Use standard search.
+          
+          Default value = On
+     
+     
+     3.2.13. ResetWinModif=
+     When the driver is configured with the MouseWare control panel, it can
+     reset the Windows internal mouse speed and button setting to provide a
+     better device control. This parameter should be left on for best
+     device behavior.
+     
+          Valid values:
+          
+          On            Reset the Windows modifier values (Speed and
+                        buttons).
+          Off           Keep Windows settings.
+          
+          Default value = On
+     
+     
+     3.2.14. BootSearch=
+     When the operating system initializes, the driver looks for devices on
+     connections specified in the SearchOrder entry. Under Windows 95, the
+     devices to search for can also be specified in the Device Manager.
+     
+          Valid values:
+          
+          On            Does an automatic search of device at boot time.
+          Off           Do not search for devices. Device will be added by
+                        the operating system or the control panel.
+          
+          Default value = On
+     
+     
+     3.2.15. MonitorUnplug=
+     The disconnection of Serial Plug and Play devices can be detected by
+     the driver which will free the port to which the device is attached
+     for possible other use.
+     
+          Valid values:
+          
+          On            The driver will free the port when the device is
+                        disconnected. Note: the control panel or the
+                        Device Manager must be used to reconnect and re-
+                        enable the device.
+          Off           Do not monitor device unplug.
+          
+          Default value = Off
+     
+     
+     3.2.16. SBoardFlags=
+     Value to control detection and configuration of the serial Plug and
+     Play board. This value is the sum of the following values.
+     
+          1             Ignore board in Plug and Play mode.
+          2             Ignore board in legacy mode.
+          4             Ignore DOS/Windows 3.x configuration manager
+          8             Ignore Plug and Play BIOS if present.
+          16            Scan for already assigned board identifiers.
+          32            Isolate Plug and Play boards.
+          64            Check for IO conflicts
+          128           Reconfigure board even when a Plug and Play BIOS
+                        and/or configuration manager is present.
+          
+          Default value = 0
+     
+     
+     3.2.17. SBoardIOBase=
+     Base Input/Output address of the serial Plug and Play board in
+     hexadecimal.
+     
+          Valid values:
+          
+          Assigned by configuration utility.
+     
+     
+     3.2.18. SBoardIrq=
+     Interrupt request number of the serial Plug and Play board in decimal.
+     
+          Valid values:
+          
+          Assigned by configuration utility.
+     
+     
+     3.2.19. SBoardID=
+     Serial Plug and Play board identifier. Do not change.
+     
+     
+     3.2.20. PnPReadPort=
+     Plug and Play I/O port values to retrieve Plug and Play configuration
+     information. The driver will try the first address first and will use
+     the next only if it detects a conflict with other hardware.
+     
+     
+     3.2.21. RunTimeCommand=
+     Modal devices can be configured during runtime. This value should not
+     be changed.
+     
+          Valid values:
+          
+          On            Enable the driver to send run time commands to
+                        configure modal devices
+          Off           Forbids modal changes of devices. The devices will
+                        keep their internal default settings
+          
+          Default value = On
+          
+     
+     3.2.22. PS2BIOSErrorCheck=
+     The BIOS on some computers returns incorrect error codes when sending
+     a command to a PS/2 device. When set, the PS2BIOSErrorCheck flag will
+     cause the driver, when receiving these erroneous codes, to reissue the
+     PS/2 command. When this flag is not set, the driver will consider that
+     the command was completed successfully. This parameter should be left
+     off for best device behavior.
+     
+     
+          Valid values:
+          
+          On            Reissue PS/2 commands with incorrect code.
+          Off           Consider PS/2 commands with incorrect code as
+                        successful.
+          
+          Default value = Off
+          
+
+3.3. [DOSGlobal] Section
+     This section describes the settings used by the DOS mouse driver and
+     DOS Mouse Control Center.
+     
+     BlinkingRate=
+     Rate at which the DOS mouse cursor blinks. This setting is used only
+     if the DOS mouse driver is loaded with cursor enhancements enabled.
+     
+          Valid values:
+          
+          Fast          Sets text cursor to blink fast
+          Slow          Sets text cursor to blink slow
+          Off           Turns blinking off
+          
+          Default value = Off
+     
+     
+     3.3.1. CursorEnhancement=
+     Indicates if the driver should load the cursor enhancements feature
+     set.
+     
+          Valid values:
+          
+          On            Load the cursor enhancements
+          Off           Do not to load cursor enhancements
+          
+          Default value = Off
+     
+     
+     3.3.2. CursorLock=
+     This locks the shape of the cursor in the DOS environment. This
+     setting is used only if the DOS mouse driver is loaded with cursor
+     enhancements enabled.
+     
+          Valid values:
+          
+          On            Enables locking of the cursor shape
+          Off           Disables locking of the cursor shape
+          
+          Default value = Off
+     
+     
+     3.3.3. CursorTrails=
+     Enables or disables the cursor trails function. This setting is used
+     only if the DOS mouse driver is loaded with the cursor enhancements
+     enabled.
+     
+          Valid values:
+          
+          On            Enables DOS cursor trails
+          Off           Disables DOS cursor trails
+          
+          Default value = Off
+     
+     
+     3.3.4. CordlessReminder=
+     The driver can check the status of a cordless device when applications
+     are launched. Depending on the device, this can include information
+     about the battery level or if another nearby cordless device is
+     causing interference. This option can be disabled to save memory or if
+     it is too time consuming. However, it is reccomended that this option
+     reamain active.
+     
+          Valid values:
+          
+          On            Enable the cordless mouse reminder
+          Off           Do not install the cordless reminder
+          
+          Default value = On
+     
+     
+     3.3.5. PowerManagement=
+     This is for the DOS environment only. The parameter determines how the
+     mouse will respond to suspend/resume commands from a host system with
+     advanced power management.
+     
+          Valid values:
+          
+          On            Cut power to mouse on "suspend" command
+          Off           Do not cut power to mouse on "suspend" command
+          
+          Default value = On
+     
+     
+     3.3.6. Memory=
+     Indicates the portion of memory the driver will attempt to load The
+     default setting will allow the driver to look for the best location
+     available in memory. The driver will try to relocate itself first in
+     extended memory, next in upper memory and finally in conventional
+     memory. This default behavior can be overridden by assigning a value
+     from the list below. In case an option cannot be satisfied, the next
+     lower region of memory will be used.
+     
+          Valid values:
+          
+          Automatic     Load in the best memory available
+          Upper         Load in upper memory
+          Conventional  Load in conventional memory
+          
+          Default value = Automatic
+     
+     
+     3.3.7. MemoryStub=
+     When the driver runs in extended memory, it still needs to maintain a
+     program stub of about 1K in conventional or upper memory. This
+     parameter determines where that stub is to be loaded in much the same
+     manner as the `memory' parameter above.
+     
+          Valid values:
+          
+          Automatic     Load the stub in upper memory
+          Conventional  Load the stub in conventional memory
+          
+          Default value = Automatic
+     
+     
+     3.3.8. DriverVersion=
+     The DOS driver version number for this release.
+     
+     
+     3.3.9. PS2Access=
+     Define the type of support provided by the Logitech Virtual Keyboard
+     Driver (LVKD.386), if installed, for a PS/2 device. See also the
+     `PS2APIEmulation' parameter.
+     
+          Valid values:
+          
+          None          No access to the device. This will match the
+                        behavior of the default Windows Virtual Keyboard
+                        Driver (*VKD).
+          
+          BIOS          LVKD.386 allows access to the PS/2 device. It will
+                        forward any PS/2 request from the driver to the
+                        BIOS.
+          
+          Direct        The LVKD fully virtualizes the 8042 keyboard
+                        controller. The driver will determine which mode
+                        is suitable depending on the machine.
+          
+          Default       Use Direct access for some machines, Bios access
+                        for the remainder.
+          
+          Default value = Direct
+     
+     
+     3.3.10. PS2APIEmulation=
+     Indicates if the specialized Logitech API command set is to be used
+     
+          Valid values:
+          
+          Off           Do not use these commands
+          On            Use these commands
+          
+          Default value = Off
+     
+     
+     
+     3.3.10. LanguageID=
+     If your mouse driver is multilingual, allows you to change the
+     language used
+     
+          Valid values:
+          
+          ENU           English
+          XXX           Automatic detection
+          Default value = XXX
+     
+
+3.4. [DeviceType] Section
+     Each connected device will have its own section defining that device's
+     characteristics. The 'DeviceType' name will be a text string
+     describing the mouse model as follows. Values written here are for
+     mice that can identify themselves (e.g. MouseMan) or for general
+     groups of mice (e.g. SerialM). For unidentifiable mice, the
+     'DeviceModel' parameter may be used to specify a device shape. By
+     default, the DeviceModel name will be the same as the DeviceType.
+     
+     Note for DOS dual mode: Only one device's [DeviceType] section will be
+     supported at a time. For dual mode, the DOS mouse driver will write
+     out the second mouse's [DeviceType] section but will not use it. Only
+     the first mouse found section will be used. To indicate the active
+     device section, the parameter 'ActiveMouse' will be used. Please see
+     ActiveMouse description in the [Global] section.
+     
+     Under Windows, if more that one instance of the same device model is
+     connected to the system, the additional device instance(s) will have a
+     4 digit instance count appended to it (them).
+     
+     These sections store the parameters which are specific to each device
+     such as speed and acceleration. Generaly these parameters will be set
+     from the DOS or Windows mouse control center or by a DOS command line
+     parameter. For a complete list of all of these parameters type "mouse
+     /?" from the mouse directory at the DOS command prompt.
+     
+     
+     The device types are:
+     
+          Bus           Bus mouse
+          
+          Inport        Microsoft Inport mouse
+          
+          PS2           Non-identifiable PS/2 type mice
+          
+          SerialC       C7, C9, TrackMan I, etc. (Non-identifiable C-
+                        Series type mice)
+          
+          SerialM       Kidz mouse, Microsoft mouse, etc. (Non-
+                        identifiable M-type mice)
+          
+          SerialV       MouseMan Serial, First mouse, etc. (Non-
+                        identifiable V-type mice)
+          
+          MouseMan      MouseMan mice (W-type, W-type lefty, A-type)
+          
+          MouseMan2     MouseMan mice (PnP/A-type, new shape)
+          
+          TrackMan2     TrackMan II stationary mouse (W-type)
+          
+          TrackMan3     TrackMan II stationary mouse (A-type)
+          
+          TrackManPortable1   TrackMan Portable (W-type)
+          
+          TrackManPortable2   TrackMan Portable (A-type)
+          
+          TrackManVoyager     TrackMan Voyager (A-type)
+          
+          Cordless1    MouseMan Cordless (original cordless mouse)
+          
+          Cordless2    MouseMan Cordless (second generation cordless
+                        mouse)
+          
+          Cordless3    MouseMan Cordless (PnP/A-type, new receiver)
+          
+          EasyPoint     Integrated trackball
+          
+          IntegratedTrackBall1    Integrated trackball
+          
+          OS2Mouse      Windows driver only: for use under WINOS2, OS2
+          
+          TouchPad2     Integrated touchpad TP2
+     
+
+3.5. [COMx] Section
+     This section defines the COM ports used by the computer. This section
+     allows advanced users to configure their mouse for atypical IRQ values
+     and non-standard COM port address. The 'x' value must be filled in by
+     the user as must the values in this section. Valid values for 'x' are:
+     1, 2, 3, and 4. If you are using a serial bus board which allows non-
+     standard configurations, you must set the values in this section to
+     match the corresponding values on your serial board. The driver cannot
+     set these automatically.
+     
+     
+     3.5.1 BaseAddress=
+     The base address of the COM port (given in hexadecimal).
+     
+          Valid values:
+          
+          valid hexidecimal value which depends on the hardware.
+          
+          Default value: COM1=3F8, COM2=2F8, COM3=3E8, COM4=2E8
+     
+     
+     3.5.2 IRQValue=
+     The IRQ value of the COM port (given in decimal).
+     
+          Valid values:
+          
+          determined by hardware
+          
+          Default value: COM1=4, COM2=3, COM3=4, COM4=3
+     
+     Note:
+     The COM3 and COM4 values are synchronized with the Windows values. Use
+     the Windows Ports control panel to modify the ports values.
+     
+     
+     3.5.3 DeviceModel=
+     Devices that cannot be detected automatically can be specified under
+     this entry. Do not use.
+     
+          Valid values:
+          
+          Driver supported device types
+     
+
+3.6. [DISPLAY]
+     The sections controls the generation of the mouse cursor when running
+     some super VGA capable DOS programs. Super VGA (SVGA) is defined
+     loosely as any mode above the VGA standard established by IBM. The
+     various video card manufacturers have implimented the SVGA modes
+     differently. This presents a problem for when running DOS programs
+     which require the mouse driver to draw the mouse cursor. To do this,
+     the mouse driver must have knowledge of the underling video
+     architecture and the current video mode.
+     
+     To remedy this problem, the Video Electronics Standards Association
+     (VESA) and Logitech Inc. have established the Video Cursor Interface
+     (VCI) Standard. This standard outlines the interface between an input
+     device, such as a mouse, and a small overlay program containing
+     hardware dependent cursor movement and drawing code. The host (or
+     mouse driver in this case) calls the VCI module to perform all cursor
+     functions. The host need not have any knowledge of the cursor drawing
+     software/hardware.
+     
+     The VCI module can be implemented in one of three ways: as an overlay
+     program that the host program loads, as a TSR/device driver program
+     that redirects INT 10h calls to itself, as ROM resident code.
+     
+     The mouse driver itself contains the code for implimenting VCI
+     support. The following parameters may be used to enable the driver to
+     use an external VCI overlay instead.
+     
+     
+     3.6.1. UseVCIOverlay=
+     The driver can use an external video overlay instead of its built-in
+     video code. This flag will enable or disable the search for such a
+     module.
+     
+          Valid values:
+          
+          On            Attempt to load the video overlay specified in the
+                        VideoModule keyname.
+          
+          Off           Use the mouse driver's built-in video code.
+          
+          Default value=Off
+     
+     
+     3.6.2. VideoModule=
+     Location of the VESA VCI video cursor overlay. This value is either a
+     file name, the keyword RESIDENT, or blank for no external VCI support.
+     If only a file name is present, the driver will assume that the VCI
+     file is located in the driver directory. By default, the directory
+     where MOUSEDRV.INI is located is used. If the overlay cannot be found
+     or has an incorrect format, the driver will revert to its internal
+     video code.
+     
+          Valid values:
+          
+          A path and file name of VCI file. If only a file name is
+          present, the driver will assume that the VCI file is located in
+          the same directory as the MOUSEDRV.INI file.
+          
+          RESIDENT  The VCI module is resident in memory.
+          
+          Value is blank Indicates no external VCI module.
+          
+          Default value is left blank
+     
+
+3.7. [WinGlobal] Section
+     The section describes the settings used by the Windows mouse driver.
+     
+     
+     3.7.1. UseDOSDriver=
+     This parameter enables the use of the DOS mouse driver under Windows
+     instead of the Windows driver. Since this will limit functionality if
+     should be set only if there are compatibility problems under Windows.
+     If this parameter is set to On, the DOS mouse driver must be launched
+     before launching Windows.
+     
+          Valid values:
+          
+          On            Use the DOS mouse driver under Windows. The mouse
+                        functionality will then be limited.
+          
+          Off           Normal use of the Windows mouse driver.
+          
+          Default value=Off
+     
+     
+     3.7.2. DriverVersion=
+     Windows mouse driver version number.
+     
+     
+     3.7.3. WinCC=
+     The full path and file name of the Windows Control Center. The default
+     directory is same as the location of the Windows mouse driver
+     LMOUSE.DRV.
+     
+
+4. MOUSECC.INI File
+     
+     The MOUSECC.INI file parameters are used in the Windows Mouse Control
+     Center. These include: button assignments, smart move, the device type
+     reported by the driver and the path of the user interface files.
+     
+
+4.1. [Directories] Section
+     The section simply describes the location of the Windows user
+     interface executable files.
+     
+     
+     4.1.1 CursorEnhDir=
+     The fully qualified path and file name for the WCURSOR.EXE file.
+     
+     
+     4.1.2 ButtonAsgnDir=
+     The fully qualified path and file name for the WBUTTONS.EXE file.
+     
+
+4.2. [DeviceType] Section(s)
+     The actual name of this section depends on the connected device (see
+     the explanation of the DeviceType section of the MOUSEDRV.INI file
+     above for more information). If you have connected more then one
+     device to your system, separate sections will be created for each
+     additional device.
+     
+     
+     4.2.1 MiddleButton=
+     This parameter stores the assignment made to the middle button. Each
+     possible button assignment is designated by a numeric value which is
+     what is stored here. To make changes to the button assignments use the
+     Windows Mouse Control Center.
+     
+     4.2.2 RightButton=
+     This parameter stores the assignment made to the right button. Each
+     possible button assignment is designated by a numeric value which is
+     what is stored here. To make changes to the button assignments use the
+     Windows Mouse Control Center.
+     
+     
+     4.2.3 SmartMove=
+     Designates whether smart move is enabled or disabled.
+     
+          Valid values:
+          
+          On            Smart move is enabled.
+          Off           Smart move is disabled.
+          
+          Default value = Off
+     
+     4.2.4 DeviceModel=
+     The device designated in the MOUSEDRV.INI file which is in turn
+     reported by the driver. Generally, this value is the same as the name
+     of the section.
+     
+     
+     4.2.5 TapAndDragLock=
+     Touchpad specific parameter. The cursor will stay activated after a
+     drag has been initiated. It is released by a tap. This setting takes
+     effect only if RunTimeCommand=On
+     
+          Valid values:
+          
+          Off           Tap and drag lock is disabled
+          On            Tap and drag lock is enabled
+          
+          Default value = Off
+     
+     
+     4.2.6 VirtualEdge=
+     Touchpad specific parameter. When reaching the border of the pad, this
+     function will make the cursor continue to move. This allows a broader
+     movement without lifting the finger. This setting takes effect only if
+     RunTimeCommand=On
+     
+          Valid values:
+          
+          Off                Virtual edge function is disabled
+          TapDragOnly        Only when dragging with a single finger
+          MultipleFingerOnly Only when dragging with two or more fingers
+          On                 When dragging with any number of fingers
+          Always             Always enabled when reaching the border
+          
+          Default value = On
+     
+     
+     4.2.7 MultipleFinger=
+     Touchpad specific parameter. Multiple finger gestures will generate a
+     left or right button press. This setting takes effect only if
+     RunTimeCommand=On
+     
+          Valid values:
+          
+          Off           Multiple finger is disabled
+          TapOnly       Only taps are allowed with two or more fingers
+          On            Both taps and drags are allowed with two fingers
+          
+          Default value = On
+          
+     
+     4.2.8 TouchThreshold=
+     Touchpad specific parameter. This parameter adjusts the touching
+     sensitivity. This setting takes effect only if RunTimeCommand=On
+     
+          Valid values:
+          
+          5 to 64       The lower the more sensitive
+          
+          Default value = 15
+          
+     
+     4.2.9 EdgeWidth=
+     Touchpad specific parameter. Describes the size of the border which
+     activates the virtual edge function. This setting takes effect only if
+     RunTimeCommand=On
+     
+          Valid values:
+          
+          0 to 5        The smaller this value, the narrower the edge
+          
+          Default value = 0
+     
+
+4.3. [Button Assignments] Section
+     This section describes the settings for the currently active device.
+     The parameters in this section are the same as those in the DeviceType
+     section above, see that section for details. Since this section is not
+     constantly updated, these settings may not accurately reflect the
+     current values until after exiting Windows.
+     
+
+5. CURSOR.INI File
+     
+     The CURSOR.INI file stores the parameters selected from the cursor
+     page of the Windows Mouse Control Center; such as cursor color etc.
+     
+
+5.1. [Configuration] Section
+     The parameters in this section designate if the cursor icon will
+     appear and if the cursor is to be inverted.
+     
+     5.1.1 HideCursorIcon=
+     Designates if the cursor icon is to be displayed.
+     
+          Valid values:
+          
+          0             Display the icon.
+          1             Hide the icon.
+          
+          Default value = 0
+     
+     5.1.2 Color=
+     Sets the color of the cursor.
+     
+          Valid values:
+          
+          0             Normal cursor color.
+          1             Invert cursor color.
+          
+          Default value = 0
+
+5.2. [System] Section
+     These parameters designate the MouseWare directory and compatible
+     version number.
+     
+     5.2.1 Dir=
+     Fully qualified path of the MouseWare directory.
+     
+     5.2.2 Version=
+     Version number of the last major revision of the WCURSOR.EXE file.
+     
+     -------------------------------------------------------
+     End of file MOUSEDRV.TXT
+     -------------------------------------------------------
