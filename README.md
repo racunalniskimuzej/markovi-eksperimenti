@@ -1,8 +1,8 @@
 # Štamcarjevi muzejski eksperimenti
 zx-mold: Kalup za odlitek ZX Spectruma
 
-Okolje za No-LAN 2.0
+no-lan: Okolje za No-LAN 2.0
 
-Raspberry Pi okolje za dostop do muzejskih zbirk prek DEC VT320
+vt320: Raspberry Pi okolje za dostop do muzejskih zbirk prek DEC VT320
 
-Windows 95 Dial-up server
+dial-up: Windows 95 Dial-up server
