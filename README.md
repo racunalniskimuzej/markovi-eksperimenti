@@ -1,5 +1,5 @@
 # Štamcarjevi muzejski eksperimenti
-Kalup za odlitek ZX Spectruma
+zx-mold: Kalup za odlitek ZX Spectruma
 
 Okolje za No-LAN 2.0
 
