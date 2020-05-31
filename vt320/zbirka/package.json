@@ -1,0 +1,16 @@
+{
+  "name": "zbirka",
+  "version": "1.0.0",
+  "description": "Dostop do zbirk Društva računalniški muzej",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "latinize": "^0.4.1",
+    "readline-sync": "^1.4.10",
+    "sync-request": "^6.1.0"
+  }
+}
