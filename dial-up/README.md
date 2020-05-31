@@ -1,4 +1,4 @@
-Z dvema zunanjima US Robotics modemoma simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom
+Z dvema zunanjima U.S. Robotics modemoma (gonilnik mdm3com.inf) simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom
 
 Viri:
 - https://www.vogons.org/viewtopic.php?t=68514
