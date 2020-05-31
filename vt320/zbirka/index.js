@@ -6,21 +6,20 @@ const izpisi = (str) => {
     console.log(latinize(str));
 };
 
-const helpText = `
-          ohNh+               +hNh+          
-         'MMMMM              'MMMMN          
-          -omMMdo/sddo/sddo/sdMMd+-          
-       '    sMMMMNMMMMMMMMMNMMMMo    '       
-     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     
-     MMMMMMMMMN     MMMMM     MMMMMMMMMN     
-  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  
-  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  
-:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:
-MMMMM     NMMMM              'MMMMN    'MMMMM
-+ymy/     +yNMMs/'         '/sMMNy/     /ymy+
-  '         sMMMM+         oMMMMo         '  
-            -smms.         -smms-            
-                                             
+const helpText = `                          ohNh+               +hNh+          
+                         'MMMMM              'MMMMN          
+                          -omMMdo/sddo/sddo/sdMMd+-          
+                       '    sMMMMNMMMMMMMMMNMMMMo    '       
+                     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     
+                     MMMMMMMMMN     MMMMM     MMMMMMMMMN     
+                  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  
+                  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  
+                :omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:
+                MMMMM     NMMMM              'MMMMN    'MMMMM
+                +ymy/     +yNMMs/'         '/sMMNy/     /ymy+
+                  '         sMMMM+         oMMMMo         '  
+                            -smms.         -smms-           
+
 ------------------------------------------
 Dostop do zbirk Društva računalniški muzej
 ------------------------------------------
@@ -28,7 +27,7 @@ Dostop do zbirk Društva računalniški muzej
 Ukazi:
 * najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
 * eksponat <id> - Izpiše podatke o eksponatu.
-* razstave [id] - Izpiše seznam razstav oz. podrobnosti o razstavi, če je naveden ID.
+* razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * pocisti - Počisti zaslon.`;
 
