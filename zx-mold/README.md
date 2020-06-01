@@ -1,4 +1,5 @@
-STL za kalup za odlitek ZX Spectruma - stiskan v 4 kosih na Ender 3 Pro:
+STL za kalup za odlitek ZX Spectruma:
+- Za tisk na Ender 3 Pro povečan toliko, da zasede 4 delovne površine
 - Odstranjeni vsi napisi (Sinclair, ZX Spectrum)
 - Odstranjena spodnja polovica Spectruma
 
