@@ -149,6 +149,7 @@ readlineSync.promptCLLoop({
             if (obj.eksponat.opis) out += "\nOpis: " + obj.eksponat.opis;
             if (obj.stanje) out += "\nStanje: " + obj.stanje;
             if (obj.zgodovina) out += "\nZgodovina: " + obj.zgodovina;
+            if (obj.donator) out += "\nEksponat je prijazno doniral/-a " + obj.donator.replace(',', '');
             out += "\n";
             izpisi(out);
         } catch (e) {
