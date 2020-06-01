@@ -1,5 +1,4 @@
 ![racunalniski-muzej.si](https://raw.githubusercontent.com/markostamcar/muzej.si/master/muzej.jpg)
-
 # Štamcarjevi muzejski eksperimenti
 - dial-up: Windows 95 Dial-up server
 - no-lan: Okolje za No-LAN 2.0
