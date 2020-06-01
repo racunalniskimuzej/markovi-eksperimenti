@@ -6,24 +6,32 @@ const izpisi = (str) => {
     console.log(latinize(str));
 };
 
-const helpText = `                          ohNh+               +hNh+          
-                         'MMMMM              'MMMMN          
-                          -omMMdo/sddo/sddo/sdMMd+-          
-                       '    sMMMMNMMMMMMMMMNMMMMo    '       
-                     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     
-                     MMMMMMMMMN     MMMMM     MMMMMMMMMN     
-                  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  
-                  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  
-                :omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:
-                MMMMM     NMMMM              'MMMMN    'MMMMM
-                +ymy/     +yNMMs/'         '/sMMNy/     /ymy+
-                  '         sMMMM+         oMMMMo         '  
-                            -smms.         -smms-           
-
-------------------------------------------
+var banner = ` 
+          ohNh+               +hNh+          
+         'MMMMM              'MMMMN          
+          -omMMdo/sddo/sddo/sdMMd+-          
+       '    sMMMMNMMMMMMMMMNMMMMo    '       
+     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     
+     MMMMMMMMMN     MMMMM     MMMMMMMMMN     
+  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  
+  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  
+:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:
+MMMMM     NMMMM              'MMMMN    'MMMMM
++ymy/     +yNMMs/'         '/sMMNy/     /ymy+
+  '         sMMMM+         oMMMMo         '  
+            -smms.         -smms-            
+                                             
+-------[ http://zbirka.muzej.si/ ] -------
 Dostop do zbirk Društva računalniški muzej
 ------------------------------------------
+`;
+let lines = banner.split(/\n/);
+lines = lines.map(line => line.length > 0 ?
+    line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
+    line);
+banner = lines.join('\n');
 
+const helpText = `
 Ukazi:
 * najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
 * eksponat <id> - Izpiše podatke o eksponatu.
@@ -31,7 +39,7 @@ Ukazi:
 * statistika - Izpiše statistiko celotne zbirke.
 * pocisti - Počisti zaslon.`;
 
-izpisi(helpText);
+izpisi(banner + helpText);
 
 var vec = '';
 const najdi2 = (url) => {
@@ -115,7 +123,7 @@ const razstave2 = (url) => {
 
 readlineSync.promptCLLoop({
     pomoc: function() {
-        izpisi(helpText);
+        izpisi(banner + helpText);
     },
     pocisti: function() {
         izpisi('\033[2J');
