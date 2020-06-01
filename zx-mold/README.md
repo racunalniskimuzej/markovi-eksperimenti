@@ -1,3 +1,5 @@
+![ZX Spectrum](https://raw.githubusercontent.com/markostamcar/muzej.si/master/zx-mold/spectrum.jpg)
+
 STL za kalup za odlitek ZX Spectruma:
 - Za tisk na Ender 3 Pro povečan toliko, da zasede 4 delovne površine
 - Odstranjeni vsi napisi (Sinclair, ZX Spectrum)
