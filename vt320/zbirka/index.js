@@ -23,8 +23,8 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
                                              
 -------[ http://zbirka.muzej.si/ ] -------
 Dostop do zbirk Društva računalniški muzej
-------------------------------------------
-`;
+------------------------------------------`;
+
 let lines = banner.split(/\n/);
 lines = lines.map(line => line.length > 0 ?
     line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
