@@ -1,3 +1,5 @@
+![MOO 3.1 Menu System](https://raw.githubusercontent.com/markostamcar/muzej.si/master/no-lan/moo31.jpg)
+
 Postavitev:
 - Slovenski Windows 95
 - PC se zažene direktno v DOS (spremenjen MSDOS.SYS) in nato v menu za izbiro iger (prek AUTOEXEC.BAT) - MOO 3.1 Menu System
