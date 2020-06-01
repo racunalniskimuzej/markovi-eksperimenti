@@ -1,3 +1,5 @@
+![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
+
 Terminalski dostop do http://zbirka.muzej.si/
 - Node.js modul v direktorju "zbirka" se namesti z "npm install"
 - Shell dostop do RPi prek USB RS232 adapterja se omogoči s "systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service"
