@@ -21,15 +21,9 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
   '         sMMMM+         oMMMMo         '  
             -smms.         -smms-            
                                              
--------[ http://zbirka.muzej.si/ ] -------
+------ [ https://zbirka.muzej.si/ ] ------
 Dostop do zbirk Društva računalniški muzej
 ------------------------------------------`;
-
-let lines = banner.split(/\n/);
-lines = lines.map(line => line.length > 0 ?
-    line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
-    line);
-banner = lines.join('\n');
 
 const helpText = `
 Ukazi:
@@ -38,6 +32,12 @@ Ukazi:
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * pocisti - Počisti zaslon.`;
+
+let lines = banner.split(/\n/);
+lines = lines.map(line => line.length > 0 ?
+    line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
+    line);
+banner = lines.join('\n');
 
 izpisi(banner + helpText);
 
