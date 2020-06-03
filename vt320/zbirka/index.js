@@ -21,7 +21,7 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
   '         sMMMM+         oMMMMo         '  
             -smms.         -smms-            
                                              
------- [ https://zbirka.muzej.si/ ] ------
+-------[ https://zbirka.muzej.si/ ]-------
 Dostop do zbirk Društva računalniški muzej
 ------------------------------------------`;
 
