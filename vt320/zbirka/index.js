@@ -22,7 +22,7 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
             -smms.         -smms-            
                                              
 -------[ https://zbirka.muzej.si/ ]-------
-Dostop do zbirk Društva računalniški muzej
+Dostop do zbirk Društva računalniški muzej!
 ------------------------------------------`;
 
 const helpText = `
