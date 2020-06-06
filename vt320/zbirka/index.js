@@ -6,6 +6,18 @@ const izpisi = (str) => {
     console.log(latinize(str));
 };
 
+const easteregg = () => {
+    var out = '';
+    var chars = '#$%&@*      ';
+    for (var j = 0; j < 24; j++) {
+        for (var i = 0; i < 80; i++) {
+            out += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        out += "\007\n";
+    }
+    return out.substring(0, out.length - 1);
+};
+
 var banner = ` 
           ohNh+               +hNh+          
          'MMMMM              'MMMMN          
@@ -186,10 +198,10 @@ readlineSync.promptCLLoop({
         }
     },
     format: function() {
-        izpisi('OMG!');
+        izpisi(easteregg());
     },
     rm: function() {
-        izpisi('OMG!');
+        izpisi(easteregg());
     },
     blank: function() {}
 }, {
