@@ -8,7 +8,7 @@ const izpisi = (str) => {
 
 const easteregg = () => {
     var out = '';
-    var chars = '#$%&@*      ';
+    var chars = '#$%&@*';
     for (var j = 0; j < 24; j++) {
         for (var i = 0; i < 80; i++) {
             out += chars.charAt(Math.floor(Math.random() * chars.length));
