@@ -13,6 +13,7 @@ Terminalski dostop do http://zbirka.muzej.si/
 
 - Namestitev paketov za zajem slike iz webcama, tiskanje ter obdelavo slik:
 `sudo apt install fswebcam cups graphicsmagick; sudo usermod -a -G video zbirka`
+- V `.profile` pred zagonom index.js dodamo ukaz za zagon webcam serverja: `node muzej.si/vt320/zbirka/webcam.js &`
 - Tiskalnik lahko priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP; trenutno ga v muzeju nimamo, zato si bomo pomagali s print serverjem TRENDnet TE-310, ki ga usposobimo takole:
 - V `/etc/dhcpcd.conf` nastavimo statičen IP za mrežno kartico: `interface eth0   static ip_address=192.168.3.10/24`
 - V `/etc/rc.local` po navodilih print serverju nastavimo IP: `arp -s 192.168.3.1 00:c0:02:16:29:45`
