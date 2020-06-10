@@ -159,9 +159,16 @@ readlineSync.promptCLLoop({
 
                 if (!readlineSync.keyInYNStrict(latinize('Želiš še eno fotko?'))) {
                     if (readlineSync.keyInYNStrict(latinize('Želiš natisniti to fotko?'))) {
+                        readlineSync.question(latinize('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...'), {
+                            hideEchoBack: true,
+                            mask: ''
+                        });
                         fs.writeFileSync("/tmp/webcam.txt", ascii);
-                        izpisi('Tiskam... :)');
-                        execSync('lp /tmp/webcam.txt');
+                        while (true) {
+                            izpisi('Tiskam... :)');
+                            execSync('lp /tmp/webcam.txt');
+                            if (!readlineSync.keyInYNStrict(latinize('Natisnem še enkrat?'))) break;
+                        }
                         return;
                     } else {
                         return;
