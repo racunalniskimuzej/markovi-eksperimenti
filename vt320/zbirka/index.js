@@ -21,7 +21,15 @@ const easteregg = () => {
     return out.substring(0, out.length - 1);
 };
 
-var banner = ` 
+const center = (str) => {
+    let lines = str.split(/\n/);
+    lines = lines.map(line => line.length > 0 ?
+        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
+        line);
+    return lines.join('\n');
+}
+
+var banner1 = ` 
           ohNh+               +hNh+          
          'MMMMM              'MMMMN          
           -omMMdo/sddo/sddo/sdMMd+-          
@@ -36,9 +44,12 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
   '         sMMMM+         oMMMMo         '  
             -smms.         -smms-            
                                              
--------[ https://zbirka.muzej.si/ ]-------
-Dostop do zbirk Društva računalniški muzej
-------------------------------------------`;
+`;
+
+var banner2 = `-------[ https://zbirka.muzej.si/ ]-------
+Dostop do zbirk Društva računalniški muzej`;
+
+banner = center(banner1 + banner2);
 
 const helpText = `
 Ukazi:
@@ -46,14 +57,8 @@ Ukazi:
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
-* fotka - ASCII art iz tvojega obraza :)
+* fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.`;
-
-let lines = banner.split(/\n/);
-lines = lines.map(line => line.length > 0 ?
-    line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
-    line);
-banner = lines.join('\n');
 
 izpisi(banner + helpText);
 
@@ -153,21 +158,31 @@ readlineSync.promptCLLoop({
                 });
 
                 var res = request('GET', 'http://localhost:8000/');
+                izpisi('\007');
                 var ascii = res.body.toString();
                 if (ascii.length == 0) throw "napaka";
-                izpisi(ascii);
 
-                if (!readlineSync.keyInYNStrict(latinize('Želiš še eno fotko?'))) {
+                let half = Math.floor(ascii.length / 2)
+                let ascii1 = ascii.slice(0, half);
+                let ascii2 = ascii.slice(half, ascii.length);
+                izpisi(ascii1);
+                readlineSync.question(latinize('Za nadaljevanje pritisni ENTER...'), {
+                    hideEchoBack: true,
+                    mask: ''
+                });
+                izpisi(ascii2);
+
+                if (readlineSync.keyInYNStrict(latinize('Si zadovoljen s fotko? (n = ponovno fotkanje)'))) {
                     if (readlineSync.keyInYNStrict(latinize('Želiš natisniti to fotko?'))) {
                         readlineSync.question(latinize('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...'), {
                             hideEchoBack: true,
                             mask: ''
                         });
-                        fs.writeFileSync("/tmp/webcam.txt", ascii);
+                        fs.writeFileSync("/tmp/webcam.txt", center(ascii + "\n" + banner1 + "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si"));
                         while (true) {
                             izpisi('Tiskam... :)');
                             execSync('lp /tmp/webcam.txt');
-                            if (!readlineSync.keyInYNStrict(latinize('Natisnem še enkrat?'))) break;
+                            if (readlineSync.keyInYNStrict(latinize('Je bil tisk uspešen? (n = ponovno tiskanje)'))) break;
                         }
                         return;
                     } else {
