@@ -3,8 +3,7 @@ var request = require('sync-request');
 var latinize = require('latinize');
 
 fs = require('fs');
-var lp = require("node-lp");
-printer = lp({});
+const execSync = require('child_process').execSync;
 
 const izpisi = (str) => {
     console.log(latinize(str));
@@ -47,6 +46,7 @@ Ukazi:
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
+* fotka - ASCII art iz tvojega obraza :)
 * pocisti - Počisti zaslon.`;
 
 let lines = banner.split(/\n/);
@@ -146,15 +146,15 @@ readlineSync.promptCLLoop({
     },
     fotka: function() {
         while (true) {
-            readlineSync.keyInPause('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...', {
+            readlineSync.keyInPause(latinize('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...'), {
                 guide: false
             });
             var res = request('GET', 'http://localhost:8000/');
             var ascii = res.body.toString();
             izpisi(ascii);
 
-            odgovori = ['Da', 'Da, tiskaj', 'Ne, še enkrat'];
-            odgovor = readlineSync.keyInSelect(odgovori, 'Si si všeč?', {
+            odgovori = [latinize('Da'), latinize('Da, tiskaj'), latinize('Ne, še enkrat')];
+            odgovor = readlineSync.keyInSelect(odgovori, latinize('Si si všeč?'), {
                 cancel: false
             }) + 1;
             switch (odgovor) {
@@ -163,9 +163,8 @@ readlineSync.promptCLLoop({
                     return;
                 case 2: {
                     fs.writeFileSync("/tmp/webcam.txt", ascii);
-                    printer.queue("/tmp/webcam.txt");
-
                     izpisi('Tiskam... :)');
+                    execSync('lp /tmp/webcam.txt');
                     return;
                 }
                 case 3:

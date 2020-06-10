@@ -3,7 +3,7 @@ const imageToAscii = require("image-to-ascii");
 var Camera = require("@sigodenjs/fswebcam");
 var camera = new Camera({
     callbackReturn: "buffer",
-    rotate: 90
+//    rotate: 90
 });
 
 const requestListener = function(req, res) {
@@ -13,7 +13,7 @@ const requestListener = function(req, res) {
             colored: false,
             size_options: {
                 screen_size: {
-                    height: 53
+                    height: 30
                 }
             }
         }, (err, converted) => {
