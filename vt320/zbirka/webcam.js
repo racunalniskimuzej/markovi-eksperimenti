@@ -2,8 +2,7 @@ const http = require("http");
 const imageToAscii = require("image-to-ascii");
 var Camera = require("@sigodenjs/fswebcam");
 var camera = new Camera({
-    callbackReturn: "buffer",
-//    rotate: 90
+    callbackReturn: "buffer"
 });
 
 const requestListener = function(req, res) {
@@ -17,12 +16,9 @@ const requestListener = function(req, res) {
                 }
             }
         }, (err, converted) => {
-            res.end(err || converted);
+            res.end(converted);
         });
     });
-
 };
 const server = http.createServer(requestListener);
-server.listen(8000, 'localhost', () => {
-    console.log('WebCam server zagnan!');
-});
+server.listen(8000, 'localhost');

@@ -145,31 +145,32 @@ readlineSync.promptCLLoop({
         izpisi('\033[2J');
     },
     fotka: function() {
-        while (true) {
-            readlineSync.keyInPause(latinize('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...'), {
-                guide: false
-            });
-            var res = request('GET', 'http://localhost:8000/');
-            var ascii = res.body.toString();
-            izpisi(ascii);
+        try {
+            while (true) {
+                readlineSync.question(latinize('Kameri pokaži svoj nasmešek in pritisni ENTER...'), {
+                    hideEchoBack: true,
+                    mask: ''
+                });
 
-            odgovori = [latinize('Da'), latinize('Da, tiskaj'), latinize('Ne, še enkrat')];
-            odgovor = readlineSync.keyInSelect(odgovori, latinize('Si si všeč?'), {
-                cancel: false
-            }) + 1;
-            switch (odgovor) {
+                var res = request('GET', 'http://localhost:8000/');
+                var ascii = res.body.toString();
+                if (ascii.length == 0) throw "napaka";
+                izpisi(ascii);
 
-                case 1:
-                    return;
-                case 2: {
-                    fs.writeFileSync("/tmp/webcam.txt", ascii);
-                    izpisi('Tiskam... :)');
-                    execSync('lp /tmp/webcam.txt');
-                    return;
+                if (!readlineSync.keyInYNStrict(latinize('Želiš še eno fotko?'))) {
+                    if (readlineSync.keyInYNStrict(latinize('Želiš natisniti to fotko?'))) {
+                        fs.writeFileSync("/tmp/webcam.txt", ascii);
+                        izpisi('Tiskam... :)');
+                        execSync('lp /tmp/webcam.txt');
+                        return;
+                    } else {
+                        return;
+                    }
                 }
-                case 3:
-                    break;
+
             }
+        } catch (e) {
+            izpisi('Fotkanje trenutno ni na voljo :( Prosim, pocukaj za rokav muzejskega delavca.');
         }
 
     },
