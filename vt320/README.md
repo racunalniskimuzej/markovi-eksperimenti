@@ -12,7 +12,7 @@ Terminalski dostop do http://zbirka.muzej.si/
 Viri:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
 
-(Opcijsko:) Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju
+(Opcijsko:) Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju :D
 
 - Namestitev paketov za zajem slike iz webcama, tiskanje ter obdelavo slik:
 `sudo apt install fswebcam cups graphicsmagick; sudo usermod -a -G video zbirka`
