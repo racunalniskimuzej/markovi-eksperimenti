@@ -145,16 +145,34 @@ readlineSync.promptCLLoop({
         izpisi('\033[2J');
     },
     fotka: function() {
-        readlineSync.keyInPause('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...', {
-            guide: false
-        });
-        var res = request('GET', 'http://localhost:8000/');
-        var ascii = res.getBody();
+        while (true) {
+            readlineSync.keyInPause('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...', {
+                guide: false
+            });
+            var res = request('GET', 'http://localhost:8000/');
+            var ascii = res.body.toString();
+            izpisi(ascii);
 
-        fs.writeFileSync("/tmp/webcam.txt", ascii);
-        printer.queue("/tmp/webcam.txt");
+            odgovori = ['Da', 'Da, tiskaj', 'Ne, še enkrat'];
+            odgovor = readlineSync.keyInSelect(odgovori, 'Si si všeč?', {
+                cancel: false
+            }) + 1;
+            switch (odgovor) {
 
-        izpisi('Tiskam... :)');
+                case 1:
+                    return;
+                case 2: {
+                    fs.writeFileSync("/tmp/webcam.txt", ascii);
+                    printer.queue("/tmp/webcam.txt");
+
+                    izpisi('Tiskam... :)');
+                    return;
+                }
+                case 3:
+                    break;
+            }
+        }
+
     },
     najdi: function najdi(...geslo) {
         var url = 'http://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? geslo.join('+') : 'undefined');

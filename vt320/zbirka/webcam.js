@@ -24,5 +24,5 @@ const requestListener = function(req, res) {
 };
 const server = http.createServer(requestListener);
 server.listen(8000, 'localhost', () => {
-    console.log('Server is now running!');
+    console.log('WebCam server zagnan!');
 });
