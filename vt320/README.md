@@ -9,9 +9,6 @@ Terminalski dostop do http://zbirka.muzej.si/
 `0 5 * * * pkill -KILL -u zbirka; su zbirka -c "cd /home/zbirka/muzej.si/vt320/zbirka; git pull; npm install"`
 - Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
 
-Viri:
-- https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
-
 (Opcijsko:) Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju :D
 
 - Namestitev paketov za zajem slike iz webcama, tiskanje ter obdelavo slik:
@@ -20,3 +17,6 @@ Viri:
 - V `/etc/dhcpcd.conf` nastavimo statičen IP za mrežno kartico: `interface eth0   static ip_address=192.168.3.10/24`
 - V `/etc/rc.local` po navodilih print serverju nastavimo IP: `arp -s 192.168.3.1 00:c0:02:16:29:45`
 - Nato še namestimo tiskalnik: `sudo lpadmin -p tiskalnik -v lpd://192.168.3.1/L1 -E; sudo lpadmin -d tiskalnik`
+
+Viri:
+- https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
