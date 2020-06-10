@@ -10,3 +10,20 @@ Terminalski dostop do http://zbirka.muzej.si/
 
 Viri:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
+
+
+
+
+sudo apt install fswebcam cups graphicsmagick
+sudo usermod -a -G video zbirka
+sudo lpadmin -p tiskalnik -v lpd://192.168.3.1/L1 -E
+sudo lpadmin -d tiskalnik
+/etc/rc.local:
+arp -s 192.168.3.1 00:c0:02:16:29:45
+/etc/dhcpcd.conf:
+interface eth0
+static ip_address=192.168.3.10/24
+.profile:
+node muzej.si/vt/320/zbirka/webcam.js &
+crontab:
+npm install
