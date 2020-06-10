@@ -2,6 +2,10 @@ const readlineSync = require('readline-sync');
 var request = require('sync-request');
 var latinize = require('latinize');
 
+fs = require('fs');
+var lp = require("node-lp");
+printer = lp({});
+
 const izpisi = (str) => {
     console.log(latinize(str));
 };
@@ -139,6 +143,18 @@ readlineSync.promptCLLoop({
     },
     pocisti: function() {
         izpisi('\033[2J');
+    },
+    fotka: function() {
+        readlineSync.keyInPause('Pokaži svoj nasmešek in pritisni katerokoli črko ali številko...', {
+            guide: false
+        });
+        var res = request('GET', 'http://localhost:8000/');
+        var ascii = res.getBody();
+
+        fs.writeFileSync("/tmp/webcam.txt", ascii);
+        printer.queue("/tmp/webcam.txt");
+
+        izpisi('Tiskam... :)');
     },
     najdi: function najdi(...geslo) {
         var url = 'http://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? geslo.join('+') : 'undefined');

@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sigodenjs/fswebcam": "^0.1.4",
+    "image-to-ascii": "^3.0.12",
     "latinize": "^0.4.1",
+    "node-lp": "^1.0.1",
     "readline-sync": "^1.4.10",
     "sync-request": "^6.1.0"
   }
