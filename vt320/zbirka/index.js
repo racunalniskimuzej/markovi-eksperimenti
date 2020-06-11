@@ -30,7 +30,7 @@ const center = (str) => {
 }
 
 const vprasaj = (query) => {
-    return readlineSync.keyIn(latinize(query + " [d/n]"), {
+    return readlineSync.keyIn(latinize(query + " [d/n]: "), {
         hideEchoBack: false,
         limit: 'dn',
         trueValue: 'd',
