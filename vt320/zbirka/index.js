@@ -30,11 +30,20 @@ const center = (str) => {
 }
 
 const vprasaj = (query) => {
-   return readlineSync.keyIn(latinize(query + " [d/n]"), {hideEchoBack: false, limit: 'dn', trueValue: 'd', falseValue: 'n', caseSensitive: false});
+    return readlineSync.keyIn(latinize(query + " [d/n]"), {
+        hideEchoBack: false,
+        limit: 'dn',
+        trueValue: 'd',
+        falseValue: 'n',
+        caseSensitive: false
+    });
 }
 
 const pocakaj = (query) => {
-   readlineSync.question(latinize(query), {hideEchoBack: true, mask: ''});
+    readlineSync.question(latinize(query), {
+        hideEchoBack: true,
+        mask: ''
+    });
 }
 
 var banner1 = ` 
@@ -161,9 +170,6 @@ readlineSync.promptCLLoop({
         try {
             while (true) {
                 pocakaj('Kameri pokaži svoj nasmešek in pritisni ENTER...');
-        
-       
-       
 
                 var res = request('GET', 'http://localhost:8000/');
                 izpisi('\007');
@@ -173,18 +179,15 @@ readlineSync.promptCLLoop({
                 let half = Math.floor(ascii.length / 2)
                 let ascii1 = ascii.slice(0, half);
                 let ascii2 = ascii.slice(half, ascii.length);
+
                 izpisi(ascii1);
                 pocakaj('Za nadaljevanje pritisni ENTER...');
-                    
-            
                 izpisi(ascii2);
 
                 if (vprasaj('Si zadovoljen s fotko? (n = ponovno fotkanje)')) {
                     if (vprasaj('Želiš natisniti to fotko?')) {
                         pocakaj('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...');
-                           
-                           
-                    
+
                         fs.writeFileSync("/tmp/webcam.txt", center(ascii + "\n" + banner1 + "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si"));
                         while (true) {
                             izpisi('Tiskam... :)');
@@ -246,7 +249,6 @@ readlineSync.promptCLLoop({
         } catch (e) {
             izpisi("Prišlo je do napake.");
         }
-
 
     },
     vec: () => {
