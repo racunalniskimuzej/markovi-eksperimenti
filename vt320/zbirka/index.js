@@ -46,6 +46,29 @@ const pocakaj = (query) => {
     });
 }
 
+function fujitsu(str) {
+    if (typeof str === 'string') {
+        return str.replace(/[^A-Za-z0-9]/g, function(x) {
+            return fujitsu_chars[x] || x;
+        });
+    } else {
+        return str;
+    }
+}
+
+fujitsu_chars = {
+    'Š': '[',
+    'Đ': '\',
+    'Ć': ']',
+    'Č': '^',
+    'Ž': '`',
+    'š': '[',
+    'đ': '\',
+    'ć': ']',
+    'č': '^',
+    'ž': '`',
+};
+
 var banner1 = ` 
           ohNh+               +hNh+          
          'MMMMM              'MMMMN          
@@ -188,7 +211,7 @@ readlineSync.promptCLLoop({
                     if (vprasaj('Želiš natisniti to fotko?')) {
                         pocakaj('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...');
 
-                        fs.writeFileSync("/tmp/webcam.txt", center(ascii + "\n" + banner1 + "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si"));
+                        fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n" + banner1 + "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
                         while (true) {
                             izpisi('Tiskam... :)');
                             execSync('lp /tmp/webcam.txt');
