@@ -29,6 +29,14 @@ const center = (str) => {
     return lines.join('\n');
 }
 
+const vprasaj = (query) => {
+   return readlineSync.keyIn(latinize(query + " [d/n]"), {hideEchoBack: false, limit: 'dn', trueValue: 'd', falseValue: 'n', caseSensitive: false});
+}
+
+const pocakaj = (query) => {
+   readlineSync.question(latinize(query), {hideEchoBack: true, mask: ''});
+}
+
 var banner1 = ` 
           ohNh+               +hNh+          
          'MMMMM              'MMMMN          
@@ -152,10 +160,10 @@ readlineSync.promptCLLoop({
     fotka: function() {
         try {
             while (true) {
-                readlineSync.question(latinize('Kameri pokaži svoj nasmešek in pritisni ENTER...'), {
-                    hideEchoBack: true,
-                    mask: ''
-                });
+                pocakaj('Kameri pokaži svoj nasmešek in pritisni ENTER...');
+        
+       
+       
 
                 var res = request('GET', 'http://localhost:8000/');
                 izpisi('\007');
@@ -166,23 +174,22 @@ readlineSync.promptCLLoop({
                 let ascii1 = ascii.slice(0, half);
                 let ascii2 = ascii.slice(half, ascii.length);
                 izpisi(ascii1);
-                readlineSync.question(latinize('Za nadaljevanje pritisni ENTER...'), {
-                    hideEchoBack: true,
-                    mask: ''
-                });
+                pocakaj('Za nadaljevanje pritisni ENTER...');
+                    
+            
                 izpisi(ascii2);
 
-                if (readlineSync.keyInYNStrict(latinize('Si zadovoljen s fotko? (n = ponovno fotkanje)'))) {
-                    if (readlineSync.keyInYNStrict(latinize('Želiš natisniti to fotko?'))) {
-                        readlineSync.question(latinize('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...'), {
-                            hideEchoBack: true,
-                            mask: ''
-                        });
+                if (vprasaj('Si zadovoljen s fotko? (n = ponovno fotkanje)')) {
+                    if (vprasaj('Želiš natisniti to fotko?')) {
+                        pocakaj('1. Prižgi printer s stikalom blizu kablov.\n2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...');
+                           
+                           
+                    
                         fs.writeFileSync("/tmp/webcam.txt", center(ascii + "\n" + banner1 + "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si"));
                         while (true) {
                             izpisi('Tiskam... :)');
                             execSync('lp /tmp/webcam.txt');
-                            if (readlineSync.keyInYNStrict(latinize('Je bil tisk uspešen? (n = ponovno tiskanje)'))) break;
+                            if (vprasaj('Je bil tisk uspešen? (n = ponovno tiskanje)')) break;
                         }
                         return;
                     } else {

@@ -10,14 +10,14 @@ var gm = require('gm');
 const requestListener = function(req, res) {
     res.writeHead(200);
     camera.capture(function(err, data) {
-        gm(data).contrast(-5).toBuffer('JPG', function(err, data) {
+        gm(data).contrast(-5).resize(480, 640).toBuffer('JPG', function(err, data) {
             imageToAscii(data, {
                 colored: false,
                 reverse: true,
                 pixels: " .,:;i1tfLCG08",
                 size_options: {
                     screen_size: {
-                        height: 52
+                        height: 48
                     }
                 }
             }, (err, converted) => {
