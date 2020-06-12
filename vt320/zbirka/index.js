@@ -10,15 +10,15 @@ const izpisi = (str) => {
 };
 
 const easteregg = () => {
-    var out = '';
-    var chars = '#$%&@*';
+    var out = '\033(0';
+    var chars = '`a';
     for (var j = 0; j < 24; j++) {
         for (var i = 0; i < 80; i++) {
             out += chars.charAt(Math.floor(Math.random() * chars.length));
         }
         out += "\007\n";
     }
-    return out.substring(0, out.length - 1);
+    return out.substring(0, out.length - 1) + "\033(B";
 };
 
 const center = (str) => {
