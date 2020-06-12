@@ -24,7 +24,7 @@ const easteregg = () => {
 const center = (str) => {
     let lines = str.split(/\n/);
     lines = lines.map(line => line.length > 0 ?
-        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ') :
+        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ').padEnd(80, ' ') :
         line);
     return lines.join('\n');
 }
@@ -69,7 +69,8 @@ fujitsu_chars = {
     'ž': '`',
 };
 
-var banner1 = ` 
+var banner = ` 
+
           ohNh+               +hNh+          
          'MMMMM              'MMMMN          
           -omMMdo/sddo/sddo/sdMMd+-          
@@ -83,13 +84,9 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
 +ymy/     +yNMMs/'         '/sMMNy/     /ymy+
   '         sMMMM+         oMMMMo         '  
             -smms.         -smms-            
-                                             
 `;
 
-var banner2 = `-------[ https://zbirka.muzej.si/ ]-------
-Dostop do zbirk Društva računalniški muzej`;
-
-banner = center(banner1 + banner2);
+banner = center(banner);
 
 const helpText = `
 Ukazi:
@@ -293,7 +290,7 @@ readlineSync.promptCLLoop({
     },
     blank: function() {}
 }, {
-    prompt: '$ > ',
+    prompt: '\033[1$}\033[7m\r' + center(latinize('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}$ > ',
     limitMessage: "Ne poznam ukaza '$<lastInput>'. Poizkusite s 'pomoc'.",
     defaultInput: "blank"
 });
