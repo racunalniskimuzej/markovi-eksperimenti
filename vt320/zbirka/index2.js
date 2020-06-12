@@ -47,7 +47,7 @@ const pocakaj = (query) => {
 }
 
 function latinize(str) {
-    console.log("\033P1;1;1;0;0;2;0;0{P???oGGIKIGG????/???OPPPPPPM????;????oGIKIG?????/????FGGGGG?????;\033\\");
+    console.log("\033P1;1;1;0;0;2;0;0{P~~NNFuuttuufnn~/~~zzquuuuuuoxx~;~~^NNeuttuufnn~/~~{wwrvvvvvrzz~;~~~vvuuttUEFf~~/~~~rrptsuuvvv~~;~~^NNfvttuufnn~/~~{wwrvvvvvrzz~;~~FFFvvvvvfNN^~/}}ooouuvvvrww{~;~~~~~ZZVVZZ^^~~/~~~}ustttttpzz~;~~~~~ZZVVZZ^~~~/~~|wwqvvvvvqyy~;~~~^^ZZVVZZ^^~~/~~~rrrtttuuuv~~;~~~~~^^VVZZ^~~~/~~|wwqvvvvvqyy~;~~~~~^^^^NnFFFn/~~|wwqvvvvyooo~;\033\\");
 
     if (typeof str === 'string') {
         return str.replace(/[^A-Za-z0-9]/g, function(x) {
@@ -60,15 +60,15 @@ function latinize(str) {
 
 fujitsu_chars = {
     'Š': "\033(P!\033(B",
-    'Đ': '\\',
-    'Ć': ']',
-    'Č': '^',
-    'Ž': '`',
-    'š': '[',
-    'đ': '\\',
-    'ć': ']',
-    'č': '\033(P"\033(B',
-    'ž': '`',
+    'Đ': "\033(P%\033(B",
+    'Ć': "\033(P$\033(B",
+    'Č': "\033(P"\033(B",
+    'Ž': "\033(P#\033(B",
+    'š': "\033(P&\033(B",
+    'đ': "\033(P*\033(B",
+    'ć': "\033(P)\033(B",
+    'č': "\033(P'\033(B",
+    'ž': "\033(P(\033(B",
 };
 
 var banner = ` 
