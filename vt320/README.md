@@ -20,6 +20,13 @@ Terminalski dostop do http://zbirka.muzej.si/
 - S `tftp` preverimo, da je v datoteki `CONFIG` na print serverju tale vrstica: `0501 LPT1MODE:Ack&Busy`
 - Nato še namestimo tiskalnik: `sudo lpadmin -p tiskalnik -v lpd://192.168.3.1/L1 -E; sudo lpadmin -d tiskalnik`
 
+Kako do šumnikov:
+- VT320 podpira "download" simbolov iz strežnika (link do dokumentacije spodaj)
+- Posamezne črke so velike 15x12 pikslov - za uporabo z orodjem jih pretvorimo v XPM z
+`convert -negate -monochrome sumniki.png sumniki.xpm`
+- Nato v `drcsconv.pl` (link spodaj) zakomentiramo klica `system` in nastavimo `$column = 10;` ter `$row = 1;`
+- Skripto poženemo z `perl drcsconv.pl sumniki.xpm` in skopiramo vseh 10 vrstic z enkodiranimi črkami
+
 Viri:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
 - https://www.vt100.net/docs/vt320-uu/appendixe.html
