@@ -47,7 +47,7 @@ const pocakaj = (query) => {
 }
 
 function latinize(str) {
-    console.log("\033P1;1;1;0;0;2;0;0{P???owYn||~ywo??/?IRJaVNn^NVbJRI\033\\");
+    console.log("\033P1;1;1;0;0;2;0;0{P???oGGIKIGG????/???OPPPPPPM????;????oGIKIG?????/????FGGGGG?????;\033\\");
 
     if (typeof str === 'string') {
         return str.replace(/[^A-Za-z0-9]/g, function(x) {
@@ -67,7 +67,7 @@ fujitsu_chars = {
     'š': '[',
     'đ': '\\',
     'ć': ']',
-    'č': '^',
+    'č': '\033(P"\033(B',
     'ž': '`',
 };
 
