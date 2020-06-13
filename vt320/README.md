@@ -22,10 +22,10 @@ Terminalski dostop do http://zbirka.muzej.si/
 
 Kako do šumnikov:
 - VT320 podpira "download" simbolov iz strežnika (link do dokumentacije spodaj)
-- Posamezne črke so velike 15x12 pikslov - za uporabo z orodjem jih pretvorimo v XPM z
+- Posamezne črke so velike 15x12 pikslov - za uporabo z orodjem jih pretvorimo v XPM s
 `convert -negate -monochrome sumniki.png sumniki.xpm`
 - Nato v `drcsconv.pl` (link spodaj) zakomentiramo klica `system` in nastavimo `$column = 10;` ter `$row = 1;`
-- Skripto poženemo z `perl drcsconv.pl sumniki.xpm` in skopiramo vseh 10 vrstic z enkodiranimi črkami
+- Skripto poženemo s `perl drcsconv.pl sumniki.xpm` in skopiramo vseh 10 vrstic z enkodiranimi črkami
 
 Viri:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
