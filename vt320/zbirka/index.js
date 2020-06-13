@@ -6,7 +6,7 @@ fs = require('fs');
 const execSync = require('child_process').execSync;
 
 const izpisi = (str) => {
-    console.log(latinize(str));
+    console.log(vt320(str));
 };
 
 const easteregg = () => {
@@ -30,7 +30,7 @@ const center = (str) => {
 }
 
 const vprasaj = (query) => {
-    return readlineSync.keyIn(latinize(query + " [d/n]: "), {
+    return readlineSync.keyIn(vt320(query + " [d/n]: "), {
         hideEchoBack: false,
         limit: 'dn',
         trueValue: 'd',
@@ -40,20 +40,10 @@ const vprasaj = (query) => {
 }
 
 const pocakaj = (query) => {
-    readlineSync.question(latinize(query), {
+    readlineSync.question(vt320(query), {
         hideEchoBack: true,
         mask: ''
     });
-}
-
-function fujitsu(str) {
-    if (typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return fujitsu_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
 }
 
 fujitsu_chars = {
@@ -68,6 +58,44 @@ fujitsu_chars = {
     'č': '^',
     'ž': '`',
 };
+
+function fujitsu(str) {
+    if (typeof str === 'string') {
+        return str.replace(/[^A-Za-z0-9]/g, function(x) {
+            return fujitsu_chars[x] || x;
+        });
+    } else {
+        return str;
+    }
+}
+
+vt320_chars = {
+    'Š': "\033(P!\033(B",
+    'Đ': "\033(P%\033(B",
+    'Ć': "\033(P$\033(B",
+    'Č': "\033(P\"\033(B",
+    'Ž': "\033(P#\033(B",
+    'š': "\033(P&\033(B",
+    'đ': "\033(P*\033(B",
+    'ć': "\033(P)\033(B",
+    'č': "\033(P'\033(B",
+    'ž': "\033(P(\033(B",
+};
+
+function vt320(str) {
+    if (typeof str === 'string') {
+        return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
+            return vt320_chars[x] || x;
+        }));
+    } else {
+        return str;
+    }
+}
+
+function promptInit() {
+    sumniki = "\033P1;1;1;0;0;2;0;0{P~~NNFuuttuufnn~/~~zzquuuuuuoxx~;~~^NNeuttuufnn~/~~{wwrvvvvvrzz~;~~~vvuuttUEFf~~/~~~rrptsuuvvv~~;~~^NNfvttuufnn~/~~{wwrvvvvvrzz~;~~FFFvvvvvfNN^~/}}ooouuvvvrww{~;~~~~~ZZVVZZ^^~~/~~~}ustttttpzz~;~~~~~ZZVVZZ^~~~/~~|wwqvvvvvqyy~;~~~^^ZZVVZZ^^~~/~~~rrrtttuuuv~~;~~~~~^^VVZZ^~~~/~~|wwqvvvvvqyy~;~~~~~^^^^NnFFFn/~~|wwqvvvvyooo~;\033\\";
+    return sumniki + '\033[1$}\033[7m\r' + center(vt320('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
+}
 
 var banner = ` 
 
@@ -290,7 +318,7 @@ readlineSync.promptCLLoop({
     },
     blank: function() {}
 }, {
-    prompt: '\033[1$}\033[7m\r' + center(latinize('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}$ > ',
+    prompt: promptInit() + '$ > ',
     limitMessage: "Ne poznam ukaza '$<lastInput>'. Poizkusite s 'pomoc'.",
     defaultInput: "blank"
 });
