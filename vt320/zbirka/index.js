@@ -83,7 +83,7 @@ vt320_chars = {
 };
 
 function vt320(str) {
-    if (typeof str === 'string') {
+    if (!process.env.SSH_CONNECTION && typeof str === 'string') {
         return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
             return vt320_chars[x] || x;
         }));
@@ -93,6 +93,7 @@ function vt320(str) {
 }
 
 function promptInit() {
+    if (process.env.SSH_CONNECTION) return '';
     sumniki = "\033P1;1;1;0;0;2;0;0{P~~NNFuuttuufnn~/~~zzquuuuuuoxx~;~~^NNeuttuufnn~/~~{wwrvvvvvrzz~;~~~vvuuttUEFf~~/~~~rrptsuuvvv~~;~~^NNfvttuufnn~/~~{wwrvvvvvrzz~;~~FFFvvvvvfNN^~/}}ooouuvvvrww{~;~~~~~ZZVVZZ^^~~/~~~}ustttttpzz~;~~~~~ZZVVZZ^~~~/~~|wwqvvvvvqyy~;~~~^^ZZVVZZ^^~~/~~~rrrtttuuuv~~;~~~~~^^VVZZ^~~~/~~|wwqvvvvvqyy~;~~~~~^^^^NnFFFn/~~|wwqvvvvyooo~;\033\\";
     return sumniki + '\033[1$}\033[7m\r' + center(vt320('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
 }
