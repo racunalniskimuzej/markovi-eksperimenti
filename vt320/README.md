@@ -22,7 +22,7 @@ Terminalski dostop do http://zbirka.muzej.si/
 
 Kako do šumnikov:
 - VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
-- Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista - za pretvorbo PNG v XPM potrebuje ImageMagick
+- Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista (za pretvorbo PNG v XPM potrebuje ImageMagick)
 - Skripto poženemo s `perl drcsconv.pl sumniki.png` in uporabimo vseh 10 vrstic z enkodiranimi črkami
 
 Viri:
