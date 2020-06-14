@@ -94,8 +94,8 @@ function vt320(str) {
 
 function promptInit() {
     if (process.env.SSH_CONNECTION) return '';
-    sumniki = "\033P1;1;1;0;0;2;0;0{P~~NNFuuttuufnn~/~~zzquuuuuuoxx~;~~^NNeuttuufnn~/~~{wwrvvvvvrzz~;~~~vvuuttUEFf~~/~~~rrptsuuvvv~~;~~^NNfvttuufnn~/~~{wwrvvvvvrzz~;~~FFFvvvvvfNN^~/}}ooouuvvvrww{~;~~~~~ZZVVZZ^^~~/~~~}ustttttpzz~;~~~~~ZZVVZZ^~~~/~~|wwqvvvvvqyy~;~~~^^ZZVVZZ^^~~/~~~rrrtttuuuv~~;~~~~~^^VVZZ^~~~/~~|wwqvvvvvqyy~;~~~~~^^^^NnFFFn/~~|wwqvvvvyooo~;\033\\";
-    return sumniki + '\033[1$}\033[7m\r' + center(vt320('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
+    sumniki = "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;?????____oOwwwO/??AFFLGGGGDNNN?;\033\\";
+    return sumniki + '\033[1$}\033[7m\r' + vt320(center('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
 }
 
 var banner = ` 
