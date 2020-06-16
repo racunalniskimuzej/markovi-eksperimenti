@@ -115,10 +115,15 @@ global.lk201 = function lk201(str) {
     }
 }
 
-function promptInit() {
+function vt320drcs() {
     if (process.env.SSH_CONNECTION) return '';
-    sumniki = "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;?????____oOwwwO/??AFFLGGGGDNNN?\033\\";
-    return sumniki + '\033[1$}\033[7m\r' + vt320(center('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
+    return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
+        "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
+        "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +
+        "?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;" +
+        "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
+        "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
+        vt320(center('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
 }
 
 var banner = ` 
@@ -149,7 +154,7 @@ Ukazi:
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.`;
 
-izpisi(promptInit() + banner + helpText);
+izpisi(vt320drcs() + banner + helpText);
 
 var vec = '';
 const najdi2 = (url) => {
@@ -340,9 +345,12 @@ readlineSync.promptCLLoop({
     rm: function() {
         izpisi(easteregg());
     },
-    blank: function() {}
+    blank: function() {},
+    izhod: function() {
+        if (process.env.SSH_CONNECTION) return true;
+    }
 }, {
-    prompt: promptInit() + '$ > ',
+    prompt: vt320drcs() + '$ > ',
     limitMessage: "Ne poznam ukaza '$<lastInput>'. Poizkusite s 'pomoc'.",
     defaultInput: "blank",
     hideEchoBack: true,
