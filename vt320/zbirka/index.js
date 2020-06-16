@@ -279,16 +279,16 @@ readlineSync.promptCLLoop({
 
     },
     najdi: function najdi(...geslo) {
-        var url = 'http://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? geslo.join('+') : 'undefined');
+        var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(lk201(geslo.join(' '))) : 'undefined');
         najdi2(url);
     },
     razstave: function razstave(id) {
-        var url = 'http://zbirka.muzej.si/api/razstave/' + (id ? id.replace('#', '') + '/' : '');
+        var url = 'https://zbirka.muzej.si/api/razstave/' + (id ? id.replace('#', '') + '/' : '');
         razstave2(url);
     },
     eksponat: function(id) {
         try {
-            var res = request('GET', 'http://zbirka.muzej.si/api/eksponati/' + id + '/');
+            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + id + '/');
             var obj = JSON.parse(res.getBody());
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
@@ -308,7 +308,7 @@ readlineSync.promptCLLoop({
     },
     statistika: () => {
         try {
-            var res = request('GET', 'http://zbirka.muzej.si/api/statistika/');
+            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/');
             var arr = JSON.parse(res.getBody());
             var out = '';
             for (var i = 0; i < arr.length; i++) {
