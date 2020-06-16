@@ -1,7 +1,7 @@
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
 Terminalski dostop do https://zbirka.muzej.si/
-- Node.js modul v direktorju `zbirka` se namesti z `npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v node_modules spremenjena 
+- Node.js modul v direktorju `zbirka` se namesti z `npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v `node_modules` spremenjena 
 - Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service`
 - Na RPi se ustvari nov uporabnik `zbirka` in v njegov `.profile` doda onemogočenje CTRL+C/Z/backslash in samodejni zagon Node.js aplikacije
 - V `rc.local` dodan ukaz za izklop varčevanja z energijo za WiFi, saj se je na RPi 3B+ povezava sicer ob daljši neaktivnosti obešala
