@@ -351,10 +351,12 @@ readlineSync.promptCLLoop({
     blank: function() {},
     izhod: function() {
         if (process.env.SSH_CONNECTION) return true;
+    },
+    _: function(command) {
+        izpisi("Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'.");
     }
 }, {
     prompt: vt320drcs() + '$ > ',
-    limitMessage: "Ne poznam ukaza '$<lastInput>'. Poizkusite s 'pomoc'.",
     defaultInput: "blank",
     hideEchoBack: true,
     mask: "return vt320(lk201(str))"
