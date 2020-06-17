@@ -5,6 +5,15 @@ var latinize = require('latinize');
 fs = require('fs');
 const execSync = require('child_process').execSync;
 
+const imageToAscii = require("image-to-ascii");
+var Camera = require("@sigodenjs/fswebcam");
+var camera = new Camera({
+    callbackReturn: "buffer",
+    rotate: 90
+});
+var gm = require('gm');
+var deasync = require('deasync');
+
 const izpisi = (str) => {
     console.log(vt320(str));
 };
@@ -248,10 +257,44 @@ readlineSync.promptCLLoop({
             while (true) {
                 pocakaj('Kameri pokaži svoj nasmešek in pritisni ENTER...');
 
-                var res = request('GET', 'http://localhost:8000/');
-                izpisi('\007');
-                var ascii = res.body.toString();
-                if (ascii.length == 0) throw "napaka";
+
+
+
+var done = false, buffer = null;
+camera.capture(function(err, data) {
+   buffer = data;
+   done = true;
+});
+deasync.loopWhile(function() { return !done; });
+
+izpisi('\007');
+
+
+
+    var img = gm(buffer).contrast(-5).resize(480, 640);
+
+var done2 = false, data = null;
+
+    img.toBuffer('JPG', function(err, buffer) {
+      data = buffer;
+      done2 = true;
+    });
+    deasync.loopWhile(function() {
+      return !done2;
+    });
+
+
+var img2ascii = deasync(imageToAscii);
+var ascii = img2ascii(data, {
+                colored: false,
+                reverse: true,
+                pixels: " .,:;i1tfLCG08",
+                size_options: {
+                    screen_size: {
+                        height: 48
+                    }
+                }});
+
 
                 let half = Math.floor(ascii.length / 2)
                 let ascii1 = ascii.slice(0, half);
