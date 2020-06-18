@@ -19,6 +19,9 @@ Terminalski dostop do https://zbirka.muzej.si/
 - S `tftp` preverimo, da je v datoteki `CONFIG` na print serverju tale vrstica: `0501 LPT1MODE:Ack&Busy`
 - Nato še namestimo tiskalnik: `sudo lpadmin -p tiskalnik -v lpd://192.168.3.1/L1 -E; sudo lpadmin -d tiskalnik`
 
+sudo lpadmin -p tiskalnik -v usb://Unknown/Printer -E; sudo lpadmin -d tiskalnik
+
+
 Kako do šumnikov:
 - VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
 - Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista (za pretvorbo PNG v XPM potrebuje ImageMagick)
