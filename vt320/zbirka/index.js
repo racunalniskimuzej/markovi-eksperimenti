@@ -255,7 +255,7 @@ readlineSync.promptCLLoop({
     fotka: function() {
         try {
             while (true) {
-                pocakaj('Kameri pokaži svoj nasmešek in pritisni ENTER...');
+                pocakaj('Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...');
 
                 var done = false,
                     buffer = null;
@@ -271,7 +271,7 @@ readlineSync.promptCLLoop({
 
                 var done2 = false,
                     data = null;
-                var img = gm(buffer).contrast(-5).resize(480, 640);
+                var img = gm(buffer).contrast(-5);
                 img.toBuffer('JPG', function(err, buffer) {
                     data = buffer;
                     done2 = true;
