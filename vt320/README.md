@@ -13,13 +13,8 @@ Terminalski dostop do https://zbirka.muzej.si/
 
 - Namestitev paketov za zajem slike iz webcama in tiskanje:
 `sudo apt install fswebcam cups; sudo usermod -a -G video zbirka`
-- Tiskalnik lahko priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP; trenutno ga v muzeju nimamo, zato si bomo pomagali s print serverjem TRENDnet TE-310, ki ga usposobimo takole:
-- V `/etc/dhcpcd.conf` nastavimo statičen IP za mrežno kartico: `interface eth0   static ip_address=192.168.3.10/24`
-- V `/etc/rc.local` po navodilih print serverju nastavimo IP: `arp -s 192.168.3.1 00:c0:02:16:29:45`
-- S `tftp` preverimo, da je v datoteki `CONFIG` na print serverju tale vrstica: `0501 LPT1MODE:Ack&Busy`
-- Nato še namestimo tiskalnik: `sudo lpadmin -p tiskalnik -v lpd://192.168.3.1/L1 -E; sudo lpadmin -d tiskalnik`
-
-sudo lpadmin -p tiskalnik -v usb://Unknown/Printer -E; sudo lpadmin -d tiskalnik
+- Tiskalnik lahko priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP
+- Namestimo ga s `sudo lpadmin -p tiskalnik -v usb://Unknown/Printer -E; sudo lpadmin -d tiskalnik`
 
 
 Kako do šumnikov:
