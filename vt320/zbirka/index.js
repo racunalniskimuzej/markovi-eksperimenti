@@ -152,8 +152,6 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
             -smms.         -smms-            
 `;
 
-banner = center(banner);
-
 const helpText = `
 Ukazi:
 * najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
@@ -163,7 +161,7 @@ Ukazi:
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.`;
 
-izpisi(vt320drcs() + banner + helpText);
+izpisi(vt320drcs() + center(banner) + helpText);
 
 var vec = '';
 const najdi2 = (url) => {
@@ -247,7 +245,7 @@ const razstave2 = (url) => {
 
 readlineSync.promptCLLoop({
     pomoc: function() {
-        izpisi(banner + helpText);
+        izpisi(center(banner) + helpText);
     },
     pocisti: function() {
         izpisi('\033[2J');
@@ -306,8 +304,8 @@ readlineSync.promptCLLoop({
                             '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
                             '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...');
 
-                        fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n" + banner +
-                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
+                        fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n\n" +
+                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si" + banner)));
                         while (true) {
                             izpisi('Tiskam... :)');
                             execSync('lp /tmp/webcam.txt');
