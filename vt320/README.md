@@ -1,6 +1,7 @@
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
 Terminalski dostop do https://zbirka.muzej.si/
+- Nastavitve na VT320 ponastavimo z `Default` in spremenimo naslednje: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, nato izberemo `Save`
 - Node.js modul v direktorju `zbirka` se namesti s `sudo apt install graphicsmagick; npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v `node_modules` spremenjena 
 - Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service`
 - Na RPi se ustvari nov uporabnik `zbirka` in v njegov `.profile` doda onemogočenje CTRL+C/Z/backslash in samodejni zagon Node.js aplikacije
