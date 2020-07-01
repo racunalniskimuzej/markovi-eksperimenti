@@ -243,6 +243,18 @@ const razstave2 = (url) => {
     }
 };
 
+const vec2 = () => {
+    if (vec) {
+        if (vec.includes('/api/eksponati/')) {
+            najdi2(vec);
+        } else {
+            razstave2(vec);
+        }
+    } else {
+        izpisi('Ni zadetkov.');
+    }
+}
+
 readlineSync.promptCLLoop({
     pomoc: function() {
         izpisi(center(banner) + helpText);
@@ -369,15 +381,7 @@ readlineSync.promptCLLoop({
 
     },
     vec: () => {
-        if (vec) {
-            if (vec.includes('/api/eksponati/')) {
-                najdi2(vec);
-            } else {
-                razstave2(vec);
-            }
-        } else {
-            izpisi('Ni zadetkov.');
-        }
+        vec2();
     },
     format: function() {
         izpisi(easteregg());
@@ -390,7 +394,16 @@ readlineSync.promptCLLoop({
         if (process.env.SSH_CONNECTION) return true;
     },
     _: function(command) {
-        izpisi("Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'.");
+        var cmd = latinize(lk201(command)).toLowerCase();
+        if (cmd == "pomoc") {
+            izpisi(center(banner) + helpText);
+        } else if (cmd == "pocisti") {
+            izpisi('\033[2J');
+        } else if (cmd == "vec") {
+            vec2();
+        } else {
+            izpisi("Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'.");
+        }
     }
 }, {
     prompt: vt320drcs() + '$ > ',
