@@ -163,7 +163,7 @@ Ukazi:
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.
-* english - Switch to English language.`;
+* \x1B[7menglish\x1B[m - Switch to English language.`;
 
 const helpTextEn = `
 Commands:
@@ -173,7 +173,7 @@ Commands:
 * stats - Displays collection statistics.
 * photo - ASCII art of your face :) Donate to get a printout ;)
 * clear - Clears the screen.
-* slovenski - Preklopi na slovenščino.`;
+* \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
 
 var vec = '';
 const najdi2 = (url) => {
@@ -455,8 +455,8 @@ readlineSync.promptCLLoop({
         } else if (cmd == "vec") {
             vec2();
         } else {
-            izpisi((slo ? "Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'." :
-                "Command '" + lk201(command) + "' not recognized. Try 'help'."));
+            izpisi((slo ? "Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'. / Try 'help'." :
+                "Command '" + lk201(command) + "' not recognized. Try 'help'. / Poizkusite s 'pomoc'."));
         }
     }
 }, {
