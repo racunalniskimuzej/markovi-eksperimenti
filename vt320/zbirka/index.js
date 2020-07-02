@@ -18,6 +18,8 @@ const izpisi = (str) => {
     console.log(vt320(str));
 };
 
+var slo = true;
+
 const easteregg = () => {
     var out = '\033(0';
     var chars = '`a';
@@ -39,11 +41,11 @@ const center = (str) => {
 }
 
 const vprasaj = (query) => {
-    return readlineSync.keyIn(vt320(query + " [d/n]: "), {
+    return readlineSync.keyIn(vt320(query + (slo ? " [d/n]: " : " [y/n]: ")), {
         hideEchoBack: false,
-        limit: 'dn',
-        trueValue: 'd',
-        falseValue: 'n',
+        limit: (slo ? 'dn' : 'yn'),
+        trueValue: (slo ? 'd' : 'y'),
+        falseValue: (slo ? 'n' : 'n'),
         caseSensitive: false
     });
 }
@@ -132,7 +134,8 @@ function vt320drcs() {
         "?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;" +
         "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
         "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
-        vt320(center('Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/')) + '\033[0$}';
+        vt320(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
+        'Slovenian computer museum collection - https://zbirka.muzej.si/'))) + '\033[0$}';
 }
 
 var banner = ` 
@@ -152,8 +155,9 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
             -smms.         -smms-            
 `;
 
-const helpText = `
+const helpTextSlo = `
 Ukazi:
+* english - Switch to English language.
 * najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
@@ -161,7 +165,21 @@ Ukazi:
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.`;
 
-izpisi(vt320drcs() + center(banner) + helpText);
+const helpTextEn = `
+Commands:
+* slovenski - Preklopi na slovenščino.
+* find <keyword> - Lists item IDs matching the keywords.
+* item <id> - Displays details about an item.
+* exhibitions [id] - List all exibitions or details about an exhibition with ID
+* stats - Displays collection statistics.
+* photo - ASCII art of your face :) Donate to get a printout ;)
+* clear - Clears the screen.`;
+
+const helpText = () => {
+    return (slo ? helpTextSlo : helpTextEn);
+}
+
+izpisi(vt320drcs() + center(banner) + helpText());
 
 var vec = '';
 const najdi2 = (url) => {
@@ -180,14 +198,15 @@ const najdi2 = (url) => {
         }
         if (json.next) {
             vec = json.next;
-            out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
+            out += (slo ? "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n" :
+            "(Partial list of " + json.count + " results - type 'more' for more)\n");
         } else {
             vec = '';
         }
-        if (json.count == 0) out += "Ni zadetkov.";
+        if (json.count == 0) out += (slo ? "Ni zadetkov." : "No results.");
         izpisi(out);
     } catch (e) {
-        izpisi("Ni zadetkov.");
+        izpisi((slo ? "Ni zadetkov." : "No results."));
     }
 };
 
@@ -206,7 +225,8 @@ const razstave2 = (url) => {
             }
             if (json.next) {
                 vec = json.next;
-                out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
+                out += (slo ? "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n" :
+                "(Partial list of " + json.count + " results - type 'more' for more)\n");
             } else {
                 vec = '';
             }
@@ -216,16 +236,16 @@ const razstave2 = (url) => {
             if (json.otvoritev && json.zakljucek) out += " (" + json.otvoritev + " - " + json.zakljucek + ")";
             out += "\n--------------------------";
             if (json.avtorji) {
-                out += "\nAvtorji: ";
+                out += (slo ? "\nAvtorji: " : "\nAuthors: ");
                 for (var i = 0; i < json.avtorji.length; i++) {
                     out += json.avtorji[i].replace(',', '') + ", ";
                 }
                 out = out.substring(0, out.length - 2);
             }
 
-            if (json.opis) out += "\nOpis: " + json.opis;
+            if (json.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + json.opis;
             if (json.primerki) {
-                out += "\nEksponati:\n";
+                out += (slo ? "\nEksponati:\n" : "\nItems:\n");
                 for (var i = 0; i < json.primerki.length; i++) {
                     if (json.primerki[i].eksponat) {
                         out += "#" + json.primerki[i].inventarna_st + ": " + json.primerki[i].eksponat.ime;
@@ -239,7 +259,7 @@ const razstave2 = (url) => {
         }
         izpisi(out);
     } catch (e) {
-        izpisi("Prišlo je do napake / Razstava s tem ID ne obstaja.");
+        izpisi((slo ? "Razstava s tem ID ne obstaja." : "Exhibition with this ID not found."));
     }
 };
 
@@ -251,13 +271,21 @@ const vec2 = () => {
             razstave2(vec);
         }
     } else {
-        izpisi('Ni zadetkov.');
+        izpisi((slo ? 'Ni več zadetkov.' : 'No more results.'));
     }
 }
 
 readlineSync.promptCLLoop({
+    english: function() {
+        slo = false;
+        izpisi(center(banner) + helpText());
+    },
+    slovenski: function() {
+        slo = true;
+        izpisi(center(banner) + helpText());
+    },
     pomoc: function() {
-        izpisi(center(banner) + helpText);
+        izpisi(center(banner) + helpText());
     },
     pocisti: function() {
         izpisi('\033[2J');
@@ -265,7 +293,8 @@ readlineSync.promptCLLoop({
     fotka: function() {
         try {
             while (true) {
-                pocakaj('Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...');
+                pocakaj((slo ? 'Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...' :
+                'Say cheese, press ENTER and wait for the beep...'));
 
                 var done = false,
                     buffer = null;
@@ -307,7 +336,7 @@ readlineSync.promptCLLoop({
                 let ascii2 = ascii.slice(half, ascii.length);
 
                 izpisi(ascii1);
-                pocakaj('Za nadaljevanje pritisni ENTER...');
+                pocakaj((slo ? 'Za nadaljevanje pritisni ENTER...' : 'Press ENTER to continue...'));
                 izpisi(ascii2);
 
                 if (vprasaj('Si zadovoljen s fotko? (n = ponovno fotkanje)')) {
@@ -350,17 +379,18 @@ readlineSync.promptCLLoop({
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
             out += "\n--------------------------";
-            if (obj.eksponat.tip) out += "\nTip: " + obj.eksponat.tip;
-            if (obj.eksponat.proizvajalec) out += "\nProizvajalec: " + obj.eksponat.proizvajalec;
-            if (obj.leto_proizvodnje) out += "\nLeto: " + obj.leto_proizvodnje;
-            if (obj.eksponat.opis) out += "\nOpis: " + obj.eksponat.opis;
-            if (obj.stanje) out += "\nStanje: " + obj.stanje;
-            if (obj.zgodovina) out += "\nZgodovina: " + obj.zgodovina;
-            if (obj.donator) out += "\nEksponat je prijazno doniral/-a " + obj.donator.replace(',', '');
+            if (obj.eksponat.tip) out += (slo ? "\nTip: " : "\nModel: ") + obj.eksponat.tip;
+            if (obj.eksponat.proizvajalec) out += (slo ? "\nProizvajalec: " : "\nManufacturer: ") + obj.eksponat.proizvajalec;
+            if (obj.leto_proizvodnje) out += (slo ? "\nLeto: " : "\nYear: ") + obj.leto_proizvodnje;
+            if (obj.eksponat.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + obj.eksponat.opis;
+            if (obj.stanje) out += (slo ? "\nStanje: " : "\nCondition: ") + obj.stanje;
+            if (obj.zgodovina) out += (slo ? "\nZgodovina: " : "\nHistory: ") + obj.zgodovina;
+            if (obj.donator) out += (slo ? "\nEksponat je prijazno doniral/-a " : 
+            "\nKindly donated by ") + obj.donator.replace(',', '');
             out += "\n";
             izpisi(out);
         } catch (e) {
-            izpisi("Eksponat s tem ID ne obstaja.");
+            izpisi((slo ? "Eksponat s tem ID ne obstaja." : "Item with this ID not found."));
         }
     },
     statistika: () => {
@@ -376,7 +406,7 @@ readlineSync.promptCLLoop({
             }
             izpisi(out);
         } catch (e) {
-            izpisi("Prišlo je do napake.");
+            izpisi((slo ? "Prišlo je do napake." : "An error occured"));
         }
 
     },
@@ -396,13 +426,14 @@ readlineSync.promptCLLoop({
     _: function(command) {
         var cmd = latinize(lk201(command)).toLowerCase();
         if (cmd == "pomoc") {
-            izpisi(center(banner) + helpText);
+            izpisi(center(banner) + helpText());
         } else if (cmd == "pocisti") {
             izpisi('\033[2J');
         } else if (cmd == "vec") {
             vec2();
         } else {
-            izpisi("Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'.");
+            izpisi((slo ? "Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'." :
+            "Command '" + lk201(command) + "' not recognized. Try 'help'."));
         }
     }
 }, {
