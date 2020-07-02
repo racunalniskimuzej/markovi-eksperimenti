@@ -157,29 +157,23 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
 
 const helpTextSlo = `
 Ukazi:
-* english - Switch to English language.
 * najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
-* pocisti - Počisti zaslon.`;
+* pocisti - Počisti zaslon.
+* english - Switch to English language.`;
 
 const helpTextEn = `
 Commands:
-* slovenski - Preklopi na slovenščino.
 * find <keyword> - Lists item IDs matching the keywords.
 * item <id> - Displays details about an item.
-* exhibitions [id] - List all exibitions; or details of specified ID.
+* exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
 * photo - ASCII art of your face :) Donate to get a printout ;)
-* clear - Clears the screen.`;
-
-const helpText = () => {
-    return (slo ? helpTextSlo : helpTextEn);
-}
-
-izpisi(vt320drcs() + center(banner) + helpText());
+* clear - Clears the screen.
+* slovenski - Preklopi na slovenščino.`;
 
 var vec = '';
 const najdi2 = (url) => {
@@ -387,7 +381,7 @@ const eksponat1 = (id) => {
 }
 
 const pomoc1 = () => {
-    izpisi(center(banner) + helpText());
+    izpisi(center(banner) + (slo ? helpTextSlo : helpTextEn));
 }
 
 const pocisti1 = () => {
@@ -413,8 +407,11 @@ const statistika1 = () => {
 
 const jezik = (sl) => {
     slo = sl;
-    izpisi(center(banner) + helpText());
+    pomoc1();
 }
+
+izpisi(vt320drcs());
+pomoc1();
 
 readlineSync.promptCLLoop({
     english: function() { jezik(false); },
