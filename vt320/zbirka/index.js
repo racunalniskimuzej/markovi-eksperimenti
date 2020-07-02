@@ -460,7 +460,7 @@ readlineSync.promptCLLoop({
         }
     }
 }, {
-    prompt: vt320drcs() + '$ > ',
+    prompt: { toString: function() { return vt320drcs() + '$ > '; } },
     defaultInput: "blank",
     hideEchoBack: true,
     mask: "return vt320(lk201(str))"
