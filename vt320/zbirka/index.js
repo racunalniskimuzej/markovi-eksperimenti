@@ -1,142 +1,4 @@
-const readlineSync = require('readline-sync');
-var request = require('sync-request');
-var latinize = require('latinize');
-
-fs = require('fs');
-const execSync = require('child_process').execSync;
-
-const imageToAscii = require("image-to-ascii");
-var Camera = require("@sigodenjs/fswebcam");
-var camera = new Camera({
-    callbackReturn: "buffer",
-    rotate: 90
-});
-var gm = require('gm');
-var deasync = require('deasync');
-
-const izpisi = (str) => {
-    console.log(vt320(str));
-};
-
-var slo = true;
-
-const easteregg = () => {
-    var out = '\033(0';
-    var chars = '`a';
-    for (var j = 0; j < 24; j++) {
-        for (var i = 0; i < 80; i++) {
-            out += chars.charAt(Math.floor(Math.random() * chars.length));
-        }
-        out += "\007\n";
-    }
-    izpisi(out.substring(0, out.length - 1) + "\033(B");
-};
-
-const center = (str) => {
-    let lines = str.split(/\n/);
-    lines = lines.map(line => line.length > 0 ?
-        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ').padEnd(80, ' ') :
-        line);
-    return lines.join('\n');
-}
-
-const vprasaj = (query) => {
-    return readlineSync.keyIn(vt320(query + (slo ? " [d/n]: " : " [y/n]: ")), {
-        hideEchoBack: false,
-        limit: (slo ? 'dn' : 'yn'),
-        trueValue: (slo ? 'd' : 'y'),
-        falseValue: (slo ? 'n' : 'n'),
-        caseSensitive: false
-    });
-}
-
-const pocakaj = (query) => {
-    readlineSync.question(vt320(query), {
-        hideEchoBack: true,
-        mask: ''
-    });
-}
-
-fujitsu_chars = {
-    'Š': '[',
-    'Đ': '\\',
-    'Ć': ']',
-    'Č': '^',
-    'Ž': '`',
-    'š': '[',
-    'đ': '\\',
-    'ć': ']',
-    'č': '^',
-    'ž': '`'
-};
-
-function fujitsu(str) {
-    if (typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return fujitsu_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
-}
-
-vt320_chars = {
-    "Š": "\033(P!\033(B",
-    "Č": "\033(P\"\033(B",
-    "Ž": "\033(P#\033(B",
-    "Ć": "\033(P$\033(B",
-    "Đ": "\033(P%\033(B",
-    "š": "\033(P&\033(B",
-    "č": "\033(P'\033(B",
-    "ž": "\033(P(\033(B",
-    "ć": "\033(P)\033(B",
-    "đ": "\033(P*\033(B"
-};
-
-global.vt320 = function vt320(str) {
-    if (!process.env.SSH_CONNECTION && typeof str === 'string') {
-        return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return vt320_chars[x] || x;
-        }));
-    } else {
-        return str;
-    }
-}
-
-lk201_chars = {
-    "{": "Š",
-    ":": "Č",
-    "|": "Ž",
-    "\"": "Ć",
-    "}": "Đ",
-    "[": "š",
-    ";": "č",
-    "\\": "ž",
-    "'": "ć",
-    "]": "đ"
-};
-
-global.lk201 = function lk201(str) {
-    if (!process.env.SSH_CONNECTION && typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return lk201_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
-}
-
-function vt320drcs() {
-    if (process.env.SSH_CONNECTION) return '';
-    return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
-        "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
-        "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +
-        "?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;" +
-        "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
-        "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
-        vt320(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
-            'Slovenian computer museum collection - https://zbirka.muzej.si/'))) + '\033[0$}';
-}
+require('./utils');
 
 var banner = ` 
 
@@ -174,6 +36,12 @@ Commands:
 * photo - ASCII art of your face :) Donate to get a printout ;)
 * clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
+
+var slo = true;
+const jezik = (sl) => {
+    slo = sl;
+    pomoc2();
+}
 
 var vec = '';
 const najdi2 = (url) => {
@@ -257,210 +125,201 @@ const razstave2 = (url) => {
     }
 };
 
-const vec2 = () => {
-    if (vec) {
-        if (vec.includes('/api/eksponati/')) {
-            najdi2(vec);
-        } else {
-            razstave2(vec);
-        }
-    } else {
-        izpisi((slo ? 'Ni več zadetkov.' : 'No more results.'));
-    }
-}
-
-const fotka1 = () => {
-    try {
-        while (true) {
-            pocakaj((slo ? 'Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...' :
-                'Say cheese, press ENTER and wait for the beep...'));
-
-            var done = false,
-                buffer = null;
-            camera.capture(function(err, data) {
-                buffer = data;
-                done = true;
-            });
-            deasync.loopWhile(function() {
-                return !done;
-            });
-
-            izpisi('\007');
-
-            var done2 = false,
-                data = null;
-            var img = gm(buffer).contrast(-5);
-            img.toBuffer('JPG', function(err, buffer) {
-                data = buffer;
-                done2 = true;
-            });
-            deasync.loopWhile(function() {
-                return !done2;
-            });
-
-            var img2ascii = deasync(imageToAscii);
-            var ascii = img2ascii(data, {
-                colored: false,
-                reverse: true,
-                pixels: " .,:;i1tfLCG08",
-                size_options: {
-                    screen_size: {
-                        height: 48
-                    }
-                }
-            });
-
-            let half = Math.floor(ascii.length / 2)
-            let ascii1 = ascii.slice(0, half);
-            let ascii2 = ascii.slice(half, ascii.length);
-
-            izpisi(ascii1);
-            pocakaj((slo ? 'Za nadaljevanje pritisni ENTER...' : 'Press ENTER to continue...'));
-            izpisi(ascii2);
-
-            if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
-                if (vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
-                    pocakaj((slo ? '1. Prižgi printer s stikalom blizu kablov.\n' +
-                        '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
-                        '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...' :
-                        '1. Turn on line printer with switch next to its cables.\n' +
-                        '2. Press the blue START button so that the display shows ONLINE.\n' +
-                        '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
-
-                    fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n\n" +
-                        "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si" + banner)));
-                    while (true) {
-                        izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
-                        execSync('lp /tmp/webcam.txt');
-                        if (vprasaj((slo ? 'Je bil tisk uspešen? (n = ponovno tiskanje)' : 'Did it print okay? (n = prints again)'))) break;
-                    }
-                    return;
-                } else {
-                    return;
-                }
-            }
-
-        }
-    } catch (e) {
-        izpisi((slo ? 'Pri fotkanju je prišlo do napake :(' : 'An error occured while taking your picture :('));
-    }
-}
-
-const najdi1 = (...geslo) => {
-    var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(lk201(geslo.join(' '))) : 'undefined');
-    najdi2(url);
-
-}
-
-const razstave1 = (id) => {
-    var url = 'https://zbirka.muzej.si/api/razstave/' + (id ? id.replace('#', '') + '/' : '');
-    razstave2(url);
-}
-
-const eksponat1 = (id) => {
-    try {
-        var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + id + '/');
-        var obj = JSON.parse(res.getBody());
-        var out = obj.eksponat.ime;
-        if (obj.serijska_st) out += ", " + obj.serijska_st;
-        out += "\n--------------------------";
-        if (obj.eksponat.tip) out += (slo ? "\nTip: " : "\nModel: ") + obj.eksponat.tip;
-        if (obj.eksponat.proizvajalec) out += (slo ? "\nProizvajalec: " : "\nManufacturer: ") + obj.eksponat.proizvajalec;
-        if (obj.leto_proizvodnje) out += (slo ? "\nLeto: " : "\nYear: ") + obj.leto_proizvodnje;
-        if (obj.eksponat.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + obj.eksponat.opis;
-        if (obj.stanje) out += (slo ? "\nStanje: " : "\nCondition: ") + obj.stanje;
-        if (obj.zgodovina) out += (slo ? "\nZgodovina: " : "\nHistory: ") + obj.zgodovina;
-        if (obj.donator) out += (slo ? "\nEksponat je prijazno doniral/-a " :
-            "\nKindly donated by ") + obj.donator.replace(',', '');
-        out += "\n";
-        izpisi(out);
-    } catch (e) {
-        izpisi((slo ? "Eksponat s tem ID ne obstaja." : "Item with this ID not found."));
-    }
-
-}
-
-const pomoc1 = () => {
+const pomoc2 = () => {
     izpisi(center(banner) + (slo ? helpTextSlo : helpTextEn));
 }
 
-const pocisti1 = () => {
-    izpisi('\033[2J');
-}
-
-const statistika1 = () => {
-    try {
-        var res = request('GET', 'https://zbirka.muzej.si/api/statistika/');
-        var arr = JSON.parse(res.getBody());
-        var out = '';
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i].eksponatov > 0) {
-                out += arr[i].eksponatov + " x " + arr[i].ime;
-                out += "\n";
-            }
-        }
-        izpisi(out);
-    } catch (e) {
-        izpisi((slo ? "Prišlo je do napake." : "An error occured"));
-    }
-}
-
-const jezik = (sl) => {
-    slo = sl;
-    pomoc1();
-}
-
 izpisi(vt320drcs());
-pomoc1();
+pomoc2();
 
-readlineSync.promptCLLoop({
-    english: function() { jezik(false); },
-    slovenski: function() { jezik(true); },
+readlineSync.promptCLLoop(self = {
+    najdi: function najdi(...geslo) {
+        var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(lk201(geslo.join(' '))) : 'undefined');
+        najdi2(url);
 
-    pomoc: function() { pomoc1(); },
-    help: function() { pomoc1(); },
+    },
+    eksponat: function(id) {
+        try {
+            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + id + '/');
+            var obj = JSON.parse(res.getBody());
+            var out = obj.eksponat.ime;
+            if (obj.serijska_st) out += ", " + obj.serijska_st;
+            out += "\n--------------------------";
+            if (obj.eksponat.tip) out += (slo ? "\nTip: " : "\nModel: ") + obj.eksponat.tip;
+            if (obj.eksponat.proizvajalec) out += (slo ? "\nProizvajalec: " : "\nManufacturer: ") + obj.eksponat.proizvajalec;
+            if (obj.leto_proizvodnje) out += (slo ? "\nLeto: " : "\nYear: ") + obj.leto_proizvodnje;
+            if (obj.eksponat.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + obj.eksponat.opis;
+            if (obj.stanje) out += (slo ? "\nStanje: " : "\nCondition: ") + obj.stanje;
+            if (obj.zgodovina) out += (slo ? "\nZgodovina: " : "\nHistory: ") + obj.zgodovina;
+            if (obj.donator) out += (slo ? "\nEksponat je prijazno doniral/-a " :
+                "\nKindly donated by ") + obj.donator.replace(',', '');
+            out += "\n";
+            izpisi(out);
+        } catch (e) {
+            izpisi((slo ? "Eksponat s tem ID ne obstaja." : "Item with this ID not found."));
+        }
 
-    pocisti: function() { pocisti1(); },
-    clear: function() { pocisti1(); },
+    },
+    razstave: function razstave(id) {
+        var url = 'https://zbirka.muzej.si/api/razstave/' + (id ? id.replace('#', '') + '/' : '');
+        razstave2(url);
+    },
+    statistika: () => {
+        try {
+            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/');
+            var arr = JSON.parse(res.getBody());
+            var out = '';
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].eksponatov > 0) {
+                    out += arr[i].eksponatov + " x " + arr[i].ime;
+                    out += "\n";
+                }
+            }
+            izpisi(out);
+        } catch (e) {
+            izpisi((slo ? "Prišlo je do napake." : "An error occured"));
+        }
+    },
+    fotka: function() {
+        try {
+            while (true) {
+                pocakaj((slo ? 'Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...' :
+                    'Say cheese, press ENTER and wait for the beep...'));
 
-    fotka: function() { fotka1(); },
-    photo: function() { fotka1(); },
+                var done = false,
+                    buffer = null;
+                camera.capture(function(err, data) {
+                    buffer = data;
+                    done = true;
+                });
+                deasync.loopWhile(function() {
+                    return !done;
+                });
 
-    najdi: function najdi(...geslo) { najdi1(...geslo); },
-    find: function find(...geslo) { najdi1(...geslo); },
+                izpisi('\007');
 
-    razstave: function razstave(id) { razstave1(id); },
-    exhibitions: function exhibitions(id) { razstave1(id); },
+                var done2 = false,
+                    data = null;
+                var img = gm(buffer).contrast(-5);
+                img.toBuffer('JPG', function(err, buffer) {
+                    data = buffer;
+                    done2 = true;
+                });
+                deasync.loopWhile(function() {
+                    return !done2;
+                });
 
-    eksponat: function(id) { eksponat1(id); },
-    item: function(id) { eksponat1(id); },
+                var img2ascii = deasync(imageToAscii);
+                var ascii = img2ascii(data, {
+                    colored: false,
+                    reverse: true,
+                    pixels: " .,:;i1tfLCG08",
+                    size_options: {
+                        screen_size: {
+                            height: 48
+                        }
+                    }
+                });
 
-    statistika: () => { statistika1(); },
-    stats: () => { statistika1(); },
+                let half = Math.floor(ascii.length / 2)
+                let ascii1 = ascii.slice(0, half);
+                let ascii2 = ascii.slice(half, ascii.length);
 
-    vec: () => { vec2(); },
-    more: () => { vec2(); },
+                izpisi(ascii1);
+                pocakaj((slo ? 'Za nadaljevanje pritisni ENTER...' : 'Press ENTER to continue...'));
+                izpisi(ascii2);
 
-    format: function() { easteregg(); },
-    rm: function() { easteregg(); },
+                if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
+                    if (vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
+                        pocakaj((slo ? '1. Prižgi printer s stikalom blizu kablov.\n' +
+                            '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
+                            '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...' :
+                            '1. Turn on line printer with switch next to its cables.\n' +
+                            '2. Press the blue START button so that the display shows ONLINE.\n' +
+                            '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
 
-    izhod: function() { if (process.env.SSH_CONNECTION) return true; },
+                        fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n\n" +
+                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si" + banner)));
+                        while (true) {
+                            izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
+                            execSync('lp /tmp/webcam.txt');
+                            if (vprasaj((slo ? 'Je bil tisk uspešen? (n = ponovno tiskanje)' : 'Did it print okay? (n = prints again)'))) break;
+                        }
+                        return;
+                    } else {
+                        return;
+                    }
+                }
+
+            }
+        } catch (e) {
+            izpisi((slo ? 'Pri fotkanju je prišlo do napake :(' : 'An error occured while taking your picture :('));
+        }
+    },
+    pocisti: () => {
+        izpisi('\033[2J');
+    },
+    english: () => {
+        jezik(false);
+    },
+    slovenski: () => {
+        jezik(true);
+    },
+    vec: function() {
+        if (vec) {
+            if (vec.includes('/api/eksponati/')) {
+                najdi2(vec);
+            } else {
+                razstave2(vec);
+            }
+        } else {
+            izpisi((slo ? 'Ni več zadetkov.' : 'No more results.'));
+        }
+    },
+    pomoc: () => {
+        pomoc2();
+    },
+    help: () => {
+        self["pomoc"]();
+    },
+    format: () => {
+        var out = '\033(0';
+        var chars = '`a';
+        for (var j = 0; j < 24; j++) {
+            for (var i = 0; i < 80; i++) {
+                out += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            out += "\007\n";
+        }
+        izpisi(out.substring(0, out.length - 1) + "\033(B");
+    },
+    rm: () => {
+        self["format"]();
+    },
+    izhod: function() {
+        if (process.env.SSH_CONNECTION) return true;
+    },
     blank: function() {},
-    _: function(command) {
+    _: function(command, ...args) {
         var cmd = latinize(lk201(command)).toLowerCase();
-        if (cmd == "pomoc") {
-            pomoc1();
-        } else if (cmd == "pocisti") {
-            pocisti1();
-        } else if (cmd == "vec") {
-            vec2();
+        if (!slo) {
+            cmd = cmd.replace("find", "najdi").replace("item", "eksponat").replace("exhibitions", "razstave").
+            replace("stats", "statistika").replace("photo", "fotka").replace("clear", "pocisti").replace("more", "vec");
+        }
+
+        if (self[cmd]) {
+            self[cmd](...args);
         } else {
             izpisi((slo ? "Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'. / Try 'help'." :
                 "Command '" + lk201(command) + "' not recognized. Try 'help'. / Poizkusite s 'pomoc'."));
         }
     }
 }, {
-    prompt: { toString: function() { return vt320drcs() + '$ > '; } },
+    prompt: {
+        toString: function() {
+            return vt320drcs() + '$ > ';
+        }
+    },
     defaultInput: "blank",
     hideEchoBack: true,
     mask: "return vt320(lk201(str))"
