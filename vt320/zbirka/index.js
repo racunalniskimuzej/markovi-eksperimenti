@@ -280,7 +280,7 @@ readlineSync.promptCLLoop(self = {
         pomoc2();
     },
     help: () => {
-        self["pomoc"]();
+        self.pomoc();
     },
     format: () => {
         var out = '\033(0';
@@ -294,7 +294,7 @@ readlineSync.promptCLLoop(self = {
         izpisi(out.substring(0, out.length - 1) + "\033(B");
     },
     rm: () => {
-        self["format"]();
+        self.format();
     },
     izhod: function() {
         if (process.env.SSH_CONNECTION) return true;
