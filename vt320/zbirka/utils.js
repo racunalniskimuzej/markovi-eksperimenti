@@ -39,10 +39,10 @@ global.prevedi = function prevedi(str) {
     return data;
 }
 
-global.center = function center(str) {
+global.center = function center(str, pad = false) {
     let lines = str.split(/\n/);
     lines = lines.map(line => line.length > 0 ?
-        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ').padEnd(80, ' ') :
+        line.padStart(line.length + ((80 / 2) - (line.length / 2)), ' ').padEnd((pad ? 80 : 0), ' ') :
         line);
     return lines.join('\n');
 }
@@ -146,5 +146,5 @@ global.vt320drcs = function vt320drcs() {
         "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
         "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
         vt320(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
-            'Slovenian computer museum collection - https://zbirka.muzej.si/'))) + '\033[0$}';
+            'Slovenian computer museum collection - https://zbirka.muzej.si/'), true)) + '\033[0$}';
 }
