@@ -101,14 +101,14 @@ vt320_chars = {
 };
 
 global.vt320 = function vt320(str) {
-    if (process.argv.slice(2)[0]) {
-       if (process.argv.slice(2)[0] != 9600 && typeof str === 'string') {
-        return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return vt320_chars[x] || x;
-        }));
-    } else {
-      return latinize(str);
-    }
+    if (process.argv.slice(2)[0] && typeof str === 'string') {
+        if (process.argv.slice(2)[0] != 9600) {
+            return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
+                return vt320_chars[x] || x;
+            }));
+        } else {
+            return latinize(str);
+        }
     } else {
         return str;
     }
