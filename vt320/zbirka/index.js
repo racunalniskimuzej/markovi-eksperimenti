@@ -25,7 +25,7 @@ Ukazi:
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
 * pocisti - Počisti zaslon.
-* \x1B[7menglish\x1B[m - Switch to English language.`;
+* \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
 
 const helpTextEn = `
 Commands:
@@ -37,7 +37,7 @@ Commands:
 * clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
 
-var slo = true;
+global.slo = true;
 const jezik = (sl) => {
     slo = sl;
     pomoc2();
@@ -51,10 +51,18 @@ const najdi2 = (url) => {
         var json = JSON.parse(res.getBody());
         var arr = json.results;
         var out = '';
+        zadetki = [];
         for (var i = 0; i < arr.length; i++) {
             if (arr[i].eksponat) {
-                out += "#" + arr[i].inventarna_st + ": " + arr[i].eksponat.ime;
-                if (arr[i].serijska_st) out += ", " + arr[i].serijska_st;
+                zadetki[i] = arr[i].eksponat.ime;
+                if (arr[i].serijska_st) zadetki[i] += ", " + arr[i].serijska_st;
+            }
+        }
+        zadetki = prevedi(zadetki.join("\n")).split("\n");
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].eksponat) {
+                out += "#" + arr[i].inventarna_st + ": " + zadetki[i];
                 out += "\n";
             }
         }
@@ -154,7 +162,7 @@ readlineSync.promptCLLoop(self = {
             if (obj.donator) out += (slo ? "\nEksponat je prijazno doniral/-a " :
                 "\nKindly donated by ") + obj.donator.replace(',', '');
             out += "\n";
-            izpisi(out);
+            izpisi(prevedi(out));
         } catch (e) {
             izpisi((slo ? "Eksponat s tem ID ne obstaja." : "Item with this ID not found."));
         }

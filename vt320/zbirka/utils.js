@@ -13,10 +13,31 @@ global.camera = new Camera({
 });
 global.gm = require('gm');
 global.deasync = require('deasync');
+global.translate = require('@vitalets/google-translate-api');
 
 global.izpisi = function izpisi(str) {
     console.log(vt320(str));
 };
+
+global.prevedi = function prevedi(str) {
+    if (slo) return str;
+    var done = false;
+    var data;
+    translate(str, {
+        from: 'sl',
+        to: 'en'
+    }).then(res => {
+        done = true;
+        data = res.text;
+    }).catch(err => {
+        done = true;
+        data = str;
+    });
+    deasync.loopWhile(function() {
+        return !done;
+    });
+    return data;
+}
 
 global.center = function center(str) {
     let lines = str.split(/\n/);
