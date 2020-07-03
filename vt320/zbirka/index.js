@@ -144,11 +144,10 @@ readlineSync.promptCLLoop(self = {
     najdi: function najdi(...geslo) {
         var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(lk201(geslo.join(' '))) : 'undefined');
         najdi2(url);
-
     },
     eksponat: function(id) {
         try {
-            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + id + '/');
+            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined'));
             var obj = JSON.parse(res.getBody());
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
