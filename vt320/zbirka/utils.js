@@ -101,10 +101,14 @@ vt320_chars = {
 };
 
 global.vt320 = function vt320(str) {
-    if (!process.env.SSH_CONNECTION && typeof str === 'string') {
+    if (process.argv.slice(2)[0]) {
+       if (process.argv.slice(2)[0] != 9600 && typeof str === 'string') {
         return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
             return vt320_chars[x] || x;
         }));
+    } else {
+      return latinize(str);
+    }
     } else {
         return str;
     }
@@ -124,7 +128,7 @@ lk201_chars = {
 };
 
 global.lk201 = function lk201(str) {
-    if (!process.env.SSH_CONNECTION && typeof str === 'string') {
+    if (process.argv.slice(2)[0] && typeof str === 'string') {
         return str.replace(/[^A-Za-z0-9]/g, function(x) {
             return lk201_chars[x] || x;
         });
@@ -134,7 +138,7 @@ global.lk201 = function lk201(str) {
 }
 
 global.vt320drcs = function vt320drcs() {
-    if (process.env.SSH_CONNECTION) return '';
+    if (!process.argv.slice(2)[0] || process.argv.slice(2)[0] == 9600) return '';
     return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
         "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
         "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +

@@ -304,7 +304,7 @@ readlineSync.promptCLLoop(self = {
         self.format();
     },
     izhod: function() {
-        if (process.env.SSH_CONNECTION) return true;
+        if (!process.argv.slice(2)[0]) return true;
     },
     blank: function() {},
     _: function(command, ...args) {
