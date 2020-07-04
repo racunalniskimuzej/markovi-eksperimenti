@@ -100,19 +100,42 @@ vt320_chars = {
     "đ": "\033(P*\033(B"
 };
 
-global.vt320 = function vt320(str) {
-    if (process.argv.slice(2)[0] && typeof str === 'string') {
-        if (process.argv.slice(2)[0] != 9600) {
+global.vt320 = function vt320(str) {return paka3000(str);
+    if (typeof str === 'string') {
             return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
                 return vt320_chars[x] || x;
             }));
-        } else {
-            return latinize(str);
-        }
+        
     } else {
         return str;
     }
 }
+
+paka3000_chars = {
+    "Š": "\033(S[\033(B",
+    "Č": "\033(S^\033(B",
+    "Ž": "\033(S@\033(B",
+    "Ć": "\033(S]\033(B",
+    "Đ": "\033(S\\\033(B",
+    "š": "\033(S{\033(B",
+    "č": "\033(S~\033(B",
+    "ž": "\033(S`\033(B",
+    "ć": "\033(S}\033(B",
+    "đ": "\033(S|\033(B"
+};
+
+
+global.paka3000 = function paka3000(str) {
+    if (typeof str === 'string') {
+            return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
+                return paka3000_chars[x] || x;
+            }));
+
+    } else {
+        return str;
+    }
+}
+
 
 lk201_chars = {
     "{": "Š",
@@ -127,7 +150,7 @@ lk201_chars = {
     "]": "đ"
 };
 
-global.lk201 = function lk201(str) {
+global.lk201 = function lk201(str) {return triglav(str);
     if (process.argv.slice(2)[0] && typeof str === 'string') {
         return str.replace(/[^A-Za-z0-9]/g, function(x) {
             return lk201_chars[x] || x;
@@ -137,8 +160,33 @@ global.lk201 = function lk201(str) {
     }
 }
 
+triglav_chars = {
+    "[": "Š",
+    "^": "Č",
+    "@": "Ž",
+    "]": "Ć",
+    "\\": "Đ",
+    "{": "š",
+    "~": "č",
+    "`": "ž",
+    "}": "ć",
+    "|": "đ"
+};
+
+global.triglav = function triglav(str) {
+    if (process.argv.slice(2)[0] && typeof str === 'string') {
+        return str.replace(/[^A-Za-z0-9]/g, function(x) {
+            return triglav_chars[x] || x;
+        });
+    } else {
+        return str;
+    }
+}
+
+
+
 global.vt320drcs = function vt320drcs() {
-    if (!process.argv.slice(2)[0] || process.argv.slice(2)[0] == 9600) return '';
+    if (!process.argv.slice(2)[0] || process.argv.slice(2)[0] == "/dev/ttyUSB1") return '';
     return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
         "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
         "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +

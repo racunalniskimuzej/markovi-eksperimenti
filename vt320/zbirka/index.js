@@ -293,7 +293,7 @@ readlineSync.promptCLLoop(self = {
         var out = '\033(0';
         var chars = '`a';
         for (var j = 0; j < 24; j++) {
-            for (var i = 0; i < 80; i++) {
+            for (var i = 0; i < 79; i++) {
                 out += chars.charAt(Math.floor(Math.random() * chars.length));
             }
             out += "\007\n";
