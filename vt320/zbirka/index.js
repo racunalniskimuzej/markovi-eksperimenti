@@ -142,7 +142,7 @@ pomoc2();
 
 readlineSync.promptCLLoop(self = {
     najdi: function najdi(...geslo) {
-        var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(lk201(geslo.join(' '))) : 'undefined');
+        var url = 'https://zbirka.muzej.si/api/eksponati/?kveri=' + (geslo.length > 0 ? encodeURIComponent(tipkovnica(geslo.join(' '))) : 'undefined');
         najdi2(url);
     },
     eksponat: function(id) {
@@ -245,7 +245,7 @@ readlineSync.promptCLLoop(self = {
                             '2. Press the blue START button so that the display shows ONLINE.\n' +
                             '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
 
-                        fs.writeFileSync("/tmp/webcam.txt", center(fujitsu(ascii + "\n\n" +
+                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n\n" +
                             "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si" + banner)));
                         while (true) {
                             izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
@@ -304,11 +304,11 @@ readlineSync.promptCLLoop(self = {
         self.format();
     },
     izhod: function() {
-        if (!process.argv.slice(2)[0]) return true;
+        if (!tty.startsWith("/dev/ttyUSB")) return true;
     },
     blank: function() {},
     _: function(command, ...args) {
-        var cmd = latinize(lk201(command)).toLowerCase();
+        var cmd = latinize(tipkovnica(command)).toLowerCase();
         if (!slo) {
             cmd = cmd.replace("find", "najdi").replace("item", "eksponat").replace("exhibitions", "razstave").
             replace("stats", "statistika").replace("photo", "fotka").replace("clear", "pocisti").replace("more", "vec");
@@ -317,8 +317,8 @@ readlineSync.promptCLLoop(self = {
         if (self[cmd]) {
             self[cmd](...args);
         } else {
-            izpisi((slo ? "Ne poznam ukaza '" + lk201(command) + "'. Poizkusite s 'pomoc'. / Try 'help'." :
-                "Command '" + lk201(command) + "' not recognized. Try 'help'. / Poizkusite s 'pomoc'."));
+            izpisi((slo ? "Ne poznam ukaza '" + tipkovnica(command) + "'. Poizkusite s 'pomoc'. / Try 'help'." :
+                "Command '" + tipkovnica(command) + "' not recognized. Try 'help'. / Poizkusite s 'pomoc'."));
         }
     }
 }, {
@@ -329,5 +329,5 @@ readlineSync.promptCLLoop(self = {
     },
     defaultInput: "blank",
     hideEchoBack: true,
-    mask: "return vt320(lk201(str))"
+    mask: "return zaslon(tipkovnica(str))"
 });

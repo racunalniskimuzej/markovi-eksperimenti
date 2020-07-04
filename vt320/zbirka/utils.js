@@ -15,8 +15,37 @@ global.gm = require('gm');
 global.deasync = require('deasync');
 global.translate = require('@vitalets/google-translate-api');
 
+const ttyname = require('ttyname');
+global.tty = ttyname();
+
+global.zaslon = function(str) {
+    return str;
+}
+global.tipkovnica = function(str) {
+    return str;
+}
+global.tiskalnik = function(str) {
+    return zamenjaj(fujitsu, str);
+}
+
+if (tty == "/dev/ttyUSB0") {
+    zaslon = function(str) {
+        return latinize(zamenjaj(vt320, str));
+    }
+    tipkovnica = function(str) {
+        return zamenjaj(lk201, str);
+    }
+} else if (tty == "/dev/ttyUSB1") {
+    zaslon = function(str) {
+        return latinize(zamenjaj(paka3000, str));
+    }
+    tipkovnica = function(str) {
+        return zamenjaj(triglav, str);
+    }
+}
+
 global.izpisi = function izpisi(str) {
-    console.log(vt320(str));
+    console.log(zaslon(str));
 };
 
 global.prevedi = function prevedi(str) {
@@ -48,7 +77,7 @@ global.center = function center(str, pad = false) {
 }
 
 global.vprasaj = function vprasaj(query) {
-    return readlineSync.keyIn(vt320(query + (slo ? " [d/n]: " : " [y/n]: ")), {
+    return readlineSync.keyIn(zaslon(query + (slo ? " [d/n]: " : " [y/n]: ")), {
         hideEchoBack: false,
         limit: (slo ? 'dn' : 'yn'),
         trueValue: (slo ? 'd' : 'y'),
@@ -58,13 +87,23 @@ global.vprasaj = function vprasaj(query) {
 }
 
 global.pocakaj = function pocakaj(query) {
-    readlineSync.question(vt320(query), {
+    readlineSync.question(zaslon(query), {
         hideEchoBack: true,
         mask: ''
     });
 }
 
-fujitsu_chars = {
+global.zamenjaj = function zamenjaj(chars, str) {
+    if (typeof str === 'string') {
+        return str.replace(/[^A-Za-z0-9]/g, function(x) {
+            return chars[x] || x;
+        });
+    } else {
+        return str;
+    }
+}
+
+fujitsu = {
     'Š': '[',
     'Đ': '\\',
     'Ć': ']',
@@ -77,17 +116,7 @@ fujitsu_chars = {
     'ž': '`'
 };
 
-global.fujitsu = function fujitsu(str) {
-    if (typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return fujitsu_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
-}
-
-vt320_chars = {
+vt320 = {
     "Š": "\033(P!\033(B",
     "Č": "\033(P\"\033(B",
     "Ž": "\033(P#\033(B",
@@ -100,18 +129,7 @@ vt320_chars = {
     "đ": "\033(P*\033(B"
 };
 
-global.vt320 = function vt320(str) {return paka3000(str);
-    if (typeof str === 'string') {
-            return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
-                return vt320_chars[x] || x;
-            }));
-        
-    } else {
-        return str;
-    }
-}
-
-paka3000_chars = {
+paka3000 = {
     "Š": "\033(S[\033(B",
     "Č": "\033(S^\033(B",
     "Ž": "\033(S@\033(B",
@@ -124,20 +142,7 @@ paka3000_chars = {
     "đ": "\033(S|\033(B"
 };
 
-
-global.paka3000 = function paka3000(str) {
-    if (typeof str === 'string') {
-            return latinize(str.replace(/[^A-Za-z0-9]/g, function(x) {
-                return paka3000_chars[x] || x;
-            }));
-
-    } else {
-        return str;
-    }
-}
-
-
-lk201_chars = {
+lk201 = {
     "{": "Š",
     ":": "Č",
     "|": "Ž",
@@ -150,17 +155,7 @@ lk201_chars = {
     "]": "đ"
 };
 
-global.lk201 = function lk201(str) {return triglav(str);
-    if (process.argv.slice(2)[0] && typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return lk201_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
-}
-
-triglav_chars = {
+triglav = {
     "[": "Š",
     "^": "Č",
     "@": "Ž",
@@ -173,26 +168,14 @@ triglav_chars = {
     "|": "đ"
 };
 
-global.triglav = function triglav(str) {
-    if (process.argv.slice(2)[0] && typeof str === 'string') {
-        return str.replace(/[^A-Za-z0-9]/g, function(x) {
-            return triglav_chars[x] || x;
-        });
-    } else {
-        return str;
-    }
-}
-
-
-
 global.vt320drcs = function vt320drcs() {
-    if (!process.argv.slice(2)[0] || process.argv.slice(2)[0] == "/dev/ttyUSB1") return '';
+    if (tty != "/dev/ttyUSB0") return '';
     return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
         "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
         "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +
         "?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;" +
         "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
         "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
-        vt320(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
+        zaslon(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
             'Slovenian computer museum collection - https://zbirka.muzej.si/'), true)) + '\033[0$}';
 }
