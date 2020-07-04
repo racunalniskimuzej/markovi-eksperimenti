@@ -22,4 +22,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 stty intr undef; stty susp undef; stty quit undef
-node muzej.si/vt320/zbirka/index.js `stty speed`
+node muzej.si/vt320/zbirka/index.js
