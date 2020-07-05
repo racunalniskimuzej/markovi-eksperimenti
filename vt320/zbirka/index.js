@@ -245,8 +245,8 @@ readlineSync.promptCLLoop(self = {
                             '2. Press the blue START button so that the display shows ONLINE.\n' +
                             '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
 
-                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n\n" +
-                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si" + banner)));
+                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n" + banner +
+                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
                         while (true) {
                             izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
                             execSync('lp /tmp/webcam.txt');
