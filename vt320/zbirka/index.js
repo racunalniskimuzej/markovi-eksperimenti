@@ -246,7 +246,7 @@ readlineSync.promptCLLoop(self = {
                             '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
 
                         fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n" + banner +
-                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
+                            "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
                         while (true) {
                             izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
                             execSync('lp /tmp/webcam.txt');
