@@ -3,7 +3,7 @@
 Terminalski dostop do https://zbirka.muzej.si/
 - Nastavitve na VT320 ponastavimo z `Default` in spremenimo naslednje: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, nato izberemo `Save`
 - Nastavitve za PAKA 3000: `NABOR ZNAKOV: USASCII, TIP TASTATURE: JUGO., ODD.HITROST: 19200, SPR.HITROST: 19200`
-- Node.js modul v direktorju `zbirka` se namesti s `sudo apt install graphicsmagick; npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v `node_modules` spremenjena 
+- Node.js modul (stestiran na v8/v10) v direktorju `zbirka` se namesti s `sudo apt install graphicsmagick; npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v `node_modules` spremenjena 
 - Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service`
 - Na RPi se ustvari nov uporabnik `zbirka` in v njegov `.profile` doda onemogočenje CTRL+C/Z/backslash in samodejni zagon Node.js aplikacije
 - V `rc.local` dodan ukaz za izklop varčevanja z energijo za WiFi, saj se je na RPi 3B+ povezava sicer ob daljši neaktivnosti obešala
