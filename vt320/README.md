@@ -16,7 +16,7 @@ Terminalski dostop do https://zbirka.muzej.si/
 - Namestitev paketov za zajem slike iz webcama in tiskanje:
 `sudo apt install fswebcam cups; sudo usermod -a -G video zbirka`
 - Tiskalnik priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP
-- Namestimo ga s `sudo lpadmin -p tiskalnik -v usb://Unknown/Printer -E; sudo lpadmin -d tiskalnik`
+- Namestimo ga s `sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik`
 
 
 Kako do šumnikov:
