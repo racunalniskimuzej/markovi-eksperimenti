@@ -8,90 +8,91 @@ Postavitev:
 - Priložen tudi `LOGITECH` gonilnik za miško
 - "Nasilne" igre so zaščitene z geslom - geslo je "ibm"; kadar na dogodku ne pričakujemo otrok, lahko menu za izbiro iger preklopimo v način, kjer ne bo spraševal za geslo - čisto na dnu menuja izberemo “■■” in vnesemo geslo "muzej".
 
-Seznam iger in viri, če gre za freeware/shareware/demo:
+Seznam iger in virov, če gre za freeware/shareware/demo:
 
-|-|-|-|
-| Aldo's Adventure | ? | ✔️ |
-| Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ | ✔️ |
-| Arkanoid | ? | ❌ |
-| Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ | ✔️ |
-| Blockout | ? | ❌ |
-| Blood | https://www.dosgamesarchive.com/download/blood/ | ✔️ |
-| Bumpy's Arcade Fantasy | ? | ❌ |
-| Carmageddon | https://www.dosgamesarchive.com/download/carmageddon/ | ✔️ |
-| Castle of Dr. Brain | ? | ❌ |
-| Command & Conquer | https://www.dosgamesarchive.com/download/command-and-conquer/ | ✔️ |
-| Commander Keen | https://www.dosgamesarchive.com/download/commander-keen-invasion-of-the-vorticons/ | ✔️ |
-| Cool Spot | https://www.dosgamesarchive.com/download/cool-spot/ | ✔️ |
-| Crystal Caves | https://www.dosgamesarchive.com/download/crystal-caves/ | ✔️ |
-| Dangerous Dave | https://www.dosgamesarchive.com/download/dangerous-dave/ | ✔️ |
-| Deluxe Ski Jump 2 | http://www.mediamond.fi/dsj2/downloads/ | ✔️ |
-| Descent | https://www.dosgamesarchive.com/download/descent/ | ✔️ |
-| Disney's Aladdin | https://www.dosgamesarchive.com/download/disneys-aladdin/ | ✔️ |
-| DONKEY.BAS | http://drivey.com/DONKEYQB.EXE | ❌ |
-| Doom | https://www.dosgamesarchive.com/download/doom/ | ✔️ |
-| Duke Nukem | https://www.dosgamesarchive.com/download/duke-nukem/ | ✔️ |
-| Duke Nukem 3D | https://www.dosgamesarchive.com/download/duke-nukem-3d/ | ✔️ |
-| Dungeon Keeper | ? | ❌ |
-| Dynablaster | ? | ❌ |
-| Epic Pinball | https://www.dosgamesarchive.com/download/epic-pinball/ | ✔️ |
-| Fantastic Dizzy | ? | ❌ |
-| Framed | https://www.dosgamesarchive.com/download/framed/ | ✔️ |
-| Golden Axe | ? | ❌ |
-| Grand Theft Auto | https://www.dosgamesarchive.com/download/grand-theft-auto/ | ✔️ |
-| Heretic | https://www.dosgamesarchive.com/download/heretic/ | ✔️ |
-| Hexen: Beyond Heretic | https://www.dosgamesarchive.com/download/hexen-beyond-heretic/ | ✔️ |
-| Hexxagon | https://www.dosgamesarchive.com/download/hexxagon/ | ✔️ |
-| Home Alone | ? | ❌ |
-| Hugo | ? | ❌ |
-| Jazz Jackrabbit | https://www.dosgamesarchive.com/download/jazz-jackrabbit/ | ✔️ |
-| Jill of the Jungle | https://www.dosgamesarchive.com/download/jill-of-the-jungle/ | ✔️ |
-| Laser Light | ? | ❌ |
-| Leisure Suit Larry | ? | ❌ |
-| Lemmings | https://www.dosgamesarchive.com/download/lemmings/ | ✔️ |
-| Liero | https://www.dosgamesarchive.com/download/liero/ | ✔️ |
-| Little Big Adventure | https://www.dosgamesarchive.com/download/relentless-twinsens-adventure/ | ✔️ |
-| Lotus III: The Ultimate Challenge | ? | ❌ |
-| Micro Machines | https://www.dosgamesarchive.com/download/micro-machines/ | ✔️ |
-| Mortal Kombat | ? | ❌ |
-| Oxyd | ? | ❌ |
-| Pipe Mania | ? | ❌ |
-| Police Quest | ? | ❌ |
-| Prehistorik | ? | ❌ |
-| Prehistorik 2 | https://www.dosgamesarchive.com/download/prehistorik-2/ | ✔️ |
-| Prince of Persia | https://www.dosgamesarchive.com/download/prince-of-persia/ | ✔️ |
-| Quake | https://www.dosgamesarchive.com/download/quake/ | ✔️ |
-| Rayman | https://www.dosgamesarchive.com/download/rayman/ | ✔️ |
-| Redneck Rampage | https://www.dosgamesarchive.com/download/redneck-rampage/ | ✔️ |
-| Shadow Warrior | https://www.dosgamesarchive.com/download/shadow-warrior/ | ✔️ |
-| Sid Meier's Civilization | ? | ❌ |
-| SimCity | https://www.dosgamesarchive.com/download/simcity/ | ✔️ |
-| SimCity 2000 | https://www.dosgamesarchive.com/download/simcity-2000/ | ✔️ |
-| Ski or Die | ? | ❌ |
-| Sokoban | ? | ❌ |
-| Stunts | ? | ❌ |
-| Supaplex | https://www.dosgamesarchive.com/download/supaplex/ | ✔️ |
-| Terminal Velocity | https://www.dosgamesarchive.com/download/terminal-velocity/ | ✔️ |
-| Tetris | https://vadim.oversigma.com/Tetris.htm | ✔️ |
-| The Incredible Machine | https://www.dosgamesarchive.com/download/the-incredible-machine/ | ✔️ |
-| The Incredible Machine 2 | https://www.dosgamesarchive.com/download/the-incredible-machine-2/ | ✔️ |
-| The Lion King | https://www.dosgamesarchive.com/download/the-lion-king/ | ✔️ |
-| The Lost Vikings | https://www.dosgamesarchive.com/download/the-lost-vikings/ | ✔️ |
-| The Need for Speed | https://www.dosgamesarchive.com/download/the-need-for-speed/ | ✔️ |
-| The Oregon Trail | ? | ❌ |
-| Theme Hospital | https://www.dosgamesarchive.com/download/theme-hospital/ | ✔️ |
-| Transport Tycoon | https://www.dosgamesarchive.com/download/transport-tycoon/ | ✔️ |
-| Transport Tycoon Deluxe | https://www.dosgamesarchive.com/download/transport-tycoon-deluxe/ | ✔️ |
-| Tyrian | https://www.dosgamesarchive.com/download/tyrian/ | ✔️ |
-| Ugh | ? | ❌ |
-| Wacky Wheels | https://www.dosgamesarchive.com/download/wacky-wheels/ | ✔️ |
-| Warcraft II | https://www.dosgamesarchive.com/download/warcraft-ii-tides-of-darkness/ | ✔️ |
-| Warcraft: Orcs & Humans | https://www.dosgamesarchive.com/download/warcraft-orcs-and-humans/ | ✔️ |
-| Where in the World is Carmen Sandiego? | ? | ❌ |
-| Wolfenstein 3D | https://www.dosgamesarchive.com/download/wolfenstein-3d/ | ✔️ |
-| Worms | https://www.dosgamesarchive.com/download/worms/ | ✔️ |
-| Zool | https://www.dosgamesarchive.com/download/zool/ | ✔️ |
-| Zork | ? | ❌ |
+| Igra | Vir |
+|-|-|
+| Aldo's Adventure | ? |
+| Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ |
+| Arkanoid | ? |
+| Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ |
+| Blockout | ? |
+| Blood | https://www.dosgamesarchive.com/download/blood/ |
+| Bumpy's Arcade Fantasy | ? |
+| Carmageddon | https://www.dosgamesarchive.com/download/carmageddon/ |
+| Castle of Dr. Brain | ? |
+| Command & Conquer | https://www.dosgamesarchive.com/download/command-and-conquer/ |
+| Commander Keen | https://www.dosgamesarchive.com/download/commander-keen-invasion-of-the-vorticons/ |
+| Cool Spot | https://www.dosgamesarchive.com/download/cool-spot/ |
+| Crystal Caves | https://www.dosgamesarchive.com/download/crystal-caves/ |
+| Dangerous Dave | https://www.dosgamesarchive.com/download/dangerous-dave/ |
+| Deluxe Ski Jump 2 | http://www.mediamond.fi/dsj2/downloads/ |
+| Descent | https://www.dosgamesarchive.com/download/descent/ |
+| Disney's Aladdin | https://www.dosgamesarchive.com/download/disneys-aladdin/ |
+| DONKEY.BAS | http://drivey.com/DONKEYQB.EXE |
+| Doom | https://www.dosgamesarchive.com/download/doom/ |
+| Duke Nukem | https://www.dosgamesarchive.com/download/duke-nukem/ |
+| Duke Nukem 3D | https://www.dosgamesarchive.com/download/duke-nukem-3d/ |
+| Dungeon Keeper | ? |
+| Dynablaster | ? |
+| Epic Pinball | https://www.dosgamesarchive.com/download/epic-pinball/ |
+| Fantastic Dizzy | ? |
+| Framed | https://www.dosgamesarchive.com/download/framed/ |
+| Golden Axe | ? |
+| Grand Theft Auto | https://www.dosgamesarchive.com/download/grand-theft-auto/ |
+| Heretic | https://www.dosgamesarchive.com/download/heretic/ |
+| Hexen: Beyond Heretic | https://www.dosgamesarchive.com/download/hexen-beyond-heretic/ |
+| Hexxagon | https://www.dosgamesarchive.com/download/hexxagon/ |
+| Home Alone | ? |
+| Hugo | ? |
+| Jazz Jackrabbit | https://www.dosgamesarchive.com/download/jazz-jackrabbit/ |
+| Jill of the Jungle | https://www.dosgamesarchive.com/download/jill-of-the-jungle/ |
+| Laser Light | ? |
+| Leisure Suit Larry | ? |
+| Lemmings | https://www.dosgamesarchive.com/download/lemmings/ |
+| Liero | https://www.dosgamesarchive.com/download/liero/ |
+| Little Big Adventure | https://www.dosgamesarchive.com/download/relentless-twinsens-adventure/ |
+| Lotus III: The Ultimate Challenge | ? |
+| Micro Machines | https://www.dosgamesarchive.com/download/micro-machines/ |
+| Mortal Kombat | ? |
+| Oxyd | ? |
+| Pipe Mania | ? |
+| Police Quest | ? |
+| Prehistorik | ? |
+| Prehistorik 2 | https://www.dosgamesarchive.com/download/prehistorik-2/ |
+| Prince of Persia | https://www.dosgamesarchive.com/download/prince-of-persia/ |
+| Quake | https://www.dosgamesarchive.com/download/quake/ |
+| Rayman | https://www.dosgamesarchive.com/download/rayman/ |
+| Redneck Rampage | https://www.dosgamesarchive.com/download/redneck-rampage/ |
+| Shadow Warrior | https://www.dosgamesarchive.com/download/shadow-warrior/ |
+| Sid Meier's Civilization | ? |
+| SimCity | https://www.dosgamesarchive.com/download/simcity/ |
+| SimCity 2000 | https://www.dosgamesarchive.com/download/simcity-2000/ |
+| Ski or Die | ? |
+| Sokoban | ? |
+| Stunts | ? |
+| Supaplex | https://www.dosgamesarchive.com/download/supaplex/ |
+| Terminal Velocity | https://www.dosgamesarchive.com/download/terminal-velocity/ |
+| Tetris | https://vadim.oversigma.com/Tetris.htm |
+| The Incredible Machine | https://www.dosgamesarchive.com/download/the-incredible-machine/ |
+| The Incredible Machine 2 | https://www.dosgamesarchive.com/download/the-incredible-machine-2/ |
+| The Lion King | https://www.dosgamesarchive.com/download/the-lion-king/ |
+| The Lost Vikings | https://www.dosgamesarchive.com/download/the-lost-vikings/ |
+| The Need for Speed | https://www.dosgamesarchive.com/download/the-need-for-speed/ |
+| The Oregon Trail | ? |
+| Theme Hospital | https://www.dosgamesarchive.com/download/theme-hospital/ |
+| Transport Tycoon | https://www.dosgamesarchive.com/download/transport-tycoon/ |
+| Transport Tycoon Deluxe | https://www.dosgamesarchive.com/download/transport-tycoon-deluxe/ |
+| Tyrian | https://www.dosgamesarchive.com/download/tyrian/ |
+| Ugh | ? |
+| Wacky Wheels | https://www.dosgamesarchive.com/download/wacky-wheels/ |
+| Warcraft II | https://www.dosgamesarchive.com/download/warcraft-ii-tides-of-darkness/ |
+| Warcraft: Orcs & Humans | https://www.dosgamesarchive.com/download/warcraft-orcs-and-humans/ |
+| Where in the World is Carmen Sandiego? | ? |
+| Wolfenstein 3D | https://www.dosgamesarchive.com/download/wolfenstein-3d/ |
+| Worms | https://www.dosgamesarchive.com/download/worms/ |
+| Zool | https://www.dosgamesarchive.com/download/zool/ |
+| Zork | ? |
 
 Viri:
 - http://web.archive.org/web/20060924093236/http://members.aol.com/rg3294/dos/moo31.zip
