@@ -84,7 +84,7 @@ Postavitev:
 | Tyrian | https://www.dosgamesarchive.com/download/tyrian/ |
 | Ugh | / |
 | Wacky Wheels | https://www.dosgamesarchive.com/download/wacky-wheels/ |
-| Warcraft II | https://www.dosgamesarchive.com/download/warcraft-ii-tides-of-darkness/ |
+| Warcraft II | http://www.blizzardarchive.com/pub/index.php?id=war2 |
 | Warcraft: Orcs & Humans | https://www.dosgamesarchive.com/download/warcraft-orcs-and-humans/ |
 | Where in the World is Carmen Sandiego? | / |
 | Wolfenstein 3D | https://www.dosgamesarchive.com/download/wolfenstein-3d/ |
