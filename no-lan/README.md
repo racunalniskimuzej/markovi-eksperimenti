@@ -50,7 +50,7 @@ Postavitev:
 | Lemmings | https://www.dosgamesarchive.com/download/lemmings/ |
 | Liero | https://www.dosgamesarchive.com/download/liero/ |
 | Little Big Adventure | https://www.dosgamesarchive.com/download/relentless-twinsens-adventure/ |
-| Lotus III: The Ultimate Challenge | / |
+| Lotus III: The Ultimate Challenge | https://archive.org/details/LotusTheUltimateChallenge_1020 |
 | Micro Machines | https://www.dosgamesarchive.com/download/micro-machines/ |
 | Mortal Kombat | / |
 | Oxyd | https://www.classicdosgames.com/game/Oxyd.html |
