@@ -10,14 +10,14 @@ Postavitev:
 
 Seznam iger in viri:
 
-| Igra | Vir |
-|-|-|
-| Aldo's Adventure | a |
-| Arcade Volleyball | a |
-| Arkanoid | a |
-| Big Red Racing | a |
-| Blockout | a |
-| Blood | a |
+| Igra | Vir | Freeware/Shareware/Demo? |
+|-|-|-|
+| Aldo's Adventure | ? | ✔️ |
+| Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ | ✔️ |
+| Arkanoid | ? | ❌ |
+| Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ | ✔️ |
+| Blockout | ? | ❌ |
+| Blood | https://www.dosgamesarchive.com/download/blood/ | ✔️ |
 | Bumpy's Arcade Fantasy | a |
 | Carmageddon | a |
 | Castle of Dr. Brain | a |
