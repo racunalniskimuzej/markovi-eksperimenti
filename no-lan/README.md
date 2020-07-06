@@ -63,37 +63,36 @@ Seznam iger in viri:
 | Prince of Persia | https://www.dosgamesarchive.com/download/prince-of-persia/ | ✔️ |
 | Quake | https://www.dosgamesarchive.com/download/quake/ | ✔️ |
 | Rayman | https://www.dosgamesarchive.com/download/rayman/ | ✔️ |
-| Redneck Rampage | a |
-| Shadow Warrior | a |
-| Sid Meier's Civilization | a |
-| SimCity | a |
-| SimCity 2000 | a |
-| Ski or Die | a |
-| Sokoban | a |
-| Stunts | a |
-| Supaplex | a |
-| Terminal Velocity | a |
-| Tetris | a |
-| The Incredible Machine | a |
-| The Incredible Machine 2 | a |
-| The Lion King | a |
-| The Lost Vikings | a |
-| The Need for Speed | a |
-| The Oregon Trail | a |
-| Theme Hospital | a |
-| Transport Tycoon | a |
-| Transport Tycoon Deluxe | a |
-| Tyrian | a |
-| Ugh | a |
-| Wacky Wheels | a |
-| Warcraft II | a |
-| Warcraft: Orcs & Humans | a |
-| Where in the World is Carmen Sandiego? | a |
-| Wolfenstein 3D | a |
-| Worms | a |
-| Zool | a |
-| Zork | a |
+| Redneck Rampage | https://www.dosgamesarchive.com/download/redneck-rampage/ | ✔️ |
+| Shadow Warrior | https://www.dosgamesarchive.com/download/shadow-warrior/ | ✔️ |
+| Sid Meier's Civilization | ? | ❌ |
+| SimCity | https://www.dosgamesarchive.com/download/simcity/ | ✔️ |
+| SimCity 2000 | https://www.dosgamesarchive.com/download/simcity-2000/ | ✔️ |
+| Ski or Die | ? | ❌ |
+| Sokoban | ? | ❌ |
+| Stunts | ? | ❌ |
+| Supaplex | https://www.dosgamesarchive.com/download/supaplex/ | ✔️ |
+| Terminal Velocity | https://www.dosgamesarchive.com/download/terminal-velocity/ | ✔️ |
+| Tetris | https://vadim.oversigma.com/Tetris.htm | ✔️ |
+| The Incredible Machine | https://www.dosgamesarchive.com/download/the-incredible-machine/ | ✔️ |
+| The Incredible Machine 2 | https://www.dosgamesarchive.com/download/the-incredible-machine-2/ | ✔️ |
+| The Lion King | https://www.dosgamesarchive.com/download/the-lion-king/ | ✔️ |
+| The Lost Vikings | https://www.dosgamesarchive.com/download/the-lost-vikings/ | ✔️ |
+| The Need for Speed | https://www.dosgamesarchive.com/download/the-need-for-speed/ | ✔️ |
+| The Oregon Trail | ? | ❌ |
+| Theme Hospital | https://www.dosgamesarchive.com/download/theme-hospital/ | ✔️ |
+| Transport Tycoon | https://www.dosgamesarchive.com/download/transport-tycoon/ | ✔️ |
+| Transport Tycoon Deluxe | https://www.dosgamesarchive.com/download/transport-tycoon-deluxe/ | ✔️ |
+| Tyrian | https://www.dosgamesarchive.com/download/tyrian/ | ✔️ |
+| Ugh | ? | ❌ |
+| Wacky Wheels | https://www.dosgamesarchive.com/download/wacky-wheels/ | ✔️ |
+| Warcraft II | https://www.dosgamesarchive.com/download/warcraft-ii-tides-of-darkness/ | ✔️ |
+| Warcraft: Orcs & Humans | https://www.dosgamesarchive.com/download/warcraft-orcs-and-humans/ | ✔️ |
+| Where in the World is Carmen Sandiego? | ? | ❌ |
+| Wolfenstein 3D | https://www.dosgamesarchive.com/download/wolfenstein-3d/ | ✔️ |
+| Worms | https://www.dosgamesarchive.com/download/worms/ | ✔️ |
+| Zool | https://www.dosgamesarchive.com/download/zool/ | ✔️ |
+| Zork | ? | ❌ |
 
 Viri:
 - http://web.archive.org/web/20060924093236/http://members.aol.com/rg3294/dos/moo31.zip
-- https://www.dosgamesarchive.com/
