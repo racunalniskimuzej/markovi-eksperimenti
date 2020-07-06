@@ -18,19 +18,19 @@ Seznam iger in viri:
 | Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ | ✔️ |
 | Blockout | ? | ❌ |
 | Blood | https://www.dosgamesarchive.com/download/blood/ | ✔️ |
-| Bumpy's Arcade Fantasy | a |
-| Carmageddon | a |
-| Castle of Dr. Brain | a |
-| Command & Conquer | a |
-| Commander Keen | a |
-| Cool Spot | a |
-| Crystal Caves | a |
-| Dangerous Dave | a |
-| Deluxe Ski Jump 2 | a |
-| Descent | a |
-| Disney's Aladdin | a |
-| DONKEY.BAS | a |
-| Doom | a |
+| Bumpy's Arcade Fantasy | ? | ❌ |
+| Carmageddon | https://www.dosgamesarchive.com/download/carmageddon/ | ✔️ |
+| Castle of Dr. Brain | ? | ❌ |
+| Command & Conquer | https://www.dosgamesarchive.com/download/command-and-conquer/ | ✔️ |
+| Commander Keen | https://www.dosgamesarchive.com/download/commander-keen-invasion-of-the-vorticons/ | ✔️ |
+| Cool Spot | https://www.dosgamesarchive.com/download/cool-spot/ | ✔️ |
+| Crystal Caves | https://www.dosgamesarchive.com/download/crystal-caves/ | ✔️ |
+| Dangerous Dave | https://www.dosgamesarchive.com/download/dangerous-dave/ | ✔️ |
+| Deluxe Ski Jump 2 | http://www.mediamond.fi/dsj2/downloads/ | ✔️ |
+| Descent | https://www.dosgamesarchive.com/download/descent/ | ✔️ |
+| Disney's Aladdin | https://www.dosgamesarchive.com/download/disneys-aladdin/ | ✔️ |
+| DONKEY.BAS | http://drivey.com/DONKEYQB.EXE | ❌ |
+| Doom | https://www.dosgamesarchive.com/download/doom/ | ✔️ |
 | Duke Nukem | a |
 | Duke Nukem 3D | a |
 | Dungeon Keeper | a |
