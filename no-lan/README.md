@@ -10,7 +10,7 @@ Postavitev:
 
 | Igra | Vir (če gre za freeware/shareware/demo) |
 |-|-|
-| Aldo's Adventure | https://www.myabandonware.com/game/aldos-adventure-9s |
+| Aldo's Adventure | https://www.abandonwaredos.com/abandonware-game.php?abandonware=Aldo%27s+Adventure&gid=40 |
 | Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ |
 | Arkanoid | / |
 | Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ |
