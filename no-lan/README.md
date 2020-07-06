@@ -12,7 +12,7 @@ Seznam iger in virov, če gre za freeware/shareware/demo:
 
 | Igra | Vir |
 |-|-|
-| Aldo's Adventure | ? |
+| Aldo's Adventure | |
 | Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ |
 | Arkanoid | ? |
 | Big Red Racing | https://www.dosgamesarchive.com/download/big-red-racing/ |
