@@ -31,38 +31,38 @@ Seznam iger in viri:
 | Disney's Aladdin | https://www.dosgamesarchive.com/download/disneys-aladdin/ | ✔️ |
 | DONKEY.BAS | http://drivey.com/DONKEYQB.EXE | ❌ |
 | Doom | https://www.dosgamesarchive.com/download/doom/ | ✔️ |
-| Duke Nukem | a |
-| Duke Nukem 3D | a |
-| Dungeon Keeper | a |
-| Dynablaster | a |
-| Epic Pinball | a |
-| Fantastic Dizzy | a |
-| Framed | a |
-| Golden Axe | a |
-| Grand Theft Auto | a |
-| Heretic | a |
-| Hexen: Beyond Heretic | a |
-| Hexxagon | a |
-| Home Alone | a |
-| Hugo | a |
-| Jazz Jackrabbit | a |
-| Jill of the Jungle | a |
-| Laser Light | a |
-| Leisure Suit Larry | a |
-| Lemmings | a |
-| Liero | a |
-| Little Big Adventure | a |
-| Lotus III: The Ultimate Challenge | a |
-| Micro Machines | a |
-| Mortal Kombat | a |
-| Oxyd | a |
-| Pipe Mania | a |
-| Police Quest | a |
-| Prehistorik | a |
-| Prehistorik 2 | a |
-| Prince of Persia | a |
-| Quake | a |
-| Rayman | a |
+| Duke Nukem | https://www.dosgamesarchive.com/download/duke-nukem/ | ✔️ |
+| Duke Nukem 3D | https://www.dosgamesarchive.com/download/duke-nukem-3d/ | ✔️ |
+| Dungeon Keeper | ? | ❌ |
+| Dynablaster | ? | ❌ |
+| Epic Pinball | https://www.dosgamesarchive.com/download/epic-pinball/ | ✔️ |
+| Fantastic Dizzy | ? | ❌ |
+| Framed | https://www.dosgamesarchive.com/download/framed/ | ✔️ |
+| Golden Axe | ? | ❌ |
+| Grand Theft Auto | https://www.dosgamesarchive.com/download/grand-theft-auto/ | ✔️ |
+| Heretic | https://www.dosgamesarchive.com/download/heretic/ | ✔️ |
+| Hexen: Beyond Heretic | https://www.dosgamesarchive.com/download/hexen-beyond-heretic/ | ✔️ |
+| Hexxagon | https://www.dosgamesarchive.com/download/hexxagon/ | ✔️ |
+| Home Alone | ? | ❌ |
+| Hugo | ? | ❌ |
+| Jazz Jackrabbit | https://www.dosgamesarchive.com/download/jazz-jackrabbit/ | ✔️ |
+| Jill of the Jungle | https://www.dosgamesarchive.com/download/jill-of-the-jungle/ | ✔️ |
+| Laser Light | ? | ❌ |
+| Leisure Suit Larry | ? | ❌ |
+| Lemmings | https://www.dosgamesarchive.com/download/lemmings/ | ✔️ |
+| Liero | https://www.dosgamesarchive.com/download/liero/ | ✔️ |
+| Little Big Adventure | https://www.dosgamesarchive.com/download/relentless-twinsens-adventure/ | ✔️ |
+| Lotus III: The Ultimate Challenge | ? | ❌ |
+| Micro Machines | https://www.dosgamesarchive.com/download/micro-machines/ | ✔️ |
+| Mortal Kombat | ? | ❌ |
+| Oxyd | ? | ❌ |
+| Pipe Mania | ? | ❌ |
+| Police Quest | ? | ❌ |
+| Prehistorik | ? | ❌ |
+| Prehistorik 2 | https://www.dosgamesarchive.com/download/prehistorik-2/ | ✔️ |
+| Prince of Persia | https://www.dosgamesarchive.com/download/prince-of-persia/ | ✔️ |
+| Quake | https://www.dosgamesarchive.com/download/quake/ | ✔️ |
+| Rayman | https://www.dosgamesarchive.com/download/rayman/ | ✔️ |
 | Redneck Rampage | a |
 | Shadow Warrior | a |
 | Sid Meier's Civilization | a |
