@@ -10,8 +10,9 @@ Postavitev:
 
 Seznam iger in viri:
 
-| Aldo's Adventure | a |
+| Igra | Vir |
 |-|-|
+| Aldo's Adventure | a |
 | Arcade Volleyball | a |
 | Arkanoid | a |
 | Big Red Racing | a |
