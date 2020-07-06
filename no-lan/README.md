@@ -10,6 +10,7 @@ Postavitev:
 
 Seznam iger in viri, če gre za freeware/shareware/demo:
 
+|-|-|-|
 | Aldo's Adventure | ? | ✔️ |
 | Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ | ✔️ |
 | Arkanoid | ? | ❌ |
