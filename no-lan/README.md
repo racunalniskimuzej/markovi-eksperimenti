@@ -8,10 +8,8 @@ Postavitev:
 - Priložen tudi `LOGITECH` gonilnik za miško
 - "Nasilne" igre so zaščitene z geslom - geslo je "ibm"; kadar na dogodku ne pričakujemo otrok, lahko menu za izbiro iger preklopimo v način, kjer ne bo spraševal za geslo - čisto na dnu menuja izberemo “■■” in vnesemo geslo "muzej".
 
-Seznam iger in viri:
+Seznam iger in viri, če gre za freeware/shareware/demo:
 
-| Igra | Vir | Freeware/Shareware/Demo? |
-|-|-|-|
 | Aldo's Adventure | ? | ✔️ |
 | Arcade Volleyball | https://www.dosgamesarchive.com/download/arcade-volleyball/ | ✔️ |
 | Arkanoid | ? | ❌ |
