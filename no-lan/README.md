@@ -79,6 +79,7 @@ Postavitev:
 | The Need for Speed | https://www.dosgamesarchive.com/download/the-need-for-speed/ |
 | The Oregon Trail | / |
 | Theme Hospital | https://www.dosgamesarchive.com/download/theme-hospital/ |
+| Tomb Raider | / |
 | Transport Tycoon | https://www.dosgamesarchive.com/download/transport-tycoon/ |
 | Transport Tycoon Deluxe | https://www.dosgamesarchive.com/download/transport-tycoon-deluxe/ |
 | Tyrian | https://www.dosgamesarchive.com/download/tyrian/ |
