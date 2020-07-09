@@ -228,6 +228,9 @@ IBM
 şTerminal Velocity
 c:\igre\tv\tv
 IBM
+şTomb Raider
+c:\igre\tomb\tomb
+IBM
 şTyrian
 c:\igre\tyrsw20\tyrian
 IBM

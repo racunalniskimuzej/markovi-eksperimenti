@@ -207,6 +207,9 @@ c:\igre\oregon\oregon
 Theme Hospital
 c:\igre\theme\hospital
 
+Tomb Raider
+c:\igre\tomb\tomb
+
 Transport Tycoon
 c:\igre\ttycoon\tycoon
 
