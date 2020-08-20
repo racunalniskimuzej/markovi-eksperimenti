@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slideshow</title>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto">
+<style>
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', serif;
+	font-size: 2.5em;
+	background-color: #000000;
+	color: #ffffff;
+	overflow: hidden;
+}
+
+#slideshow {
+	position: relative;
+	width: 100%;
+}
+
+#slideshow>div {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.desc {
+	position: absolute;
+	bottom: 0px;
+	background-color: #000000aa;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.getJSON('data.json', function(json) {
+        for (var i = 0; i < json.length; i++) {
+            var obj = json[i];
+            $("#slideshow").append('<div><img src="' + obj.img + '"/><p class="desc">' + obj.text + '</p></div>');
+        }
+
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 5000);
+
+    });
+});
+</script>
+</head>
+<body>
+<div id="slideshow"></div>
+</body>
+</html>
