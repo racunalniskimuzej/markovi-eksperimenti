@@ -4,13 +4,13 @@ Za avtomatsko predvajanje na RPi 3B+:
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
-@chromium --kiosk https://esh01.stamcar.com/static/fb/
+@chromium --kiosk https://zbirka.muzej.si/slideshow/
 ```
 
 Za avtomatsko predvajanje na RPi 4 (dual screen):
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
-@chromium-browser --window-position=0,0 --kiosk https://esh01.stamcar.com/static/fb/
-@chromium-browser --window-position=1920,0 --kiosk --user-data-dir=/tmp https://esh01.stamcar.com/static/fb/
+@chromium-browser --window-position=0,0 --kiosk https://zbirka.muzej.si/slideshow/
+@chromium-browser --window-position=1920,0 --kiosk --user-data-dir=/tmp https://zbirka.muzej.si/slideshow/
 ```
