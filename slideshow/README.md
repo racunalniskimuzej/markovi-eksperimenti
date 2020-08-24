@@ -1,4 +1,4 @@
-# Vse fotografije so last Društva računalniški muzej
+# Vse fotografije so last Društva računalniški muzej.
 
 Za avtomatsko predvajanje na RPi 3B+:
 
