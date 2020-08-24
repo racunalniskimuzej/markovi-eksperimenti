@@ -43,6 +43,9 @@ body {
 <script>
 $(document).ready(function() {
     $.getJSON('data.json', function(json) {
+        json = json.sort(function() {
+            return .5 - Math.random();
+        });
         for (var i = 0; i < json.length; i++) {
             var obj = json[i];
             $("#slideshow").append('<div><img src="' + obj.img + '"/><p class="desc">' + obj.text + '</p></div>');
