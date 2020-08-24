@@ -4,6 +4,9 @@ Za avtomatsko predvajanje na RPi 3B+:
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
+@xset s off
+@xset -dpms
+@xset s noblank
 @chromium --kiosk https://zbirka.muzej.si/slideshow/
 ```
 
@@ -11,6 +14,9 @@ Za avtomatsko predvajanje na RPi 4 (dual screen):
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
+@xset s off
+@xset -dpms
+@xset s noblank
 @chromium-browser --window-position=0,0 --kiosk https://zbirka.muzej.si/slideshow/
 @chromium-browser --window-position=1920,0 --kiosk --user-data-dir=/tmp https://zbirka.muzej.si/slideshow/
 ```
