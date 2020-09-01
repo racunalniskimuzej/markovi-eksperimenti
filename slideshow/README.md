@@ -22,6 +22,7 @@ Za avtomatsko predvajanje na RPi 4 (dual screen):
 ```
 
 Izklop prikaza miškinega kazalčka:
+
 `/etc/lightdm/lightdm.conf`:
 ```
 xserver-command = X -nocursor
