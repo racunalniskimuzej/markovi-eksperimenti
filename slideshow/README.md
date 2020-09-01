@@ -25,5 +25,5 @@ Izklop prikaza miškinega kazalčka:
 
 `/etc/lightdm/lightdm.conf`:
 ```
-xserver-command = X -nocursor
+xserver-command=X -nocursor
 ```
