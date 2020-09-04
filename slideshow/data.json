@@ -1,506 +1,557 @@
-[
-   {
-      "text": "👾📺 V sklopu evidentiranja in preizkušanja eksponatov z veseljem ugotavljamo, da naš Vectrex iz leta 1982 brezhibno deluje! 😍",
-      "img": "photos/118152237_176763070626091_8799490073852596361_o_176763067292758.jpg"
-   },
-   {
-      "text": "📖⌨️ Knjiga Mirko tipka na radirko je učna zbirka programov za ZX Spectrum. Izšla je leta 1985 v okviru revije Moj mikro, programe pa sta zbrala in uredila Žiga Turk ter Ciril Kraševec, njena soustanovitelja in prva urednika.",
-      "img": "photos/117932665_176458297323235_5820547517026849836_o_176458293989902.jpg"
-   },
-   {
-      "text": "⬛📺 DOS PTSD intensifies 😅😅",
-      "img": "photos/117956048_175794030722995_5300572115075334265_o_175794027389662.jpg"
-   },
-   {
-      "text": "🧠📺 Mattel Electronics Intellivision je igralna konzola druge generacije iz leta 1979. V njej z 2 MHz tiktaka procesor General Instrument CP1610, soroden tistemu v PDP-11, ki naslavlja 1K pomnilnika.",
-      "img": "photos/117732137_175542330748165_2151523579892346017_o_175542327414832.jpg"
-   },
-   {
-      "text": "💼🔢 Izgleda kot kovček za začeti jedrsko vojno 😅, a gre le za mobilni programator EPROM-ov Iskra PRO-GRM 781A, ki nam ga je leta 2008 prijazno donirala Fakulteta za računalništvo in informatiko.",
-      "img": "photos/117769562_175270240775374_635039347561195385_o_175270237442041.jpg"
-   },
-   {
-      "text": "🤙☎️ Ker vas je včeraj prek 100 všečkalo stare Iskrine telefone, sem se odločil narediti še eno \"družinsko\" fotografijo iz naše zbirke - nekateri rabijo še malo ljubezni in čiščenja 🥰",
-      "img": "photos/117641943_174683607500704_6338344629600784517_o_174683604167371.jpg"
-   },
-   {
-      "text": "📞☎️ Iskra ETA 86 je ikoničen telefon z mednarodno priznanim designom, prvič predstavljenim leta 1978. Oblikoval ga je dr. Davorin Savnik, vodja Iskrinega oblikovalskega oddelka in eden znamenitejših slovenskih oblikovalcev.",
-      "img": "photos/117273169_173648924270839_7018220532073477289_o_173648920937506.jpg"
-   },
-   {
-      "text": "🧮🔢 Hrvaški Digitron db 803 iz leta 1974 je eden prvih jugoslovanskih kalkulatorjev. Polnimo ga v njegovem kovčku, kjer ga lahko uporabljamo tudi, če ima prazne baterije.",
-      "img": "photos/117307897_173650674270664_1504179945170138349_o_173650670937331.jpg"
-   },
-   {
-      "text": "🥂🐛 20 let pozneje se zdi kot bled spomin - sploh, ker se ni zgodilo nič groznega - a za Y2K je bilo treba popraviti in stestirati marsikaj. V muzeju hranimo uokvirjeno prvo vlogo za izdajo osebne izkaznice, izdano 1. januarja 2000 ob 7:00 na Ministrstvu za javno upravo.",
-      "img": "photos/117342685_173657224270009_1876315557504212452_o_173657220936676.jpg"
-   },
-   {
-      "text": "⌨️🖥️ IskraData 100 je 16-bitni razvojni sistem, ustvarjen leta 1982 v TOZD Računalniki Kranj. Omogoča programiranje na mikroprocesorjih Motorola 68000 in Zilog 80. Programiralo se je lahko v Basic-u in Pascal-u.",
-      "img": "photos/117302324_173006474335084_4906809877855484441_o_173006471001751.jpg"
-   },
-   {
-      "text": "📰💿 CDji in DVDji, ki so bili včasih priloženi slovenskim računalniškim revijam, so neprecenljiv vir slovenskega softwarea. Revija PC & mediji je redno objavljala prispevke bralcev, ki jih bomo v muzeju skrbno pregledali in vam predstavili najbolj zanimive.",
-      "img": "photos/117229110_172691701033228_8416261405523263229_o_172691697699895.jpg"
-   },
-   {
-      "text": "📰📰 Revija Moj Mikro, marec 1986.",
-      "img": "photos/117123415_172360077733057_52318836503518841_o_172360071066391.jpg"
-   },
-   {
-      "text": "📚🗃️ Paradox for Windows iz leta 1993 je sistem podatkovnih baz, ki ga je Borland prevzel s podjetjem Ansa Software in je na koncu končal v rokah Corel-a. Nudil je kompatibilnost s konkurenčnim sistemom dBase. Ste ju kdaj uporabljali?",
-      "img": "photos/117035046_171524767816588_5991219086009948786_o_171524764483255.jpg"
-   },
-   {
-      "text": "🧱🍄 Tetris, Super Mario Land, Dr. Mario, Golf in Alleyway so ene prvih iger za Nintendo Game Boy. Golf je od njih potrebnoval največji ROM čip s kar 128 KB, Mariova pustolovščina 64 KB, ostale pa zgolj 32 KB. Maria sicer najdemo v prav vseh teh igrah.",
-      "img": "photos/116798583_171223234513408_6754322759707797000_o_171223231180075.jpg"
-   },
-   {
-      "text": "🐤🧒 Revija Ciciban iz založbe Mladinska knjiga že 75 let vabi otroke v svet branja in pisanja, lepote in raziskovanja - tudi informacijskih tehnologij. V njej so se že dolgo nazaj lahko naučili z računalnikom izrisati cvetlico za voščilnico za materinski dan.",
-      "img": "photos/116428699_170566827912382_1988135728059662527_o_170566824579049.jpg"
-   },
-   {
-      "text": "🕹️💨 Iz časov, ko je NEC še delal igralne konzole, prihaja prenosna različica njihovega TurboGrafx-16 (PC Engine) imenovana TurboExpress.",
-      "img": "photos/116370519_170335814602150_4554699929841316516_o_170335811268817.jpg"
-   },
-   {
-      "text": "💾⌨️ MS-DOS 6.x je bil zadnji samostojni Microsoft DOS, ki je bil prisoten od čistega začetka dobe PCjev (1981) pa vse do Windows Me, zadnjih sorodnih Oken. V nekaterih poslovnih okoljih se uporablja še danes 😅, v marsikaterem domu pa za DOS retrogaming 😍",
-      "img": "photos/116212798_169254634710268_5830374889433253919_o_169254631376935.jpg"
-   },
-   {
-      "text": "🧱🍄 Leta 1994 je Laser plus d.o.o., uradni zastopnik za Nintendo v Sloveniji, oboževalce Maria razveselil s poslovenjenim albumom za nalepke 😍",
-      "img": "photos/116204727_169218518047213_6419404491732994630_o_169218514713880.jpg"
-   },
-   {
-      "text": "🕹️📺 Atari 5200 je konzola iz leta 1982, mišljena kot zmogljivejši brat uspešnega Atarija 2600, a s hardwareom, podobnim tistemu v Atarijevih hišnih računalnikih.",
-      "img": "photos/116127872_169052174730514_4053937510658891875_o_169052171397181.jpg"
-   },
-   {
-      "text": "📺🍎 Serija namiznih računalnikov Apple iMac je od leta 1998 šla že skozi 7 generacij - modeli s katodnimi monitorji imajo zagotovo en poseben čar (na fotki različica z režo za optični pogon, ki je bila posodobitev originala).",
-      "img": "photos/115928083_168662334769498_4195676161206568829_o_168662331436165.jpg"
-   },
-   {
-      "text": "🥂🎆 Windows Me. Zadnji s kernelom iz družine 9x, preden so Windows XP tudi domačim uporabnikom ponudili vse prednosti NT. Windows Millennium Edition v nekaterih zbudi močna čustva, ampak a je bil res tako slab? 🤔",
-      "img": "photos/115750304_168272138141851_1571628723991574595_o_168272134808518.jpg"
-   },
-   {
-      "text": "🏁🏎️ Dirkaške simulacije so bile v drugi polovici 90. let 20. stoletja zelo popularne. Slovenci seveda nismo (o)stali križem rok. Medtem ko so nekateri vozili častne kroge, se je našel gospod z idejo, da raje skonstruira pripomoček za pristnejšo vožnjo.",
-      "img": "photos/109926553_168055261496872_6007660739108554668_o_168055258163539.jpg"
-   },
-   {
-      "text": "🏴‍☠️🦜 Psst, fante, a hočeš katalog poceni igric?",
-      "img": "photos/110725094_167715824864149_2210422849018335770_o_167715821530816.jpg"
-   },
-   {
-      "text": "⌨️📺 DEC VT510 je model iz zadnje serije Digitalovih \"klasičnih\" terminalov. Podpira prikaz 53 vrstic in hitrosti do 115200 bit/s.",
-      "img": "photos/109696263_166259071676491_5270844963831282230_o_166259068343158.jpg"
-   },
-   {
-      "text": "⌨️🖥️ Institut Jožef Stefan je leta 1984 izdelal prvi domači 16-bitni računalnik PMP-11, ki je nastal kot pripomoček pri delu raziskovalcev in inženirjev.",
-      "img": "photos/109164865_165893651713033_5148935546948162766_o_165893648379700.jpg"
-   },
-   {
-      "text": "🤝🙂 Commodore je v svojih zadnjih vzdihljajih skušal konkurirati pohodu PC-jev z Amigo 1200 (na sliki) in 4000. AGA arhitektura čipovja, tretja po vrsti, je prinesla nekaj grafičnih napredkov, hitrejše procesorje, vendar je bilo vse skupaj premalo in prepozno.",
-      "img": "photos/108318759_165135888455476_5573528972840477004_o_165135885122143.jpg"
-   },
-   {
-      "text": "📼🕹️ View-Master Interactive Vision je nenavadna konzola - sliko sestavi iz VHS posnetkov ter svoje grafike, ki je na nivoju 8-bitnih igralnih konzol. Njen fizični izgled in občutek rokovanja z... igralno palico? pa sta tudi stvar debate 😅",
-      "img": "photos/108194160_164917808477284_7448573623244315279_o_164917805143951.jpg"
-   },
-   {
-      "text": "💥🕹️ Action 52 za NES je obljubljal dober deal: 52 iger za 199 dolarjev oz. manj kot 4 dolarje na igro! Kdor ga je kupil, pa je hitro ugotovil, da igre niso bile vredne niti toliko, še več - nekatere se sploh niso zagnale ali pa so se sesuvale 😅",
-      "img": "photos/107800629_164462001856198_2791524964887473355_o_164461998522865.jpg"
-   },
-   {
-      "text": "🐦📱 Mobi Telekoma Slovenije, na voljo od 26. oktobra 1998, je mnogim omogočil vstop v svet mobilne telefonije. Na sliki se skriva eden od prvih 2 modelov telefonov Mobi - se še spomnite, kako se je imenoval?",
-      "img": "photos/108288218_164208625214869_8475650129133879840_o_164208615214870.jpg"
-   },
-   {
-      "text": "🕹️🕹️ Game Boy Micro je poslednji Nintendov Game Boy iz leta 2005, ki ga je nasledil DS. Ima 2'' zaslon in poganja samo igre za Game Boy Advance.",
-      "img": "photos/107466139_163849608584104_4771477837076692996_o_163849605250771.jpg"
-   },
-   {
-      "text": "🧀🐁 Duhovita Miška pravi: Ne sekirajte se, če ne razumete, zakaj sem pomemben sestavni del računalnika - vam bo že kliknilo ;)",
-      "img": "photos/107636222_163482628620802_816012600013844669_o_163482625287469.jpg"
-   },
-   {
-      "text": "🧠🗒️ ThinkPad (na sliki model 340CSE) je serija legendarnih prenosnikov, ki jo je IBM začel leta 1992 in je šla skozi roke LGja in Acerja ter končala pod znamko Lenovo. Prodanih je bilo prek 100 milijonov kosov.",
-      "img": "photos/107092521_163181298650935_2004397177864020043_o_163181295317602.jpg"
-   },
-   {
-      "text": "💼💻 HP 200LX bi imel marsikdo v 1994. V njem procesor 186 poganja MS-DOS 5.0, ki ima na razpolago 2 MB RAM, na voljo pa imamo obilico I/O portov in možnosti za razširitev.",
-      "img": "photos/107646912_162841378684927_6684136101745956569_o_162841375351594.jpg"
-   },
-   {
-      "text": "🌍🔌 Novell NetWare je bil včasih nepogrešljiv mrežni produkt v poslovnem okolju. Med drugim je kar nekaj let pred Microsoftom ponujal imenik za domensko prijavo.",
-      "img": "photos/106977863_162515842050814_3039679184454482503_o_162515838717481.jpg"
-   },
-   {
-      "text": "⌨️📺 Terminal Gorenje Paka 3000 lives on! Ima podoben hardware kot DEC VT102 + jugoslovanske znake v ROMu. Žal nobena od originalnih tipkovnic v zbirki ne dela v celoti, k sreči pa je kompatibilna tudi tipkovnica od Triglava.",
-      "img": "photos/106500735_162210592081339_180513130904427276_o_162210588748006.jpg"
-   },
-   {
-      "text": "🌴✋ Palm. Tako kot BlackBerry nekoč sinonim za prenosni organizator. Najprej jih je kupil U.S. Robotics, ki ga je nato kupil 3Com, ki ga je nato kupil HP, ki je leta 2011 dokončno upokojil ime znamke.",
-      "img": "photos/107003764_161808838788181_3959358704349837172_o_161808835454848.jpg"
-   },
-   {
-      "text": "🍭🎮 SNK Neo Geo Pocket Color je prenosna konzola iz leta 1999. Game Boy Color prekaša s 16-bit CPUjem ter z zaslonom z višjo resolucijo in več barvami, a ga ni uspela vreči s prestola.",
-      "img": "photos/106600493_161521478816917_1641547320839101353_o_161521475483584.jpg"
-   },
-   {
-      "text": "🐘💪 Trdi disk IBM 3370 iz leta 1979 ima 7 plošč s skupno kapaciteto 571 MB. Zraven je tudi evidenčni izpisek slabih sektorjev 😅 in pa sodobnejši trdi disk za primerjavo.",
-      "img": "photos/74601184_161065008862564_6044902739174075837_o_161065005529231.jpg"
-   },
-   {
-      "text": "🧼🤗 V Društvu računalniški muzej dolgo pozabljenim predmetom vračamo dostojanstvo. Če jim le damo priložnost, nas lahko naučijo marsikaj...",
-      "img": "photos/106589838_160028715632860_5353795813598831101_o_160028712299527.jpg"
-   },
-   {
-      "text": "💿🎮 3DO Interactive Multiplayer - model Panasonic FZ-1 - je igralna konzola iz leta 1993. Za svoj čas je bila zelo napredna, kar se je poznalo tudi pri ceni - današnjih 1.100 € - ki je bila eden od glavnih razlogov za njen tržni neuspeh.",
-      "img": "photos/104597758_156052772697121_8656107729417325334_o_156052769363788.jpg"
-   },
-   {
-      "text": "🎁📦 Redkokdo je vsa ta leta obdržal tudi škatle od svojih dragocenosti - v muzeju na tiste, ki jih imamo, skrbno pazimo. Škatla skupaj z vsemi prilogami in dobro ohranjenim primerkom pomeni dosti večjo vrednost eksponata. Pokažite nam kakšno svojo! 📸",
-      "img": "photos/104421187_156038822698516_4912007020680428551_o_156038819365183.jpg"
-   },
-   {
-      "text": "🏢✍️ Microsoft Office 97 je prinesel mnogo novosti, eno od njih lahko najdete tudi na fotografiji 😀",
-      "img": "photos/104483047_156036376032094_4445822856483019567_o_156036372698761.jpg"
-   },
-   {
-      "text": "💤💭 Sega Dreamcast je igralna konzola iz leta 1999. Kljub mnogim tehnološkim bonbončkom ji ni uspelo konkurirati ostalim konzolam 6. generacije in je bila zato Segina zadnja konzola. 😢",
-      "img": "photos/104469363_156030709365994_1973533149923183022_o_156030706032661.jpg"
-   },
-   {
-      "text": "➿📼 Veliki koluti z magnetnimi trakovi so bili nekoč prisotni povsod, razen morda v domačem okolju. V muzeju jih hranimo mnogo vrst in upamo, da bomo iz katerega tudi uspeli kaj prebrati 😀",
-      "img": "photos/83476442_156029362699462_5033825675895342389_o_156029359366129.jpg"
-   },
-   {
-      "text": "💿📚 Iomega Jaz je serija prenosnih podatkovnih medijev in pogonov, predstavljena leta 1995, ki je z večjimi kapacitetami (2 GB leta 1998) nasledila uspešni Zip drive. Primerek na sliki je nekoč uporabljala Založba Pasadena.",
-      "img": "photos/104331345_156024526033279_718829764961881139_o_156024522699946.jpg"
-   },
-   {
-      "text": "⌨️📺 Tektronix 4014 je grafični terminal iz leta 1974. Namesto takrat izjemno dragih pomnilniških čipov za ohranjanje podatkov na zaslonu uporablja poseben 19'' CRT s spominsko funkcijo. Kljub temu smo morali takrat zanj odšteti vrtoglavih 40.000 €.",
-      "img": "photos/104392338_156020346033697_1216091248407560238_o_156020342700364.jpg"
-   },
-   {
-      "text": "📱🎮 Nokia N-Gage iz leta 2003 je bil neuspešen poizkus s prestola vreči Nintendov Game Boy Advance. Četudi je bila ideja združiti mobilni telefon in igralno konzolo v eno napravo smiselna, N-Gage ni ponujal gumbov, primernih za igranje iger, zaslon pa je bil nelogično pokončen.",
-      "img": "photos/104219182_156018409367224_6172733179714454912_o_156018406033891.jpg"
-   },
-   {
-      "text": "🖥️💾 IBM PS/2 je tretja generacija PCjev iz leta 1987. Prinesla je mnogo vplivnih novosti: serijska vrata (16550 UART), 3.5'' diskete s kapaciteto 1440 KB, ikonično tipkovnico Model M, PS/2 porta za tipkovnico in miško ter VGA grafiko.",
-      "img": "photos/83772509_156059726029759_1469473047086965882_o_156059722696426.jpg"
-   },
-   {
-      "text": "📼✏️ Kdor je v prejšnjem tisočletju uporabljal hišne računalnike, ve da kasete niso bile samo za glasbo. Podatki na teh nostalgičnih medijih so bili zapisani na podoben način, kot je potekala komunikacija med modemi prek analogne telefonske linije.",
-      "img": "photos/83767671_155828662719532_2322701165102340158_o_155828659386199.jpg"
-   },
-   {
-      "text": "🔵🖥️ IBM PS/1 je serija računalnikov, namenjena domačim uporabnikom, s procesorji 386/486 in 2-16 MB pomnilnika. Na trg je prišla nekaj let po PS/2 in pomeni IBMovo vrnitev k vodilom ISA in IDE, nazadnje uporabljenih v PC AT, od katerih so se z njim oddaljili.",
-      "img": "photos/104288553_155462522756146_4026781935712411547_o_155462519422813.jpg"
-   },
-   {
-      "text": "🔺🔼 Coleco Telstar Arcade je igralna konzola prve generacije iz leta 1977. Ko vstavimo katero od kartuš z igrami, ki so prav tako trikotne oblike, imamo na njenih 3 stranicah na razpolago krmilnika v stilu pong-a, volan ter pištolo.",
-      "img": "photos/82560298_154971692805229_4692223211607948110_o_154971689471896.jpg"
-   },
-   {
-      "text": "🎮📺 Pred 25 leti se je Sony po sporu z Nintendom sam podal v svet igralnih konzol. Zanimiva je primerjava designa z nedavno predstavljenim PlayStation 5 😀",
-      "img": "photos/103714717_154112769557788_2953979555597483690_o_154112766224455.jpg"
-   },
-   {
-      "text": "🛠️🧰 Včasih je imel vsak računalniški navdušenec nameščena tudi Nortonova Orodja (ali pa vsaj Norton Commander) ter za dobro mero še Norton Uninstall Deluxe 😅",
-      "img": "photos/103938863_153761449592920_5950520384012017952_o_153761446259587.jpg"
-   },
-   {
-      "text": "🧠💭 Mehurčni pomnilnik je manj znan način shranjevanja podatkov iz 70. let, ki za delovanje ne uporablja gibljivih delov - podobno kot današnji SSDji. Podatki so v obliki magnetnih mehurčkov na tankem materialu zapisani v vzporednih linijah, od koder jih pri branju potegnemo.",
-      "img": "photos/102671878_153487869620278_5034993297531024345_o_153487866286945.jpg"
-   },
-   {
-      "text": "👾🎲 Se spomnite teh preprostih prenosnih igric? Nimajo zaslona s piksli, temveč so vsi možni položaji zapečeni v po meri izdelan LCD. Nekatere imajo celo izmenljive module z več igrami. Med njih spada tudi Nintendova serija Game & Watch, predhodnik Game Boya.",
-      "img": "photos/103256453_152996136336118_2422755849072166854_o_152996133002785.jpg"
-   },
-   {
-      "text": "💚🤖 HTC Dream (poznan tudi kot T-Mobile G1) je prvi pametni telefon z operacijskim sistemom Android iz leta 2008. Tako kot večino Android telefonov ga poganja ARM procesor (528 MHz), RAMa je 192 MB, prostora za datoteke pa 256 MB.",
-      "img": "photos/103182442_152589403043458_4989897797781335095_o_152589399710125.jpg"
-   },
-   {
-      "text": "✍️📋 V muzejskem depoju so vsi eksponati skrbno označeni. 😅",
-      "img": "photos/102739624_152137973088601_1721030284613179696_o_152137969755268.jpg"
-   },
-   {
-      "text": "🧙✨ 3dfx Voodoo2 (na sliki PCI kartica Creative Labs 3D Blaster CT6670) je legendarna grafična kartica iz leta 1998, ko je pospeševanje 3D grafike šele začelo prodirati v naše domove. Podjetje 3dfx, ki ga je konec 2000 prevzela Nvidia, je takrat oralo ledino na tem področju.",
-      "img": "photos/103126085_151805539788511_8051156200524121439_o_151805536455178.jpg"
-   },
-   {
-      "text": "🎉🤩 NOVI PODATKOVNI MEDIJ - USB KLJUČEK - je najmanjši in najlažji pogon za hitro in preprosto shranjevanje podatkov!! 🏃 Ker je Plug & Play, je njegova namestitev bliskovita. 🔑 USB KLJUČEK vam omogoča izdelavo varnostnih kopij pomembnih datotek ter, da jih delite z drugimi.",
-      "img": "photos/102316545_151294463172952_2935850420171440128_o_151294459839619.jpg"
-   },
-   {
-      "text": "🍎💼 Apple IIc je simpatičen prenosljiv računalnik iz leta 1984. V njem procesor 65C02 tiktaka z 1 MHz in naslavlja 128 - 1125 KB pomnilnika.",
-      "img": "photos/101102128_149675760001489_4155316683478663168_o_149675753334823.jpg"
-   },
-   {
-      "text": "⌨️📺 Terminal Kopa 700 iz leta 1978 je pod slovensko znamko zapakiran DEC VT52 😍",
-      "img": "photos/101543761_149180053384393_8496579745494859776_o_149180046717727.jpg"
-   },
-   {
-      "text": "📰🖥️ V muzejski knjižnici imamo kar 236 številk revije Monitor, ki izhaja že od leta 1991 💪. Posebej hvaležni pa smo jim za donirano celotno zbirko Monitorjevega računalniškega muzeja. 🤩",
-      "img": "photos/100843788_148911166744615_2469534662519685120_o_148911163411282.jpg"
-   },
-   {
-      "text": "🧡📺 http://zbirka.muzej.si/ je ze kul, ampak se bolj kul bo dostop do nje ponuditi obiskovalcem prek pravega VT320 terminala! Iskanje delujocega kabla trajalo celo jutro, a sem ga nasel 💪",
-      "img": "photos/99297810_148345966801135_1004431114950934528_o_148345963467802.jpg"
-   },
-   {
-      "text": "📺🎮 Hej, sosed ACS Sony! Mami je dala dnar, zato imamo v muzeju nov TV, PlayStation 2, tamau PSP, pa še ostalo je neki flik za Memory Stick! 😂",
-      "img": "photos/101065206_147951010173964_7933980171210588160_o_147951006840631.jpg"
-   },
-   {
-      "text": "🌎📚 V muzeju s pomočjo zavzetih prostovoljcev hranimo tudi obsežno zbirko računalniške literature. Leta 1994 je bil internet še tako majhen, da je bilo njegov imenik moč natisniti v knjigo 😅 Danes se število spletnih strani približuje 2 milijardama.",
-      "img": "photos/100867138_147678630201202_8694577334113533952_o_147678626867869.jpg"
-   },
-   {
-      "text": "🔫🦆 Nintendo Entertainment System Action Set je otroke pod smrečico razveselil za božič leta 1988. Takrat je stal 149,99 dolarjev (danes je to okrog 290 €). V kompletu dobimo konzolo, pištolo Zapper, 2 gamepada in igri Super Mario Bros./Duck Hunt.",
-      "img": "photos/100801302_147281786907553_8723541180513517568_o_147281780240887.jpg"
-   },
-   {
-      "text": "📻🏠 RadioShack TRS-80 je ameriški hišni računalnik iz leta 1977. Tako kot mnoge naprave iz tega obdobja (ZX Spectrum, Amstrad CPC, Galaksija,...) je zgrajen okoli procesorja Z80. V naši zbirki imamo tudi pripadajoč Line Printer VII, Daisy Wheel Printer II, kasetar in 2 joysticka.",
-      "img": "photos/100739585_146794893622909_2302228300312870912_o_146794890289576.jpg"
-   },
-   {
-      "text": "🎮🐱 Atari Lynx (na fotki Lynx II) je prva prenosna konzola z barvnim zaslonom iz leta 1989. Kot mnoge druge je neuspešno poizkusil premagati Game Boy, čeprav ima kar nekaj prednosti pred njim.",
-      "img": "photos/99060846_146401470328918_2513357489446060032_o_146401466995585.jpg"
-   },
-   {
-      "text": "2️⃣3️⃣ Levo: OS/2 Warp izpod rok Microsofta in IBMa je napovedoval prihodnost, ki se na razočaranje mnogih ni uresničila. Desno: Windows 3.0 je pomenil velik skok naprej - z močno izboljšanim UI in kupom tehničnih bonbončkov je bila to prva komercialno uspešna različica.",
-      "img": "photos/100943948_145939880375077_5387526376746123264_o_145939877041744.jpg"
-   },
-   {
-      "text": "🎲📦 Dandanes so fizične škatle in celo fizične izdaje softwarea prava redkost, a lepi so spomini na \"big box\" izdaje 🤗 Imate kakšno še doma? Pogrešate trgovine Mantis, Ita Plus in Hobbit?",
-      "img": "photos/100849167_145646297071102_5372479328191774720_o_145646293737769.jpg"
-   },
-   {
-      "text": "🔥📺 Stari ugasnjeni CRT monitorji nam pripovedujejo zgodbe, zapisane v njihov fosfor - tale je mnogo let služil v nekem proizvodnem obratu. 🏭",
-      "img": "photos/100478071_145243720444693_3751056631954145280_o_145243713778027.jpg"
-   },
-   {
-      "text": "🎮🌍 Tiger Electronics Game. com iz leta 1997 je poizkusil in spodletel konkurirati Game Boyu. Danes slovi kot ponesrečen izdelek, a je imel mnoge inovativne funkcije za svoj čas.",
-      "img": "photos/98111993_144750650494000_4772093056839057408_o_144750643827334.jpg"
-   },
-   {
-      "text": "❤️🧱 Na monitorju od tega PC XT, ki ga je v Jugoslavijo uvozil Intertrade, najdemo listek z naslednjimi navodili: \"Preden ugasneš tetris pritisni [Esc] in nato vpiši pctools in malo počakaj, da se program odpre nato pritisni [F3] in zatem še [P], šele sedaj ugasni računalnik\" 🙃",
-      "img": "photos/99297570_144053880563677_6500406322159157248_o_144053873897011.jpg"
-   },
-   {
-      "text": "📷🖼️ Kodak Photo CD Writer 225 iz leta 1995 omogoča zapisovanje do 100 fotografij v visoki kvaliteti na posebne zapisljive CDje. Slike so stisnjene v posebnem Kodakovem formatu, saj ob pisanju specifikacije učinkovitejši JPEG še ni obstajal in bi bil tudi računsko prezahteven.",
-      "img": "photos/97971078_143405837295148_7844790734312964096_o_143405830628482.jpg"
-   },
-   {
-      "text": "🕹️👾 Atari 2600 Video Computer System je ikonična igralna konzola druge generacije iz leta 1977, iz časov, ko je bila imitacija lesa zaželjena estetika 🌳 💰 Prodanih jih je bilo več kot 30 milijonov. 🎲 Zanjo je bilo izdanih več kot 500 iger - tretjino imamo tudi v naši zbirki.",
-      "img": "photos/97133960_142991807336551_415825376250429440_o_142991800669885.jpg"
-   },
-   {
-      "text": "✒️✍️ HP 7225A je preprost ploter iz leta 1978. Marsikdo od nas še nikoli ni videl tega predhodnika sodobnih tiskalnikov v delovanju - veselimo se, da vam ga bomo lahko demonstrirali :) V zbirki imamo tudi Sharp MZ-1P16 in Calcomp 5324. ",
-      "img": "photos/98184921_142666457369086_6117713015119806464_o_142666450702420.jpg"
-   },
-   {
-      "text": "👁️🕹️ Milton Bradley Microvision je prva prenosna konzola z igrami na kartušah iz leta 1979. Ima par zanimivih tehnoloških lastnosti: 🧠 Konzola vsebuje samo zaslon in gumbe, procesor je del kartuš z igrami. 🔬 Zaslon ima resolucijo 16x16 pikslov, toliko kot najmanjše ikone.",
-      "img": "photos/97657919_142273060741759_1511749018412122112_o_142273057408426.jpg"
-   },
-   {
-      "text": "🚫🍄 Je to Nintendo Entertainment System? Ne čisto. Izda ga uporaba imena \"Family Computer\", kot se je NES imenoval samo na Japonskem, pa tudi ime proizvajalca - \"HI-TECH TOY'S\". ♊ Gre za še enega od nelicenčnih NES klonov z oznako HK-380.",
-      "img": "photos/97431728_141457730823292_5049760987423440896_o_141457724156626.jpg"
-   },
-   {
-      "text": "⬛🖥️ Oric NOVA 64 je bila kopija britanskega hišnega računalnika Oric Atmos za jugoslovansko tržišče. Ljubljanska Avtotehna je pridobila pravice za proizvodnjo 5000 računalnikov, osnovanih na Atmosu, ki jih je prodajala pod novim imenom.",
-      "img": "photos/97143330_141116610857404_8692854128809869312_o_141116607524071.jpg"
-   },
-   {
-      "text": "👾👽 4 nenavadni mediji! 😮 Coleco Telstar Arcade ima trikotne ROM kartuše 🔺, Nintendo e-Reader za GBA bere papirnate kartice 💳, prenosna konzola Game. com iz leta 1997 ima za takrat čisto majhne kartuše 🔬, za Atari 2600 pa so obstajale kartuše z 2 igrama, vsako na svojem koncu 🐫.",
-      "img": "photos/96405107_140573890911676_7479526537704767488_o_140573884245010.jpg"
-   },
-   {
-      "text": "⬛🖥️ Sinclair QL iz leta 1984 je bil zmogljiv osebni računalnik. V njem 32-bitni procesor Motorola 68008 s taktom 7,5 MHz naslavlja 128-896 KB pomnilnika, podatke pa lahko shranjujemo na 2 vgrajena Microdrive-a. 🥉 Žal Kvantni Skok ni uspel konkurirati PCju in Macintoshu.",
-      "img": "photos/96390013_140167830952282_3825579086248411136_o_140167824285616.jpg"
-   },
-   {
-      "text": "🕹️📺 Magnavox Odyssey iz leta 1972 je prva domača igralna konzola. V muzeju hranimo zelo lepo ohranjen primerek s pripadajočo opremo. Je resnično fascinantna: ⬛⬜ igre so črnobele z zelo preprosto grafiko 🖼️ zraven njih dobimo barvne prosojnice za čez TV ekran 🔇 zvoka sploh ni.",
-      "img": "photos/96233093_139773747658357_5448287377866883072_o_139773737658358.jpg"
-   },
-   {
-      "text": "💿📀 Hitachi CDR-1502S, ki nam ga je prijazno doniral Institut Jožef Stefan, je eden prvih CD-ROM pogonov, star kar 35 let! Na računalnik se priključi prek posebne ISA kartice. Za primerjavo pa je zraven Slim DVD-RW pogon iz 10 let starega laptopa.",
-      "img": "photos/96265794_139467517688980_8585861339505754112_o_139467514355647.jpg"
-   },
-   {
-      "text": "💻💼 Compaq Portable III iz leta 1987 je korak bližje k praktičnemu prenosnemu PCju - a še vedno tehta 9,1 kg, tudi zaradi zaslona, ki ni LCD, kot se morda zdi na prvi pogled, ampak črnobela plazma z oranžnimi odtenki. Še vedno tudi ne deluje na baterijo, napajamo ga iz vtičnice.",
-      "img": "photos/96253330_138453977790334_156700777987964928_o_138453974457001.jpg"
-   },
-   {
-      "text": "✖️📦 Microsoft Xbox se je konec leta 2001 kot novinec pridružil bitki igralnih konzol - prvi kos v trgovini Toys 'R' Us je prodal sam Bill Gates. Si predstavljate, da vas je takrat pod božično smrečico pričakala tale škatla? 🎅 🖥️",
-      "img": "photos/95662983_137557621213303_4029431119018459136_o_137557617879970.jpg"
-   },
-   {
-      "text": "💻💻 Amstradov CPC je sicer manj poznan, a zato nič manj omembe vreden hišni računalnik, ki je na mnogih trgih uspešno konkuriral Spectrumu in Commodorju. 📼 Model CPC 464 je bil prvi v seriji in se ponaša z vgrajenim kasetarjem in lastnim monitorjem.",
-      "img": "photos/95611081_137071884595210_4678468464912891904_o_137071877928544.jpg"
-   },
-   {
-      "text": "🦕🖥️ Terminal Lear Siegler ADM-3A (1976) izgleda kot nekaj iz Kremenčkovih :D Pred 12 leti smo ga dobili od Fakultete za strojništvo UM in prihaja še iz časov pred vplivnim terminalom VT100.",
-      "img": "photos/95343235_136179054684493_4900318463647547392_o_136179051351160.jpg"
-   },
-   {
-      "text": "🎮🍄 Game Boy DMG-01 (1989): 90 mm x 148 mm x 32 mm & PocketSprite (2018): 32 mm x 55 mm x 14 mm (poganja tudi igre za GBC, NES in Sego) 😍 📷 Pokažite nam svoje Game Boye! 📸",
-      "img": "photos/95395643_135642844738114_3291452164429316096_o_135642841404781.jpg"
-   },
-   {
-      "text": "📻📼 Hornyphon 9159 je kasetofon avstrijskega proizvajalca Horny, kasneje del Philipsa. Definitivno pa gor ne gre poganjati Tinderja 😅",
-      "img": "photos/94999889_135171604785238_6283704636297707520_o_135171601451905.jpg"
-   },
-   {
-      "text": "🎮🍄 Ta vikend bi pa prijal en Super Mario 64, kajne? :D Ali pa morda The Legend of Zelda: Ocarina of Time, Banjo-Kazooie, Mario Kart 64 ter GoldenEye 007? 🗺 Konzola Nintendo 64 iz 1996 je pripomogla k razcvetu naprednih 3D iger, pritegnila pa je tudi pozornost piscev emulatorjev.",
-      "img": "photos/94625272_134130348222697_1106369049870204928_o_134130341556031.jpg"
-   },
-   {
-      "text": "🌞☀️ V naši zbirki imamo kar nekaj delovnih postaj iz zlate dobe podjetja Sun Microsystems - na sliki sta SPARCstation 20 (s simpatičnim hostnameom \"mokrica\") ter zunanji CD pogon v ohišju Sun 411 (\"nanos\"). 📋 Vsi ti računalniki vsebujejo procesorje z arhitekturo SPARC.",
-      "img": "photos/94996363_133671551601910_6464503213063143424_o_133671548268577.jpg"
-   },
-   {
-      "text": "🍏🍎 Apple Macintosh SE je osebni računalnik iz družine Compact Mac-ov. V njem procesor Motorola 68000 poganja Applov klasični operacijski sistem \"System Software\", ki ga je kasneje nasledil Mac OS. 📦 V naši zbirki imamo 4 take simpatične Mace, poleg SE še SE/30, SE FDHD ter Classic.",
-      "img": "photos/94636579_132700081699057_7846166773115125760_o_132700075032391.jpg"
-   },
-   {
-      "text": "🎮🕹️ Imamo bogato zbirko video iger za mnoge klasične sisteme: 405 za NES, 92 za SNES, 115 za Game Boy, 47 za Nintendo 64, 232 za Atari, 121 za Sego ter še 500 drugih. 😀😀",
-      "img": "photos/94337779_132251931743872_3127244436442972160_o_132251928410539.jpg"
-   },
-   {
-      "text": "💼🧳 Prenosnik IBM Portable PC 5155 sicer tehta kar 13,6 kg, a ga je bil leta 1984 marsikdo pripravljen nesti s seboj na službeno potovanje. 😓 Za eno leto je sicer IBM s prvim prenosnim PCjem prehitelo takrat neznano podjetje Compaq 🤑 Preračunano bi danes stal 10.000 dolarjev",
-      "img": "photos/94224516_131975435104855_7652781253522882560_o_131975428438189.jpg"
-   },
-   {
-      "text": "🔴🔵 Sega Game Gear je bil barvni konkurent Game Boyu, ki smo ga lahko občudovali tudi pri nas. Mnoge je prvič spoznal z Zvočnim Ježem 💙🦔 💡 Razlogi za njegov poraz napram tehnološko šibkejšemu tekmecu so med drugim višja cena in ker je 6 AA baterij požrl v manj kot 5 urah.",
-      "img": "photos/94157039_131278255174573_5850369666223964160_o_131278251841240.jpg"
-   },
-   {
-      "text": "⌚📷 Casio WQV-1 Wrist Camera iz leta 2000 je prva digitalna kamera, vgrajena v ročno uro. Shrani lahko 100 črnobelih fotk velikosti 120x120 pikslov. 😎 Ni si težko predstavljati, kako je takrat vzbudila zanimanje gadget navdušencev.",
-      "img": "photos/93903975_130408915261507_4903629724518973440_o_130408908594841.jpg"
-   },
-   {
-      "text": "⌨️🦅 PEL Varaždin Orao (Orel) je hrvaški šolski računalnik iz 1984. Odlikujta ga preprosta estetska in tehnična zasnova. V njem so procesor MOS 6502, 16/32 KB pomnilnika in poseben čip za 256x256 grafiko. ❤️",
-      "img": "photos/93407234_130060205296378_544854697857515520_o_130060201963045.jpg"
-   },
-   {
-      "text": "⌨️🖥️ Robotron A 5120 je pisarniški računalnik iz Vzhodne Nemčije. Klon operacijskega sistema CP/M (SCP) poganja klon procesorja Z80 (U880) skupaj s 16-64 KB pomnilnika, medij pa so bile 8'' diskete, kasneje pa tudi 5,25'' kot pri našem primerku.",
-      "img": "photos/94101313_129314282037637_4109514005477851136_o_129314278704304.jpg"
-   },
-   {
-      "text": "🏋️💪 Z našim sistemom Iskra Delta 4850 pridejo tudi 4 trdi diski Fujitsu M2294, vsak s kapaciteto 335 MB in težo 45 kg 😅",
-      "img": "photos/93375554_128830128752719_4623597573351931904_o_128830122086053.jpg"
-   },
-   {
-      "text": "🗃️⌨️ IBM 129 Card Data Recorder - stroj za luknjanje kartic, predstavljen leta 1971 - pride z \"brezplačno\" mizo, saj tehta okrog 100 kg 🐘😀 Z njim se na kartice zapisuje podatke, ki jih nato prebere nek računalnik.",
-      "img": "photos/93111223_128288232140242_6671340218039140352_o_128288228806909.jpg"
-   },
-   {
-      "text": "🤖🔵🔴 Nintendo je z robotkom R.O.B. (Robotic Operating Buddy) želel pokazati, da so igralne konzole več kot samo pripomoček za kratkočasenje. R.O.B. postane naš \"Player 2\" in zna s svojimi igračkami izvesti nekaj zanimivih trikov.",
-      "img": "photos/93048921_127735015528897_6603946722261467136_o_127735012195564.jpg"
-   },
-   {
-      "text": "🌸🖨️ Na igličnem tiskalniku NEC Pinwriter P6 plus iz Filozofske fakultete najdemo tale simpatičen napis, ki uporabnike opominja, da je treba s tehniko delati lepo, če želimo, da bo tako delala tudi z nami 🙃",
-      "img": "photos/93421083_127131155589283_5607254708881195008_o_127131145589284.jpg"
-   },
-   {
-      "text": "⌨️🖥️ Silicon Graphics - SGI je pred 20 leti kraljeval na področju najbolj zmogljivih grafičnih delovnih postaj in strežnikov. Med drugim so pomembno vplivali na razvoj igralne konzole Nintendo 64. 💸",
-      "img": "photos/92684762_126040645698334_1054111182052392960_o_126040639031668.jpg"
-   },
-   {
-      "text": "📺👁️ CRT oz. katodni monitorji: veliki, težki, utripajoči, polni svinca in kadmija s ščepcem X-žarkov, a neskončno nostalgični :) 🏃 V muzeju imamo lepo zbirko vseh velikosti in tipov, od črnobelih z zelenim fosforjem do najboljših Sony Trinitron. Uporabljamo jih za retrogaming.",
-      "img": "photos/92375160_125531205749278_116880027357806592_o_125531202415945.jpg"
-   },
-   {
-      "text": "🥛🐄 Ljubljanske mlekarne so včasih uporabljale tale terminal DEC VT420: \"Med Mlekom in Jogurtom preklapljaš s pritiskom na tipko F4\" ❤️😂",
-      "img": "photos/92697230_124950209140711_4762597356594003968_o_124950205807378.jpg"
-   },
-   {
-      "text": "🏋️‍♂️🏋️‍♀️ Naš največji in najtežji eksponat je IBM eServer zSeries, ki ga kljub velikemu tovornemu dvigalu nismo mogli spraviti v kletni depo. Zaenkrat o njem ne vemo prav veliko, edino da je bil narejen okrog leta 2004.",
-      "img": "photos/92422122_124389535863445_1051760825624166400_o_124389532530112.jpg"
-   },
-   {
-      "text": "🎾🏓 Gorenje Elrad Geti 3220 (~1980) je predstavnik prve generacije igralnih konzol. Izbiramo lahko med klasičnimi \"pong\" igrami squash, pelota, tenis, hokej ter 2 strelskima.",
-      "img": "photos/91992151_123947579240974_2677881129456893952_o_123947575907641.jpg"
-   },
-   {
-      "text": "🧠🐘 V muzeju imamo dober spomin in si vse zapomnimo. Še posebej radi prisluhnemo zgodbam o vaših začetkih na področju računalništva. Imate kakšno zanimivo za nas? :)",
-      "img": "photos/92411125_123346132634452_8827486634686545920_o_123346129301119.jpg"
-   },
-   {
-      "text": "⚙️⚙️ \"A imate v muzeju kakšno razširitveno kartico za...?\" \"Imamo.\" 😎",
-      "img": "photos/92248511_123263489309383_9037802116495704064_o_123263482642717.jpg"
-   },
-   {
-      "text": "⌨️🖥️ Terminal Kopa 1000 iz leta 1979 je pod slovensko znamko zapakiran DEC VT100. V našem depoju mu delajo družbo tudi njegov predhodnik Kopa 700, mikroračunalnik Kopa 2500 (DEC PDP-11) ter Kopa 4500.",
-      "img": "photos/91517801_122729756029423_5060105605134417920_o_122729752696090.jpg"
-   },
-   {
-      "text": "🏠⌨️ Poleg britanske Mavrice je bil v naših krajih zelo razširjen tudi ameriški hišni računalnik Commodore 64 ❤️ 🎨🔊 S kar 64 KB pomnilnika, zmogljivo grafiko in zvokom ter \"pravo\" tipkovnico je mnoge prepričal k nakupu.",
-      "img": "photos/91937879_122110966091302_2656091579248279552_o_122110962757969.jpg"
-   },
-   {
-      "text": "🎮🕹️ Nintendo Entertainment System, NES, Famicom ali kar \"Nintendo\". Nekoč je kraljeval v skoraj vsaki dnevni sobi, sedaj pa je kultna klasika ❤️ 🇯🇵🇺🇸 Na japonski trg je prišel leta 1983, na največji, ameriški, pa 1985.",
-      "img": "photos/91970621_121441489491583_3274760362443931648_o_121441482824917.jpg"
-   },
-   {
-      "text": "💾💾 Gibki diski so stvar preteklosti, a kdo se jih ne spominja z nostalgičnim nasmeškom? :) Nekaj zanimivih dejstev: ↕️ V muzeju imamo pogone in medije vseh najbolj razširjenih formatov: 8, 5.25 ter 3.5 inčnih 🗃️ 8 inčni so se na trgu pojavili leta 1971, sprva s kapaciteto 80 KB.",
-      "img": "photos/91153090_120129079622824_6045639435213602816_o_120129072956158.jpg"
-   },
-   {
-      "text": "🧮🔢 V muzeju imamo tudi lepo zbirko računskih strojev in kalkulatorjev. Si predstavljate, da bi morali za preproste matematične izračune s seboj nositi Facit C1-13, ki tehta 6,75 kg? :D",
-      "img": "photos/91066843_119516593017406_4400400578383970304_o_119516586350740.jpg"
-   },
-   {
-      "text": "😎💾 You vs. the guy she told you not to worry about 😅 💪 V muzeju med drugim kuriramo tudi zbirko vseh vrst podatkovnih nosilcev - od microSD kartic z maso 250 mg do trdega diska IBM 3370 s 7 ploščami premera 36 cm in kapaciteto 571 MB, ki tehta kar nekaj kg.",
-      "img": "photos/91038243_118946196407779_3189015575217045504_o_118946193074446.jpg"
-   },
-   {
-      "text": "🌈⌨️ Sinclair ZX Spectrum oz. Mavrica je zaradi svoje cenovne dostopnosti našla mesto v marsikaterem slovenskem domu. Ker so bile igre in programi zanjo shranjeni na poceni avdio kasetah, je to sprožilo prvi množični file sharing, tudi prek radijskih valov :)",
-      "img": "photos/91602151_118363943132671_5848371853596295168_o_118363939799338.jpg"
-   },
-   {
-      "text": "⌨️🇸🇮🖥️ Iskra Delta Partner je namizni računalnik, prvič predstavljen leta 1983. Mišljen je bil kot mali poslovni oz. razvojni sistem. ❤️ V muzeju smo ponosni na obširno zbirko slovenskih računalnikov in njihove opreme. Med drugim sodelujemo tudi z društvom \"Deltašev\" I DELTA CLUB.",
-      "img": "photos/90950823_117764809859251_7191412022590832640_o_117764806525918.jpg"
-   },
-   {
-      "text": "✏️📺 V muzejski zbirki je tudi unikatna igralna konzola Vectrex, ki ima svoj lasten TV zaslon. Njena posebnost, razvidna tudi iz imena, je vektorska grafika (iz serije črt) namesto rasterske (kot točke na zaslonu oz. piksli) - to daje njenim igram poseben videz in zelo gladke animacije.",
-      "img": "photos/90755991_116748633294202_2261255721058304000_o_116748629960869.jpg"
-   },
-   {
-      "text": "❓🤔 Nagradno vprašanje brez nagrade :D Kateri trije podatkovni mediji iz starih časov so na fotografiji? 🦖🗄️🦕",
-      "img": "photos/90651121_116002976702101_1091459865471090688_o_116002973368768.jpg"
-   },
-   {
-      "text": "💾🖥️ Windows 95 je bil prvi Microsoftov operacijski sistem, ki je bil preveden v slovenščino. Prinesel je vrsto sprememb in novosti, ki so z nami še danes.",
-      "img": "photos/90902647_115284073440658_8584677530554859520_o_115284066773992.jpg"
-   },
-   {
-      "text": "📺 🖥️ Tole je katodni monitor IBM 5151, ki je pripadal originalnemu IBM PC iz leta 1981. Sliko prikazuje v odtenkih zelene barve 🟢 v resoluciji 720 x 350. 2 leti kasneje ga je nasledil IBM 5153, barvni monitor, ki je podpiral 16-barvni standard CGA.",
-      "img": "photos/90750346_112368673732198_4939790879545098240_o_112368667065532.jpg"
-   },
-   {
-      "text": "💻📰 Računalniške novice so ena najstarejših slovenskih računalniških revij, ki še izhaja. V muzeju hranimo tudi njihovo 1. številko iz aprila 1996, ki je takrat stala 99 SIT :) 🕰️ Že iz vsebine naslovnice doživimo nostalgijo.",
-      "img": "photos/90436108_110862670549465_2661346252691603456_o_110862667216132.jpg"
-   },
-   {
-      "text": "💿 💿 Ali ste se kdaj vprašali, zakaj se CDjem reče Compact Disc? Odgovor se skriva v zgodovini njihovega nastanka! 📽️ 4 leta prej je namreč Philips skupaj s partnerji na ameriškem tržišču lansiral prvi optični disk, imenovan LaserDisc.",
-      "img": "photos/90074832_110141953954870_1296959318846865408_o_110141950621537.jpg"
-   },
-   {
-      "text": "👓👁️ 3D VR headset iz 1995? 😮 Nintendo je poizkusil z Virtual Boyem, nam v Evropi malo poznanim poizkusom narediti naslednji mega prodajni hit za originalnim Game Boyem. A kolikor je bila naprava inovativna, je žal imela veliko kompromisov.",
-      "img": "photos/84168586_109620404007025_7894251375830237184_o_109620400673692.jpg"
-   },
-   {
-      "text": "🐁 🖱️ 🐭 :D :D",
-      "img": "photos/90085780_108750280760704_673414184402157568_o_108750277427371.jpg"
-   },
-   {
-      "text": "☎️🌍 Se še spomnite klicnega dostopa do interneta? ☎️ V muzeju smo vzpostavili simulacijo le-tega s pomočjo dveh starih PCjev (Pentium 133 MHz, 16 MB RAM, slovenski Windows 95) in dveh zunanjih modemov U.S. Robotics.",
-      "img": "photos/89814709_107479844221081_2819101986316615680_o_107479834221082.jpg"
-   }
+[{
+		"text": "👁️🔠 Microsoft Visual Basic je bil nekoč eden najbolj priljubljenih programskih jezikov. Ste tudi vi spisali kak program v njem?",
+		"img": "photos/118716039_181135523522179_638745676482954479_o_181135520188846.jpg"
+	},
+	{
+		"text": "🔌🔢 Take priključne plošče so se včasih uporabljale za prilagajanje obnašanja in funkcionalnosti strojev za obdelavo podatkov (npr. IBM) in računalnikov. Med drugim jo je imela tudi slavna nemška šifrirna naprava Enigma.",
+		"img": "photos/118745723_181132873522444_2305595270557641184_o_181132870189111.jpg"
+	},
+	{
+		"text": "🧠🧱 Kultna miselna igra Tetris je bila leta 1984 najprej spisana za sovjetski računalnik Electronika 60, nato pa so sledile številne različice, tudi za NES, Game Boy in Virtual Boy.",
+		"img": "photos/118405313_181130033522728_3787935423394372163_o_181130030189395.jpg"
+	},
+	{
+		"text": "🚫🦠 Islandski F-Prot Antivirus je prvič izšel leta 1989 in je pred škodljivci dolgo ščitil tudi marsikateri slovenski PC.",
+		"img": "photos/118692772_181126380189760_4484964642856489731_o_181126376856427.jpg"
+	},
+	{
+		"text": "🌈⌨️ Katere so bile vaše najljubše igre za Mavrico in C64? 😀",
+		"img": "photos/118697339_180591966909868_4303622880316509540_o_180591963576535.jpg"
+	},
+	{
+		"text": "💥🪂 Zdi se, da lahko iz tega HP terminala Envizex vsak trenutek skoči Vin Diesel 👨‍🦲💪",
+		"img": "photos/118559155_179047630397635_1240138586548268811_o_179047627064302.jpg"
+	},
+	{
+		"text": "🔢🖨️ HP-85 iz leta 1980 spada med majhne namizne znanstvene računalnike. Ima vgrajen 5'' CRT monitor, 16 KB RAMa in CPU s taktom 625 kHz. Pride z vgrajenim programskim jezikom BASIC, podatke lahko izpisujemo na vgrajeni termični tiskalnik.",
+		"img": "photos/118595394_179045477064517_4347518186053236779_o_179045473731184.jpg"
+	},
+	{
+		"text": "😄📺 Fairchild Channel F(un) iz leta 1976 je bila prva igralna konzola z izmenljivimi ROM kartušami. Poganja jo njihov lastni procesor F8, ki naslavlja 64 bajtov (!) pomnilnika, ki pa je k sreči bil razširljiv s samimi kartušami z igrami.",
+		"img": "photos/118519213_179040583731673_3582691921292744936_o_179040580398340.jpg"
+	},
+	{
+		"text": "🎂🍰 Microsoft Windowsi 95 praznujejo 25 let!",
+		"img": "photos/49376291_609105746420467_6762532344680944777_n_312151773338554.jpg"
+	},
+	{
+		"text": "🌈⌨️ + 📖 = 🍳🍽️? 😎 Priložen je tudi program, ki nam na podlagi sestavin, ki jih imamo doma, predlaga jedilnik.",
+		"img": "photos/118393873_178198850482513_1344258722444731872_o_178198847149180.jpg"
+	},
+	{
+		"text": "👾🏴‍☠️ Nelicenčne igre za Nintendo Entertainment System so izgledale malo drugače kot npr. običajna kartuša od Battletoads.",
+		"img": "photos/118226834_177921310510267_6533477215650324822_o_177921307176934.jpg"
+	},
+	{
+		"text": "⚽🐭 To je zanimiva \"miška\" Spaceball 2003 iz leta 1991. Get yourself on the ball!",
+		"img": "photos/118281999_177618400540558_8901610805360158338_o_177618397207225.jpg"
+	},
+	{
+		"text": "📺🖨️ O tiskalniku Tektronix 4631 Hard Copy Unit, ki smo ga pred 12 leti dobili iz Fakultete za strojništvo UM, še ne vemo prav veliko, a bi se vsekakor radi poučili in ga preizkusili. Tiska na prav poseben način z 1-dimenzionalno CRT cevjo in na poseben srebrn papir.",
+		"img": "photos/118067396_177470900555308_4252293137629964435_o_177470897221975.jpg"
+	},
+	{
+		"text": "👾📺 V sklopu evidentiranja in preizkušanja eksponatov z veseljem ugotavljamo, da naš Vectrex iz leta 1982 brezhibno deluje! 😍",
+		"img": "photos/118152237_176763070626091_8799490073852596361_o_176763067292758.jpg"
+	},
+	{
+		"text": "📖⌨️ Knjiga Mirko tipka na radirko je učna zbirka programov za ZX Spectrum. Izšla je leta 1985 v okviru revije Moj mikro, programe pa sta zbrala in uredila Žiga Turk ter Ciril Kraševec, njena soustanovitelja in prva urednika.",
+		"img": "photos/117932665_176458297323235_5820547517026849836_o_176458293989902.jpg"
+	},
+	{
+		"text": "⬛📺 DOS PTSD intensifies 😅😅",
+		"img": "photos/117956048_175794030722995_5300572115075334265_o_175794027389662.jpg"
+	},
+	{
+		"text": "🧠📺 Mattel Electronics Intellivision je igralna konzola druge generacije iz leta 1979. V njej z 2 MHz tiktaka procesor General Instrument CP1610, soroden tistemu v PDP-11, ki naslavlja 1K pomnilnika.",
+		"img": "photos/117732137_175542330748165_2151523579892346017_o_175542327414832.jpg"
+	},
+	{
+		"text": "💼🔢 Izgleda kot kovček za začeti jedrsko vojno 😅, a gre le za mobilni programator EPROM-ov Iskra PRO-GRM 781A, ki nam ga je leta 2008 prijazno donirala Fakulteta za računalništvo in informatiko.",
+		"img": "photos/117769562_175270240775374_635039347561195385_o_175270237442041.jpg"
+	},
+	{
+		"text": "🤙☎️ Ker vas je včeraj prek 100 všečkalo stare Iskrine telefone, sem se odločil narediti še eno \"družinsko\" fotografijo iz naše zbirke - nekateri rabijo še malo ljubezni in čiščenja 🥰",
+		"img": "photos/117641943_174683607500704_6338344629600784517_o_174683604167371.jpg"
+	},
+	{
+		"text": "📞☎️ Iskra ETA 86 je ikoničen telefon z mednarodno priznanim designom, prvič predstavljenim leta 1978. Oblikoval ga je dr. Davorin Savnik, vodja Iskrinega oblikovalskega oddelka in eden znamenitejših slovenskih oblikovalcev.",
+		"img": "photos/117273169_173648924270839_7018220532073477289_o_173648920937506.jpg"
+	},
+	{
+		"text": "🧮🔢 Hrvaški Digitron db 803 iz leta 1974 je eden prvih jugoslovanskih kalkulatorjev. Polnimo ga v njegovem kovčku, kjer ga lahko uporabljamo tudi, če ima prazne baterije.",
+		"img": "photos/117307897_173650674270664_1504179945170138349_o_173650670937331.jpg"
+	},
+	{
+		"text": "🥂🐛 20 let pozneje se zdi kot bled spomin - sploh, ker se ni zgodilo nič groznega - a za Y2K je bilo treba popraviti in stestirati marsikaj. V muzeju hranimo uokvirjeno prvo vlogo za izdajo osebne izkaznice, izdano 1. januarja 2000 ob 7:00 na Ministrstvu za javno upravo.",
+		"img": "photos/117342685_173657224270009_1876315557504212452_o_173657220936676.jpg"
+	},
+	{
+		"text": "⌨️🖥️ IskraData 100 je 16-bitni razvojni sistem, ustvarjen leta 1982 v TOZD Računalniki Kranj. Omogoča programiranje na mikroprocesorjih Motorola 68000 in Zilog 80. Programiralo se je lahko v Basic-u in Pascal-u.",
+		"img": "photos/117302324_173006474335084_4906809877855484441_o_173006471001751.jpg"
+	},
+	{
+		"text": "📰💿 CDji in DVDji, ki so bili včasih priloženi slovenskim računalniškim revijam, so neprecenljiv vir slovenskega softwarea. Revija PC & mediji je redno objavljala prispevke bralcev, ki jih bomo v muzeju skrbno pregledali in vam predstavili najbolj zanimive.",
+		"img": "photos/117229110_172691701033228_8416261405523263229_o_172691697699895.jpg"
+	},
+	{
+		"text": "📰📰 Revija Moj Mikro, marec 1986.",
+		"img": "photos/117123415_172360077733057_52318836503518841_o_172360071066391.jpg"
+	},
+	{
+		"text": "📚🗃️ Paradox for Windows iz leta 1993 je sistem podatkovnih baz, ki ga je Borland prevzel s podjetjem Ansa Software in je na koncu končal v rokah Corel-a. Nudil je kompatibilnost s konkurenčnim sistemom dBase. Ste ju kdaj uporabljali?",
+		"img": "photos/117035046_171524767816588_5991219086009948786_o_171524764483255.jpg"
+	},
+	{
+		"text": "🧱🍄 Tetris, Super Mario Land, Dr. Mario, Golf in Alleyway so ene prvih iger za Nintendo Game Boy. Golf je od njih potrebnoval največji ROM čip s kar 128 KB, Mariova pustolovščina 64 KB, ostale pa zgolj 32 KB. Maria sicer najdemo v prav vseh teh igrah.",
+		"img": "photos/116798583_171223234513408_6754322759707797000_o_171223231180075.jpg"
+	},
+	{
+		"text": "🐤🧒 Revija Ciciban iz založbe Mladinska knjiga že 75 let vabi otroke v svet branja in pisanja, lepote in raziskovanja - tudi informacijskih tehnologij. V njej so se že dolgo nazaj lahko naučili z računalnikom izrisati cvetlico za voščilnico za materinski dan.",
+		"img": "photos/116428699_170566827912382_1988135728059662527_o_170566824579049.jpg"
+	},
+	{
+		"text": "🕹️💨 Iz časov, ko je NEC še delal igralne konzole, prihaja prenosna različica njihovega TurboGrafx-16 (PC Engine) imenovana TurboExpress.",
+		"img": "photos/116370519_170335814602150_4554699929841316516_o_170335811268817.jpg"
+	},
+	{
+		"text": "💾⌨️ MS-DOS 6.x je bil zadnji samostojni Microsoft DOS, ki je bil prisoten od čistega začetka dobe PCjev (1981) pa vse do Windows Me, zadnjih sorodnih Oken. V nekaterih poslovnih okoljih se uporablja še danes 😅, v marsikaterem domu pa za DOS retrogaming 😍",
+		"img": "photos/116212798_169254634710268_5830374889433253919_o_169254631376935.jpg"
+	},
+	{
+		"text": "🧱🍄 Leta 1994 je Laser plus d.o.o., uradni zastopnik za Nintendo v Sloveniji, oboževalce Maria razveselil s poslovenjenim albumom za nalepke 😍",
+		"img": "photos/116204727_169218518047213_6419404491732994630_o_169218514713880.jpg"
+	},
+	{
+		"text": "🕹️📺 Atari 5200 je konzola iz leta 1982, mišljena kot zmogljivejši brat uspešnega Atarija 2600, a s hardwareom, podobnim tistemu v Atarijevih hišnih računalnikih.",
+		"img": "photos/116127872_169052174730514_4053937510658891875_o_169052171397181.jpg"
+	},
+	{
+		"text": "📺🍎 Serija namiznih računalnikov Apple iMac je od leta 1998 šla že skozi 7 generacij - modeli s katodnimi monitorji imajo zagotovo en poseben čar (na fotki različica z režo za optični pogon, ki je bila posodobitev originala).",
+		"img": "photos/115928083_168662334769498_4195676161206568829_o_168662331436165.jpg"
+	},
+	{
+		"text": "🥂🎆 Windows Me. Zadnji s kernelom iz družine 9x, preden so Windows XP tudi domačim uporabnikom ponudili vse prednosti NT. Windows Millennium Edition v nekaterih zbudi močna čustva, ampak a je bil res tako slab? 🤔",
+		"img": "photos/115750304_168272138141851_1571628723991574595_o_168272134808518.jpg"
+	},
+	{
+		"text": "🏁🏎️ Dirkaške simulacije so bile v drugi polovici 90. let 20. stoletja zelo popularne. Slovenci seveda nismo (o)stali križem rok. Medtem ko so nekateri vozili častne kroge, se je našel gospod z idejo, da raje skonstruira pripomoček za pristnejšo vožnjo.",
+		"img": "photos/109926553_168055261496872_6007660739108554668_o_168055258163539.jpg"
+	},
+	{
+		"text": "🏴‍☠️🦜 Psst, fante, a hočeš katalog poceni igric?",
+		"img": "photos/110725094_167715824864149_2210422849018335770_o_167715821530816.jpg"
+	},
+	{
+		"text": "⌨️📺 DEC VT510 je model iz zadnje serije Digitalovih \"klasičnih\" terminalov. Podpira prikaz 53 vrstic in hitrosti do 115200 bit/s.",
+		"img": "photos/109696263_166259071676491_5270844963831282230_o_166259068343158.jpg"
+	},
+	{
+		"text": "⌨️🖥️ Institut Jožef Stefan je leta 1984 izdelal prvi domači 16-bitni računalnik PMP-11, ki je nastal kot pripomoček pri delu raziskovalcev in inženirjev.",
+		"img": "photos/109164865_165893651713033_5148935546948162766_o_165893648379700.jpg"
+	},
+	{
+		"text": "🤝🙂 Commodore je v svojih zadnjih vzdihljajih skušal konkurirati pohodu PC-jev z Amigo 1200 (na sliki) in 4000. AGA arhitektura čipovja, tretja po vrsti, je prinesla nekaj grafičnih napredkov, hitrejše procesorje, vendar je bilo vse skupaj premalo in prepozno.",
+		"img": "photos/108318759_165135888455476_5573528972840477004_o_165135885122143.jpg"
+	},
+	{
+		"text": "📼🕹️ View-Master Interactive Vision je nenavadna konzola - sliko sestavi iz VHS posnetkov ter svoje grafike, ki je na nivoju 8-bitnih igralnih konzol. Njen fizični izgled in občutek rokovanja z... igralno palico? pa sta tudi stvar debate 😅",
+		"img": "photos/108194160_164917808477284_7448573623244315279_o_164917805143951.jpg"
+	},
+	{
+		"text": "💥🕹️ Action 52 za NES je obljubljal dober deal: 52 iger za 199 dolarjev oz. manj kot 4 dolarje na igro! Kdor ga je kupil, pa je hitro ugotovil, da igre niso bile vredne niti toliko, še več - nekatere se sploh niso zagnale ali pa so se sesuvale 😅",
+		"img": "photos/107800629_164462001856198_2791524964887473355_o_164461998522865.jpg"
+	},
+	{
+		"text": "🐦📱 Mobi Telekoma Slovenije, na voljo od 26. oktobra 1998, je mnogim omogočil vstop v svet mobilne telefonije. Na sliki se skriva eden od prvih 2 modelov telefonov Mobi - se še spomnite, kako se je imenoval?",
+		"img": "photos/108288218_164208625214869_8475650129133879840_o_164208615214870.jpg"
+	},
+	{
+		"text": "🕹️🕹️ Game Boy Micro je poslednji Nintendov Game Boy iz leta 2005, ki ga je nasledil DS. Ima 2'' zaslon in poganja samo igre za Game Boy Advance.",
+		"img": "photos/107466139_163849608584104_4771477837076692996_o_163849605250771.jpg"
+	},
+	{
+		"text": "🧀🐁 Duhovita Miška pravi: Ne sekirajte se, če ne razumete, zakaj sem pomemben sestavni del računalnika - vam bo že kliknilo ;)",
+		"img": "photos/107636222_163482628620802_816012600013844669_o_163482625287469.jpg"
+	},
+	{
+		"text": "🧠🗒️ ThinkPad (na sliki model 340CSE) je serija legendarnih prenosnikov, ki jo je IBM začel leta 1992 in je šla skozi roke LGja in Acerja ter končala pod znamko Lenovo. Prodanih je bilo prek 100 milijonov kosov.",
+		"img": "photos/107092521_163181298650935_2004397177864020043_o_163181295317602.jpg"
+	},
+	{
+		"text": "💼💻 HP 200LX bi imel marsikdo v 1994. V njem procesor 186 poganja MS-DOS 5.0, ki ima na razpolago 2 MB RAM, na voljo pa imamo obilico I/O portov in možnosti za razširitev.",
+		"img": "photos/107646912_162841378684927_6684136101745956569_o_162841375351594.jpg"
+	},
+	{
+		"text": "🌍🔌 Novell NetWare je bil včasih nepogrešljiv mrežni produkt v poslovnem okolju. Med drugim je kar nekaj let pred Microsoftom ponujal imenik za domensko prijavo.",
+		"img": "photos/106977863_162515842050814_3039679184454482503_o_162515838717481.jpg"
+	},
+	{
+		"text": "⌨️📺 Terminal Gorenje Paka 3000 lives on! Ima podoben hardware kot DEC VT102 + jugoslovanske znake v ROMu. Žal nobena od originalnih tipkovnic v zbirki ne dela v celoti, k sreči pa je kompatibilna tudi tipkovnica od Triglava.",
+		"img": "photos/106500735_162210592081339_180513130904427276_o_162210588748006.jpg"
+	},
+	{
+		"text": "🌴✋ Palm. Tako kot BlackBerry nekoč sinonim za prenosni organizator. Najprej jih je kupil U.S. Robotics, ki ga je nato kupil 3Com, ki ga je nato kupil HP, ki je leta 2011 dokončno upokojil ime znamke.",
+		"img": "photos/107003764_161808838788181_3959358704349837172_o_161808835454848.jpg"
+	},
+	{
+		"text": "🍭🎮 SNK Neo Geo Pocket Color je prenosna konzola iz leta 1999. Game Boy Color prekaša s 16-bit CPUjem ter z zaslonom z višjo resolucijo in več barvami, a ga ni uspela vreči s prestola.",
+		"img": "photos/106600493_161521478816917_1641547320839101353_o_161521475483584.jpg"
+	},
+	{
+		"text": "🐘💪 Trdi disk IBM 3370 iz leta 1979 ima 7 plošč s skupno kapaciteto 571 MB. Zraven je tudi evidenčni izpisek slabih sektorjev 😅 in pa sodobnejši trdi disk za primerjavo.",
+		"img": "photos/74601184_161065008862564_6044902739174075837_o_161065005529231.jpg"
+	},
+	{
+		"text": "🧼🤗 V Društvu računalniški muzej dolgo pozabljenim predmetom vračamo dostojanstvo. Če jim le damo priložnost, nas lahko naučijo marsikaj...",
+		"img": "photos/106589838_160028715632860_5353795813598831101_o_160028712299527.jpg"
+	},
+	{
+		"text": "💿🎮 3DO Interactive Multiplayer - model Panasonic FZ-1 - je igralna konzola iz leta 1993. Za svoj čas je bila zelo napredna, kar se je poznalo tudi pri ceni - današnjih 1.100 € - ki je bila eden od glavnih razlogov za njen tržni neuspeh.",
+		"img": "photos/104597758_156052772697121_8656107729417325334_o_156052769363788.jpg"
+	},
+	{
+		"text": "🎁📦 Redkokdo je vsa ta leta obdržal tudi škatle od svojih dragocenosti - v muzeju na tiste, ki jih imamo, skrbno pazimo. Škatla skupaj z vsemi prilogami in dobro ohranjenim primerkom pomeni dosti večjo vrednost eksponata. Pokažite nam kakšno svojo! 📸",
+		"img": "photos/104421187_156038822698516_4912007020680428551_o_156038819365183.jpg"
+	},
+	{
+		"text": "🏢✍️ Microsoft Office 97 je prinesel mnogo novosti, eno od njih lahko najdete tudi na fotografiji 😀",
+		"img": "photos/104483047_156036376032094_4445822856483019567_o_156036372698761.jpg"
+	},
+	{
+		"text": "💤💭 Sega Dreamcast je igralna konzola iz leta 1999. Kljub mnogim tehnološkim bonbončkom ji ni uspelo konkurirati ostalim konzolam 6. generacije in je bila zato Segina zadnja konzola. 😢",
+		"img": "photos/104469363_156030709365994_1973533149923183022_o_156030706032661.jpg"
+	},
+	{
+		"text": "➿📼 Veliki koluti z magnetnimi trakovi so bili nekoč prisotni povsod, razen morda v domačem okolju. V muzeju jih hranimo mnogo vrst in upamo, da bomo iz katerega tudi uspeli kaj prebrati 😀",
+		"img": "photos/83476442_156029362699462_5033825675895342389_o_156029359366129.jpg"
+	},
+	{
+		"text": "💿📚 Iomega Jaz je serija prenosnih podatkovnih medijev in pogonov, predstavljena leta 1995, ki je z večjimi kapacitetami (2 GB leta 1998) nasledila uspešni Zip drive. Primerek na sliki je nekoč uporabljala Založba Pasadena.",
+		"img": "photos/104331345_156024526033279_718829764961881139_o_156024522699946.jpg"
+	},
+	{
+		"text": "⌨️📺 Tektronix 4014 je grafični terminal iz leta 1974. Namesto takrat izjemno dragih pomnilniških čipov za ohranjanje podatkov na zaslonu uporablja poseben 19'' CRT s spominsko funkcijo. Kljub temu smo morali takrat zanj odšteti vrtoglavih 40.000 €.",
+		"img": "photos/104392338_156020346033697_1216091248407560238_o_156020342700364.jpg"
+	},
+	{
+		"text": "📱🎮 Nokia N-Gage iz leta 2003 je bil neuspešen poizkus s prestola vreči Nintendov Game Boy Advance. Četudi je bila ideja združiti mobilni telefon in igralno konzolo v eno napravo smiselna, N-Gage ni ponujal gumbov, primernih za igranje iger, zaslon pa je bil nelogično pokončen.",
+		"img": "photos/104219182_156018409367224_6172733179714454912_o_156018406033891.jpg"
+	},
+	{
+		"text": "🖥️💾 IBM PS/2 je tretja generacija PCjev iz leta 1987. Prinesla je mnogo vplivnih novosti: serijska vrata (16550 UART), 3.5'' diskete s kapaciteto 1440 KB, ikonično tipkovnico Model M, PS/2 porta za tipkovnico in miško ter VGA grafiko.",
+		"img": "photos/83772509_156059726029759_1469473047086965882_o_156059722696426.jpg"
+	},
+	{
+		"text": "📼✏️ Kdor je v prejšnjem tisočletju uporabljal hišne računalnike, ve da kasete niso bile samo za glasbo. Podatki na teh nostalgičnih medijih so bili zapisani na podoben način, kot je potekala komunikacija med modemi prek analogne telefonske linije.",
+		"img": "photos/83767671_155828662719532_2322701165102340158_o_155828659386199.jpg"
+	},
+	{
+		"text": "🔵🖥️ IBM PS/1 je serija računalnikov, namenjena domačim uporabnikom, s procesorji 386/486 in 2-16 MB pomnilnika. Na trg je prišla nekaj let po PS/2 in pomeni IBMovo vrnitev k vodilom ISA in IDE, nazadnje uporabljenih v PC AT, od katerih so se z njim oddaljili.",
+		"img": "photos/104288553_155462522756146_4026781935712411547_o_155462519422813.jpg"
+	},
+	{
+		"text": "🔺🔼 Coleco Telstar Arcade je igralna konzola prve generacije iz leta 1977. Ko vstavimo katero od kartuš z igrami, ki so prav tako trikotne oblike, imamo na njenih 3 stranicah na razpolago krmilnika v stilu pong-a, volan ter pištolo.",
+		"img": "photos/82560298_154971692805229_4692223211607948110_o_154971689471896.jpg"
+	},
+	{
+		"text": "🎮📺 Pred 25 leti se je Sony po sporu z Nintendom sam podal v svet igralnih konzol. Zanimiva je primerjava designa z nedavno predstavljenim PlayStation 5 😀",
+		"img": "photos/103714717_154112769557788_2953979555597483690_o_154112766224455.jpg"
+	},
+	{
+		"text": "🛠️🧰 Včasih je imel vsak računalniški navdušenec nameščena tudi Nortonova Orodja (ali pa vsaj Norton Commander) ter za dobro mero še Norton Uninstall Deluxe 😅",
+		"img": "photos/103938863_153761449592920_5950520384012017952_o_153761446259587.jpg"
+	},
+	{
+		"text": "🧠💭 Mehurčni pomnilnik je manj znan način shranjevanja podatkov iz 70. let, ki za delovanje ne uporablja gibljivih delov - podobno kot današnji SSDji. Podatki so v obliki magnetnih mehurčkov na tankem materialu zapisani v vzporednih linijah, od koder jih pri branju potegnemo.",
+		"img": "photos/102671878_153487869620278_5034993297531024345_o_153487866286945.jpg"
+	},
+	{
+		"text": "👾🎲 Se spomnite teh preprostih prenosnih igric? Nimajo zaslona s piksli, temveč so vsi možni položaji zapečeni v po meri izdelan LCD. Nekatere imajo celo izmenljive module z več igrami. Med njih spada tudi Nintendova serija Game & Watch, predhodnik Game Boya.",
+		"img": "photos/103256453_152996136336118_2422755849072166854_o_152996133002785.jpg"
+	},
+	{
+		"text": "💚🤖 HTC Dream (poznan tudi kot T-Mobile G1) je prvi pametni telefon z operacijskim sistemom Android iz leta 2008. Tako kot večino Android telefonov ga poganja ARM procesor (528 MHz), RAMa je 192 MB, prostora za datoteke pa 256 MB.",
+		"img": "photos/103182442_152589403043458_4989897797781335095_o_152589399710125.jpg"
+	},
+	{
+		"text": "✍️📋 V muzejskem depoju so vsi eksponati skrbno označeni. 😅",
+		"img": "photos/102739624_152137973088601_1721030284613179696_o_152137969755268.jpg"
+	},
+	{
+		"text": "🧙✨ 3dfx Voodoo2 (na sliki PCI kartica Creative Labs 3D Blaster CT6670) je legendarna grafična kartica iz leta 1998, ko je pospeševanje 3D grafike šele začelo prodirati v naše domove. Podjetje 3dfx, ki ga je konec 2000 prevzela Nvidia, je takrat oralo ledino na tem področju.",
+		"img": "photos/103126085_151805539788511_8051156200524121439_o_151805536455178.jpg"
+	},
+	{
+		"text": "🎉🤩 NOVI PODATKOVNI MEDIJ - USB KLJUČEK - je najmanjši in najlažji pogon za hitro in preprosto shranjevanje podatkov!! 🏃 Ker je Plug & Play, je njegova namestitev bliskovita. 🔑 USB KLJUČEK vam omogoča izdelavo varnostnih kopij pomembnih datotek ter, da jih delite z drugimi.",
+		"img": "photos/102316545_151294463172952_2935850420171440128_o_151294459839619.jpg"
+	},
+	{
+		"text": "🍎💼 Apple IIc je simpatičen prenosljiv računalnik iz leta 1984. V njem procesor 65C02 tiktaka z 1 MHz in naslavlja 128 - 1125 KB pomnilnika.",
+		"img": "photos/101102128_149675760001489_4155316683478663168_o_149675753334823.jpg"
+	},
+	{
+		"text": "⌨️📺 Terminal Kopa 700 iz leta 1978 je pod slovensko znamko zapakiran DEC VT52 😍",
+		"img": "photos/101543761_149180053384393_8496579745494859776_o_149180046717727.jpg"
+	},
+	{
+		"text": "📰🖥️ V muzejski knjižnici imamo kar 236 številk revije Monitor, ki izhaja že od leta 1991 💪. Posebej hvaležni pa smo jim za donirano celotno zbirko Monitorjevega računalniškega muzeja. 🤩",
+		"img": "photos/100843788_148911166744615_2469534662519685120_o_148911163411282.jpg"
+	},
+	{
+		"text": "🧡📺 http://zbirka.muzej.si/ je ze kul, ampak se bolj kul bo dostop do nje ponuditi obiskovalcem prek pravega VT320 terminala! Iskanje delujocega kabla trajalo celo jutro, a sem ga nasel 💪",
+		"img": "photos/99297810_148345966801135_1004431114950934528_o_148345963467802.jpg"
+	},
+	{
+		"text": "📺🎮 Hej, sosed ACS Sony! Mami je dala dnar, zato imamo v muzeju nov TV, PlayStation 2, tamau PSP, pa še ostalo je neki flik za Memory Stick! 😂",
+		"img": "photos/101065206_147951010173964_7933980171210588160_o_147951006840631.jpg"
+	},
+	{
+		"text": "🌎📚 V muzeju s pomočjo zavzetih prostovoljcev hranimo tudi obsežno zbirko računalniške literature. Leta 1994 je bil internet še tako majhen, da je bilo njegov imenik moč natisniti v knjigo 😅 Danes se število spletnih strani približuje 2 milijardama.",
+		"img": "photos/100867138_147678630201202_8694577334113533952_o_147678626867869.jpg"
+	},
+	{
+		"text": "🔫🦆 Nintendo Entertainment System Action Set je otroke pod smrečico razveselil za božič leta 1988. Takrat je stal 149,99 dolarjev (danes je to okrog 290 €). V kompletu dobimo konzolo, pištolo Zapper, 2 gamepada in igri Super Mario Bros./Duck Hunt.",
+		"img": "photos/100801302_147281786907553_8723541180513517568_o_147281780240887.jpg"
+	},
+	{
+		"text": "📻🏠 RadioShack TRS-80 je ameriški hišni računalnik iz leta 1977. Tako kot mnoge naprave iz tega obdobja (ZX Spectrum, Amstrad CPC, Galaksija,...) je zgrajen okoli procesorja Z80. V naši zbirki imamo tudi pripadajoč Line Printer VII, Daisy Wheel Printer II, kasetar in 2 joysticka.",
+		"img": "photos/100739585_146794893622909_2302228300312870912_o_146794890289576.jpg"
+	},
+	{
+		"text": "🎮🐱 Atari Lynx (na fotki Lynx II) je prva prenosna konzola z barvnim zaslonom iz leta 1989. Kot mnoge druge je neuspešno poizkusil premagati Game Boy, čeprav ima kar nekaj prednosti pred njim.",
+		"img": "photos/99060846_146401470328918_2513357489446060032_o_146401466995585.jpg"
+	},
+	{
+		"text": "2️⃣3️⃣ Levo: OS/2 Warp izpod rok Microsofta in IBMa je napovedoval prihodnost, ki se na razočaranje mnogih ni uresničila. Desno: Windows 3.0 je pomenil velik skok naprej - z močno izboljšanim UI in kupom tehničnih bonbončkov je bila to prva komercialno uspešna različica.",
+		"img": "photos/100943948_145939880375077_5387526376746123264_o_145939877041744.jpg"
+	},
+	{
+		"text": "🎲📦 Dandanes so fizične škatle in celo fizične izdaje softwarea prava redkost, a lepi so spomini na \"big box\" izdaje 🤗 Imate kakšno še doma? Pogrešate trgovine Mantis, Ita Plus in Hobbit?",
+		"img": "photos/100849167_145646297071102_5372479328191774720_o_145646293737769.jpg"
+	},
+	{
+		"text": "🔥📺 Stari ugasnjeni CRT monitorji nam pripovedujejo zgodbe, zapisane v njihov fosfor - tale je mnogo let služil v nekem proizvodnem obratu. 🏭",
+		"img": "photos/100478071_145243720444693_3751056631954145280_o_145243713778027.jpg"
+	},
+	{
+		"text": "🎮🌍 Tiger Electronics Game. com iz leta 1997 je poizkusil in spodletel konkurirati Game Boyu. Danes slovi kot ponesrečen izdelek, a je imel mnoge inovativne funkcije za svoj čas.",
+		"img": "photos/98111993_144750650494000_4772093056839057408_o_144750643827334.jpg"
+	},
+	{
+		"text": "❤️🧱 Na monitorju od tega PC XT, ki ga je v Jugoslavijo uvozil Intertrade, najdemo listek z naslednjimi navodili: \"Preden ugasneš tetris pritisni [Esc] in nato vpiši pctools in malo počakaj, da se program odpre nato pritisni [F3] in zatem še [P], šele sedaj ugasni računalnik\" 🙃",
+		"img": "photos/99297570_144053880563677_6500406322159157248_o_144053873897011.jpg"
+	},
+	{
+		"text": "📷🖼️ Kodak Photo CD Writer 225 iz leta 1995 omogoča zapisovanje do 100 fotografij v visoki kvaliteti na posebne zapisljive CDje. Slike so stisnjene v posebnem Kodakovem formatu, saj ob pisanju specifikacije učinkovitejši JPEG še ni obstajal in bi bil tudi računsko prezahteven.",
+		"img": "photos/97971078_143405837295148_7844790734312964096_o_143405830628482.jpg"
+	},
+	{
+		"text": "🕹️👾 Atari 2600 Video Computer System je ikonična igralna konzola druge generacije iz leta 1977, iz časov, ko je bila imitacija lesa zaželjena estetika 🌳 💰 Prodanih jih je bilo več kot 30 milijonov. 🎲 Zanjo je bilo izdanih več kot 500 iger - tretjino imamo tudi v naši zbirki.",
+		"img": "photos/97133960_142991807336551_415825376250429440_o_142991800669885.jpg"
+	},
+	{
+		"text": "✒️✍️ HP 7225A je preprost ploter iz leta 1978. Marsikdo od nas še nikoli ni videl tega predhodnika sodobnih tiskalnikov v delovanju - veselimo se, da vam ga bomo lahko demonstrirali :) V zbirki imamo tudi Sharp MZ-1P16 in Calcomp 5324. ",
+		"img": "photos/98184921_142666457369086_6117713015119806464_o_142666450702420.jpg"
+	},
+	{
+		"text": "👁️🕹️ Milton Bradley Microvision je prva prenosna konzola z igrami na kartušah iz leta 1979. Ima par zanimivih tehnoloških lastnosti: 🧠 Konzola vsebuje samo zaslon in gumbe, procesor je del kartuš z igrami. 🔬 Zaslon ima resolucijo 16x16 pikslov, toliko kot najmanjše ikone.",
+		"img": "photos/97657919_142273060741759_1511749018412122112_o_142273057408426.jpg"
+	},
+	{
+		"text": "🚫🍄 Je to Nintendo Entertainment System? Ne čisto. Izda ga uporaba imena \"Family Computer\", kot se je NES imenoval samo na Japonskem, pa tudi ime proizvajalca - \"HI-TECH TOY'S\". ♊ Gre za še enega od nelicenčnih NES klonov z oznako HK-380.",
+		"img": "photos/97431728_141457730823292_5049760987423440896_o_141457724156626.jpg"
+	},
+	{
+		"text": "⬛🖥️ Oric NOVA 64 je bila kopija britanskega hišnega računalnika Oric Atmos za jugoslovansko tržišče. Ljubljanska Avtotehna je pridobila pravice za proizvodnjo 5000 računalnikov, osnovanih na Atmosu, ki jih je prodajala pod novim imenom.",
+		"img": "photos/97143330_141116610857404_8692854128809869312_o_141116607524071.jpg"
+	},
+	{
+		"text": "👾👽 4 nenavadni mediji! 😮 Coleco Telstar Arcade ima trikotne ROM kartuše 🔺, Nintendo e-Reader za GBA bere papirnate kartice 💳, prenosna konzola Game. com iz leta 1997 ima za takrat čisto majhne kartuše 🔬, za Atari 2600 pa so obstajale kartuše z 2 igrama, vsako na svojem koncu 🐫.",
+		"img": "photos/96405107_140573890911676_7479526537704767488_o_140573884245010.jpg"
+	},
+	{
+		"text": "⬛🖥️ Sinclair QL iz leta 1984 je bil zmogljiv osebni računalnik. V njem 32-bitni procesor Motorola 68008 s taktom 7,5 MHz naslavlja 128-896 KB pomnilnika, podatke pa lahko shranjujemo na 2 vgrajena Microdrive-a. 🥉 Žal Kvantni Skok ni uspel konkurirati PCju in Macintoshu.",
+		"img": "photos/96390013_140167830952282_3825579086248411136_o_140167824285616.jpg"
+	},
+	{
+		"text": "🕹️📺 Magnavox Odyssey iz leta 1972 je prva domača igralna konzola. V muzeju hranimo zelo lepo ohranjen primerek s pripadajočo opremo. Je resnično fascinantna: ⬛⬜ igre so črnobele z zelo preprosto grafiko 🖼️ zraven njih dobimo barvne prosojnice za čez TV ekran 🔇 zvoka sploh ni.",
+		"img": "photos/96233093_139773747658357_5448287377866883072_o_139773737658358.jpg"
+	},
+	{
+		"text": "💿📀 Hitachi CDR-1502S, ki nam ga je prijazno doniral Institut Jožef Stefan, je eden prvih CD-ROM pogonov, star kar 35 let! Na računalnik se priključi prek posebne ISA kartice. Za primerjavo pa je zraven Slim DVD-RW pogon iz 10 let starega laptopa.",
+		"img": "photos/96265794_139467517688980_8585861339505754112_o_139467514355647.jpg"
+	},
+	{
+		"text": "💻💼 Compaq Portable III iz leta 1987 je korak bližje k praktičnemu prenosnemu PCju - a še vedno tehta 9,1 kg, tudi zaradi zaslona, ki ni LCD, kot se morda zdi na prvi pogled, ampak črnobela plazma z oranžnimi odtenki. Še vedno tudi ne deluje na baterijo, napajamo ga iz vtičnice.",
+		"img": "photos/96253330_138453977790334_156700777987964928_o_138453974457001.jpg"
+	},
+	{
+		"text": "✖️📦 Microsoft Xbox se je konec leta 2001 kot novinec pridružil bitki igralnih konzol - prvi kos v trgovini Toys 'R' Us je prodal sam Bill Gates. Si predstavljate, da vas je takrat pod božično smrečico pričakala tale škatla? 🎅 🖥️",
+		"img": "photos/95662983_137557621213303_4029431119018459136_o_137557617879970.jpg"
+	},
+	{
+		"text": "💻💻 Amstradov CPC je sicer manj poznan, a zato nič manj omembe vreden hišni računalnik, ki je na mnogih trgih uspešno konkuriral Spectrumu in Commodorju. 📼 Model CPC 464 je bil prvi v seriji in se ponaša z vgrajenim kasetarjem in lastnim monitorjem.",
+		"img": "photos/95611081_137071884595210_4678468464912891904_o_137071877928544.jpg"
+	},
+	{
+		"text": "🦕🖥️ Terminal Lear Siegler ADM-3A (1976) izgleda kot nekaj iz Kremenčkovih :D Pred 12 leti smo ga dobili od Fakultete za strojništvo UM in prihaja še iz časov pred vplivnim terminalom VT100.",
+		"img": "photos/95343235_136179054684493_4900318463647547392_o_136179051351160.jpg"
+	},
+	{
+		"text": "🎮🍄 Game Boy DMG-01 (1989): 90 mm x 148 mm x 32 mm & PocketSprite (2018): 32 mm x 55 mm x 14 mm (poganja tudi igre za GBC, NES in Sego) 😍 📷 Pokažite nam svoje Game Boye! 📸",
+		"img": "photos/95395643_135642844738114_3291452164429316096_o_135642841404781.jpg"
+	},
+	{
+		"text": "📻📼 Hornyphon 9159 je kasetofon avstrijskega proizvajalca Horny, kasneje del Philipsa. Definitivno pa gor ne gre poganjati Tinderja 😅",
+		"img": "photos/94999889_135171604785238_6283704636297707520_o_135171601451905.jpg"
+	},
+	{
+		"text": "🎮🍄 Ta vikend bi pa prijal en Super Mario 64, kajne? :D Ali pa morda The Legend of Zelda: Ocarina of Time, Banjo-Kazooie, Mario Kart 64 ter GoldenEye 007? 🗺 Konzola Nintendo 64 iz 1996 je pripomogla k razcvetu naprednih 3D iger, pritegnila pa je tudi pozornost piscev emulatorjev.",
+		"img": "photos/94625272_134130348222697_1106369049870204928_o_134130341556031.jpg"
+	},
+	{
+		"text": "🌞☀️ V naši zbirki imamo kar nekaj delovnih postaj iz zlate dobe podjetja Sun Microsystems - na sliki sta SPARCstation 20 (s simpatičnim hostnameom \"mokrica\") ter zunanji CD pogon v ohišju Sun 411 (\"nanos\"). 📋 Vsi ti računalniki vsebujejo procesorje z arhitekturo SPARC.",
+		"img": "photos/94996363_133671551601910_6464503213063143424_o_133671548268577.jpg"
+	},
+	{
+		"text": "🍏🍎 Apple Macintosh SE je osebni računalnik iz družine Compact Mac-ov. V njem procesor Motorola 68000 poganja Applov klasični operacijski sistem \"System Software\", ki ga je kasneje nasledil Mac OS. 📦 V naši zbirki imamo 4 take simpatične Mace, poleg SE še SE/30, SE FDHD ter Classic.",
+		"img": "photos/94636579_132700081699057_7846166773115125760_o_132700075032391.jpg"
+	},
+	{
+		"text": "🎮🕹️ Imamo bogato zbirko video iger za mnoge klasične sisteme: 405 za NES, 92 za SNES, 115 za Game Boy, 47 za Nintendo 64, 232 za Atari, 121 za Sego ter še 500 drugih. 😀😀",
+		"img": "photos/94337779_132251931743872_3127244436442972160_o_132251928410539.jpg"
+	},
+	{
+		"text": "💼🧳 Prenosnik IBM Portable PC 5155 sicer tehta kar 13,6 kg, a ga je bil leta 1984 marsikdo pripravljen nesti s seboj na službeno potovanje. 😓 Za eno leto je sicer IBM s prvim prenosnim PCjem prehitelo takrat neznano podjetje Compaq 🤑 Preračunano bi danes stal 10.000 dolarjev",
+		"img": "photos/94224516_131975435104855_7652781253522882560_o_131975428438189.jpg"
+	},
+	{
+		"text": "🔴🔵 Sega Game Gear je bil barvni konkurent Game Boyu, ki smo ga lahko občudovali tudi pri nas. Mnoge je prvič spoznal z Zvočnim Ježem 💙🦔 💡 Razlogi za njegov poraz napram tehnološko šibkejšemu tekmecu so med drugim višja cena in ker je 6 AA baterij požrl v manj kot 5 urah.",
+		"img": "photos/94157039_131278255174573_5850369666223964160_o_131278251841240.jpg"
+	},
+	{
+		"text": "⌚📷 Casio WQV-1 Wrist Camera iz leta 2000 je prva digitalna kamera, vgrajena v ročno uro. Shrani lahko 100 črnobelih fotk velikosti 120x120 pikslov. 😎 Ni si težko predstavljati, kako je takrat vzbudila zanimanje gadget navdušencev.",
+		"img": "photos/93903975_130408915261507_4903629724518973440_o_130408908594841.jpg"
+	},
+	{
+		"text": "⌨️🦅 PEL Varaždin Orao (Orel) je hrvaški šolski računalnik iz 1984. Odlikujta ga preprosta estetska in tehnična zasnova. V njem so procesor MOS 6502, 16/32 KB pomnilnika in poseben čip za 256x256 grafiko. ❤️",
+		"img": "photos/93407234_130060205296378_544854697857515520_o_130060201963045.jpg"
+	},
+	{
+		"text": "⌨️🖥️ Robotron A 5120 je pisarniški računalnik iz Vzhodne Nemčije. Klon operacijskega sistema CP/M (SCP) poganja klon procesorja Z80 (U880) skupaj s 16-64 KB pomnilnika, medij pa so bile 8'' diskete, kasneje pa tudi 5,25'' kot pri našem primerku.",
+		"img": "photos/94101313_129314282037637_4109514005477851136_o_129314278704304.jpg"
+	},
+	{
+		"text": "🏋️💪 Z našim sistemom Iskra Delta 4850 pridejo tudi 4 trdi diski Fujitsu M2294, vsak s kapaciteto 335 MB in težo 45 kg 😅",
+		"img": "photos/93375554_128830128752719_4623597573351931904_o_128830122086053.jpg"
+	},
+	{
+		"text": "🗃️⌨️ IBM 129 Card Data Recorder - stroj za luknjanje kartic, predstavljen leta 1971 - pride z \"brezplačno\" mizo, saj tehta okrog 100 kg 🐘😀 Z njim se na kartice zapisuje podatke, ki jih nato prebere nek računalnik.",
+		"img": "photos/93111223_128288232140242_6671340218039140352_o_128288228806909.jpg"
+	},
+	{
+		"text": "🤖🔵🔴 Nintendo je z robotkom R.O.B. (Robotic Operating Buddy) želel pokazati, da so igralne konzole več kot samo pripomoček za kratkočasenje. R.O.B. postane naš \"Player 2\" in zna s svojimi igračkami izvesti nekaj zanimivih trikov.",
+		"img": "photos/93048921_127735015528897_6603946722261467136_o_127735012195564.jpg"
+	},
+	{
+		"text": "🌸🖨️ Na igličnem tiskalniku NEC Pinwriter P6 plus iz Filozofske fakultete najdemo tale simpatičen napis, ki uporabnike opominja, da je treba s tehniko delati lepo, če želimo, da bo tako delala tudi z nami 🙃",
+		"img": "photos/93421083_127131155589283_5607254708881195008_o_127131145589284.jpg"
+	},
+	{
+		"text": "⌨️🖥️ Silicon Graphics - SGI je pred 20 leti kraljeval na področju najbolj zmogljivih grafičnih delovnih postaj in strežnikov. Med drugim so pomembno vplivali na razvoj igralne konzole Nintendo 64. 💸",
+		"img": "photos/92684762_126040645698334_1054111182052392960_o_126040639031668.jpg"
+	},
+	{
+		"text": "📺👁️ CRT oz. katodni monitorji: veliki, težki, utripajoči, polni svinca in kadmija s ščepcem X-žarkov, a neskončno nostalgični :) 🏃 V muzeju imamo lepo zbirko vseh velikosti in tipov, od črnobelih z zelenim fosforjem do najboljših Sony Trinitron. Uporabljamo jih za retrogaming.",
+		"img": "photos/92375160_125531205749278_116880027357806592_o_125531202415945.jpg"
+	},
+	{
+		"text": "🥛🐄 Ljubljanske mlekarne so včasih uporabljale tale terminal DEC VT420: \"Med Mlekom in Jogurtom preklapljaš s pritiskom na tipko F4\" ❤️😂",
+		"img": "photos/92697230_124950209140711_4762597356594003968_o_124950205807378.jpg"
+	},
+	{
+		"text": "🏋️‍♂️🏋️‍♀️ Naš največji in najtežji eksponat je IBM eServer zSeries, ki ga kljub velikemu tovornemu dvigalu nismo mogli spraviti v kletni depo. Zaenkrat o njem ne vemo prav veliko, edino da je bil narejen okrog leta 2004.",
+		"img": "photos/92422122_124389535863445_1051760825624166400_o_124389532530112.jpg"
+	},
+	{
+		"text": "🎾🏓 Gorenje Elrad Geti 3220 (~1980) je predstavnik prve generacije igralnih konzol. Izbiramo lahko med klasičnimi \"pong\" igrami squash, pelota, tenis, hokej ter 2 strelskima.",
+		"img": "photos/91992151_123947579240974_2677881129456893952_o_123947575907641.jpg"
+	},
+	{
+		"text": "🧠🐘 V muzeju imamo dober spomin in si vse zapomnimo. Še posebej radi prisluhnemo zgodbam o vaših začetkih na področju računalništva. Imate kakšno zanimivo za nas? :)",
+		"img": "photos/92411125_123346132634452_8827486634686545920_o_123346129301119.jpg"
+	},
+	{
+		"text": "⚙️⚙️ \"A imate v muzeju kakšno razširitveno kartico za...?\" \"Imamo.\" 😎",
+		"img": "photos/92248511_123263489309383_9037802116495704064_o_123263482642717.jpg"
+	},
+	{
+		"text": "⌨️🖥️ Terminal Kopa 1000 iz leta 1979 je pod slovensko znamko zapakiran DEC VT100. V našem depoju mu delajo družbo tudi njegov predhodnik Kopa 700, mikroračunalnik Kopa 2500 (DEC PDP-11) ter Kopa 4500.",
+		"img": "photos/91517801_122729756029423_5060105605134417920_o_122729752696090.jpg"
+	},
+	{
+		"text": "🏠⌨️ Poleg britanske Mavrice je bil v naših krajih zelo razširjen tudi ameriški hišni računalnik Commodore 64 ❤️ 🎨🔊 S kar 64 KB pomnilnika, zmogljivo grafiko in zvokom ter \"pravo\" tipkovnico je mnoge prepričal k nakupu.",
+		"img": "photos/91937879_122110966091302_2656091579248279552_o_122110962757969.jpg"
+	},
+	{
+		"text": "🎮🕹️ Nintendo Entertainment System, NES, Famicom ali kar \"Nintendo\". Nekoč je kraljeval v skoraj vsaki dnevni sobi, sedaj pa je kultna klasika ❤️ 🇯🇵🇺🇸 Na japonski trg je prišel leta 1983, na največji, ameriški, pa 1985.",
+		"img": "photos/91970621_121441489491583_3274760362443931648_o_121441482824917.jpg"
+	},
+	{
+		"text": "💾💾 Gibki diski so stvar preteklosti, a kdo se jih ne spominja z nostalgičnim nasmeškom? :) Nekaj zanimivih dejstev: ↕️ V muzeju imamo pogone in medije vseh najbolj razširjenih formatov: 8, 5.25 ter 3.5 inčnih 🗃️ 8 inčni so se na trgu pojavili leta 1971, sprva s kapaciteto 80 KB.",
+		"img": "photos/91153090_120129079622824_6045639435213602816_o_120129072956158.jpg"
+	},
+	{
+		"text": "🧮🔢 V muzeju imamo tudi lepo zbirko računskih strojev in kalkulatorjev. Si predstavljate, da bi morali za preproste matematične izračune s seboj nositi Facit C1-13, ki tehta 6,75 kg? :D",
+		"img": "photos/91066843_119516593017406_4400400578383970304_o_119516586350740.jpg"
+	},
+	{
+		"text": "😎💾 You vs. the guy she told you not to worry about 😅 💪 V muzeju med drugim kuriramo tudi zbirko vseh vrst podatkovnih nosilcev - od microSD kartic z maso 250 mg do trdega diska IBM 3370 s 7 ploščami premera 36 cm in kapaciteto 571 MB, ki tehta kar nekaj kg.",
+		"img": "photos/91038243_118946196407779_3189015575217045504_o_118946193074446.jpg"
+	},
+	{
+		"text": "🌈⌨️ Sinclair ZX Spectrum oz. Mavrica je zaradi svoje cenovne dostopnosti našla mesto v marsikaterem slovenskem domu. Ker so bile igre in programi zanjo shranjeni na poceni avdio kasetah, je to sprožilo prvi množični file sharing, tudi prek radijskih valov :)",
+		"img": "photos/91602151_118363943132671_5848371853596295168_o_118363939799338.jpg"
+	},
+	{
+		"text": "⌨️🇸🇮🖥️ Iskra Delta Partner je namizni računalnik, prvič predstavljen leta 1983. Mišljen je bil kot mali poslovni oz. razvojni sistem. ❤️ V muzeju smo ponosni na obširno zbirko slovenskih računalnikov in njihove opreme. Med drugim sodelujemo tudi z društvom \"Deltašev\" I DELTA CLUB.",
+		"img": "photos/90950823_117764809859251_7191412022590832640_o_117764806525918.jpg"
+	},
+	{
+		"text": "✏️📺 V muzejski zbirki je tudi unikatna igralna konzola Vectrex, ki ima svoj lasten TV zaslon. Njena posebnost, razvidna tudi iz imena, je vektorska grafika (iz serije črt) namesto rasterske (kot točke na zaslonu oz. piksli) - to daje njenim igram poseben videz in zelo gladke animacije.",
+		"img": "photos/90755991_116748633294202_2261255721058304000_o_116748629960869.jpg"
+	},
+	{
+		"text": "❓🤔 Nagradno vprašanje brez nagrade :D Kateri trije podatkovni mediji iz starih časov so na fotografiji? 🦖🗄️🦕",
+		"img": "photos/90651121_116002976702101_1091459865471090688_o_116002973368768.jpg"
+	},
+	{
+		"text": "💾🖥️ Windows 95 je bil prvi Microsoftov operacijski sistem, ki je bil preveden v slovenščino. Prinesel je vrsto sprememb in novosti, ki so z nami še danes.",
+		"img": "photos/90902647_115284073440658_8584677530554859520_o_115284066773992.jpg"
+	},
+	{
+		"text": "📺 🖥️ Tole je katodni monitor IBM 5151, ki je pripadal originalnemu IBM PC iz leta 1981. Sliko prikazuje v odtenkih zelene barve 🟢 v resoluciji 720 x 350. 2 leti kasneje ga je nasledil IBM 5153, barvni monitor, ki je podpiral 16-barvni standard CGA.",
+		"img": "photos/90750346_112368673732198_4939790879545098240_o_112368667065532.jpg"
+	},
+	{
+		"text": "💻📰 Računalniške novice so ena najstarejših slovenskih računalniških revij, ki še izhaja. V muzeju hranimo tudi njihovo 1. številko iz aprila 1996, ki je takrat stala 99 SIT :) 🕰️ Že iz vsebine naslovnice doživimo nostalgijo.",
+		"img": "photos/90436108_110862670549465_2661346252691603456_o_110862667216132.jpg"
+	},
+	{
+		"text": "💿 💿 Ali ste se kdaj vprašali, zakaj se CDjem reče Compact Disc? Odgovor se skriva v zgodovini njihovega nastanka! 📽️ 4 leta prej je namreč Philips skupaj s partnerji na ameriškem tržišču lansiral prvi optični disk, imenovan LaserDisc.",
+		"img": "photos/90074832_110141953954870_1296959318846865408_o_110141950621537.jpg"
+	},
+	{
+		"text": "👓👁️ 3D VR headset iz 1995? 😮 Nintendo je poizkusil z Virtual Boyem, nam v Evropi malo poznanim poizkusom narediti naslednji mega prodajni hit za originalnim Game Boyem. A kolikor je bila naprava inovativna, je žal imela veliko kompromisov.",
+		"img": "photos/84168586_109620404007025_7894251375830237184_o_109620400673692.jpg"
+	},
+	{
+		"text": "🐁 🖱️ 🐭 :D :D",
+		"img": "photos/90085780_108750280760704_673414184402157568_o_108750277427371.jpg"
+	},
+	{
+		"text": "☎️🌍 Se še spomnite klicnega dostopa do interneta? ☎️ V muzeju smo vzpostavili simulacijo le-tega s pomočjo dveh starih PCjev (Pentium 133 MHz, 16 MB RAM, slovenski Windows 95) in dveh zunanjih modemov U.S. Robotics.",
+		"img": "photos/89814709_107479844221081_2819101986316615680_o_107479834221082.jpg"
+	}
 ]
