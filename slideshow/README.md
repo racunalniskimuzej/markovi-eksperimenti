@@ -7,7 +7,7 @@ Za avtomatsko predvajanje na RPi 3B+:
 @xset s off
 @xset -dpms
 @xset s noblank
-@chromium --kiosk --app=https://zbirka.muzej.si/slideshow/
+@chromium --kiosk --app=https://zbirka.muzej.si/slideshow/index.htm
 ```
 
 Za avtomatsko predvajanje na RPi 4 (dual screen):
@@ -17,8 +17,8 @@ Za avtomatsko predvajanje na RPi 4 (dual screen):
 @xset s off
 @xset -dpms
 @xset s noblank
-@chromium-browser --window-position=0,0 --kiosk --app=https://zbirka.muzej.si/slideshow/
-@chromium-browser --window-position=1920,0 --kiosk --user-data-dir=/tmp --app=https://zbirka.muzej.si/slideshow/
+@chromium-browser --window-position=0,0 --kiosk --app=https://zbirka.muzej.si/slideshow/index.htm
+@chromium-browser --window-position=1920,0 --kiosk --user-data-dir=/tmp --app=https://zbirka.muzej.si/slideshow/index.htm
 ```
 
 Izklop prikaza miškinega kazalčka:
