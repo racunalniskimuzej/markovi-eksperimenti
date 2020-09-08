@@ -1,8 +1,8 @@
 # Vse fotografije so last Društva računalniški muzej.
 
-Za namestitev barvnih emojijev: `sudo apt install fonts-noto-color-emoji`
+Namestitev barvnih emojijev: `sudo apt install fonts-noto-color-emoji`
 
-Za avtomatsko predvajanje na RPi 3B+:
+Avtomatsko predvajanje na RPi 3B+:
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
@@ -12,7 +12,7 @@ Za avtomatsko predvajanje na RPi 3B+:
 @chromium --kiosk --app=https://zbirka.muzej.si/slideshow/index.htm
 ```
 
-Za avtomatsko predvajanje na RPi 4 (dual screen):
+Avtomatsko predvajanje na RPi 4 (dual screen):
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
 ```
