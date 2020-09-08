@@ -1,5 +1,8 @@
 # Vse fotografije so last Društva računalniški muzej.
 
+Za namestitev barvnih emojijev:
+`sudo apt install fonts-noto-color-emoji`
+
 Za avtomatsko predvajanje na RPi 3B+:
 
 `/home/pi/.config/lxsession/LXDE-pi/autostart`:
