@@ -7,8 +7,6 @@ Terminalski dostop do https://zbirka.muzej.si/
 - Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service`
 - Na RPi se ustvari nov uporabnik `zbirka` in v njegov `.profile` doda onemogočenje CTRL+C/Z/backslash in samodejni zagon Node.js aplikacije
 - V `rc.local` dodan ukaz za izklop varčevanja z energijo za WiFi, saj se je na RPi 3B+ povezava sicer ob daljši neaktivnosti obešala
-- Za preprosto posodabljanje Node.js modula z najnovejšo verzijo se vsako jutro ob 5:00 izvede naslednji cronjob:
-`0 5 * * * pkill -KILL -u zbirka; su zbirka -c "cd /home/zbirka/muzej.si/vt320/zbirka; git pull; npm install"`
 - Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
 
 (Opcijsko:) Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju :D
