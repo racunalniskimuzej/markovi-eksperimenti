@@ -1,3 +1,5 @@
+![Slideshow](https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/slideshow.jpg)
+
 # Vse fotografije so last Društva računalniški muzej.
 
 Namestitev barvnih emojijev: `sudo apt install fonts-noto-color-emoji`
