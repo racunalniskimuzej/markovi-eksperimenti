@@ -1,4 +1,295 @@
 [{
+		"text": "💪🛺 V kategorijo \"še dobro, da je na koleščkih\" spada tudi naš primerek mainframea IBM System/390 😅 Nekoč je služil založbi Mladinska knjiga.",
+		"img": "photos/EoP55LKXcAUySBO.jpg"
+	},
+	{
+		"text": "⏭️💿 V muzeju hranimo tudi lepo ohranjeno škatlo z operacijskim sistemom NeXTSTEP 3.1 in navodili zanj. 🤩 Originalno je bil spisan za delovne postaje NeXT, a prav različica 3.1 je bila prva, ki podpira tudi arhitekturo i386.",
+		"img": "photos/EoLLjIYXMAQ3NmN.jpg"
+	},
+	{
+		"text": "🐘📚 Mehanski trdi diski so z nami že mnogo desetletij - za enega od začetnikov velja IBM 350, enota iz leta 1956 s kapaciteto 3,75 MB. S čarovnijo, ki je magnetizem, lahko danes hranijo že 16 TB in več 😍 Kako velik pa je bil vaš prvi disk?",
+		"img": "photos/EoFWhvEW8AApTLA.jpg"
+	},
+	{
+		"text": "📖🗺️Zdi se mi, da so bile video igre včasih v povprečju težje. Včasih je bilo treba veliko domišljije, da smo jih usvojili, zato je bilo edino smiselno med poukom pod šolsko klopjo listati navodila za uporabo ali pa kar\"Strategy Guide\"kot npr. tale za streljačino Heretic (1994)🤘",
+		"img": "photos/EoAgzixWMAINiEc.jpg"
+	},
+	{
+		"text": "🕶️📺 Filtre za CRT monitorje je povozil čas. A včasih so bili nepogrešljivi, saj so zmanjšali bleščanje ter odvajali statični naboj, naj bi pa tudi prestregli nekaj škodljivih stranskih produktov CRT tehnologije. Kako se jih pa vi spominjate?",
+		"img": "photos/En7V4seXEAAXdEz.jpg"
+	},
+	{
+		"text": "📺🖥️ Pred YouTube in Netflixom smo na računalniku vsebine gledali in snemali tudi s TV tunerji. Ste uporabljali kakšnega? Ali ste vedeli, da lahko z določenimi modeli USB DVB-T tunerjev sledite komercialnim letalom na nebu?",
+		"img": "photos/En2lqwBXUAAoegp.jpg"
+	},
+	{
+		"text": "🔌🚌 USB 1.0 je bil predstavljen januarja 1996 in je danes nepogrešljiv način, kako med seboj povezujemo številne naprave, od USB ključkov do mini hladilnikov in plazma krogel. Kdaj ste se pa vi prvič srečali z njim?",
+		"img": "photos/EnxUsAHXcAA38dS.jpg"
+	},
+	{
+		"text": "🏎️🏁 Leta 1996 je za DOS izšla nadvse zabavna igra Race Mania, delo slovenskega igričarskega studia Tan­gor. Ste jo kdaj igrali?",
+		"img": "photos/Ens_VUPXYAcHvLO.jpg"
+	},
+	{
+		"text": "⚠️ STACK FAILURE ⚠️ Če pogledamo zgodovino tehnologij shranjevanja podatkov, so bile starejše tipično manj zanesljive. V tem skladu feritnega pomnilnika je očitno prišlo do napake, zaradi katere je bil odpisan manj kot pol leta od datuma proizvodnje.",
+		"img": "photos/EniSlqpXYAQ3jRw.jpg"
+	},
+	{
+		"text": "🏔️🛷Igro Line Rider je leta 2006 ustvaril umetnik Boštjan Čadež, takrat študent na Akademiji za likovno umetnost in oblikovanje.V njej narišeš stezo, po kateri se potem spušča sankač. Iz Silverlighta(se ga kdo spomni?)in Flasha se je pozneje preselil celo na Nintendo DS ter Wii🤩",
+		"img": "photos/EndPW8eW8AEhJD6.jpg"
+	},
+	{
+		"text": "💪🥼 HP 9845B je zmogljiv tehnični namizni računalnik iz leta 1979. Nastal je z željo naprednim uporabnikom ponuditi kar največ procesne moči.",
+		"img": "photos/EnYOJX0XcAE1-rJ.jpg"
+	},
+	{
+		"text": "🐘🕳️Konzola Nintendo 64 ima zanimivo možnost za razširitev: Vstavimo lahko dodatnih 4 MB RAMa. Ker uporablja tehnologijo Rambus (poznano iz PC), je tu originalno vstavljen \"Jumper Pak\", ki služi kot njegov terminator in pa lekcija zame, da konzola brez njega od sebe ne da slike😅",
+		"img": "photos/EnS3n34XIAEA8bz.jpg"
+	},
+	{
+		"text": "👁️☎️ iPhone 2 oz. 3G, kot ga je Apple dejansko poimenoval, je bil predstavljen junija 2008. Ima podoben hardware kot originalni iPhone, a doda danes samoumevni GPS in podporo 3G. Hkrati je bil lansiran tudi iOS 2.0, prvi z App Storeom. Kdaj ste se pa vi prvič srečali z njim?",
+		"img": "photos/EnMGyIVW8AQLVd5.jpg"
+	},
+	{
+		"text": "🐎🔌 Ta IBMov kabel z 78-pinskim konektorjem se je uporabljal za priklop na vodilo PCA pri mainframeih S/390 😲",
+		"img": "photos/EnG-bffXEAcJA3Q.jpg"
+	},
+	{
+		"text": "🤩🌈 ZX Spectrum Expansion System vsebuje ZX Interface 1, ZX Microdrive in kup kartuš zanj. Z vmesnikom je moč več Mavric povezati v mrežo ali nanj priključiti naprave z RS-232.",
+		"img": "photos/EnChscpWEAIMCBM.jpg"
+	},
+	{
+		"text": "🧠🏗️ Ali ste vedeli, da je bilo za IBM PC XT moč dokupiti Expansion Unit 5161, ki ima v svojem identičnem ohišju prostor za dodatno diskovje in RAM?",
+		"img": "photos/Em-ZHiwXcAcL3IH.jpg"
+	},
+	{
+		"text": "🇬🇧🦉 Letos prijazno doniran BBC Micro Model B iz 80. let prejšnejga stoletja je plod iniciative britanske javne televizije za računalniško opismenjevanje družbe in podjetja Acorn Computer (črka A v ARM!), ki je zmagalo na razpisu za izdelavo tega izobraževalnega računalnika.",
+		"img": "photos/Em4oEuGXUAAaR0T.jpg"
+	},
+	{
+		"text": "⌨️🔤 ÄÖÜ 😅 Koliko fanov mehanskih tipkovnic imamo tukaj? 💪",
+		"img": "photos/Emy4AsdXMAAdQGB.jpg"
+	},
+	{
+		"text": "🔴🕹️ Atarijeva igralna palica je že 43 let ikona čarobnega sveta video iger.",
+		"img": "photos/Emuqh3uW4AAd4kV.jpg"
+	},
+	{
+		"text": "📰🗄️ Iz našega arhiva farbovitega magazina - revije Joker: 💍 Ring, igra slovenskih avtorjev! ☢️ Half-Life!! 💀 Klasika Grim Fandango! 🔊 Sound Blaster 64 PnP! in 😎 Hugo - Čarobni hrast za samo 5590 SIT!",
+		"img": "photos/EmpoZH7XMAAl7-e.jpg"
+	},
+	{
+		"text": "⚫🔊 Zakaj tudi gramofonska plošča založbe RTV sodi v našo zbirko: - Na sorodnem Flexi discu je bilo moč v rač. revijah najti programe - Prvi optični medij LaserDisc se je po obliki in velikosti zgledoval prav po njih - Sorodni sta mu tudi \"video vinilki\" CED in TeD",
+		"img": "photos/EmYWuQpXMAII9MD.jpg"
+	},
+	{
+		"text": "💾🦕 Za hude čase kopičimo zaloge nerabljenih, originalno zapakiranih retro medijev 🥰 Jih imate tudi vi kaj? 😎 LGRov video, kako lahko diskete uporabljate s svojim Androidom:",
+		"img": "photos/EmOM0W8XUAM0SJq.jpg"
+	},
+	{
+		"text": "💿🎮 Universal Media Disc (UMD), ki ga je uporabljal Sonyjev PlayStation Portable, je imel zaradi vedno cenejšega flash pomnilnika precej kratek obstoj - kasnejši model PSP Go celo ni več imel pogona zanj.",
+		"img": "photos/EmKqj_vXUAY0-xN.jpg"
+	},
+	{
+		"text": "❤️😡Starejši routerji (kot Netgear WGR614 na sliki) so se zaradi malo pomnilnika in hroščatega firmwarea pogosto sesuvali. Včasih je bila rešitev omejiti število hkratnih povezav, nastaviti timer za reboot ali namestitev odprtokodnega Open/DD-WRT. Kakšna pa je bila vaša izkušnja?",
+		"img": "photos/EmFBzyxXgAIjRQR.jpg"
+	},
+	{
+		"text": "🏄🛣️ V muzejski knjižnici hranimo tudi knjigo z naslovom \"Internet\", ki jo je skupaj s Tomažem Turkom leta 1996 napisala dr. Borka Džonova Jerman Blažič, pionirka slovenskega interneta. 💪",
+		"img": "photos/El_ORX8WMAAOJ6i.jpg"
+	},
+	{
+		"text": "🏃‍♀️🦕 Ali prepoznate klasični igri za DOS na tej slabi fotki CRT slike? 😅😎",
+		"img": "photos/El4cXlCX0AIdGTo.jpg"
+	},
+	{
+		"text": "⛵🕹️ Magnavox Odyssey 2 (na sliki z modulom za sintezo govora The Voice) je igralna konzola druge generacije iz leta 1978. Prinaša mnogo izboljšav od svojega predhodnika: izmenljive ROM kartuše, zvok in barvno grafiko.",
+		"img": "photos/El1_pHVXgAE9gVR.jpg"
+	},
+	{
+		"text": "😈🦈 Goljufanje v video igrah je staro kot čas 😅 Pri konzolah, ki so uporabljale ROM kartuše, se lahko z vmesnikom GameShark ali Game Genie preprosto vmešamo v izmenjavo podatkov in npr. preprečimo zapis izgube življenja v pomnilnik, kar za lik v igri pomeni neskočno življenj.",
+		"img": "photos/ElvQm6nXYAUAhIf.jpg"
+	},
+	{
+		"text": "⛰️💨 Prenosnik Daewoo DN386S smo lani februarja v Mestni hiši pokazali v okviru razstave Naši računalniki od Karavank do Kitajske. Na njem se je za ta predor razvijala programska oprema za upravljanje sistema za nadzor ventilacijskega sistema.",
+		"img": "photos/ElpxM4DW0AAINko.jpg"
+	},
+	{
+		"text": "🌟🕹️ Nintendov Super Game Boy omogoča igranje GB iger na konzoli SNES. V njem je v bistvu celotno drobovje Game Boya ter podpora za dodatne barvne učinke. Podoben dodatek (Game Boy Player) je bil izdan tudi za kasnejši GameCube, ki omogoča tudi igranje iger za Game Boy Advance.",
+		"img": "photos/EllJOp7X0AAgUYA.jpg"
+	},
+	{
+		"text": "📱🤖 Kako čas leti... moj prvi službeni telefon Motorola Milestone (Droid) zdaj spada v muzejsko zbirko. Gre za prvi telefon z Androidom 2.0, ki je prinesel mnogo izboljšav. Odlikujeta ga tudi zaslon z za leto 2009 visoko resolucijo 854x480 in praktična fizična tipkovnica.",
+		"img": "photos/ElbYyyXX0Ao0IGf.jpg"
+	},
+	{
+		"text": "🍩🌙 Kako zanimivo je od blizu pogledati številne majcene krofkaste magnetke, ki sestavljajo feritni pomnilnik! Ste vedeli, da so jih v programu Apollo za ROM krmilne enote plovila natančne tovarniške delavke vezle na roko?",
+		"img": "photos/ElV0KdKXEAEVH13.jpg"
+	},
+	{
+		"text": "🧠🗃️ Kartica z oznako M8373 z nešteto pomnilniškimi čipi MOS je ena od mnogih, ki je sestavljala Digitalov miniračunalnik VAX-11.",
+		"img": "photos/ElP66e9WkAApZcU.jpg"
+	},
+	{
+		"text": "🧠🍇 Na delovnih postajah Convergent NGEN 286 je tekel inovativen večopravilni operacijski sistem CTOS, ki je podpiral tudi povezovanje v gruče.",
+		"img": "photos/ElLHKwJXIAAL9O2.jpg"
+	},
+	{
+		"text": "⚫⚪ RCA Studio II je igralna konzola druge generacije iz leta 1977. Komercialno ni bila uspešna, saj je konkurenca že tedaj nudila več kot preprosto črnobelo grafiko.",
+		"img": "photos/ElFQd5vWMAMEocJ.jpg"
+	},
+	{
+		"text": "🟠👈 Zavoljo znanosti smo se vseeno \"dotaknili\" tega eksponata 😅 Izkaže se, da gre za nadgrajeno tipkovnico za originalni ZX Spectrum, saj se mnogo računalniških navdušencev ni moglo sprijazniti z njegovimi radirkastimi tipkami.",
+		"img": "photos/Ekn_QQSXgAAnO9Q.jpg"
+	},
+	{
+		"text": "🎥👀 CU-SeeMe je bil pred 25 leti to, kar je Zoom danes. Iz škatle je razvidno, da lahko iz Havajev prikličemo celo Elke na Švedskem 😅 ter da med seboj lahko komunicirajo Mac in Windows uporabniki. Kdaj ste pa vi dobili svoj prvi webcam?",
+		"img": "photos/EkjnqZjXIAEBAtd.jpg"
+	},
+	{
+		"text": "👶🖥️ Slovenski prevod te knjige iz leta 1985 bi lahko imel na naslovnici kak nam bolj dostopen hišni računalnik namesto RadioShack TRS-80, ampak po vseh teh letih smo ju vseeno uspeli spoznati med seboj 😅 Kakšni pa so bili vaši prvi začetki?",
+		"img": "photos/EkcrVA-XUAEyQsf.jpg"
+	},
+	{
+		"text": "😍📺 Slika iz starih igralnih konzol ter hišnih računalnikov (po možnosti prek RF) ima na CRT zaslonih še vedno en poseben čar. Kdaj ste svoj glavni TV zamenjali za ploščatega? Imate doma še kak CRT? 🔴🟢🔵",
+		"img": "photos/EkTFItzXYAA45lX.jpg"
+	},
+	{
+		"text": "🧠🔢 Atraktivni retro kalkulator TRS 529 (narejen okrog 1975) z VFD (Vacuum fluorescent display) zaslonom prihaja iz Tvornice računskih strojeva Zagreb.",
+		"img": "photos/EkO_NnNWoAM_LVa.jpg"
+	},
+	{
+		"text": "📡📞 Si predstavljate, da imate mobilni telefon v času, ko morajo vsi ostali poiskati najbližjo telefonsko govorilnico? Z Benefonom TDM-10-J je to mogoče 😎",
+		"img": "photos/EkEgoRqXcAE7zMY.jpg"
+	},
+	{
+		"text": "🟨📼 Mnogi fizični mediji so stvar preteklosti - v muzeju med drugim hranimo VHS kaseto z reklamo za mobilno omrežje Vega WWI, ki je delovalo do 31. maja 2006. Bilo je kratko, a sladko.",
+		"img": "photos/Ej9PyR8XcAAp_XR.jpg"
+	},
+	{
+		"text": "🧳🚗 Prenosni PS One z LCD zaslonom lahko priključimo kar na vtičnico v avtu 😎",
+		"img": "photos/Ej5bPaDWsAA8VO3.jpg"
+	},
+	{
+		"text": "🇸🇮🔢 Hewlett-Packard HP-35 je prvi znanstveni žepni kalkulator iz leta 1972, ki ga je razvil Slovenec France Rode.",
+		"img": "photos/EjzLPm2WkAAZkX1.jpg"
+	},
+	{
+		"text": "🇸🇮✒️ Slovenski prevod programa Microsoft Word 6.0 je nastal pred slovenskimi Windows 95 - zanj so definirali mnogo slovenskih izrazov, ki so v uporabi še danes.",
+		"img": "photos/EjpPNNtXsAAfJvT.jpg"
+	},
+	{
+		"text": "🦖🌪️ Zmogljive grafične delovne postaje Silicon Graphics so bile svoj čas pojem za zmogljivost - pojavile so se tudi v filmih Jurassic Park, Twister in Congo. V muzeju imamo veliko zanimive periferije za njih, med drugim več kamer SGI IndyCam.",
+		"img": "photos/Ejj_ffmXYAEIwjO.jpg"
+	},
+	{
+		"text": "🏫🎓 Konec 90ih je založba DZS izdala kup kvalitetno lokaliziranih multimedijskih aplikacij za otroke: Moje prvo čudovito raziskovanje sveta, Kako pa to deluje?, Čudovite živalice, Moje sijajno človeško telo, Moje prvo čudovito raziskovanje zgodovine,... Ali se jih še spomnite?",
+		"img": "photos/EjfWSGLXYAcsruM.jpg"
+	},
+	{
+		"text": "🐁🎨 Mario Paint za SNES je skupaj s priloženo miško (na fotki je simbolična) marisikomu omogočil prvo digitalno umetniško izražanje - z njim lahko rišemo, animiramo in celo skladamo. Toplo priporočamo ogled dokumentarca, ki ga je naredil Gaming Historian:",
+		"img": "photos/EjaqaPvXcAIbrQe.jpg"
+	},
+	{
+		"text": "📦🖥️ Commodore se je preizkusil tudi na trgu PC compatible računalnikov - najprej z leta 1987 izdanim modelom PC 10 s procesorjem 8088.",
+		"img": "photos/EjWFm1xWoAAyn-H.jpg"
+	},
+	{
+		"text": "👴💻 Prenosnik Toshiba T1000 iz leta 1987 je uspešno konkuriral IBM PC Convertible, med drugim tudi, ker ponuja serijski in paralelni port ter priklop zunanjega monitorja.",
+		"img": "photos/EjK38mYWkAwxxmJ.jpg"
+	},
+	{
+		"text": "🔵🔴🏃 Naš Nintendo Power Pad iz leta 1988 je sicer malce zmečkan, ampak se bi še vedno dalo zaplesati na njem 🕺💃",
+		"img": "photos/EjEUsPNXkAAZbMr.jpg"
+	},
+	{
+		"text": "🟡🎮 Stvari je najlažje zbirati, če imaš jasen cilj - krmilnikov za igralne konzole imamo že mnogo, vključno z orjaškim Atari 5200 Trak-Ball 😅",
+		"img": "photos/Ei-tFIeWAAAHv8P.jpg"
+	},
+	{
+		"text": "🚀🌌 Redkokdo se lahko pohvali, da ima doma igralno konzolo, ki jo je naredila \"NASA\", a mi jo imamo! Gre za model NS-101, ki ponuja: ✨ NEW 16 BIT 😱 DIGITAL SOUND REAL VOICE 🤩 ARCADE QUALITY GRAPHICS 🙌 MegaCard gamepad",
+		"img": "photos/Ei6b8uGXgAUFxmV.jpg"
+	},
+	{
+		"text": "🔎⌨️ Pazljivo smo odprli naš primerek tipkovnice Ines za Spectrum in raziskali, kako se je spojila z njim. V osnovi se priklopi na oba konektorja za tipkovnico, v ohišju pa so še premostitev video izhoda, interni napajalnik, stikalo za vklop in rdeča LED.",
+		"img": "photos/Ei11-7mWsAQK-ph.jpg"
+	},
+	{
+		"text": "📖📚 Ko se želimo kaj novega naučiti, posežemo tudi po leksikonih in slovarjih - mnogo jih je bilo napisanih tudi v slovenščini, vključno z Leksikonom računalništva in informatike (2002) ter spletnimi:",
+		"img": "photos/EixSROHWsAAt0Ir.jpg"
+	},
+	{
+		"text": "💡🔢 Čisto sveža pridobitev je ta programabilni kalkulator Wang 700B iz leta 1969 s kar 32 Nixie prikazovalniki 😍🤩. Več informacij sledi.",
+		"img": "photos/EisC8F3XgAMyQhz.jpg"
+	},
+	{
+		"text": "🎮🎲 Igralna Kocka (2001) je prva Nintendova igralna konzola, ki za podatkovni medij uporablja standardne optične diske - rahlo modificiran miniDVD. Zanjo je bilo izdano par prodajnih hitov, The Legend of Zelda: The Wind Waker, Super Mario Sunshine in Super Smash Bros. Melee.",
+		"img": "photos/EilaD18X0AAz0Aw.jpg"
+	},
+	{
+		"text": "📅📝 Britansko podjetje Psion je nekdaj bilo sinonim za zmogljive osebne organizatorje. Organiser II (v zbirki imamo kar 3) nam ponuja še več funkcij od predhodnika ter mnogo možnosti za razširitev, vključno s termičnim tiskalnikom.",
+		"img": "photos/EigiEJMWAAAJLNL.jpg"
+	},
+	{
+		"text": "🖥️🐧 Knjiga Kako v Linuxu? je plod sodelovanja društva LUGOS, Založbe Pasadena in ministrstva za informacijsko družbo, ki je finančno v okviru javnega razpisa leta 2001 sofinanciralo tudi projekt tega prosto dostopnega priročnika za operacijski sistem Linux.",
+		"img": "photos/EidHjmMXYAAz7rT.jpg"
+	},
+	{
+		"text": "🇸🇮⌨️ Leta 1985 je računalničar in jezikoslovec Primož Jakopin napisal urejevalnik besedil INES, po katerem je Inštitut za elektroniko in vakuumsko tehniko (IEVT, pozneje Tipro) poimenoval čisto pravo slovensko tipkovnico, mišljeno kot nadgradnjo za hišni računalnik ZX Spectrum.",
+		"img": "photos/EiX-jEyWoAIb2X1.jpg"
+	},
+	{
+		"text": "🔌🌐 Fast Ethernet kartice s čipom Realtek RTL8139 so na trg prišle leta 1997 in se hitro razširile v računalnike po vsem svetu. Morda tudi v vašega?",
+		"img": "photos/EiSlXxSWsAAdhC1.jpg"
+	},
+	{
+		"text": "📻🎙️ Iskra Savica je ikoničen radio iz 70. let prejšnjega stoletja. Model na sliki skriva še eno funkcijo, katero?",
+		"img": "photos/EiLoSnHWAAEZ9wl.jpg"
+	},
+	{
+		"text": "📺🔌 Modem za kabelski internet Thomson na sliki je pred 20 leti prispel v marsikateri dom še pred tehnologijami xDSL.",
+		"img": "photos/EiHrceJWoAcrnqC.jpg"
+	},
+	{
+		"text": "🧮🔢 Texas Instruments TI-30 je cenovno ugoden znanstveni kalkulator iz leta 1976 - ta na sliki je nekoč pripadal Denisu 😅 Model SR-51-II iz istega leta na desni pa ponuja še več naprednih funkcij in zaslon z več ciframi.",
+		"img": "photos/Eh8iawSXcAAuxEi.jpg"
+	},
+	{
+		"text": "⌨️🖥️ IBM 5100 je eden prvih prenosljivih računalnikov (z maso 24 kg) iz leta 1975. Čeprav ima podobno oznako kot prvi PC (IBM 5150), ima povsem drugačno arhitekturo. Pride s programskima jezikoma APL in BASIC, v špranji na vrhu pa najdemo reference za mnoge ukaze.",
+		"img": "photos/Eh3UJrfXgAIgLO8.jpg"
+	},
+	{
+		"text": "☎️🔌 Iskra Data Modem 2054 je po švedski licenci izdelan modem Datel GH 2054 iz leta 1975, ki omogoča povezave s hitrostjo do 2400 bit/s. ",
+		"img": "photos/EhyAJKjXgAAmUvC.jpg"
+	},
+	{
+		"text": "🍄🧱 Kmalu izide Super Mario 3D All-Stars za Switch, ki bo vseboval Super Mario 64, Super Mario Sunshine ter Super Mario Galaxy. Leta 2004 pa je Nintendo za Game Boy Advance izdal serijo \"Classic NES\", s katero smo prav tako lahko podoživeli klasične 2D hite iz starejših konzol. ",
+		"img": "photos/Ehs6csGX0AAs4CN.jpg"
+	},
+	{
+		"text": "😍📺 Čisto sveža pridobitev je tale cuuuute litvanski prenosni TV Shiljalis 402D-1E iz časov sovjetske zveze.",
+		"img": "photos/EhnhG-mWoAA62wV.jpg"
+	},
+	{
+		"text": "💻🧒 One Laptop per Child (na sliki model XO) je projekt dobaviti izobraževalne prenosnike otrokom v državah v razvoju. So vzdržljivi in opremljeni s funkcijami in programi za uporabnike, ki se bodo prvič srečali z visoko tehnologijo.",
+		"img": "photos/Ehk0HJfXYAIC4Mg.jpg"
+	},
+	{
+		"text": "📼🗃️ Tračne enote so še vedno nepogrešljive za varnostne kopije. Jih uporablja tudi vaše podjetje?",
+		"img": "photos/EhnhdZvWsAE9LtT.jpg"
+	},
+	{
+		"text": "🟨⬛ V seriji Za Telebane, ki se je leta 1991 začela s knjigo o DOSu, prijazno začetnikom, obstaja več kot 2500 knjig. Imate tudi vi kakšno na svojih knjižnih policah?",
+		"img": "photos/EhnhuljXYAAO6ni.jpg"
+	},
+	{
+		"text": "🇸🇮💻 Gorenje Point GLT-216A je tajvanski prenosnik s slovensko značko. Gorenje je linijo izdelkov Point imelo še do leta 2018.",
+		"img": "photos/EhYd-d8WkAINVIl.jpg"
+	},
+	{
+		"text": "👖🔢 Britansko podjetje Sinclair ni proizvajalo samo hišnih računalnikov - uporabljali smo lahko tudi njihove radijske in TV sprejemnike, zapestne ure ter žepne kalkulatorje, kot je model Cambridge iz leta 1973.",
+		"img": "photos/EhYeC5zXYAYtFUR.jpg"
+	}, {
 		"text": "👁️🔠 Microsoft Visual Basic je bil nekoč eden najbolj priljubljenih programskih jezikov. Ste tudi vi spisali kak program v njem?",
 		"img": "photos/118716039_181135523522179_638745676482954479_o_181135520188846.jpg"
 	},
