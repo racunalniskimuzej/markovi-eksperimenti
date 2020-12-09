@@ -4,19 +4,9 @@
 
 Namestitev barvnih emojijev: `sudo apt install fonts-noto-color-emoji`
 
-Avtomatsko predvajanje na RPi 3B+:
-
-`/home/pi/.config/lxsession/LXDE-pi/autostart`:
-```
-@xset s off
-@xset -dpms
-@xset s noblank
-@chromium --kiosk --app=https://zbirka.muzej.si/slideshow/index.htm
-```
-
 Avtomatsko predvajanje na RPi 4 (dual screen):
 
-`/home/pi/.config/lxsession/LXDE-pi/autostart`:
+`/home/pi/.config/lxsession/LXDE-pi/autostart`: (ustvari mape in datoteko, če še ne obstaja)
 ```
 @xset s off
 @xset -dpms
