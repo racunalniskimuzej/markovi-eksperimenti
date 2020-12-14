@@ -23,6 +23,8 @@ xserver-command=X -nocursor
 ```
 
 Reden reboot ob 4:00 ponoči (Chromeu občasno zmanjka RAMa):
+
+`crontab -e`:
 ```
 0 4 * * * sudo reboot
 ```
