@@ -20,7 +20,7 @@ Before=getty.target
 IgnoreOnIsolate=yes
 
 [Service]
-ExecStart=-/sbin/agetty -a zbirka -p -L ttyUSB1 9600 vt100
+ExecStart=-/sbin/agetty -a zbirka -p -L paka3000 9600 vt100
 Type=idle
 Restart=always
 UtmpIdentifier=%I

@@ -20,7 +20,7 @@ Before=getty.target
 IgnoreOnIsolate=yes
 
 [Service]
-ExecStart=-/sbin/agetty -a zbirka -p -L ttyUSB0 19200 vt320
+ExecStart=-/sbin/agetty -a zbirka -p -L vt320 19200 vt320
 Type=idle
 Restart=always
 UtmpIdentifier=%I
