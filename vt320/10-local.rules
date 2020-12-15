@@ -1,0 +1,3 @@
+ACTION=="add", ATTRS{idVendor}=="0557", ATTRS{idProduct}=="2008", SYMLINK+="paka3000"
+ACTION=="add", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="vt320"
+ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="gameboy"
