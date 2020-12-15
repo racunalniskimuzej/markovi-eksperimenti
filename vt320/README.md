@@ -9,16 +9,17 @@ Terminalski dostop do https://zbirka.muzej.si/
 - V `rc.local` dodan ukaz za izklop varčevanja z energijo za WiFi, saj se je na RPi 3B+ povezava sicer ob daljši neaktivnosti obešala
 - Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
 
-(Opcijsko:) Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju :D
+Ukaz `fotka` za ASCII art iz webcam, ki ga lahko obiskovalci v zameno za donacijo tudi natisnejo na velikem Fujitsu line printerju :D
 
 - Namestitev paketov za zajem slike iz webcama in tiskanje:
 `sudo apt install fswebcam cups; sudo usermod -a -G video zbirka`
 - Tiskalnik priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP
 - Namestimo ga s `sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik`
 
-- Namestitev paketov za pošiljanje fotke iz Game Boy Camere na email:
-`sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
-Potrebno dodati dostop do serijskih portov: `sudo usermod -a -G dialout zbirka`
+Namestitev paketov za pošiljanje fotke iz Game Boy Camere na email:
+
+- Namestitev komponent, ki jih zahteva Node.js canvas modul: `sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+- Potrebno dodati dostop do serijskih portov: `sudo usermod -a -G dialout zbirka`
 
 
 Kako do šumnikov:
