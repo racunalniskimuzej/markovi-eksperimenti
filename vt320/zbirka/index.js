@@ -1,4 +1,5 @@
 require('./utils');
+require('./gb');
 
 var banner = ` 
 
@@ -24,6 +25,7 @@ Ukazi:
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
+* gameboy - Prejmi fotko iz Game Boy Camere na e-mail.
 * pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
 
@@ -34,6 +36,7 @@ Commands:
 * exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
 * photo - ASCII art of your face :) Donate to get a printout ;)
+* gameboy - E-mail a photo from the Game Boy Camera.
 * clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
 
@@ -261,6 +264,37 @@ readlineSync.promptCLLoop(self = {
             }
         } catch (e) {
             izpisi((slo ? 'Pri fotkanju je prišlo do napake :(' : 'An error occured while taking your picture :('));
+        }
+    },
+    gameboy: function() {
+
+        var serialport_wait = require('serialport-wait');
+        var serialport = new serialport_wait();
+
+        serialport.connect('/dev/ttyUSB0', 115200);
+
+        if (serialport.isOpen()) {
+            izpisi((slo ? 'Na Game Boyu začni s tiskanjem fotke...' : 'Start printing the photo on the Game Boy...'));
+            serialport.wait('INIT', 30);
+            if (serialport.get_wait_result()) {
+                serialport.wait('Timed Out', 30);
+                if (serialport.get_wait_result()) {
+                    gbp = render_gbp(serialport.get_buffer_all());
+                    email = readlineSync.questionEMail((slo ? 'Super! Vnesi e-naslov, kamor želiš prejeti fotko: ' :
+                        'Great! Enter the e-mail to which the photo will be sent: '), {
+                        limitMessage: (slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.')
+                    });
+                    posljimejl(email, gbp, (slo ? "📸🕹️ Tvoja Game Boy fotka iz Računalniškega muzeja" : "📸🕹️ Your Game Boy photo from the Slovenian Computer Museum"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
+                    izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                } else {
+                    izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
+                }
+            } else {
+                izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
+            }
+            serialport.close();
+        } else {
+            izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
         }
     },
     pocisti: () => {

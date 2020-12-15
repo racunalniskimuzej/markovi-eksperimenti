@@ -11,10 +11,14 @@
   "dependencies": {
     "@sigodenjs/fswebcam": "^0.1.4",
     "@vitalets/google-translate-api": "^3.0.0",
+    "canvas": "^2.6.1",
     "deasync": "^0.1.20",
     "image-to-ascii": "^3.0.12",
     "latinize": "^0.4.1",
+    "nodemailer": "^6.4.17",
     "readline-sync": "^1.4.10",
+    "serialport": "^9.0.3",
+    "serialport-wait": "0.0.3",
     "sync-request": "^6.1.0",
     "ttyname": "^1.0.0"
   }
