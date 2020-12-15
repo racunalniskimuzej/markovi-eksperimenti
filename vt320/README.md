@@ -16,6 +16,9 @@ Terminalski dostop do https://zbirka.muzej.si/
 - Tiskalnik priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP
 - Namestimo ga s `sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik`
 
+- Namestitev paketov za pošiljanje fotke iz Game Boy Camere na email:
+`sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+
 
 Kako do šumnikov:
 - VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
