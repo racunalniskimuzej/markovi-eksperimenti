@@ -191,7 +191,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
         secure: false,
         auth: {
             user: "stamcar_marko@t-2.si",
-            pass: "qcEym7x9TbMTSkE",
+            pass: "------------",
         },
     });
 
