@@ -4,7 +4,8 @@ Terminalski dostop do https://zbirka.muzej.si/
 - Nastavitve na VT320 ponastavimo z `Default` in spremenimo naslednje: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, nato izberemo `Save`
 - Nastavitve za Paka 3000: `NABOR ZNAKOV: USASCII, TIP TASTATURE: JUGO., ODD.HITROST: 9600, SPR.HITROST: 9600`
 - Node.js modul (stestiran na v8/v10) v direktorju `zbirka` se namesti s `sudo apt install graphicsmagick; npm install`, nato izvedi `git checkout *`, saj je bila ena od datotek v `node_modules` spremenjena 
-- Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@ttyUSB0.service`
+- Fiksiranje ttyUSB* s symlinki se naredi tako, da skopiramo `10-local.rules` v mapo `/etc/udev/rules.d`
+- Shell dostop do RPi prek USB RS232 adapterja se omogoči s `systemctl daemon-reload && sudo systemctl enable serial-getty@vt320.service` ter isto za `serial-getty@paka3000.service`
 - Na RPi se ustvari nov uporabnik `zbirka` in v njegov `.profile` doda onemogočenje CTRL+C/Z/backslash in samodejni zagon Node.js aplikacije
 - V `rc.local` dodan ukaz za izklop varčevanja z energijo za WiFi, saj se je na RPi 3B+ povezava sicer ob daljši neaktivnosti obešala
 - Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
