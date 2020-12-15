@@ -17,8 +17,8 @@ global.translate = require('@vitalets/google-translate-api');
 
 const ttyname = require('ttyname');
 global.tty = 'ssh';
-if (fs.realpathSync('/dev/vt320') == ttyname()) global.tty = 'vt320';
-if (fs.realpathSync('/dev/paka3000') == ttyname()) global.tty = 'paka3000';
+if (fs.existsSync('/dev/vt320') && fs.realpathSync('/dev/vt320') == ttyname()) global.tty = 'vt320';
+if (fs.existsSync('/dev/paka3000') && fs.realpathSync('/dev/paka3000') == ttyname()) global.tty = 'paka3000';
 
 global.zaslon = function(str) {
     return str;

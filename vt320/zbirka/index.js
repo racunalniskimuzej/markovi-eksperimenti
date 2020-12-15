@@ -268,6 +268,7 @@ readlineSync.promptCLLoop(self = {
     },
     gameboy: function() {
 
+
         var serialport_wait = require('serialport-wait');
         var serialport = new serialport_wait();
 
@@ -280,12 +281,16 @@ readlineSync.promptCLLoop(self = {
                 serialport.wait('Timed Out', 30);
                 if (serialport.get_wait_result()) {
                     gbp = render_gbp(serialport.get_buffer_all());
-                    email = readlineSync.questionEMail((slo ? 'Super! Vnesi e-naslov, kamor želiš prejeti fotko: ' :
+                    email = readlineSync.questionEMail(zaslon(slo ? 'Super! Vnesi e-naslov, kamor želiš prejeti fotko: ' :
                         'Great! Enter the e-mail to which the photo will be sent: '), {
-                        limitMessage: (slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.')
+                        limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.')
                     });
-                    posljimejl(email, gbp, (slo ? "📸🕹️ Tvoja Game Boy fotka iz Računalniškega muzeja" : "📸🕹️ Your Game Boy photo from the Slovenian Computer Museum"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
-                    izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                    try {
+                        posljimejl(email, gbp, (slo ? "📸🕹️ Tvoja Game Boy fotka iz Računalniškega muzeja" : "📸🕹️ Your Game Boy photo from the Slovenian Computer Museum"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
+                        izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                    } catch (e) {
+                        izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
+                    }
                 } else {
                     izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
                 }
