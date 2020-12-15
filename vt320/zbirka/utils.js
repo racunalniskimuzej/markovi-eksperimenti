@@ -16,7 +16,9 @@ global.deasync = require('deasync');
 global.translate = require('@vitalets/google-translate-api');
 
 const ttyname = require('ttyname');
-global.tty = ttyname();
+global.tty = 'ssh';
+if (fs.realpathSync('/dev/vt320') == ttyname()) global.tty = 'vt320';
+if (fs.realpathSync('/dev/paka3000') == ttyname()) global.tty = 'paka3000';
 
 global.zaslon = function(str) {
     return str;
@@ -28,14 +30,14 @@ global.tiskalnik = function(str) {
     return zamenjaj(fujitsu, str);
 }
 
-if (tty == "/dev/ttyUSB0") {
+if (tty == "vt320") {
     zaslon = function(str) {
         return latinize(zamenjaj(vt320, str));
     }
     tipkovnica = function(str) {
         return zamenjaj(lk201, str);
     }
-} else if (tty == "/dev/ttyUSB1") {
+} else if (tty == "paka3000") {
     zaslon = function(str) {
         return latinize(zamenjaj(paka3000, str));
     }
@@ -169,7 +171,7 @@ triglav = {
 };
 
 global.vt320drcs = function vt320drcs() {
-    if (tty != "/dev/ttyUSB0") return '';
+    if (tty != "vt320") return '';
     return "\033P1;1;1;0;0;2;0;0{P??oowHHIIHHWOO?/??CCLHHHHHHNEE?;" +
         "??_ooXHIIHHWOO?/??BFFKGGGGGKCC?;???GGHHIIhxwW??/???KKMIJHHGGG??;" +
         "??_ooWGIIHHWOO?/??BFFKGGGGGKCC?;??wwwGGGGGWoo_?/@@NNNHHGGGKFFB?;" +

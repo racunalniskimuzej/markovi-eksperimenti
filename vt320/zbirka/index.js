@@ -271,7 +271,7 @@ readlineSync.promptCLLoop(self = {
         var serialport_wait = require('serialport-wait');
         var serialport = new serialport_wait();
 
-        serialport.connect('/dev/ttyUSB2', 115200);
+        serialport.connect('/dev/gameboy', 115200);
 
         if (serialport.isOpen()) {
             izpisi((slo ? 'Na Game Boyu začni s tiskanjem fotke...' : 'Start printing the photo on the Game Boy...'));
@@ -338,7 +338,7 @@ readlineSync.promptCLLoop(self = {
         self.format();
     },
     izhod: function() {
-        if (!tty.startsWith("/dev/ttyUSB")) return true;
+        if (tty == "ssh") return true;
     },
     blank: function() {},
     _: function(command, ...args) {
