@@ -18,6 +18,7 @@ Terminalski dostop do https://zbirka.muzej.si/
 
 - Namestitev paketov za pošiljanje fotke iz Game Boy Camere na email:
 `sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+Potrebno dodati dostop do serijskih portov: `sudo usermod -a -G dialout zbirka`
 
 
 Kako do šumnikov:
