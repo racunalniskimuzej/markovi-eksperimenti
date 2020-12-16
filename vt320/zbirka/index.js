@@ -25,7 +25,7 @@ Ukazi:
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
-* gameboy - Prejmi fotko iz Game Boy Camere na e-mail.
+* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.
 * pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
 
