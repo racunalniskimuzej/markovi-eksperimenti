@@ -295,7 +295,7 @@ readlineSync.promptCLLoop(self = {
                             limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.')
                         });
                         try {
-                            posljimejl(email, gbp, (slo ? "📸🕹️ Tvoja Game Boy fotka" : "📸🕹️ Your Game Boy photo"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
+                            posljimejl(email, gbp, (slo ? "📸🕹️ Fotka iz Game Boy Camere" : "📸🕹️ Game Boy Camera photo"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
                             izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
                         } catch (e) {
                             izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
