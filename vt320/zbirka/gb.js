@@ -1,3 +1,8 @@
+/*
+Source: https://github.com/mofosyne/arduino-gameboy-printer-emulator/blob/master/gbp_decoder/jsdecoderV2/gbp_gameboyprinter2bpp.js
+Adapted for Node.js + node-canvas
+*/
+
 function newCanvas() {
     const {
         createCanvas,
