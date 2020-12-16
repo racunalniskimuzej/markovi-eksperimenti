@@ -2,6 +2,7 @@
 Adapted for Node.js + node-canvas from:
 https://github.com/mofosyne/arduino-gameboy-printer-emulator/blob/master/gbp_decoder/jsdecoderV2/gbp_gameboyprinter2bpp.js
 */
+
 function newCanvas() {
     const {
         createCanvas,
@@ -9,7 +10,6 @@ function newCanvas() {
     } = require('canvas');
     return createCanvas(480, 432);
 }
-
 
 function renderImage(tiles) {
     var canvas = global.canvas;
@@ -30,8 +30,6 @@ function renderImage(tiles) {
         var tile_y_offset = Math.floor(index / 20);
         paint(canvas, pixels, square_width, square_height, tile_x_offset, tile_y_offset);
     })
-
-
 }
 
 global.render_gbp = function render_gbp(rawBytes) {
@@ -128,7 +126,7 @@ function decode(rawBytes) {
 // This paints the tile with a specified offset and pixel width
 function paint(canvas, pixels, pixel_width, pixel_height, tile_x_offset, tile_y_offset) {
 
-    var palette = "grafixkidgreen";
+    var palette = "bgb";
 
     switch (palette) {
         case "grayscale":
