@@ -53,3 +53,4 @@ Viri:
 - https://www.vt100.net/docs/vt320-uu/appendixe.html
 - https://www.vt100.net/dec/vt320/soft_characters
 - https://gist.github.com/markostamcar/cddbe8d0e6216c26f865e66dbba890e2
+- https://github.com/mofosyne/arduino-gameboy-printer-emulator
