@@ -1,6 +1,6 @@
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
-Terminalski dostop do https://zbirka.muzej.si/ - nastavitve za terminala:
+Terminalski dostop do https://zbirka.muzej.si/:
 - VT320: Nastavitve ponastavimo z `Default` in spremenimo naslednje: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, nato izberemo `Save`
 - Paka 3000: `NABOR ZNAKOV: USASCII, TIP TASTATURE: JUGO., ODD.HITROST: 9600, SPR.HITROST: 9600`
 - Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
