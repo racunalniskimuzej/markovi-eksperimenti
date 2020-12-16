@@ -274,14 +274,24 @@ readlineSync.promptCLLoop(self = {
             serialport.connect('/dev/gameboy', 115200);
 
             if (serialport.isOpen()) {
-                izpisi((slo ? 'Na Game Boyu začni s tiskanjem fotke...' : 'Start printing the photo on the Game Boy...'));
-                serialport.wait('INIT', 30);
+                pocakaj((slo ? '1. Prižgi Game Boy, pritisni A za glavni menu, nato A za izbiro Shoot in še enkrat A za Shoot.\n' +
+                    '2. Nasmehni se in pritisni A za fotkanje. Če si zadovoljen, pritisni A za shranitev, sicer B za ponovno fotkanje.\n' +
+                    '3. Ko si shranil fotko, pritisni B, nato pritisni smerni gumb za desno, da izbereš Check, nato pritisni A.\n' +
+                    '4. Še enkrat pritisni A, nato smerni gumb za gor in spet A.\n' +
+                    'Za prenos fotke pritisni ENTER...' :
+                    '1. Turn the Game Boy on and press A for main menu, then A to select the Shoot mode and A again to Shoot.\n' +
+                    '2. Smile and press A to take a photo. If you like it, press A to save, else press B to take another one.\n' +
+                    '3. When the photo is saved, press B, then press the right direction button to select Check, then press A.\n' +
+                    '4. Again press A, then the up direction button and A again.\n' +
+                    'Press ENTER to start the photo transfer...'));
+                izpisi((slo ? 'Na Game Boyu pritisni A za začetek prenosa fotke...' : 'Press A on the Game Boy to transfer the photo...'));
+                serialport.wait('INIT', 10);
                 if (serialport.get_wait_result()) {
                     serialport.wait('Timed Out', 30);
                     if (serialport.get_wait_result()) {
                         gbp = render_gbp(serialport.get_buffer_all());
-                        email = readlineSync.questionEMail(zaslon(slo ? 'Super! Vnesi e-naslov, kamor želiš prejeti fotko: ' :
-                            'Great! Enter the e-mail to which the photo will be sent: '), {
+                        email = readlineSync.questionEMail(zaslon(slo ? 'Super! Vnesi e-naslov prejemnika fotke: ' :
+                            'Great! Enter e-mail of photo receipient: '), {
                             limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.')
                         });
                         try {
