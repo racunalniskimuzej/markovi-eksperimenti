@@ -126,7 +126,7 @@ function decode(rawBytes) {
 // This paints the tile with a specified offset and pixel width
 function paint(canvas, pixels, pixel_width, pixel_height, tile_x_offset, tile_y_offset) {
 
-    var palette = "bgb";
+    var palette = "dmg";
 
     switch (palette) {
         case "grayscale":
