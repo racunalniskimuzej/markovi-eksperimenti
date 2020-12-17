@@ -31,13 +31,15 @@ sudo apt-get install -y nodejs
 
 3. Zopet ```su zbirka```:
 ```
-cd ~/muzej.si/vt320/zbirka && npm install && git checkout node_modules/readline-sync/lib/readline-sync.js
+cd ~/muzej.si/vt320/zbirka
+npm install
+git checkout node_modules/readline-sync/lib/readline-sync.js
 ```
 
 4. Spet kot user ```pi```: ```sudo reboot```, nato:
 ```
-sudo systemctl enable serial-getty@vt320.service && sudo systemctl enable serial-getty@paka3000.service
-sudo systemctl start serial-getty@vt320.service && sudo systemctl start serial-getty@paka3000.service
+sudo systemctl enable serial-getty@vt320.service && sudo systemctl start serial-getty@vt320.service
+sudo systemctl enable serial-getty@paka3000.service && sudo systemctl start serial-getty@paka3000.service
 ```
 
 Kako sem usposobil šumnike:
