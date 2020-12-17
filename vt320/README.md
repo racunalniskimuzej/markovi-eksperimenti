@@ -21,12 +21,12 @@ V ```muzej.si/vt320/zbirka/gb.js``` vnesti podatke za SMTP.
 sudo apt install graphicsmagick fswebcam cups build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 sudo cp /home/zbirka/muzej.si/vt320/*.service /etc/systemd/system
 sudo cp /home/zbirka/muzej.si/vt320/10-local.rules /etc/udev/rules.d
+sudo cp /home/zbirka/muzej.si/vt320/rc.local /etc/rc.local
 sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik
 sudo usermod -a -G video zbirka
 sudo usermod -a -G dialout zbirka
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install -y nodejs
-sudo cp /home/zbirka/muzej.si/vt320/rc.local /etc/rc.local
 ```
 
 3. Zopet ```su zbirka```:
