@@ -8,15 +8,14 @@ Terminalski dostop do https://zbirka.muzej.si/ + tiskanje ASCII art iz webcam na
 - Prek USB huba priključimo še Arduino Nano za Game Boy ter USB WebCam za ASCII art
 
 Postavitev Node.js aplikacije (stestirana na v8/v10) iz direktorija `zbirka` na Raspberry Pi:
-1. sudo adduser zbirka
-2. su zbirka:
+1. ```sudo adduser zbirka```, nato kot ```su zbirka```:
 ```
 cd ~ && git clone https://github.com/markostamcar/muzej.si.git
 cp muzej.si/vt320/.profile .
-podatki za SMTP v muzej.si/vt320/zbirka/gb.js
 ```
+V ```muzej.si/vt320/zbirka/gb.js``` vnesti podatke za SMTP.
 
-3. nazaj kot user pi:
+2. Nazaj kot user ```pi```:
 
 ```
 sudo apt install graphicsmagick fswebcam cups build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
@@ -27,16 +26,15 @@ sudo usermod -a -G video zbirka
 sudo usermod -a -G dialout zbirka
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install -y nodejs
-v /etc/rc.local dodati iwconfig wlan0 power off
+sudo cp /home/zbirka/muzej.si/vt320/rc.local /etc/rc.local
 ```
 
-4. su zbirka:
+3. Zopet ```su zbirka```:
 ```
 cd ~/muzej.si/vt320/zbirka && npm install && git checkout node_modules/readline-sync/lib/readline-sync.js
 ```
 
-5. spet kot user pi: sudo reboot, nato:
-
+4. Spet kot user ```pi```: ```sudo reboot```, nato:
 ```
 sudo systemctl enable serial-getty@vt320.service && sudo systemctl enable serial-getty@paka3000.service
 sudo systemctl start serial-getty@vt320.service && sudo systemctl start serial-getty@paka3000.service
