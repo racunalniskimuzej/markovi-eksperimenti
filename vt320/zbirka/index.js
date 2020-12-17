@@ -274,16 +274,16 @@ readlineSync.promptCLLoop(self = {
             serialport.connect('/dev/gameboy', 115200);
 
             if (serialport.isOpen()) {
-                pocakaj((slo ? '1. Prižgi Game Boy, pritisni A za glavni menu, nato A za izbiro Shoot in še enkrat A za Shoot.\n' +
-                    '2. Nasmehni se in pritisni A za fotkanje. Če si zadovoljen, pritisni A za shranitev, sicer B za ponovno fotkanje.\n' +
-                    '3. Ko si shranil fotko, pritisni B, nato pritisni smerni gumb za desno, da izbereš Check, nato pritisni A.\n' +
-                    '4. Še enkrat pritisni A, nato smerni gumb za gor in spet A.\n' +
-                    'Za prenos fotke pritisni ENTER...' :
-                    '1. Turn the Game Boy on and press A for main menu, then A to select the Shoot mode and A again to Shoot.\n' +
-                    '2. Smile and press A to take a photo. If you like it, press A to save, else press B to take another one.\n' +
-                    '3. When the photo is saved, press B, then press the right direction button to select Check, then press A.\n' +
-                    '4. Again press A, then the up direction button and A again.\n' +
-                    'Press ENTER to start the photo transfer...'));
+                pocakaj((slo ? '1. Prižgi Game Boy, pritisni A za menu, nato A za Shoot in ponovno A za Shoot.\n' +
+                    '2. Nasmehni se in se slikaj z A. Nato A za shranitev ali B za ponovitev.\n' +
+                    '3. Po shranitvi pritisni B, nato smerni gumb za desno za izbiro Check, nato A.\n' +
+                    '4. Nato še enkrat A, nato gumb za gor in spet A. Ne pritisni še A za Print.\n' +
+                    'Za nadaljevanje pritisni ENTER...' :
+                    '1. Turn Game Boy on, press A for menu, then A for Shoot and A again for Shoot.\n' +
+                    '2. Smile and press A to take a photo. Then press A to save or B for a retake.\n' +
+                    '3. After saving, press B, then the right direction button for Check, then A.\n' +
+                    '4. Press A again, then the up button and A again. Do not press A to Print yet.\n' +
+                    'Press ENTER to continue...'));
                 izpisi((slo ? 'Na Game Boyu pritisni A za začetek prenosa fotke...' : 'Press A on the Game Boy to transfer the photo...'));
                 serialport.wait('INIT', 10);
                 if (serialport.get_wait_result()) {
