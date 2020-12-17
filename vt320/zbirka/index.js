@@ -301,14 +301,14 @@ readlineSync.promptCLLoop(self = {
                             izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
                         }
                     } else {
-                        izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
+                        throw "napaka";
                     }
                 } else {
-                    izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
+                    throw "napaka";
                 }
                 serialport.close();
             } else {
-                izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
+                throw "napaka";
             }
         } catch (e2) {
             izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
