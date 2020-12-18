@@ -1,21 +1,21 @@
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
-Terminalski dostop do https://zbirka.muzej.si/ + tiskanje ASCII art iz webcam na line printer + pošiljanje fotk iz Game Boy Camere na email:
-- VT320: Nastavitve ponastavimo z `Default` in spremenimo naslednje: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, nato izberemo `Save`
+Terminal access to https://zbirka.muzej.si/ + ASCII art from webcam to line printer + send your Game Boy Camera photos to email:
+- VT320: Reset settings to `Default`, then change the following: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, then select `Save`
 - Paka 3000: `NABOR ZNAKOV: USASCII, TIP TASTATURE: JUGO., ODD.HITROST: 9600, SPR.HITROST: 9600`
-- Uspesna povezava z VT320 mi je uspela samo z originalnim Digitalovim 25-pin kablom, na katerega se nato prikljuci poljuben 25-to-9 adapter in nanj USB Serial
-- Line printer Fujitsu priklopimo s kompatibilnim USB-to-LPT adapterjem, ki mora podpirati način "bi-directional (PS/2)" in ne samo novejših EPP/ECP
-- Prek USB huba priključimo še Arduino Nano za Game Boy ter USB WebCam za ASCII art
+- I was only able to connect VT320 using the original Digital 25-pin cable, then using a 25-to-9 adapter to connect to USB Serial
+- The Fujitsu line printer Fujitsu can be used with a compatible USB-to-LPT adapter which must support the  "bi-directional (PS/2)" protocol and not just the newer EPP/ECP
+- Connect the Game Boy's Arduino Nano and USB WebCam (for ASCII art) using a USB hub
 
-Postavitev Node.js aplikacije (stestirana na v8/v10) iz direktorija `zbirka` na Raspberry Pi:
-1. ```sudo adduser zbirka```, nato kot ```su zbirka```:
+Setup the Node.js program (tested on v8/v10) from the `zbirka` folder on a Raspberry Pi:
+1. ```sudo adduser zbirka```, then as ```su zbirka```:
 ```
 cd ~ && git clone https://github.com/markostamcar/muzej.si
 cp muzej.si/vt320/.profile .
 ```
-V ```muzej.si/vt320/zbirka/gb.js``` vnesti podatke za SMTP.
+In ```muzej.si/vt320/zbirka/gb.js``` set SMTP credentials.
 
-2. Nazaj kot user ```pi```:
+2. Back as user ```pi```:
 
 ```
 sudo apt install graphicsmagick fswebcam cups build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
@@ -29,26 +29,26 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install -y nodejs
 ```
 
-3. Zopet ```su zbirka```:
+3. Again as ```su zbirka```:
 ```
 cd ~/muzej.si/vt320/zbirka
 npm install
 git checkout node_modules/readline-sync/lib/readline-sync.js
 ```
 
-4. Spet kot user ```pi```: ```sudo reboot```, nato:
+4. Then back as user ```pi```: ```sudo reboot```, then:
 ```
 sudo systemctl enable serial-getty@vt320.service && sudo systemctl start serial-getty@vt320.service
 sudo systemctl enable serial-getty@paka3000.service && sudo systemctl start serial-getty@paka3000.service
 ```
 
-Kako sem usposobil šumnike:
+How I got the Slovenian characters working:
 - VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
 - Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista (za pretvorbo PNG v XPM potrebuje ImageMagick)
 - Skripto poženemo s `perl drcsconv.pl sumniki.png` in uporabimo vseh 10 vrstic z enkodiranimi črkami
 - Paka 3000 pa jih že ima vgrajene v kodni tabeli "S"
 
-Viri:
+Sources:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
 - https://www.vt100.net/docs/vt320-uu/appendixe.html
 - https://www.vt100.net/dec/vt320/soft_characters
