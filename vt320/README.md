@@ -1,3 +1,5 @@
+*English translation: README-en.md*
+
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
 Terminalski dostop do https://zbirka.muzej.si/ + tiskanje ASCII art iz webcam na line printer + pošiljanje fotk iz Game Boy Camere na email:
