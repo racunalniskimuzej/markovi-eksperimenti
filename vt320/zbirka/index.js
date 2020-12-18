@@ -267,10 +267,10 @@ readlineSync.promptCLLoop(self = {
         }
     },
     gameboy: function() {
-        try {
             var serialport_wait = require('serialport-wait');
             var serialport = new serialport_wait();
 
+        try {
             serialport.connect('/dev/gameboy', 115200);
 
             if (serialport.isOpen()) {
@@ -306,13 +306,14 @@ readlineSync.promptCLLoop(self = {
                 } else {
                     throw "napaka";
                 }
-                serialport.close();
             } else {
                 throw "napaka";
             }
         } catch (e2) {
             izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
         }
+                        serialport.close();
+
     },
     pocisti: () => {
         izpisi('\033[2J');
