@@ -43,10 +43,10 @@ sudo systemctl enable serial-getty@paka3000.service && sudo systemctl start seri
 ```
 
 How I got the Slovenian characters working:
-- VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
-- Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista (za pretvorbo PNG v XPM potrebuje ImageMagick)
-- Skripto poženemo s `perl drcsconv.pl sumniki.png` in uporabimo vseh 10 vrstic z enkodiranimi črkami
-- Paka 3000 pa jih že ima vgrajene v kodni tabeli "S"
+- VT320 supports the Dynamically Redefined Character Set (DRCS) protocol to download new character glyphs from server - see link below)
+- Each glyph is 15x12 pixels in size - use the script from gist below to convert them (to convert from PNG to XPM ImageMagick is needed)
+- Run the script using `perl drcsconv.pl sumniki.png` and copy all 10 lines of terminal commands
+- Paka 3000 already has them implemented in the "S" character set
 
 Sources:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
