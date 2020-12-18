@@ -1,4 +1,4 @@
-*English translation: README-en.md*
+[English-speaking visitors, please click here :)](README-en.md)
 
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
