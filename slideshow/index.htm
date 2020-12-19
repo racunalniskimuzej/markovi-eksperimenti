@@ -54,7 +54,7 @@ $(document).ready(function() {
         json = json.sort(function() {
             return .5 - Math.random();
         });
-	json = json.splice(0, Math.ceil(json.length / 2));
+        json = json.splice(0, Math.ceil(json.length / 2));
         for (var i = 0; i < json.length; i++) {
             var obj = json[i];
             $("#slideshow").append('<div><img src="' + obj.img + '"/><p class="desc">' + obj.text + '</p></div>');
