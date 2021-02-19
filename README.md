@@ -1,5 +1,5 @@
 ![racunalniski-muzej.si](https://raw.githubusercontent.com/markostamcar/muzej.si/master/muzej.jpg)
-# Markovi muzejski eksperimenti
+# Moji muzejski eksperimenti
 - `3d-stl` 3D modeli stvari za muzej
 - `dial-up` Windows 95 Dial-up server
 - `gb-camera` Zajem fotk iz Game Boy Camere
