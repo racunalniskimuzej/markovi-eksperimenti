@@ -1,4 +1,6 @@
-Changes in this fork:
+![zbirka.muzej.si](https://raw.githubusercontent.com/markostamcar/muzej.si/master/zbirka-crt/zbirka.jpg)
+
+Forked from https://github.com/andersevenrud/retro-css-shell-demo and changed:
 
 - amber CRT instead of green
 - pressing enter should show the prompt again and not just move to a new line
