@@ -315,7 +315,7 @@ readlineSync.promptCLLoop(self = {
         } catch (e2) {
             izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
         }
-        serialport.close();
+        if (serialport.isOpen()) serialport.close();
 
     },
     pocisti: () => {
