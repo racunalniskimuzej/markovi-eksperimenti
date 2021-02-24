@@ -99,7 +99,7 @@ global.render_gbp = function render_gbp(rawBytes) {
 
     images.forEach(renderImage);
 
-    return canvas.toBuffer('image/png');
+    return canvas.toBuffer('image/jpeg', { quality: 0.95 })
 }
 
 // Gameboy tile decoder function from http://www.huderlem.com/demos/gameboy2bpp.html
@@ -206,7 +206,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
         subject: title,
         html: body,
         attachments: [{
-            filename: 'Game Boy Camera.png',
+            filename: 'GameBoyCamera.jpg',
             content: gbp
         }]
     });
