@@ -194,7 +194,7 @@ const load = () => {
     banner,
     buflen: 32,
     commands: self = {
-      pomoc: () => (slo ? helpTextSlo : helpTextEn),
+      pomoc: () => self.slovenski(),
       pomoč: () => self.pomoc(),
       pocisti: () => t.clear(),
       počisti: () => self.pocisti(),
@@ -288,7 +288,7 @@ const load = () => {
       photo: () => self.fotka(),
       clear: () => self.pocisti(),
       more: () => self.vec(),
-      help: () => self.pomoc()
+      help: () => self.english()
     }
   });
 
