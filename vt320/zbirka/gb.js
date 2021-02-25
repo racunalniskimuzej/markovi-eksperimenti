@@ -99,7 +99,7 @@ global.render_gbp = function render_gbp(rawBytes) {
 
     images.forEach(renderImage);
 
-    return canvas.toBuffer('image/jpeg', { quality: 0.95 })
+    return canvas.toBuffer('image/jpeg', { quality: 0.95 });
 }
 
 // Gameboy tile decoder function from http://www.huderlem.com/demos/gameboy2bpp.html
