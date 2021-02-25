@@ -11,7 +11,7 @@ Z dvema zunanjima U.S. Robotics modemoma (gonilnik `mdm3com.inf`) simuliran klas
 - Na odjemalcu mora biti za dial-up povezavo nameščen tudi TCP/IP protokol in vnešen DNS strežnik (npr. Googlov `8.8.8.8`)
 - Za vzpostavitev zveze na PCju-ISPju v oknu `Dial-Up Server` izberemo opcijo `Allow caller access`, a je še NE potrdimo z Apply!
 - Nato na PCju-odjemalcu na dial-up povezavi kliknemo Connect, počakamo da se zaključi tonsko izbiranje tel. št., nato pa na ISPju kliknemo Apply
-- Če je šlo vse po sreči, se je odjemalec zdaj povezal na ISP in lahko z dial-up hitrostjo surfa po internetu (zaradi starega OS in brskalnika večina sodobnih strani, sploh pa tistih, ki uporabljajo https:// (večina), ne bo delovala)
+- Če je šlo vse po sreči, se je odjemalec zdaj povezal na ISP in lahko z dial-up hitrostjo surfa po internetu (zaradi starega OS in brskalnika večina sodobnih strani, sploh pa tistih, ki uporabljajo https://, ne bo delovala)
 
 Viri:
 - https://www.vogons.org/viewtopic.php?t=68514
