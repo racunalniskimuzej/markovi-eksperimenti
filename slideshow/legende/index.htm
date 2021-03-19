@@ -14,7 +14,7 @@ body {
 <script>
 $(document).ready(function() {
         setInterval(function() {
-		$.get("https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/legende/" + indow.location.hash.replace("#", "") + ".htm", function(data) {
+		$.get("https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/legende/" + window.location.hash.replace("#", "") + ".htm", function(data) {
   			$("body").html(data);
 		});
         }, 10000);
