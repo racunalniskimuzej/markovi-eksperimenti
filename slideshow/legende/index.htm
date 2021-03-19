@@ -4,20 +4,17 @@
 <meta charset="utf-8">
 <title>Legende</title>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto">
-<style>
-body {
-	font-family: 'Roboto', 'Noto Color Emoji';
-	font-size: 2.5em;
-}
-</style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-        setInterval(function() {
-		$.get("https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/legende/" + window.location.hash.replace("#", "") + ".htm", function(data) {
-  			$("body").html(data);
-		});
-        }, 10000);
+    $.get(window.location.hash.replace("#", "") + ".htm?" + new Date().getTime(), function(data) {
+        $("body").html(data);
+    });
+    setInterval(function() {
+        $.get(window.location.hash.replace("#", "") + ".htm?" + new Date().getTime(), function(data) {
+            $("body").html(data);
+        });
+    }, 60 * 60 * 1000);
 });
 </script>
 </head>
