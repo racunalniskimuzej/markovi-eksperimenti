@@ -13,32 +13,14 @@ body {
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    $.getJSON('data.json', function(json) {
-        json = json.sort(function() {
-            return .5 - Math.random();
-        });
-        json = json.splice(0, Math.ceil(json.length / 2));
-        for (var i = 0; i < json.length; i++) {
-            var obj = json[i];
-            $("#slideshow").append('<div><img src="' + obj.img + '"/><p class="desc">' + obj.text + '</p></div>');
-        }
-
-        $("#slideshow > div:gt(0)").hide();
-
         setInterval(function() {
-            $('#slideshow > div:first')
-                .fadeOut(1000)
-                .next()
-                .fadeIn(1000)
-                .end()
-                .appendTo('#slideshow');
+		$.get("https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/legende/" + indow.location.hash.replace("#", "") + ".htm", function(data) {
+  			$("body").html(data);
+		});
         }, 10000);
-
-    });
 });
 </script>
 </head>
 <body>
-<div id="slideshow"></div>
 </body>
 </html>
