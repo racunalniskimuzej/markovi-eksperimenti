@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Legende</title>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto">
+<style>
+body {
+	font-family: 'Roboto', 'Noto Color Emoji';
+	font-size: 2.5em;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.getJSON('data.json', function(json) {
+        json = json.sort(function() {
+            return .5 - Math.random();
+        });
+        json = json.splice(0, Math.ceil(json.length / 2));
+        for (var i = 0; i < json.length; i++) {
+            var obj = json[i];
+            $("#slideshow").append('<div><img src="' + obj.img + '"/><p class="desc">' + obj.text + '</p></div>');
+        }
+
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 10000);
+
+    });
+});
+</script>
+</head>
+<body>
+<div id="slideshow"></div>
+</body>
+</html>
