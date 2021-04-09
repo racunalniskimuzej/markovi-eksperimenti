@@ -7,7 +7,7 @@ git clone https://github.com/openwrt/openwrt.git
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-Copy mgetty to feeds/packages/utils
+Copy muzej.si/dial-up/mgetty to feeds/packages/utils
 ./scripts/feeds update packages
 ./scripts/feeds install mgetty
 
