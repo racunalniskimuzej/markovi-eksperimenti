@@ -1,0 +1,76 @@
+--- mgetty-1.1.37.git-4a8e736+20160223.orig/g3/g3cat.c
++++ mgetty-1.1.37.git-4a8e736+20160223/g3/g3cat.c
+@@ -44,7 +44,7 @@
+ 					/* written */
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putcode _P2( (code, len), int code, int len )
+ {
+@@ -67,7 +67,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putwhitespan _P1( (l), int l )
+ {
+@@ -98,7 +98,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putblackspan _P1( (l), int l )
+ {
+@@ -129,7 +129,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void puteol _P0( void )			/* write byte-aligned EOL */
+ {
+--- mgetty-1.1.37.git-4a8e736+20160223.orig/g3/pbm2g3.c
++++ mgetty-1.1.37.git-4a8e736+20160223/g3/pbm2g3.c
+@@ -40,7 +40,7 @@
+ static int out_byte_tab[ 256 ];			/* for g3 byte reversal */
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putcode _P2( (code, len), int code, int len )
+ {
+@@ -60,7 +60,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void puteol _P0( void )			/* write byte-aligned EOL */
+ {
+@@ -69,7 +69,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putwhitespan _P1( (l), int l )
+ {
+@@ -100,7 +100,7 @@
+ }
+ 
+ #ifdef __GNUC__
+-inline
++static inline
+ #endif
+ void putblackspan _P1( (l), int l )
+ {

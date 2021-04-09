@@ -1,0 +1,17 @@
+Index: mgetty-1.1.37.git-4a8e736+20160223/logfile.c
+===================================================================
+--- mgetty-1.1.37.git-4a8e736+20160223.orig/logfile.c
++++ mgetty-1.1.37.git-4a8e736+20160223/logfile.c
+@@ -331,8 +331,12 @@ static int first_open = TRUE;
+ 		             tm->tm_mon+1,  tm->tm_mday,
+ 			     tm->tm_hour, tm->tm_min, tm->tm_sec,
+ 		             log_infix, ws,
++#if false
+ 			     ( errnr <= sys_nerr ) ? sys_errlist[errnr]:
+ 			     "<error not in list>" );
++#else
++				 strerror(errnr) );
++#endif
+ #ifdef SYSLOG
+ 	syslog( level == L_FATAL? LOG_ALERT: LOG_ERR, "%s: %m", ws );
+ #endif

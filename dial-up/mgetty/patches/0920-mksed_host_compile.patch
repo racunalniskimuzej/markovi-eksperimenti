@@ -1,0 +1,23 @@
+Index: mgetty-1.1.37.git-4a8e736+20160223/Makefile
+===================================================================
+--- mgetty-1.1.37.git-4a8e736+20160223.orig/Makefile
++++ mgetty-1.1.37.git-4a8e736+20160223/Makefile
+@@ -123,6 +123,9 @@ CFLAGS?=-O2 -Wall -pipe
+ #CFLAGS=-D_HPUX_SOURCE -Aa -DBSDSTATFS		# for HP-UX 9.x
+ #CFLAGS=-cckr -D__STDC__ -O -DUSE_READ 		# for IRIX 5.2 and up
+ 
++# If you are cross compiling you can use HOSTCFLAGS to specify flags
++# for the HOSTCC only
++HOSTCFLAGS?="$(CFLAGS)"
+ 
+ #
+ # LDFLAGS specify flags to pass to the linker. You could specify
+@@ -432,7 +435,7 @@ sedscript: mksed
+ 	chmod +x sedscript
+ 
+ mksed: mksed.c policy.h Makefile 
+-	$(HOSTCC) $(CFLAGS) -DBINDIR=\"$(BINDIR)\" -DSBINDIR=\"$(SBINDIR)\" \
++	$(HOSTCC) $(HOSTCFLAGS) -DBINDIR=\"$(BINDIR)\" -DSBINDIR=\"$(SBINDIR)\" \
+ 		-DLIBDIR=\"$(LIBDIR)\" \
+ 		-DCONFDIR=\"$(CONFDIR)\" \
+ 		-DFAX_SPOOL=\"$(FAX_SPOOL)\" \
