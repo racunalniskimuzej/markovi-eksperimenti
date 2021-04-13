@@ -31,7 +31,7 @@ Set your computer at 192.168.1.2
 Connect LAN1 with PC
 Set PC LAN IP to 192.168.1.2
 Turn o2 Box off, hold reset button and turn on, wait for red power LED
-Visit 192.168.1.1, upload target "firmware", wait a few minutes (weird charater output is OK)
+Visit 192.168.1.1, upload target "firmware", wait a few minutes (weird character output is OK)
 ```
 
 # Work in progress. More to follow!
