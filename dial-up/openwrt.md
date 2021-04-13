@@ -25,7 +25,10 @@ Utilities: Telephony: <*> mgetty
 Exit and Save
 make -j4
 
+FLASH
 
+Image will be too big for brnboot, so switching to uBoot is needed:
+https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6
 ```
 
 # Work in progress. More to follow!
