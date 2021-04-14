@@ -2,7 +2,7 @@
 
 Z dvema zunanjima U.S. Robotics modemoma (gonilnik `mdm3com.inf`) simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom: https://www.facebook.com/watch/?v=205453160718972
 - Dial-up Server se v Windows 95 namesti z `dun14-95.exe`
-- V računalnik, ki bo igral vlogo ISPja, damo mrežno kartico `RTL8139` (gonilnik za WIN95A priložen)
+- V računalnik, ki bo igral vlogo ISPja, damo mrežno kartico RTL8139 (gonilnik za WIN95A: `NETRTS.INF` + `RTL8139.SYS`)
 - V registru gremo v `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\Modem\0000\Monitor` in vrednost `2` nastavimo na `ATA<cr>`
 - Za posredovanje modemskega prometa prek LAN namestimo `wrp.exe` ter `com32upd.exe`
 - Zaženemo WinRoute, se prijavimo z OK in izberemo Settings -> Interface Table, kjer najprej dvokliknemo mrežno kartico in se prepričamo, da je 1. kvadratek obkljukan, 2. pa ne - nato dvokliknemo še `RAS`, kjer ne sme biti obkljukan noben kvadratek.
