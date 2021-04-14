@@ -4,3 +4,4 @@
 - lantiq.conf: set per_channel_context to on
 - vmmc: fix permissions for /dev/vmmc*
 - network, wireless: use WiFi in client mode
+- asterisk: set enabled to 1
