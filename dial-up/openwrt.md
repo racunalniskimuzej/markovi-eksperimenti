@@ -2,16 +2,19 @@
 
 [![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box-thumb.jpg)](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box.jpg)
 
-- Arcadyan VGV7510KW22 (o2 Box 6431) offers everything we need: Good OpenWrt support, 2 analog phone connections, WLAN for internet access and USB 2.0 port for 56k modem (USRobotics USR5637)
+Shopping list
+- o2 Box 6431 (Arcadyan VGV7510KW22) - it has [good OpenWrt support](https://openwrt.org/toh/arcadyan/vgv7510kw22), 2 analog phone ports, WLAN for internet access and USB 2.0 port
+- 56k modem [USRobotics USR5637](https://www.usr.com/products/56k-dialup-modem/usr5637/)
 
+
+OpenWrt build
 ```
-BUILD
-
 git clone https://github.com/openwrt/openwrt.git
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
 Copy muzej.si/dial-up/openwrt/mgetty to feeds/packages/utils
+
 ./scripts/feeds update packages
 ./scripts/feeds install mgetty
 
@@ -27,11 +30,10 @@ Utilities: Telephony: <*> mgetty
 
 Exit and Save
 make -j4
+```
 
-FLASH
-
-Image will be too big for brnboot, so switching to uBoot is needed:
-https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6
+OpenWrt flash
+- Image will be too big for brnboot, so [switching to uBoot is needed](https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6)
 
 CONFIG
 Set root password using passwd!
