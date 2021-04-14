@@ -46,7 +46,11 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/config/network (NOTE: this will change LAN IP to 192.168.99.1!)
 /etc/config/wireless (set SSID & password!)
 /etc/config/asterisk
-/etc/mgetty/mgetty.config
+/opt/etc/mgetty/mgetty.config
+/opt/etc/mgetty/login.config
+/etc/ppp/options
+/etc/ppp/options.ttyACM0
+/etc/rc.local
 
 reboot!
 
