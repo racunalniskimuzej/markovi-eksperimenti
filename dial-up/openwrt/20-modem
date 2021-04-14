@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "${PRODUCT}" = "baf/303/200" ]; then
+    if [ "${ACTION}" = "add" ]; then
+         while true; do /opt/sbin/mgetty /dev/ttyACM0; done
+    fi
+fi
