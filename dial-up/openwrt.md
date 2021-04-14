@@ -29,6 +29,17 @@ FLASH
 
 Image will be too big for brnboot, so switching to uBoot is needed:
 https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6
+
+CONFIG
+
+/etc/asterisk/lantiq.conf:
+channels = 2
+per_channel_context = on
+
+/etc/init.d/vmmc:
+			mknod -m 664 /dev/vmmc$i c 122 $i
+			chmod 777 /dev/vmmc$i
+
 ```
 
 # Work in progress. More to follow!
