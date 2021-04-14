@@ -47,6 +47,17 @@ exten => 1002,1,Dial(TAPI/2,30,t)
 exten => 1001,1,Dial(TAPI/1,30,t)
 
 
+
+/etc/hotplug.d/usb/20-modem:
+#!/bin/sh
+
+if [ "${PRODUCT}" = "baf/303/200" ]; then
+    if [ "${ACTION}" = "add" ]; then
+        /opt/sbin/mgetty /dev/ttyACM0
+    fi
+fi
+
+
 ```
 
 # Work in progress. More to follow!
