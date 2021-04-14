@@ -41,8 +41,10 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/asterisk/extensions.conf
 /etc/hotplug.d/usb/20-modem
 /etc/config/network
-/etc/config/wireless
+/etc/config/wireless (set SSID & password!)
 /etc/config/asterisk
+
+reboot!
 
 ```
 
