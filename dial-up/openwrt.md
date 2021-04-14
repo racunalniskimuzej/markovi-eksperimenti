@@ -34,6 +34,7 @@ CONFIG
 Set root password using passwd!
 
 Copy from muzej.si/dial-up/openwrt/ to:
+(See muzej.si/dial-up/openwrt/README.md for changes list)
 
 /etc/init.d/vmmc
 /etc/asterisk/lantiq.conf
@@ -41,6 +42,7 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/hotplug.d/usb/20-modem
 /etc/config/network
 /etc/config/wireless
+/etc/config/asterisk
 
 ```
 
