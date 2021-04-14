@@ -43,6 +43,7 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/config/network
 /etc/config/wireless (set SSID & password!)
 /etc/config/asterisk
+/etc/mgetty/mgetty.config
 
 reboot!
 
