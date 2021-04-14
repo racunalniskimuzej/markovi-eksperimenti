@@ -40,7 +40,7 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/asterisk/lantiq.conf
 /etc/asterisk/extensions.conf
 /etc/hotplug.d/usb/20-modem
-/etc/config/network
+/etc/config/network (NOTE: this will change LAN IP to 192.168.99.1!)
 /etc/config/wireless (set SSID & password!)
 /etc/config/asterisk
 /etc/mgetty/mgetty.config
