@@ -1,0 +1,16 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option channel '11'
+	option hwmode '11g'
+	option path 'pci0000:00/0000:00:0e.0'
+	option htmode 'HT20'
+	option disabled '0'
+
+config wifi-iface
+    option network 'wifi'
+    option device radio0
+    option mode 'sta'
+    option ssid 'SSID'
+    option encryption psk2
+    option key 'PASSWORD'

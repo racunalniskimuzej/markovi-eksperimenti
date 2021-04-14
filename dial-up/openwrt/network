@@ -1,0 +1,62 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fd37:90f2:a95d::/48'
+
+config atm-bridge 'atm'
+	option vpi '1'
+	option vci '32'
+	option encaps 'llc'
+	option payload 'bridged'
+	option nameprefix 'dsl'
+
+config dsl 'dsl'
+	option annex 'b'
+	option tone 'av'
+
+config interface 'lan'
+	option type 'bridge'
+	option ifname 'eth0.1'
+	option proto 'static'
+	option ipaddr '192.168.1.1'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+
+config interface 'wan'
+	option ifname 'dsl0'
+	option proto 'pppoe'
+	option username 'username'
+	option password 'password'
+	option ipv6 '1'
+
+config device 'wan_dsl0_dev'
+	option name 'dsl0'
+	option macaddr '18:83:bf:a6:78:64'
+
+config interface 'wan6'
+	option ifname '@wan'
+	option proto 'dhcpv6'
+
+config switch
+	option name 'switch0'
+	option reset '1'
+	option enable_vlan '1'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '1'
+	option ports '2 3 4 5 6t'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '2'
+	option ports '0 6t'
+
+
+config interface 'wifi'
+        option proto 'dhcp'
