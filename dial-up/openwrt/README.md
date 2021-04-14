@@ -3,5 +3,5 @@
 - extensions.conf: Asterisk config for direct internal calling between the two analog ports
 - lantiq.conf: set per_channel_context to on
 - vmmc: fix permissions for /dev/vmmc*
-- network, wireless: use WiFi in client mode
+- network, wireless: use WiFi in client mode, change LAN IP to 192.168.99.1
 - asterisk: set enabled to 1
