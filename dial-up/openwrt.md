@@ -37,8 +37,15 @@ channels = 2
 per_channel_context = on
 
 /etc/init.d/vmmc:
-			mknod -m 664 /dev/vmmc$i c 122 $i
-			chmod 777 /dev/vmmc$i
+mknod -m 664 /dev/vmmc$i c 122 $i
+chmod 777 /dev/vmmc$i
+
+/etc/asterisk/extensions.conf:
+[lantiq1]
+exten => 1002,1,Dial(TAPI/2,30,t)
+[lantiq2]
+exten => 1001,1,Dial(TAPI/1,30,t)
+
 
 ```
 
