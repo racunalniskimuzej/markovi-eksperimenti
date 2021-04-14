@@ -9,7 +9,7 @@ git clone https://github.com/openwrt/openwrt.git
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-Copy muzej.si/dial-up/mgetty to feeds/packages/utils
+Copy muzej.si/dial-up/openwrt/mgetty to feeds/packages/utils
 ./scripts/feeds update packages
 ./scripts/feeds install mgetty
 
@@ -31,32 +31,12 @@ Image will be too big for brnboot, so switching to uBoot is needed:
 https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6
 
 CONFIG
+Copy from muzej.si/dial-up/openwrt/ to:
 
-/etc/asterisk/lantiq.conf:
-channels = 2
-per_channel_context = on
-
-/etc/init.d/vmmc:
-mknod -m 664 /dev/vmmc$i c 122 $i
-chmod 777 /dev/vmmc$i
-
-/etc/asterisk/extensions.conf:
-[lantiq1]
-exten => 1002,1,Dial(TAPI/2,30,t)
-[lantiq2]
-exten => 1001,1,Dial(TAPI/1,30,t)
-
-
-
-/etc/hotplug.d/usb/20-modem:
-#!/bin/sh
-
-if [ "${PRODUCT}" = "baf/303/200" ]; then
-    if [ "${ACTION}" = "add" ]; then
-        /opt/sbin/mgetty /dev/ttyACM0
-    fi
-fi
-
+/etc/init.d/vmmc
+/etc/asterisk/lantiq.conf
+/etc/asterisk/extensions.conf
+/etc/hotplug.d/usb/20-modem
 
 ```
 
