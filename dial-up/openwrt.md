@@ -39,6 +39,8 @@ Copy from muzej.si/dial-up/openwrt/ to:
 /etc/asterisk/lantiq.conf
 /etc/asterisk/extensions.conf
 /etc/hotplug.d/usb/20-modem
+/etc/config/network
+/etc/config/wireless
 
 ```
 
