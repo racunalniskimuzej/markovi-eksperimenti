@@ -1,8 +1,8 @@
-# Dial-up ISP-in-a-box using OpenWrt on Arcadyan VGV7510KW22 (o2 Box 6431)
+# Dial-up ISP-in-a-box using OpenWrt on o2 Box 6431
 
 [![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box-thumb.jpg)](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box.jpg)
 
-- o2 Box 6431 offers everything we need: Good OpenWrt support, 2 analog phone connections, WLAN for internet access and USB 2.0 port for 56k modem (USRobotics USR5637)
+- Arcadyan VGV7510KW22 (o2 Box 6431) offers everything we need: Good OpenWrt support, 2 analog phone connections, WLAN for internet access and USB 2.0 port for 56k modem (USRobotics USR5637)
 
 ```
 BUILD
