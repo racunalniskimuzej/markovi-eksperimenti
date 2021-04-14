@@ -8,12 +8,13 @@ Shopping list
 
 
 OpenWrt build
+- For me, it worked great on [WSL2](https://openwrt.org/docs/guide-developer/build-system/wsl) on Windows 10
 ```
 git clone https://github.com/openwrt/openwrt.git
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-Copy muzej.si/dial-up/openwrt/mgetty to feeds/packages/utils
+- Copy muzej.si/dial-up/openwrt/mgetty to feeds/packages/utils
 
 ./scripts/feeds update packages
 ./scripts/feeds install mgetty
@@ -28,34 +29,15 @@ Network: Telephony: <*> asterisk: <*> asterisk-codec-a-mu, <*> asterisk-codec-al
 Network: Telephony Lantiq: <*> asterisk-chan-lantiq
 Utilities: Telephony: <*> mgetty
 
-Exit and Save
+- Exit and Save
 make -j4
 ```
 
 OpenWrt flash
 - Image will be too big for brnboot, so [switching to uBoot is needed](https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6)
 
-CONFIG
-Set root password using passwd!
+OpenWrt config
+- Set root password using passwd!
+- Copy configuration files from [here](https://github.com/markostamcar/muzej.si/tree/master/dial-up/openwrt) to specified directories
+- reboot
 
-Copy from muzej.si/dial-up/openwrt/ to:
-(See muzej.si/dial-up/openwrt/README.md for changes list)
-
-/etc/init.d/vmmc
-/etc/asterisk/lantiq.conf
-/etc/asterisk/extensions.conf
-/etc/hotplug.d/usb/20-modem
-/etc/config/network (NOTE: this will change LAN IP to 192.168.99.1!)
-/etc/config/wireless (set SSID & password!)
-/etc/config/asterisk
-/opt/etc/mgetty/mgetty.config
-/opt/etc/mgetty/login.config
-/etc/ppp/options
-/etc/ppp/options.ttyACM0
-/etc/rc.local
-
-reboot!
-
-```
-
-# Work in progress. More to follow!
