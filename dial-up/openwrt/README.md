@@ -60,6 +60,6 @@ OpenWrt config
 Usage
 - After reboot, all services will be started and you will be able to connect a client modem and establish a connection (phone number 1001)
 
-Known issues
-- As of 14. April 2021, the modem connection quality is extermely poor - just 2400 bps :( Ping from OpenWrt to client machine works, but that's about it
+Known issues (As of 14. April 2021)
+- The modem connection quality is extermely poor - just 2400 bps :( Ping from OpenWrt to client machine works, but that's about it
 - I have tried different settings and codecs in lantiq.conf but was unable to get any improvements
