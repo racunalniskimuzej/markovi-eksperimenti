@@ -31,6 +31,8 @@ Image will be too big for brnboot, so switching to uBoot is needed:
 https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6
 
 CONFIG
+Set root password using passwd!
+
 Copy from muzej.si/dial-up/openwrt/ to:
 
 /etc/init.d/vmmc
