@@ -61,4 +61,4 @@ make -j4
 - `reboot`
 
 ### Usage
-- After reboot, all services will be started and you will be able to connect a client modem and establish a connection (phone number 1001)
+- After reboot, all services will be started and you will be able to connect a client modem and establish a connection (phone number `1001`)
