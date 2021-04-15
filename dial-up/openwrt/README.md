@@ -2,6 +2,10 @@
 
 [![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box-thumb.jpg)](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box.jpg)
 
+### Known issues (As of 14. April 2021)
+- The modem connection quality is extermely poor - just 2400 bps :( Ping from OpenWrt to client machine works, but that's about it
+- I have tried different settings and codecs in lantiq.conf but was unable to get any improvements
+
 ### Shopping list
 - o2 Box 6431 (Arcadyan VGV7510KW22) - it has [good OpenWrt support](https://openwrt.org/toh/arcadyan/vgv7510kw22), 2 analog phone ports, WLAN for internet access and USB 2.0 port
 - 56k modem [USRobotics USR5637](https://www.usr.com/products/56k-dialup-modem/usr5637/)
@@ -58,7 +62,3 @@ make -j4
 
 ### Usage
 - After reboot, all services will be started and you will be able to connect a client modem and establish a connection (phone number 1001)
-
-### Known issues (As of 14. April 2021)
-- The modem connection quality is extermely poor - just 2400 bps :( Ping from OpenWrt to client machine works, but that's about it
-- I have tried different settings and codecs in lantiq.conf but was unable to get any improvements
