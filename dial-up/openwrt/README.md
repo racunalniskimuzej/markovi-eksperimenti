@@ -37,7 +37,7 @@ OpenWrt flash
 - Image will be too big for brnboot, so [switching to uBoot is needed](https://forum.openwrt.org/t/installing-lede-u-boot-via-brnboot-web-interface-without-rs232/9857/6)
 
 OpenWrt config
-- Set root password using passwd!
+- Set root password using `passwd`!
 - Copy configuration files to specified directories:
 
 | File | Copy to | Changelog |
