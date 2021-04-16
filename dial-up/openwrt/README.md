@@ -9,6 +9,7 @@
 ### Shopping list
 - o2 Box 6431 (Arcadyan VGV7510KW22) - it has [good OpenWrt support](https://openwrt.org/toh/arcadyan/vgv7510kw22), 2 analog phone ports, WLAN for internet access and USB 2.0 port
 - 56k modem [USRobotics USR5637](https://www.usr.com/products/56k-dialup-modem/usr5637/)
+- 2 TAE to RJ11 adapters
 
 ### OpenWrt build
 - For me, it worked great on [WSL2](https://openwrt.org/docs/guide-developer/build-system/wsl) on Windows 10
