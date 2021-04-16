@@ -55,7 +55,7 @@ make -j4
 | options | /etc/ppp/options | ppp config from [Doge Microsystems](https://dogemicrosystems.ca/wiki/Dial_up_server) |
 | options.ttyACM0 | /etc/ppp/options.ttyACM0 | ppp config from [Doge Microsystems](https://dogemicrosystems.ca/wiki/Dial_up_server) |
 | rc.local | /etc/rc.local | iptables config from [Doge Microsystems](https://dogemicrosystems.ca/wiki/Dial_up_server) |
-| vmmc | /etc/init.d/vmmc | fix permissions for /dev/vmmc* |
+| vmmc | /etc/init.d/vmmc | permissions fix for /dev/vmmc*; NOTE: Make sure the new vmmc script has +x permission! |
 | wireless | /etc/config/wireless | set SSID & password to use WiFi in client mode |
 
 - `reboot`
