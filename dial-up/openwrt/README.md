@@ -2,6 +2,8 @@
 
 [![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box-thumb.jpg)](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/o2box.jpg)
 
+![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/diagram.png)
+
 ### Known issues (as of 14. April 2021)
 - The modem connection quality is extermely poor - just 2400 bps :( Ping from OpenWrt to client machine works, but that's about it
 - I have tried different settings and codecs in lantiq.conf but was unable to get any improvements
