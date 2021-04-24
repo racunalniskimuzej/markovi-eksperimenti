@@ -27,7 +27,7 @@ git clone https://github.com/openwrt/openwrt.git
 make menuconfig
 Target System: Lantiq
 Subtarget: XRX200
-Target Profile:  o2 Box 6431 NOR (Arcadyan VGV7510KW22 NOR)
+Target Profile: o2 Box 6431 NOR (Arcadyan VGV7510KW22 NOR)
 
 Kernel modules: USB Support: <*> kmod-usb-acm, <*> kmod-usb2
 Network: Telephony: <*> asterisk: <*> asterisk-app-confbridge, <*> asterisk-codec-a-mu, <*> asterisk-codec-alaw, <*> asterisk-codec-resample, <*> asterisk-codec-ulaw
