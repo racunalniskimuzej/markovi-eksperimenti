@@ -5,7 +5,7 @@
 ### Known issues (as of 24. April 2021)
 - The modem connection quality is extermely poor - just [2400 bps](https://github.com/markostamcar/muzej.si/blob/master/dial-up/openwrt/2400bps.m4a) :( Ping from OpenWrt to client machine works, but that's about it
 - I have tried different settings and codecs in lantiq.conf but was unable to get any improvements
-- I have tried some more changes in lantiq.conf according to the documentation (Google the following (including quote marks): "Pass-Through Mode" "tapi" "infineon") with no improvement
+- I have tried some more changes in lantiq.conf according to the documentation (Google the following, including quote marks: "Pass-Through Mode" "tapi" "infineon") with no improvement
 
 ### Shopping list
 - o2 Box 6431 (Arcadyan VGV7510KW22) - it has [good OpenWrt support](https://openwrt.org/toh/arcadyan/vgv7510kw22), 2 analog phone ports, WLAN for internet access and USB 2.0 port
