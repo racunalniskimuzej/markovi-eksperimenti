@@ -1,5 +1,5 @@
 # Dial-up ISP-in-a-box using OpenWrt on o2 Box 6431
-Goal: To build a minimalistic dial-up server with as few components as possible!
+Goal: To build the most minimalistic dial-up server with as few components as possible!
 
 ![o2 Box 6431](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/openwrt/flow.png)
 
