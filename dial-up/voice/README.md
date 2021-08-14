@@ -14,9 +14,5 @@ exten => 2222,1,Dial(TAPI/1,30,t)
 exten => 1337,1,Playback(nevergonna)
 
 7. Download to /usr/share/asterisk/sounds and rename to leekspin.ulaw & nevergonna.ulaw
-
-https://g711.org/ready/LeekSpin-1628954793.wav
-https://g711.org/ready/RickAstley-NeverGonnaGiveYouUpOfficialMusicVideo-1628956212.wav
-
 8. Set option enabled '1' in /etc/config/asterisk, then /etc/init.d/asterisk enable
 9. reboot
