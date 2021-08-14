@@ -1,4 +1,4 @@
-![RacMuz ISP](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/modem.jpg)
+![RacMuz ISP](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/win95/modem.jpg)
 
 Z dvema zunanjima U.S. Robotics modemoma (gonilnik `mdm3com.inf`) simuliran klasičen dial-up internetni dostop - kot videno v oddaji Izodrom: https://www.facebook.com/watch/?v=205453160718972
 - Dial-up Server se v Windows 95 namesti z `dun14-95.exe`
