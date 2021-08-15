@@ -2,7 +2,7 @@ Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server for use with USRobo
 
 1. Fresh Raspberry Pi OS install, change password, do `apt update && apt ugprade`
 2. Set static IP on PAP2T: IP `192.168.51.2`, netmask `255.255.255.0`
-3. Set static eth0 on Rpi: /etc/dhcpcd.conf:
+3. Set static `eth0` on RPi: `/etc/dhcpcd.conf`:
 ```
 interface eth0
 static ip_address=192.168.51.1/24
