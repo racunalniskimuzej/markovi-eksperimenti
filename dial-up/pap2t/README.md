@@ -1,4 +1,4 @@
-Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server
+Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server for use with USRobotics USR5637 USB modem
 
 1. Fresh Raspberry Pi OS install, change password, do `apt update && apt ugprade`
 2. Set static IP on PAP2T: IP `192.168.51.2`, netmask `255.255.255.0`
