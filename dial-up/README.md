@@ -1,4 +1,4 @@
-![RacMuz ISP](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/win95/modem.jpg)
+![RacMuz ISP](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/modem.jpg)
 
 # Retro dial-up experience
 - `openwrt` (Zaenkrat) neuspel poizkus sestaviti dial-up ISP-in-a-box s pomočjo OpenWrt in o2 Box 6431
