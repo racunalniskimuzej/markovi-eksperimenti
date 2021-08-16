@@ -9,11 +9,11 @@
 
 ```
 [lantiq1]
-exten => 1111,1,Dial(TAPI/2,30,t)
+exten => 2468,1,Dial(TAPI/2,30,t)
 exten => 1337,1,Playback(leekspin)
 
 [lantiq2]
-exten => 2222,1,Dial(TAPI/1,30,t)
+exten => 1357,1,Dial(TAPI/1,30,t)
 exten => 1337,1,Playback(nevergonna)
 ```
 
