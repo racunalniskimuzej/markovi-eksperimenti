@@ -1,3 +1,5 @@
+![PAP2T](https://raw.githubusercontent.com/markostamcar/muzej.si/master/dial-up/pap2t/pap2t.jpg)
+
 Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server for use with USRobotics USR5637 USB modem
 
 1. Fresh Raspberry Pi OS install, change password, do `apt update && apt upgrade`
