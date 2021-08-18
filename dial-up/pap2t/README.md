@@ -14,12 +14,12 @@ static ip_address=192.168.51.1/24
 ### a) Without Asterisk (to keep it simple - RECOMMENDED)
 5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: 100, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
 6. PAP2T Line 2: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: 101, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:100>S0<:@127.0.0.1:5060>|)`
+7. Continue with instructions for The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
 
 ### b) With Asterisk
 5. PAP2T Line 1: Proxy: 192.168.51.1, User ID: pap2t-ispmodem, Password: password, Use Auth ID: yes, Auth ID: pap2t-ispmodem
 6. PAP2T Line 2: Proxy: 192.168.51.1, User ID: pap2t-client, Password: password, Use Auth ID: yes, Auth ID: pap2t-client
-7. Continue with instructions for Asterisk Setup at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
+7. Continue with instructions for Asterisk Setup & The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
 
-9. In `/etc/mgetty/mgetty.config` set `rings  1` so the connection gets setup faster
-10. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
-11. On dial-up client put # at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
+8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
+9. On dial-up client put # at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
