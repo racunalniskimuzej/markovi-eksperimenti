@@ -23,4 +23,4 @@ static ip_address=192.168.51.1/24
 
 ### a) & b)
 8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
-9. On dial-up client put # at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
+9. On dial-up client put `#` at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
