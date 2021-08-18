@@ -12,13 +12,13 @@ static ip_address=192.168.51.1/24
 4. PAP2T Line 1 & 2: Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable
 
 ### a) Without Asterisk (to keep it simple - RECOMMENDED)
-5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: 100, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
-6. PAP2T Line 2: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: 101, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:100>S0<:@127.0.0.1:5060>|)`
+5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `100`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
+6. PAP2T Line 2: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `101`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:100>S0<:@127.0.0.1:5060>|)`
 7. Continue with instructions for The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
 
 ### b) With Asterisk
-5. PAP2T Line 1: Proxy: 192.168.51.1, User ID: pap2t-ispmodem, Password: password, Use Auth ID: yes, Auth ID: pap2t-ispmodem
-6. PAP2T Line 2: Proxy: 192.168.51.1, User ID: pap2t-client, Password: password, Use Auth ID: yes, Auth ID: pap2t-client
+5. PAP2T Line 1: Proxy: `192.168.51.1`, User ID: `pap2t-ispmodem`, Password: `password`, Use Auth ID: yes, Auth ID: `ap2t-ispmodem`
+6. PAP2T Line 2: Proxy: `192.168.51.1`, User ID: `pap2t-client`, Password: `password`, Use Auth ID: yes, Auth ID: `pap2t-client`
 7. Continue with instructions for Asterisk Setup & The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
 
 8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
