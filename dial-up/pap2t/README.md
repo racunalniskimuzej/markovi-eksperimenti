@@ -21,5 +21,6 @@ static ip_address=192.168.51.1/24
 6. PAP2T Line 2: Proxy: `192.168.51.1`, User ID: `pap2t-client`, Password: `password`, Use Auth ID: yes, Auth ID: `pap2t-client`
 7. Continue with instructions for Asterisk Setup & The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
 
+### a) & b)
 8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
 9. On dial-up client put # at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
