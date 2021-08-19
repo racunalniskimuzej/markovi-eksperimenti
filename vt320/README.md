@@ -10,7 +10,7 @@ Terminalski dostop do https://zbirka.muzej.si/ + tiskanje ASCII art iz webcam na
 - Prek USB huba priključimo še Arduino Nano za Game Boy ter USB WebCam za ASCII art
 
 Postavitev Node.js aplikacije (stestirana na v8/v10) iz direktorija `zbirka` na Raspberry Pi:
-1. ```sudo adduser zbirka```, nato kot ```su zbirka```:
+1. ```sudo adduser zbirka```, ```sudo apt install git```, nato kot ```su zbirka```:
 ```
 cd ~ && git clone https://github.com/markostamcar/muzej.si
 cp muzej.si/vt320/.profile .
