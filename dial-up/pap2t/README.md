@@ -9,7 +9,7 @@ Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server and https://gekk.in
 interface eth0
 static ip_address=192.168.51.1/24
 ```
-4. PAP2T Line 1 & 2: Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable
+4. PAP2T Line 1 & 2: Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable, FAX CED Detect Enable: no, FAX CNG Detect Enable: no, FAX Process NSE: no
 
 ### a) Without Asterisk (to keep it simple - RECOMMENDED)
 5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `100`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
@@ -23,4 +23,5 @@ static ip_address=192.168.51.1/24
 
 ### a) & b)
 8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
-9. On dial-up client put `#` at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
+9. In `/etc/mgetty/mgetty.config` set `rings  1` so the connection gets setup faster
+10. On dial-up client put `#` at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
