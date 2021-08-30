@@ -9,12 +9,22 @@
 
 ```
 [lantiq1]
-exten => 2468,1,Dial(TAPI/2,30,t)
-exten => 1337,1,Playback(leekspin)
+exten => 575767,1,Dial(TAPI/2,30,t)
+exten => 92,1,Playback(leekspin)
+exten => 93,1,Playback(leekspin)                                              
+exten => 94,1,Playback(leekspin)                                              
+exten => 95,1,Playback(nevergonna)                                              
+exten => 97,1,Playback(nevergonna)                                              
+exten => 988,1,Playback(nevergonna)                                              
 
 [lantiq2]
-exten => 1357,1,Dial(TAPI/1,30,t)
-exten => 1337,1,Playback(nevergonna)
+exten => 266972,1,Dial(TAPI/1,30,t)
+exten => 92,1,Playback(leekspin)                                                
+exten => 93,1,Playback(leekspin)                                           
+exten => 94,1,Playback(leekspin)                                                
+exten => 95,1,Playback(nevergonna)                                              
+exten => 97,1,Playback(nevergonna)                                              
+exten => 988,1,Playback(nevergonna)
 ```
 
 7. Download sounds to `/usr/share/asterisk/sounds` and rename to leekspin.ulaw & nevergonna.ulaw
