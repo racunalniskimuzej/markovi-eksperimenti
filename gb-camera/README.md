@@ -1,4 +1,4 @@
-![Game Boy Camera](https://raw.githubusercontent.com/markostamcar/muzej.si/master/gb-camera/gb.jpg)
+![Game Boy Camera](https://raw.githubusercontent.com/markostamcar/muzej.si/master/gb-camera/gb1.jpg) ![Game Boy Camera](https://raw.githubusercontent.com/markostamcar/muzej.si/master/gb-camera/gb2.jpg)
 
 Pošiljanje fotk iz Game Boy camere na e-mail
 
