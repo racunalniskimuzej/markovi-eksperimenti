@@ -25,3 +25,4 @@ static ip_address=192.168.51.1/24
 8. In `/etc/mgetty/login.config` set `/AutoPPP/ -	a_ppp	/usr/sbin/pppd noauth -chap debug` so any username/password can be used
 9. In `/etc/mgetty/mgetty.config` set `rings  1` so the connection gets setup faster
 10. On dial-up client put `#` at the end of the phone number (`1337#`) - this will reduce the number of rings before the connection is made
+11. For Windows 95 clients, manually set DNS to 8.8.8.8 to fix the very slow first website load after the dial-up connection is made
