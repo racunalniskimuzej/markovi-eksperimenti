@@ -1,7 +1,5 @@
 ![Slideshow](https://raw.githubusercontent.com/markostamcar/muzej.si/master/slideshow/slideshow.jpg)
 
-## Vse fotografije so last Društva računalniški muzej.
-
 Namestitev barvnih emojijev in orodja za skrivanje miškinega kazalčka: `sudo apt install fonts-noto-color-emoji unclutter`
 
 Avtomatsko predvajanje na RPi 4 (dual screen):
