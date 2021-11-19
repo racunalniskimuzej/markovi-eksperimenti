@@ -14,4 +14,4 @@
 - `git clone https://github.com/mpentler/teletext-twitter`
 - `pip3 install python-twitter`
 - `config.py-default` preimenujemo v `config.py` in v njem nastavimo API keys za Twitter, tti_path nastavimo na `/home/pi/.teletext-services/Teefax/`, page_number pa na 100
-- 
+- Cronjob: `0 * * * * cd /home/pi/teletext-twitter && /usr/bin/python3 /home/pi/teletext-twitter/teletext-twitter -m user -q muzej -c 10 -n`
