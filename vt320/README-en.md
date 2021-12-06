@@ -1,6 +1,6 @@
 ![VT320](https://raw.githubusercontent.com/markostamcar/muzej.si/master/vt320/vt320.jpg)
 
-Terminal access to https://zbirka.muzej.si/ + ASCII art from webcam to line printer + send your Game Boy Camera photos to email:
+Terminal access to https://zbirka.muzej.si/#english + ASCII art from webcam to line printer + send your Game Boy Camera photos to email:
 - VT320: Reset settings to `Default`, then change the following: `Display: Auto Wrap, Jump Scroll, Host Writable Status Display; Communications: Transmit=19200`, then select `Save`
 - Paka 3000: `NABOR ZNAKOV: USASCII, TIP TASTATURE: JUGO., ODD.HITROST: 9600, SPR.HITROST: 9600`
 - I was only able to connect VT320 using the original Digital 25-pin cable, then using a 25-to-9 adapter to connect to USB Serial
