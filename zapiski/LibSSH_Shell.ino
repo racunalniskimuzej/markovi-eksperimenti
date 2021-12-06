@@ -12,8 +12,8 @@
 
 
 // Set local WiFi credentials below.
-const char *configSTASSID = "YOUR_WIFI_SSID";
-const char *configSTAPSK = "YOUR_WIFI_PASS";
+const char *configSTASSID = "RacMuz";
+const char *configSTAPSK = "nostalgia";
 
 // Stack size needed to run SSH and the command parser.
 const unsigned int configSTACK = 51200;
@@ -316,7 +316,7 @@ int authenticate_console(ssh_session session)
 {
     int rc;
     int method;
-    char password[128] = {0};
+    char *password = "zbirka123";
     char *banner;
 
     // Try to authenticate
@@ -389,9 +389,9 @@ int authenticate_console(ssh_session session)
             }
         }*/
 
-        if (ssh_getpass("Password: ", password, sizeof(password), 0, 0) < 0) {
+        /*if (ssh_getpass("Password: ", password, sizeof(password), 0, 0) < 0) {
             return SSH_AUTH_ERROR;
-        }
+        }*/
 
         // Try to authenticate with password
         if (method & SSH_AUTH_METHOD_PASSWORD) {
@@ -496,10 +496,10 @@ int ex_main(){
     char c;
     int rc;
 
-    char host[16];
-    char user[16];
+    char *host = "192.168.1.25";
+    char *user = "zbirka";
 
-    fprintf(stderr, "Host name (e.g. 192.168.1.10) ? \n");
+    /*fprintf(stderr, "Host name (e.g. 192.168.1.10) ? \n");
     if (fgets(host, sizeof(host), stdin) == NULL) {
         return 0;
     }
@@ -509,7 +509,7 @@ int ex_main(){
     if (fgets(user, sizeof(user), stdin) == NULL) {
         return 0;
     }
-    user[strcspn(user, "\r\n")] = 0; //remove endline character
+    user[strcspn(user, "\r\n")] = 0; //remove endline character*/
 
     session = connect_ssh(host, user, 0);
 
