@@ -44,6 +44,10 @@ if (tty == "vt320") {
     tipkovnica = function(str) {
         return zamenjaj(triglav, str);
     }
+} else if (tty == "ssh") {
+    zaslon = function(str) {
+        return latinize(str);
+    }
 }
 
 global.izpisi = function izpisi(str) {
