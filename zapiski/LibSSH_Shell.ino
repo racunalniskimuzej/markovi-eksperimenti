@@ -765,19 +765,18 @@ void controlTask(void *pvParameter)
 }
 
 #include <Minitel1B_Hard.h>
+Minitel minitel(Serial2);
 
 void setup()
 {
-  delay(500); // wait minitel to init
-  Minitel minitel(Serial2);
+  delay(500);
   if (minitel.searchSpeed() != 4800) {     // search speed
     if (minitel.changeSpeed(4800) < 0) {   // set to 4800 if different
       minitel.searchSpeed();               // search speed again if change has failed
     }
   }
-  minitel.standardTeleinformatique();
+  minitel.modeMixte();
   minitel.echo(false);
-  Serial2.end();
   
   devState = STATE_NEW;
   
