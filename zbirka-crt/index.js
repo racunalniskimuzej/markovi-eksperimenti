@@ -59,7 +59,7 @@ Ukazi:
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * pocisti - Počisti zaslon.
-* ENGLISH - Switch to English language. (NOTE: We're working on translating item details.)`;
+* ENGLISH - Switch to English language. (NOTE: Entries not yet translated.)`;
 
 const helpTextEn = `
 Commands:

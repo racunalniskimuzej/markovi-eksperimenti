@@ -26,7 +26,8 @@
  */
 
 @font-face {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-weight: bold;
+  font-family: 'Glass TTY VT220';
+  font-weight: normal;
   font-style: normal;
+  src: url('fonts/Glass_TTY_VT220.ttf') format('truetype');
 }

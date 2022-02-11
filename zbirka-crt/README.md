@@ -12,6 +12,8 @@ Forked from https://github.com/andersevenrud/retro-css-shell-demo and changed:
 - removed fuzzy CRT animations as they consume lots of CPU and are distracting
 - added deep linking support
 - fix for iOS mobile browsers: soft keyboard did not show on some iOS versions
+- made background much darker
+- font replaced with public domain GlassTTY VT220, source: https://github.com/svofski/glasstty
 
 To deploy:
 - (just once) `npm install`

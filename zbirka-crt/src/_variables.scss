@@ -28,7 +28,7 @@
 $background-color: #000;
 $color: #fff;
 $base-unit: 1em;
-$font-size: 18px;
+$font-size: 22px;
 $chassis-background: #A5A5A5;
 $chassis-margin: $base-unit * 3;
 $interlace-background: linear-gradient(#888 50%, #000 50%);
@@ -36,7 +36,7 @@ $interlace-size: 4px;
 $envelope-background: rgba(#000, 0.25);
 $envelope-margin: 2em;
 $scanline-background: linear-gradient(to bottom, transparent 0%, rgba(255, 250, 250, 1) 50%, rgba(255, 211, 102, 1) 50%, transparent 100%);
-$output-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+$output-font-family: 'Glass TTY VT220';
 $output-color: #FFBF00;
 $output-text-shadow: rgba(255, 206, 10, 0.8);
 $output-line-height: 1.25;
