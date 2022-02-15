@@ -358,6 +358,18 @@ readlineSync.promptCLLoop(self = {
     rm: () => {
         self.format();
     },
+    print: function print(url) {
+        try {
+            var res = request('GET', url);
+            var out = res.getBody().toString();
+            self.pocisti();
+            pocakaj();
+            izpisi(out);
+            pocakaj();
+        } catch (e) {
+            izpisi(e);
+        }
+    },
     izhod: function() {
         if (tty == "ssh") return true;
     },
