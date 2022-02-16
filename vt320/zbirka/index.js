@@ -360,9 +360,10 @@ readlineSync.promptCLLoop(self = {
     },
     print: function print(url) {
         try {
-            var res = request('GET', url);
+            var res = request('GET', "https://" + url);
             var out = res.getBody().toString();
             self.pocisti();
+            if (tty == "vt320") izpisi("\033[1$}\033[0m\r" + center(" ", true) + "\033[0$}");
             pocakaj();
             izpisi(out);
             pocakaj();
