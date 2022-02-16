@@ -368,7 +368,7 @@ readlineSync.promptCLLoop(self = {
             izpisi(out);
             pocakaj();
         } catch (e) {
-            izpisi(e);
+            izpisi((slo ? "Prišlo je do napake." : "An error occured"));
         }
     },
     izhod: function() {
