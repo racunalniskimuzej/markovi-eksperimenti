@@ -8,7 +8,7 @@ Terminal access to https://zbirka.muzej.si/#english + ASCII art from webcam to l
 - Connect the Game Boy's Arduino Nano and USB WebCam (for ASCII art) using a USB hub
 
 Setup the Node.js program (tested on v8/v10) from the `zbirka` folder on a Raspberry Pi:
-1. ```sudo adduser zbirka```, then as ```su zbirka```:
+1. ```sudo adduser zbirka```, ```sudo apt install git```, then as ```su zbirka```:
 ```
 cd ~ && git clone https://github.com/markostamcar/muzej.si
 cp muzej.si/vt320/.profile .
