@@ -44,6 +44,10 @@ sudo systemctl enable serial-getty@vt320.service && sudo systemctl start serial-
 sudo systemctl enable serial-getty@paka3000.service && sudo systemctl start serial-getty@paka3000.service
 ```
 
+5. Dodatni ukazi v Node.js aplikaciji:
+- `izhod` (samo v SSH clientu, ne pa tudi na pravih terminalih)
+- `print <url>`: izpiše ASCII art iz specificiranega URLja, pri čemer `https://` izpustimo; primer: `print pastebin.com/raw/VBf8w80a`
+
 Kako sem usposobil šumnike:
 - VT320 podpira "download" simbolov iz strežnika (Dynamically Redefined Character Set (DRCS) - link do dokumentacije spodaj)
 - Posamezne črke so velike 15x12 pikslov - uporabimo perl skripto iz spodnjega gista (za pretvorbo PNG v XPM potrebuje ImageMagick)
