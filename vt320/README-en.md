@@ -42,6 +42,10 @@ sudo systemctl enable serial-getty@vt320.service && sudo systemctl start serial-
 sudo systemctl enable serial-getty@paka3000.service && sudo systemctl start serial-getty@paka3000.service
 ```
 
+5. Additional commands in the Node.js program:
+- `izhod` (terminates the program; only works on SSH clients and not on real terminal hardware)
+- `print <url>`: displays ASCII art from the specified URL, the `https://` prefix should be omitted; e.g.: `print pastebin.com/raw/VBf8w80a`
+
 How I got the Slovenian characters working:
 - VT320 supports the Dynamically Redefined Character Set (DRCS) protocol to download new character glyphs from server - see link below)
 - Each glyph is 15x12 pixels in size - use the script from gist below to convert them (to convert from PNG to XPM ImageMagick is needed)
