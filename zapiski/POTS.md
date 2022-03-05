@@ -10,23 +10,23 @@
 ```
 [lantiq1]
 exten => 575767,1,Dial(TAPI/2,30,t)
-exten => 92,1,Playback(leekspin)
-exten => 93,1,Playback(leekspin)                                              
-exten => 94,1,Playback(leekspin)                                              
-exten => 95,1,Playback(nevergonna)                                              
-exten => 97,1,Playback(nevergonna)                                              
-exten => 988,1,Playback(nevergonna)                                              
+exten => 92,1,Playback(milica)
+exten => 93,1,Playback(gasilci)
+exten => 94,1,Playback(resevalci)
+exten => 95,1,Playback(tocencas)
+exten => 97,1,Playback(prijavamotenj)
+exten => 988,1,Playback(informacije)
 
 [lantiq2]
 exten => 266972,1,Dial(TAPI/1,30,t)
-exten => 92,1,Playback(leekspin)                                                
-exten => 93,1,Playback(leekspin)                                           
-exten => 94,1,Playback(leekspin)                                                
-exten => 95,1,Playback(nevergonna)                                              
-exten => 97,1,Playback(nevergonna)                                              
-exten => 988,1,Playback(nevergonna)
+exten => 92,1,Playback(milica)
+exten => 93,1,Playback(gasilci)
+exten => 94,1,Playback(resevalci)
+exten => 95,1,Playback(tocencas)
+exten => 97,1,Playback(prijavamotenj)
+exten => 988,1,Playback(informacije)
 ```
 
-7. Download sounds to `/usr/share/asterisk/sounds` and rename to leekspin.ulaw & nevergonna.ulaw
+7. Download sounds to `/usr/share/asterisk/sounds` and rename to milica.ulaw, gasilci.ulaw, etc.
 8. Set `option enabled '1'` in `/etc/config/asterisk`, then `/etc/init.d/asterisk enable`
 9. `reboot`
