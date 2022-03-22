@@ -192,7 +192,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
         port: 587,
         secure: false,
         auth: {
-            user: "racunalniski-muzej-noreply@t-2.si",
+            user: "racunalniski-muzej-no-reply@t-2.si",
             pass: "------------",
         },
     });
@@ -201,7 +201,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
 
     sendm = deasync(transporter.sendMail);
     let info = sendm({
-        from: '"Računalniški muzej" <racunalniski-muzej-noreply@t-2.si>',
+        from: '"Računalniški muzej" <racunalniski-muzej-no-reply@t-2.si>',
         to: email,
         subject: title,
         html: body,
