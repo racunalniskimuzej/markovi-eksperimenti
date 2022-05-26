@@ -1,6 +1,9 @@
 require('./utils');
 require('./gb');
 
+var printerEnabled = fs.existsSync('/dev/usb/lp0');
+var gbEnabled = fs.existsSync('/dev/gameboy');
+
 var banner = ` 
 
           ohNh+               +hNh+          
@@ -20,13 +23,13 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
 
 const helpTextSlo = `
 Ukazi:
-* najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
+* najdi <beseda> - Izpiše IDje eksponatov, ki vsebujejo iskane besede.
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
-* fotka - ASCII art iz tvojega obraza :) Za donacijo ga lahko tudi sprintaš ;)
-* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.
-* pocisti - Počisti zaslon.
+* fotka - ASCII art iz tvojega obraza :)` +
+    (gbEnabled ? `\n* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.` : ``) +
+    `\n* pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
 
 const helpTextEn = `
@@ -35,9 +38,9 @@ Commands:
 * item <id> - Displays details about an item.
 * exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
-* photo - ASCII art of your face :) Donate to get a printout ;)
-* gameboy - E-mail a photo from the Game Boy Camera.
-* clear - Clears the screen.
+* photo - ASCII art of your face :)` +
+    (gbEnabled ? `\n* gameboy - E-mail a photo from the Game Boy Camera.` : ``) +
+    `\n* clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
 
 global.slo = true;
@@ -240,7 +243,8 @@ readlineSync.promptCLLoop(self = {
                 izpisi(ascii2);
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
-                    if (vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
+
+                    if (printerEnabled && vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
                         pocakaj((slo ? '1. Prižgi printer s stikalom blizu kablov.\n' +
                             '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
                             '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...' :
@@ -257,6 +261,39 @@ readlineSync.promptCLLoop(self = {
                         }
                         return;
                     } else {
+                        if (printerEnabled) return;
+                    }
+
+
+                    if (!printerEnabled) {
+                        email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Prazen vnos za preklic.): ' :
+                            'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Empty input to cancel.): '), {
+                            limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
+                            defaultInput: 'cancel@cancel'
+                        });
+                        if (email != 'cancel@cancel') {
+                            try {
+                                asciiText = center(ascii + "\n" + banner + "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si");
+
+                                const {
+                                    createCanvas,
+                                    loadImage
+                                } = require('canvas')
+                                var canvas = createCanvas(1124, 1920)
+                                var ctx = canvas.getContext('2d')
+                                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                ctx.fillStyle = '#00ff00';
+                                ctx.font = '18pt monospace'
+                                ctx.fillText(asciiText, 10, 25)
+
+                                posljimejl(email, canvas.toBuffer('image/jpeg', {
+                                    quality: 0.95
+                                }), (slo ? "⌨️🔠 ASCII Art" : "⌨️🔠 ASCII Art"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
+                                izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                            } catch (e) {
+                                izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
+                            }
+                        }
                         return;
                     }
                 }

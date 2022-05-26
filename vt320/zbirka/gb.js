@@ -2,7 +2,6 @@
 Adapted for Node.js + node-canvas from:
 https://github.com/mofosyne/arduino-gameboy-printer-emulator/blob/master/gbp_decoder/jsdecoderV2/gbp_gameboyprinter2bpp.js
 */
-
 function newCanvas() {
     const {
         createCanvas,
@@ -99,7 +98,9 @@ global.render_gbp = function render_gbp(rawBytes) {
 
     images.forEach(renderImage);
 
-    return canvas.toBuffer('image/jpeg', { quality: 0.95 });
+    return canvas.toBuffer('image/jpeg', {
+        quality: 0.95
+    });
 }
 
 // Gameboy tile decoder function from http://www.huderlem.com/demos/gameboy2bpp.html
@@ -182,32 +183,4 @@ function paint(canvas, pixels, pixel_width, pixel_height, tile_x_offset, tile_y_
             );
         }
     }
-}
-
-global.posljimejl = function posljimejl(email, gbp, title, body) {
-    const nodemailer = require("nodemailer");
-
-    let transporter = nodemailer.createTransport({
-        host: "smtp.t-2.si",
-        port: 587,
-        secure: false,
-        auth: {
-            user: "racunalniski-muzej-no-reply@t-2.si",
-            pass: "------------",
-        },
-    });
-
-    transporter.sendMail = transporter.sendMail.bind(transporter);
-
-    sendm = deasync(transporter.sendMail);
-    let info = sendm({
-        from: '"Računalniški muzej" <racunalniski-muzej-no-reply@t-2.si>',
-        to: email,
-        subject: title,
-        html: body,
-        attachments: [{
-            filename: 'GameBoyCamera.jpg',
-            content: gbp
-        }]
-    });
 }

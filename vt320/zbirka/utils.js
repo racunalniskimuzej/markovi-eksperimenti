@@ -109,6 +109,34 @@ global.zamenjaj = function zamenjaj(chars, str) {
     }
 }
 
+global.posljimejl = function posljimejl(email, gbp, title, body) {
+    const nodemailer = require("nodemailer");
+
+    let transporter = nodemailer.createTransport({
+        host: "smtp.t-2.si",
+        port: 587,
+        secure: false,
+        auth: {
+            user: "racunalniski-muzej-no-reply@t-2.si",
+            pass: "------------",
+        },
+    });
+
+    transporter.sendMail = transporter.sendMail.bind(transporter);
+
+    sendm = deasync(transporter.sendMail);
+    let info = sendm({
+        from: '"Računalniški muzej" <racunalniski-muzej-no-reply@t-2.si>',
+        to: email,
+        subject: title,
+        html: body,
+        attachments: [{
+            filename: 'Photo.jpg',
+            content: gbp
+        }]
+    });
+}
+
 fujitsu = {
     'Š': '[',
     'Đ': '\\',
