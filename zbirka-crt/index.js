@@ -54,7 +54,7 @@ MMMMM     NMMMM              'MMMMN    'MMMMM
 
 const helpTextSlo = `
 Ukazi:
-* najdi <geslo> - Izpiše IDje eksponatov, ki vsebujejo iskano geslo.
+* najdi <beseda> - Izpiše IDje eksponatov, ki vsebujejo iskane besede.
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
