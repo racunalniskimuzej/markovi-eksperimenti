@@ -27,7 +27,7 @@ Ukazi:
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
-* fotka - ASCII art iz tvojega obraza :)` +
+* fotka - ASCII art iz tvojega obraza` + (printerEnabled ? `, ki ga lahko tudi sprintaš.` : `, ki ga lahko pošlješ na e-mail.`) +
     (gbEnabled ? `\n* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.` : ``) +
     `\n* pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
@@ -38,7 +38,7 @@ Commands:
 * item <id> - Displays details about an item.
 * exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
-* photo - ASCII art of your face :)` +
+* photo - ASCII art of your face` + (printerEnabled ? ` with a printout option.` : ` with an e-mail option.`) +
     (gbEnabled ? `\n* gameboy - E-mail a photo from the Game Boy Camera.` : ``) +
     `\n* clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
@@ -288,7 +288,7 @@ readlineSync.promptCLLoop(self = {
 
                                 posljimejl(email, canvas.toBuffer('image/jpeg', {
                                     quality: 0.95
-                                }), (slo ? "⌨️🔠 ASCII Art" : "⌨️🔠 ASCII Art"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
+                                }), (slo ? "⌨️🔠 ASCII Art iz mojega obraza" : "⌨️🔠 ASCII Art of my face"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
                                 izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
                             } catch (e) {
                                 izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
