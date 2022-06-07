@@ -13,7 +13,7 @@ Setup the Node.js program (tested on v8/v10) from the `zbirka` folder on a Raspb
 cd ~ && git clone https://github.com/markostamcar/muzej.si
 cp muzej.si/vt320/.profile .
 ```
-In ```muzej.si/vt320/zbirka/gb.js``` set SMTP credentials.
+In ```muzej.si/vt320/zbirka/utils.js``` set SMTP credentials.
 
 2. Back as user ```pi```:
 
