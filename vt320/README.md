@@ -15,7 +15,7 @@ Postavitev Node.js aplikacije (stestirana na v8/v10) iz direktorija `zbirka` na 
 cd ~ && git clone https://github.com/markostamcar/muzej.si
 cp muzej.si/vt320/.profile .
 ```
-V ```muzej.si/vt320/zbirka/gb.js``` vnesti podatke za SMTP.
+V ```muzej.si/vt320/zbirka/utils.js``` vnesti podatke za SMTP.
 
 2. Nazaj kot user ```pi```:
 
