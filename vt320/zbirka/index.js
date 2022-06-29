@@ -52,7 +52,7 @@ const jezik = (sl) => {
 var vec = '';
 const najdi2 = (url) => {
     try {
-        var res = request('GET', url);
+        var res = request('GET', url, { timeout: 5000, socketTimeout: 5000 });
 
         var json = JSON.parse(res.getBody());
         var arr = json.results;
@@ -88,7 +88,7 @@ const najdi2 = (url) => {
 
 const razstave2 = (url) => {
     try {
-        var res = request('GET', url);
+        var res = request('GET', url, { timeout: 5000, socketTimeout: 5000 });
         var json = JSON.parse(res.getBody());
         var out = '';
 
@@ -153,7 +153,7 @@ readlineSync.promptCLLoop(self = {
     },
     eksponat: function(id) {
         try {
-            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined'));
+            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined'), { timeout: 5000, socketTimeout: 5000 });
             var obj = JSON.parse(res.getBody());
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
@@ -179,7 +179,7 @@ readlineSync.promptCLLoop(self = {
     },
     statistika: () => {
         try {
-            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/');
+            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/', { timeout: 5000, socketTimeout: 5000 });
             var arr = JSON.parse(res.getBody());
             var out = '';
             for (var i = 0; i < arr.length; i++) {
@@ -397,7 +397,7 @@ readlineSync.promptCLLoop(self = {
     },
     print: function print(url) {
         try {
-            var res = request('GET', "https://" + url);
+            var res = request('GET', "https://" + url, { timeout: 5000, socketTimeout: 5000 });
             var out = res.getBody().toString();
             self.pocisti();
             if (tty == "vt320") izpisi("\033[1$}\033[0m\r" + center(" ", true) + "\033[0$}");
