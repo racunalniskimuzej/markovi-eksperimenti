@@ -118,7 +118,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
         secure: false,
         auth: {
             user: "racunalniski-muzej-no-reply@t-2.si",
-            pass: "posljiprekt2",
+            pass: "------------",
         },
     });
 
