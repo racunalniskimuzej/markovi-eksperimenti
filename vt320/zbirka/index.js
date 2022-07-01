@@ -196,8 +196,8 @@ readlineSync.promptCLLoop(self = {
     fotka: function() {
         try {
             while (true) {
-                pocakaj((slo ? 'Kameri pokaži svoj nasmešek, pritisni ENTER in počakaj na pisk...' :
-                    'Say cheese, press ENTER and wait for the beep...'));
+                pocakaj((slo ? 'Kameri pokaži svoj nasmešek, pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' in počakaj na pisk...' :
+                    'Say cheese, press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' and wait for the beep...'));
 
                 var done = false,
                     buffer = null;
@@ -239,7 +239,7 @@ readlineSync.promptCLLoop(self = {
                 let ascii2 = ascii.slice(half, ascii.length);
 
                 izpisi(ascii1);
-                pocakaj((slo ? 'Za nadaljevanje pritisni ENTER...' : 'Press ENTER to continue...'));
+                pocakaj((slo ? 'Za nadaljevanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' : 'Press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to continue...'));
                 izpisi(ascii2);
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
@@ -247,10 +247,10 @@ readlineSync.promptCLLoop(self = {
                     if (printerEnabled && vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
                         pocakaj((slo ? '1. Prižgi printer s stikalom blizu kablov.\n' +
                             '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
-                            '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ENTER...' :
+                            '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
                             '1. Turn on line printer with switch next to its cables.\n' +
                             '2. Press the blue START button so that the display shows ONLINE.\n' +
-                            '3. In case of errors, press ERROR RESET.\nPress ENTER to print...'));
+                            '3. In case of errors, press ERROR RESET.\nPress ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
 
                         fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n" + banner +
                             "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
@@ -266,8 +266,8 @@ readlineSync.promptCLLoop(self = {
 
 
                     if (!printerEnabled) {
-                        email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Prazen vnos za preklic.): ' :
-                            'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Empty input to cancel.): '), {
+                        email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Ali samo ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' za preklic.): ' :
+                            'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Or just press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to cancel.): '), {
                             limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
                             defaultInput: 'cancel@cancel'
                         });
@@ -293,7 +293,9 @@ readlineSync.promptCLLoop(self = {
                             } catch (e) {
                                 izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
                             }
-                        }
+                        } else {
+				izpisi(slo ? 'Pošiljanje preklicano.' : 'Cancelled sending.');
+			}
                         return;
                     }
                 }
@@ -315,12 +317,12 @@ readlineSync.promptCLLoop(self = {
                     '2. Nasmehni se in se slikaj z A. Nato A za shranitev ali B za ponovitev.\n' +
                     '3. Po shranitvi pritisni B, nato smerni gumb za desno za izbiro Check, nato A.\n' +
                     '4. Nato še enkrat A, nato gumb za gor in spet A. Ne pritisni še A za Print.\n' +
-                    'Za nadaljevanje pritisni ENTER...' :
+                    'Za nadaljevanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
                     '1. Turn Game Boy on, press A for menu, then A for Shoot and A again for Shoot.\n' +
                     '2. Smile and press A to take a photo. Then press A to save or B for a retake.\n' +
                     '3. After saving, press B, then the right direction button for Check, then A.\n' +
                     '4. Press A again, then the up button and A again. Do not press A to Print yet.\n' +
-                    'Press ENTER to continue...'));
+                    'Press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to continue...'));
                 izpisi((slo ? 'Na Game Boyu pritisni A za začetek prenosa fotke...' : 'Press A on the Game Boy to transfer the photo...'));
                 serialport.wait('INIT', 10);
                 if (serialport.get_wait_result()) {
