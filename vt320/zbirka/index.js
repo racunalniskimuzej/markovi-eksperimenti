@@ -289,7 +289,7 @@ readlineSync.promptCLLoop(self = {
                                 posljimejl(email, canvas.toBuffer('image/jpeg', {
                                     quality: 0.95
                                 }), (slo ? "⌨️🔠 ASCII Art iz mojega obraza" : "⌨️🔠 ASCII Art of my face"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
-                                izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                                izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
                             } catch (e) {
                                 izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
                             }
@@ -337,7 +337,7 @@ readlineSync.promptCLLoop(self = {
                         if (email != 'cancel@cancel') {
                             try {
                                 posljimejl(email, gbp, (slo ? "📸🕹️ Fotka iz Game Boy Camere" : "📸🕹️ Game Boy Camera photo"), "<a href='https://racunalniski-muzej.si/'>https://racunalniski-muzej.si/</a>");
-                                izpisi((slo ? 'Fotka uspešno poslana na mejl!' : 'The photo was e-mailed successfully!'));
+                                izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
                             } catch (e) {
                                 izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
                             }
