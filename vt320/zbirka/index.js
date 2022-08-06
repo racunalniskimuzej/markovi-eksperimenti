@@ -234,13 +234,7 @@ readlineSync.promptCLLoop(self = {
                     }
                 });
 
-                let half = Math.floor(ascii.length / 2)
-                let ascii1 = ascii.slice(0, half);
-                let ascii2 = ascii.slice(half, ascii.length);
-
-                izpisi(ascii1);
-                pocakaj((slo ? 'Za nadaljevanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' : 'Press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to continue...'));
-                izpisi(ascii2);
+                izpisi(ascii);
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
 
