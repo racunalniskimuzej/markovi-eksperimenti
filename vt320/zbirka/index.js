@@ -52,7 +52,10 @@ const jezik = (sl) => {
 var vec = '';
 const najdi2 = (url) => {
     try {
-        var res = request('GET', url, { timeout: 5000, socketTimeout: 5000 });
+        var res = request('GET', url, {
+            timeout: 5000,
+            socketTimeout: 5000
+        });
 
         var json = JSON.parse(res.getBody());
         var arr = json.results;
@@ -88,7 +91,10 @@ const najdi2 = (url) => {
 
 const razstave2 = (url) => {
     try {
-        var res = request('GET', url, { timeout: 5000, socketTimeout: 5000 });
+        var res = request('GET', url, {
+            timeout: 5000,
+            socketTimeout: 5000
+        });
         var json = JSON.parse(res.getBody());
         var out = '';
 
@@ -153,7 +159,10 @@ readlineSync.promptCLLoop(self = {
     },
     eksponat: function(id) {
         try {
-            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined'), { timeout: 5000, socketTimeout: 5000 });
+            var res = request('GET', 'https://zbirka.muzej.si/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined'), {
+                timeout: 5000,
+                socketTimeout: 5000
+            });
             var obj = JSON.parse(res.getBody());
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
@@ -179,7 +188,10 @@ readlineSync.promptCLLoop(self = {
     },
     statistika: () => {
         try {
-            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/', { timeout: 5000, socketTimeout: 5000 });
+            var res = request('GET', 'https://zbirka.muzej.si/api/statistika/', {
+                timeout: 5000,
+                socketTimeout: 5000
+            });
             var arr = JSON.parse(res.getBody());
             var out = '';
             for (var i = 0; i < arr.length; i++) {
@@ -201,17 +213,17 @@ readlineSync.promptCLLoop(self = {
 
                 var done = false,
                     buffer = null;
-		if (tty == "vt320") {
+                if (tty == "vt320" || tty == "ssh") {
                     vt320cam.capture(function(err, data) {
                         buffer = data;
                         done = true;
                     });
-		} else {
-		    paka3000cam.capture(function(err, data) {
-                    buffer = data;
-                    done = true;
-                });
-		}
+                } else {
+                    paka3000cam.capture(function(err, data) {
+                        buffer = data;
+                        done = true;
+                    });
+                }
                 deasync.loopWhile(function() {
                     return !done;
                 });
@@ -220,7 +232,13 @@ readlineSync.promptCLLoop(self = {
 
                 var done2 = false,
                     data = null;
-                var img = gm(buffer).contrast(-5);
+                var img = gm(buffer);
+
+                if (tty == "vt320" || tty == "ssh") {
+                    img = img.crop(288, 352, 176, 4).modulate(200);
+                } else {
+                    img = img.contrast(-5);
+                }
                 img.toBuffer('JPG', function(err, buffer) {
                     data = buffer;
                     done2 = true;
@@ -295,8 +313,8 @@ readlineSync.promptCLLoop(self = {
                                 izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
                             }
                         } else {
-				izpisi(slo ? 'Pošiljanje preklicano.' : 'Cancelled sending.');
-			}
+                            izpisi(slo ? 'Pošiljanje preklicano.' : 'Cancelled sending.');
+                        }
                         return;
                     }
                 }
@@ -400,7 +418,10 @@ readlineSync.promptCLLoop(self = {
     },
     print: function print(url) {
         try {
-            var res = request('GET', "https://" + url, { timeout: 5000, socketTimeout: 5000 });
+            var res = request('GET', "https://" + url, {
+                timeout: 5000,
+                socketTimeout: 5000
+            });
             var out = res.getBody().toString();
             self.pocisti();
             if (tty == "vt320") izpisi("\033[1$}\033[0m\r" + center(" ", true) + "\033[0$}");
