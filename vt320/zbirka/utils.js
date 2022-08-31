@@ -8,11 +8,11 @@ global.execSync = require('child_process').execSync;
 global.imageToAscii = require("image-to-ascii");
 var Camera = require("@sigodenjs/fswebcam");
 global.vt320cam = new Camera({
-    device: "/dev/vt320cam",
+    device: "/dev/v4l/by-id/usb-TORINSZ_CAMERA_-_UVC-video-index0",
     callbackReturn: "buffer"
 });
 global.paka3000cam = new Camera({
-    device: "/dev/paka3000cam",
+    device: "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera-video-index0",
     callbackReturn: "buffer",
     rotate: 90
 });
