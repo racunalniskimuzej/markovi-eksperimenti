@@ -201,10 +201,17 @@ readlineSync.promptCLLoop(self = {
 
                 var done = false,
                     buffer = null;
-                camera.capture(function(err, data) {
+		if (tty == "vt320") {
+                    vt320cam.capture(function(err, data) {
+                        buffer = data;
+                        done = true;
+                    });
+		} else {
+		    paka3000cam.capture(function(err, data) {
                     buffer = data;
                     done = true;
                 });
+		}
                 deasync.loopWhile(function() {
                     return !done;
                 });
