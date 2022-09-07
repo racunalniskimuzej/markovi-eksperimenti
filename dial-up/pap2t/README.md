@@ -3,13 +3,13 @@
 Adapted from https://dogemicrosystems.ca/wiki/Dial_up_server and https://gekk.info/articles/ata-config.html for use with USRobotics USR5637 USB modem
 
 1. Fresh Raspberry Pi OS install, change password, do `apt update && apt upgrade`
-2. Set static IP on PAP2T: IP `192.168.51.2`, netmask `255.255.255.0`
+2. Set static IP on PAP2T (connect a phone and use DTMF commands): IP `192.168.51.2`, netmask `255.255.255.0`
 3. Set static eth0 on RPi: `/etc/dhcpcd.conf`:
 ```
 interface eth0
 static ip_address=192.168.51.1/24
 ```
-4. PAP2T Line 1 & 2: Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable, FAX CED Detect Enable: no, FAX CNG Detect Enable: no, FAX Process NSE: no
+4. PAP2T Line 1 & 2 (under advanced view!): Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable, FAX CED Detect Enable: no, FAX CNG Detect Enable: no, FAX Process NSE: no
 
 ### a) Without Asterisk (to keep it simple - RECOMMENDED)
 5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `100`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
