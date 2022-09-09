@@ -8,7 +8,8 @@ global.execSync = require('child_process').execSync;
 global.imageToAscii = require("image-to-ascii");
 var Camera = require("@sigodenjs/fswebcam");
 global.vt320cam = new Camera({
-    device: "/dev/v4l/by-id/usb-TORINSZ_CAMERA_-_UVC-video-index0",
+    device: "/dev/v4l/by-id/usb-046d_C270_HD_WEBCAM_200901010001-video-index0",
+    resolution: "640x360",
     callbackReturn: "buffer"
 });
 global.paka3000cam = new Camera({

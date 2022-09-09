@@ -236,9 +236,9 @@ readlineSync.promptCLLoop(self = {
 
                 if (tty == "vt320" || tty == "ssh") {
                     img = img.crop(288, 352, 176, 4).modulate(200);
-                } else {
-                    img = img.contrast(-5);
                 }
+                img = img.contrast(-5);
+                
                 img.toBuffer('JPG', function(err, buffer) {
                     data = buffer;
                     done2 = true;
