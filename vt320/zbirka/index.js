@@ -403,6 +403,15 @@ readlineSync.promptCLLoop(self = {
     help: () => {
         self.english();
     },
+    photo: () => {
+        if (slo) {
+            slo = false;
+            self.fotka();
+            slo = true;
+        } else {
+            self.fotka();         
+        }
+    },
     format: () => {
         var out = '\033(0';
         var chars = '`a';
@@ -441,7 +450,7 @@ readlineSync.promptCLLoop(self = {
         var cmd = latinize(tipkovnica(command)).toLowerCase();
         if (!slo) {
             cmd = cmd.replace("find", "najdi").replace("item", "eksponat").replace("exhibitions", "razstave").
-            replace("stats", "statistika").replace("photo", "fotka").replace("clear", "pocisti").replace("more", "vec");
+            replace("stats", "statistika").replace("clear", "pocisti").replace("more", "vec");
         }
 
         if (self[cmd]) {
