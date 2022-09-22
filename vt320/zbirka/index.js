@@ -303,7 +303,7 @@ readlineSync.promptCLLoop(self = {
                                 var canvas = createCanvas(1124, 1920)
                                 var ctx = canvas.getContext('2d')
                                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                                ctx.fillStyle = '#00ff00';
+                                ctx.fillStyle = (tty == "vt320") ? '#FFBF00' : '#00ff00';
                                 ctx.font = '18pt monospace'
                                 ctx.fillText(asciiText, 10, 25)
 
