@@ -48,4 +48,4 @@ if (($i +1)% 24 == 0 && $i < $qty-1) $pdf->AddPage();
 }
 
 ob_end_clean();
-$pdf->Output('barcodes.pdf', 'I');
+$pdf->Output('nalepke' . $od . '-' . $do . '.pdf', 'I');
