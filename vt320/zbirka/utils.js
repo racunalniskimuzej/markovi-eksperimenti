@@ -119,11 +119,11 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
     const nodemailer = require("nodemailer");
 
     let transporter = nodemailer.createTransport({
-        host: "smtp.t-2.si",
+        host: "smtp.gmail.com",
         port: 587,
         secure: false,
         auth: {
-            user: "racunalniski-muzej-no-reply@t-2.si",
+            user: "helloworld@racunalniski-muzej.si",
             pass: "------------",
         },
     });
@@ -132,7 +132,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
 
     sendm = deasync(transporter.sendMail);
     let info = sendm({
-        from: '"Računalniški muzej" <racunalniski-muzej-no-reply@t-2.si>',
+        from: '"Računalniški muzej" <helloworld@racunalniski-muzej.si>',
         to: email,
         subject: title,
         html: body,
