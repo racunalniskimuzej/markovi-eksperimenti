@@ -1,4 +1,25 @@
 <?php
+
+//Office Line B8151095
+$labelWmm = 64.6;
+$labelHmm = 33.8;
+$labelsPerRow = 3;
+$labelsPerPage = 24;
+$labelHspacing = 0;
+$fontSize = 10;
+$textPadding = 13;
+
+//Avery Zweckform L6009
+if ($_GET['tip'] == "zweck") {
+ $labelWmm = 45.7;
+ $labelHmm = 21.2;
+ $labelsPerRow = 4;
+ $labelsPerPage = 48;
+ $labelHspacing = 2.5;
+ $fontSize = 7;
+ $textPadding = 11;
+}
+
 require_once('TCPDF-main/tcpdf.php');
 
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, 'mm', 'A4', true, 'UTF-8', false);
@@ -8,43 +29,49 @@ $pdf->SetAuthor('Racunalniski muzej');
 $pdf->SetTitle('Nalepke');
 $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
+$pdf->SetFont('courier', '', $fontSize);
 
-$pdf->setMargins(8.1,17.2 + 13.3);
+$a4Wmm = 210;
+$a4Hmm = 297;
+$magic = $labelHmm / 1.965; //found by trial and error ;)
+$pdf->setMargins(($a4Wmm - ($labelWmm * $labelsPerRow) - ($labelHspacing * ($labelsPerRow-1))) / 2, $magic + (($a4Hmm - (($labelsPerPage/$labelsPerRow) * $labelHmm)) / 2));
 $pdf->SetAutoPageBreak(TRUE, -10);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 $pdf->AddPage();
-
 $od = intval($_GET['od']);
 $do = intval($_GET['do']);
 if ($do == 0) $do = $od;
 $qty = $do - $od + 1;
 
 $counter = 1;
-
 for($i = 0 ; $i < $qty ; $i++) {
 $x = $pdf->GetX();
 $y = $pdf->GetY();
 
-$pdf->write2DBarcode('https://racunalniski-muzej.si/i/' . ($od + $i), 'QRCODE,Q', $x - 18, $y - 10, 64.6, 20);
-$pdf->SetXY($x,$y);
-$pdf->Cell(64.6, 33.8, '', 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
-$pdf->SetFont('courier', '', 10);
-$pdf->SetXY($x,$y);
-$pdf->Cell(64.6, 20, "             racunalniski", 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'T');
-$pdf->SetXY($x,$y);
-$pdf->Cell(64.6, 10, "             muzej", 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'T');
-$pdf->SetXY($x,$y);
-$pdf->Cell(64.6, 20, "             inv. st. " . ($od + $i), 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
+$qrHmm = $labelHmm / 1.69;
+$qrXoffset = $labelWmm / 3.59;
+$qrYoffset = $labelHmm / 3.38;
+$textPad = str_repeat(" ", $textPadding);
 
-if($counter == 3) {
- $pdf->Ln(33.8);
+$pdf->write2DBarcode('https://racunalniski-muzej.si/i/' . ($od + $i), 'QRCODE,Q', $x - $qrXoffset, $y - $qrYoffset, $labelWmm, $qrHmm);
+$pdf->SetXY($x,$y);
+$pdf->Cell($labelWmm, $labelHmm, '', 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
+$pdf->SetXY($x + $labelHspacing, $y);
+$pdf->Cell($labelWmm, $qrYoffset * 2, $textPad . "racunalniski", 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'T');
+$pdf->SetXY($x + $labelHspacing, $y);
+$pdf->Cell($labelWmm, $qrYoffset, $textPad . "muzej", 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'T');
+$pdf->SetXY($x + $labelHspacing, $y);
+$pdf->Cell($labelWmm, $qrYoffset * 2, $textPad . "inv. st. " . ($od + $i), 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
+
+if($counter == $labelsPerRow) {
+ $pdf->Ln($labelHmm);
  $counter = 1;
 } else{
  $counter++;
 }
 
-if (($i +1)% 24 == 0 && $i < $qty-1) $pdf->AddPage();
+if (($i +1)% $labelsPerPage == 0 && $i < $qty-1) $pdf->AddPage();
 }
 
 ob_end_clean();
