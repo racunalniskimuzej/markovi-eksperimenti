@@ -27,7 +27,7 @@ while (true) {
                     };
 
                     request.post({
-                        url: 'https://---------------/index.php',
+                        url: 'https://---------------/',
                         formData: formData
                     });
                     console.log("juhej!");
