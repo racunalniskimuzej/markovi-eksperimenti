@@ -27,7 +27,7 @@ sudo cp /home/zbirka/muzej.si/vt320/rc.local /etc/rc.local
 sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik
 sudo usermod -a -G video zbirka
 sudo usermod -a -G dialout zbirka
-curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install -y nodejs
 ```
 
