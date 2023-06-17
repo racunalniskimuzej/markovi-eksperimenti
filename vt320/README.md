@@ -28,7 +28,7 @@ sudo lpadmin -p tiskalnik -E -v parallel:/dev/usb/lp0; sudo lpadmin -d tiskalnik
 sudo usermod -a -G video zbirka
 sudo usermod -a -G dialout zbirka
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs npm
 ```
 
 3. Zopet ```su zbirka```:
