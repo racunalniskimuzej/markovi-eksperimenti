@@ -442,6 +442,7 @@ readlineSync.promptCLLoop(self = {
     },
     blank: function() {},
     _: function(command, ...args) {
+        if (command == undefined) command = "";
         var cmd = latinize(tipkovnica(command)).toLowerCase();
         if (!slo) {
             cmd = cmd.replace("find", "najdi").replace("item", "eksponat").replace("exhibitions", "razstave").
