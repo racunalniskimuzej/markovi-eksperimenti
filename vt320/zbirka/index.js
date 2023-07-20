@@ -292,14 +292,22 @@ readlineSync.promptCLLoop(self = {
 
                                 const {
                                     createCanvas,
-                                    loadImage
+                                    loadImage,
+                                    registerFont
                                 } = require('canvas')
+                                registerFont(__dirname + '/Glass_TTY_VT220.ttf', { family: 'VT220' })
                                 var canvas = createCanvas(1124, 1920)
                                 var ctx = canvas.getContext('2d')
                                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                                 ctx.fillStyle = (tty == "vt320") ? '#FFBF00' : '#00ff00';
-                                ctx.font = '18pt monospace'
-                                ctx.fillText(asciiText, 10, 25)
+                                ctx.shadowColor = (tty == "vt320") ? '#FFBF00' : '#00ff00';
+                                ctx.font = '21pt VT220'
+                                ctx.shadowBlur = 5;
+                                ctx.fillText(asciiText, 10, 25);
+                                ctx.shadowBlur = 10;
+                                ctx.fillText(asciiText, 10, 25);
+                                ctx.shadowBlur = 15;
+                                ctx.fillText(asciiText, 10, 25);
 
                                 posljimejl(email, canvas.toBuffer('image/jpeg', {
                                     quality: 0.95
