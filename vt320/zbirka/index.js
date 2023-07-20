@@ -246,7 +246,7 @@ readlineSync.promptCLLoop(self = {
                 var img2ascii = deasync(imageToAscii);
                 var ascii = img2ascii(data, {
                     colored: false,
-                    reverse: true,
+                    reverse: false,
                     pixels: " .,:;i1tfLCG08",
                     size_options: {
                         screen_size: {
