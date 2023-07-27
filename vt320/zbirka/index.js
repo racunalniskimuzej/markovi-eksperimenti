@@ -310,7 +310,7 @@ readlineSync.promptCLLoop(self = {
                                 ctx.fillText(asciiText, 10, 25);
 
                                 posljimejl(email, canvas.toBuffer('image/jpeg', {
-                                    quality: 0.95
+                                    quality: 0.90
                                 }), (slo ? "⌨️🔠 ASCII Art iz mojega obraza" : "⌨️🔠 ASCII Art of my face"), (slo ? "Računalniški muzej, Celovška 111, 1000 Ljubljana" : "Slovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia"));
                                 izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
                             } catch (e) {
