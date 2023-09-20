@@ -287,6 +287,8 @@ readlineSync.promptCLLoop(self = {
                             defaultInput: 'cancel@cancel'
                         });
                         if (email != 'cancel@cancel') {
+                            izpisi(slo ? 'Pošiljam... prosim, počakaj...' : 'Sending... please wait...');
+
                             try {
                                 asciiText = center(ascii + "\n" + banner + "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si");
 
