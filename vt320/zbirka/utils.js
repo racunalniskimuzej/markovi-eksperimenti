@@ -218,6 +218,6 @@ global.vt320drcs = function vt320drcs() {
         "?????ccggcc__??/???@HJIIIIIMCC?;?????ccggcc_???/??AFFLGGGGGLDD?;" +
         "???__ccggcc__??/???KKKIIIHHHG??;?????__ggcc_???/??AFFLGGGGGLDD?;" +
         "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
-        zaslon(center((slo ? 'Dostop do zbirk Društva računalniški muzej - https://zbirka.muzej.si/' :
+        zaslon(center((slo ? 'Dostop do zbirk Računalniškega muzeja - https://zbirka.muzej.si/' :
             'Slovenian computer museum collection - https://zbirka.muzej.si/'), true)) + '\033[0$}';
 }
