@@ -39,10 +39,16 @@ $pdf->SetAutoPageBreak(TRUE, -10);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 $pdf->AddPage();
-$od = intval($_GET['od']);
-$do = intval($_GET['do']);
-if ($do == 0) $do = $od;
-$qty = $do - $od + 1;
+
+$stevilke = array();
+if (isset($_GET['od']) && isset($_GET['do'])) {
+	$stevilke = range(intval($_GET['od']), intval($_GET['do']));
+} else if (isset($_GET['seznam'])) {
+	$stevilke = explode(",", $_GET['seznam']);
+}
+
+$qty = count($stevilke);
+if ($qty > 500) die("Error: more than 500 labels!");
 
 $counter = 1;
 for($i = 0 ; $i < $qty ; $i++) {
@@ -54,7 +60,7 @@ $qrXoffset = $labelWmm / 3.59;
 $qrYoffset = $labelHmm / 3.38;
 $textPad = str_repeat(" ", $textPadding);
 
-$pdf->write2DBarcode('https://racunalniski-muzej.si/i/' . ($od + $i), 'QRCODE,Q', $x - $qrXoffset, $y - $qrYoffset, $labelWmm, $qrHmm);
+$pdf->write2DBarcode('https://racunalniski-muzej.si/i/' . ($stevilke[$i]), 'QRCODE,Q', $x - $qrXoffset, $y - $qrYoffset, $labelWmm, $qrHmm);
 $pdf->SetXY($x,$y);
 $pdf->Cell($labelWmm, $labelHmm, '', 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
 $pdf->SetXY($x + $labelHspacing, $y);
@@ -62,7 +68,7 @@ $pdf->Cell($labelWmm, $qrYoffset * 2, $textPad . "racunalniski", 0, 0, 'L', FALS
 $pdf->SetXY($x + $labelHspacing, $y);
 $pdf->Cell($labelWmm, $qrYoffset, $textPad . "muzej", 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'T');
 $pdf->SetXY($x + $labelHspacing, $y);
-$pdf->Cell($labelWmm, $qrYoffset * 2, $textPad . "inv. st. " . ($od + $i), 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
+$pdf->Cell($labelWmm, $qrYoffset * 2, $textPad . "inv. st. " . ($stevilke[$i]), 0, 0, 'L', FALSE, '', 0, FALSE, 'C', 'B');
 
 if($counter == $labelsPerRow) {
  $pdf->Ln($labelHmm);
@@ -75,4 +81,4 @@ if (($i +1)% $labelsPerPage == 0 && $i < $qty-1) $pdf->AddPage();
 }
 
 ob_end_clean();
-$pdf->Output('nalepke' . $od . '-' . $do . '.pdf', 'I');
+$pdf->Output('nalepke.pdf', 'I');
