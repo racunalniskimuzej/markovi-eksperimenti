@@ -433,7 +433,7 @@ readlineSync.promptCLLoop(self = {
     },
     print: function print(url) {
         try {
-            var res = request('GET', "https://" + url, {
+            var res = request('GET', "https://pastebin.com/raw/" + url, {
                 timeout: 5000,
                 socketTimeout: 5000
             });
