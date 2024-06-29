@@ -90,12 +90,12 @@ global.center = function center(str, pad = false) {
     return lines.join('\n');
 }
 
-global.vprasaj = function vprasaj(query) {
-    return readlineSync.keyIn(zaslon(query + (slo ? " [d/n]: " : " [y/n]: ")), {
+global.vprasaj = function vprasaj(query, da = (slo ? 'd' : 'y'), ne = (slo ? 'n' : 'n')) {
+    return readlineSync.keyIn(zaslon(query + " [" + da + "/" + ne + "]: " ), {
         hideEchoBack: false,
-        limit: (slo ? 'dn' : 'yn'),
-        trueValue: (slo ? 'd' : 'y'),
-        falseValue: (slo ? 'n' : 'n'),
+        limit: da + ne,
+        trueValue: da,
+        falseValue: ne,
         caseSensitive: false
     });
 }
