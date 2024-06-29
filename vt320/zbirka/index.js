@@ -27,7 +27,7 @@ Ukazi:
 * eksponat <id> - Izpiše podatke o eksponatu.
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
-* fotka - ASCII art iz tvojega obraza` + (printerEnabled ? `, ki ga lahko tudi sprintaš.` : `, ki ga lahko pošlješ na e-mail.`) +
+* fotka - ASCII art iz tvojega obraza` + (printerEnabled ? `, ki ga lahko pošlješ na email ali sprintaš` : `, ki ga lahko pošlješ na e-mail.`) +
     (gbEnabled ? `\n* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.` : ``) +
     `\n* pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
@@ -38,7 +38,7 @@ Commands:
 * item <id> - Displays details about an item.
 * exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
-* photo - ASCII art of your face` + (printerEnabled ? ` with a printout option.` : ` with an e-mail option.`) +
+* photo - ASCII art of your face` + (printerEnabled ? ` with an e-mail and printout option.` : ` with an e-mail option.`) +
     (gbEnabled ? `\n* gameboy - E-mail a photo from the Game Boy Camera.` : ``) +
     `\n* clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
@@ -234,7 +234,7 @@ readlineSync.promptCLLoop(self = {
                     data = null;
                 var img = gm(buffer);
                 img = img.contrast(-5);
-                
+
                 img.toBuffer('JPG', function(err, buffer) {
                     data = buffer;
                     done2 = true;
@@ -259,28 +259,39 @@ readlineSync.promptCLLoop(self = {
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
 
-                    if (printerEnabled && vprasaj((slo ? 'Želiš natisniti to fotko?' : 'Do you want a printout?'))) {
-                        pocakaj((slo ? '1. Prižgi printer s stikalom blizu kablov.\n' +
-                            '2. Pritisni moder gumb START, da se na zaslonu napiše ONLINE.\n' +
-                            '3. V primeru napak uporabi gumb ERROR RESET.\nZa tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
-                            '1. Turn on line printer with switch next to its cables.\n' +
-                            '2. Press the blue START button so that the display shows ONLINE.\n' +
-                            '3. In case of errors, press ERROR RESET.\nPress ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
-
-                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + "\n" + banner +
-                            "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")));
-                        while (true) {
-                            izpisi((slo ? 'Tiskam... :)' : 'Printing... :)'));
-                            execSync('lp /tmp/webcam.txt');
-                            if (vprasaj((slo ? 'Je bil tisk uspešen? (n = ponovno tiskanje)' : 'Did it print okay? (n = prints again)'))) break;
-                        }
-                        return;
-                    } else {
-                        if (printerEnabled) return;
+                    var printMode = false;
+                    if (printerEnabled) {
+                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail ali T za tiskanje (z donacijo)' :
+                            'Press E to send via e-mail or P to print (donation suggested)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
                     }
 
+                    if (printMode) {
 
-                    if (!printerEnabled) {
+                        while (true) {
+                            pocakaj((slo ? '\nPodpri naš muzej z donacijo 2 EUR za 1 tisk, hvala! :-)\n' +
+                                'Prosimo, oglasi se na blagajni, nato se vrni in za tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
+                                '\nSupport our museum with a donation of 2 EUR for 1 printout, thank you! :-)\n' +
+                                'Please go to the cashier, then come back and press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
+                            if (fs.existsSync('/var/www/html/razstava/print1.txt')) {
+                                fs.unlinkSync('/var/www/html/razstava/print1.txt');
+                                break;
+                            } else {
+                                if (vprasaj((slo ? 'Tiskanje ni na voljo. Želite prekiniti? (n = poizkusi znova)' : 'Printing is not available. Cancel? (n = try again)'))) return;
+                            }
+                        }
+
+                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + banner +
+                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si\n")));
+                        while (true) {
+                            izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
+                            execSync('lp /tmp/webcam.txt');
+                            //if (vprasaj((slo ? 'Je bil tisk uspešen? (n = ponovno tiskanje)' : 'Did it print okay? (n = prints again)'))) break;
+                            break;
+                        }
+                        return;
+                    }
+
+                    if (!printMode) {
                         email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Ali samo ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' za preklic.): ' :
                             'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Or just press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to cancel.): '), {
                             limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
@@ -297,7 +308,9 @@ readlineSync.promptCLLoop(self = {
                                     loadImage,
                                     registerFont
                                 } = require('canvas')
-                                registerFont(__dirname + '/Glass_TTY_VT220.ttf', { family: 'VT220' })
+                                registerFont(__dirname + '/Glass_TTY_VT220.ttf', {
+                                    family: 'VT220'
+                                })
                                 var canvas = createCanvas(1124, 1920)
                                 var ctx = canvas.getContext('2d')
                                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -414,7 +427,7 @@ readlineSync.promptCLLoop(self = {
             self.fotka();
             slo = true;
         } else {
-            self.fotka();         
+            self.fotka();
         }
     },
     format: () => {
