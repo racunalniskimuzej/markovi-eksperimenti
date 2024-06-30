@@ -1,8 +1,5 @@
 require('./utils');
-require('./gb');
-
 var printerEnabled = fs.existsSync('/dev/usb/lp0');
-var gbEnabled = fs.existsSync('/dev/gameboy');
 
 var banner = ` 
 
@@ -28,7 +25,6 @@ Ukazi:
 * razstave [id] - Izpiše seznam razstav; če je naveden ID, pa info o razstavi.
 * statistika - Izpiše statistiko celotne zbirke.
 * fotka - ASCII art iz tvojega obraza` + (printerEnabled ? `, ki ga lahko pošlješ na email ali sprintaš` : `, ki ga lahko pošlješ na e-mail.`) +
-    (gbEnabled ? `\n* gameboy - Pošlji fotko iz Game Boy Camere na e-mail.` : ``) +
     `\n* pocisti - Počisti zaslon.
 * \x1B[7menglish\x1B[m - Switch to English language. (NOTE: Partially machine translated.)`;
 
@@ -39,7 +35,6 @@ Commands:
 * exhibitions [id] - List all exibitions or details of one specified by ID.
 * stats - Displays collection statistics.
 * photo - ASCII art of your face` + (printerEnabled ? ` with an e-mail and printout option.` : ` with an e-mail option.`) +
-    (gbEnabled ? `\n* gameboy - E-mail a photo from the Game Boy Camera.` : ``) +
     `\n* clear - Clears the screen.
 * \x1B[7mslovenski\x1B[m - Preklopi na slovenščino.`;
 
@@ -342,58 +337,6 @@ readlineSync.promptCLLoop(self = {
         } catch (e) {
             izpisi((slo ? 'Pri fotkanju je prišlo do napake :(' : 'An error occured while taking your picture :('));
         }
-    },
-    gameboy: function() {
-        var serialport_wait = require('serialport-wait');
-        var serialport = new serialport_wait();
-
-        try {
-            serialport.connect('/dev/gameboy', 115200);
-
-            if (serialport.isOpen()) {
-                pocakaj((slo ? '1. Prižgi Game Boy, pritisni A za menu, nato A za Shoot in ponovno A za Shoot.\n' +
-                    '2. Nasmehni se in se slikaj z A. Nato A za shranitev ali B za ponovitev.\n' +
-                    '3. Po shranitvi pritisni B, nato smerni gumb za desno za izbiro Check, nato A.\n' +
-                    '4. Nato še enkrat A, nato gumb za gor in spet A. Ne pritisni še A za Print.\n' +
-                    'Za nadaljevanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
-                    '1. Turn Game Boy on, press A for menu, then A for Shoot and A again for Shoot.\n' +
-                    '2. Smile and press A to take a photo. Then press A to save or B for a retake.\n' +
-                    '3. After saving, press B, then the right direction button for Check, then A.\n' +
-                    '4. Press A again, then the up button and A again. Do not press A to Print yet.\n' +
-                    'Press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to continue...'));
-                izpisi((slo ? 'Na Game Boyu pritisni A za začetek prenosa fotke...' : 'Press A on the Game Boy to transfer the photo...'));
-                serialport.wait('INIT', 10);
-                if (serialport.get_wait_result()) {
-                    serialport.wait('Timed Out', 30);
-                    if (serialport.get_wait_result()) {
-                        gbp = render_gbp(serialport.get_buffer_all());
-                        email = readlineSync.questionEMail(zaslon(slo ? 'Prenos uspešen! :) E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + '): ' :
-                            'Transfer successful! :) E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + '): '), {
-                            limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov. (Ali prazen vnos za preklic.)' : 'Please enter a valid e-mail address. (Or an empty input to cancel.)'),
-                            defaultInput: 'cancel@cancel'
-                        });
-                        if (email != 'cancel@cancel') {
-                            try {
-                                posljimejl(email, gbp, (slo ? "📸🕹️ Fotka iz Game Boy Camere" : "📸🕹️ Game Boy Camera photo"), (slo ? "Računalniški muzej, Celovška 111, 1000 Ljubljana" : "Slovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia"));
-                                izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
-                            } catch (e) {
-                                izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
-                            }
-                        }
-                    } else {
-                        throw "napaka";
-                    }
-                } else {
-                    throw "napaka";
-                }
-            } else {
-                throw "napaka";
-            }
-        } catch (e2) {
-            izpisi((slo ? 'Prišlo je do napake pri komunikaciji z Game Boyem :(' : 'There was an error communicating with the Game Boy :('));
-        }
-        if (serialport.isOpen()) serialport.close();
-
     },
     pocisti: () => {
         izpisi('\033[2J');
