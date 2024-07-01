@@ -145,7 +145,6 @@ const pomoc2 = () => {
 }
 
 izpisi(vt320drcs());
-pomoc2();
 
 readlineSync.promptCLLoop(self = {
     najdi: function najdi(...geslo) {
