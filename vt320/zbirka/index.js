@@ -144,7 +144,6 @@ const pomoc2 = () => {
     izpisi(center(banner) + (slo ? helpTextSlo : helpTextEn));
 }
 
-izpisi(vt320drcs());
 izpisi('\033[2J');
 
 readlineSync.promptCLLoop(self = {
