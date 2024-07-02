@@ -424,6 +424,8 @@ readlineSync.promptCLLoop(self = {
 }, {
     prompt: {
         toString: function() {
+            if (global.screensaver != undefined) global.screensaver.kill('SIGKILL');
+            global.screensaver = require('child_process').exec('sleep 300; pkill -s 0 -x node');
             return vt320drcs() + '$ > ';
         }
     },
