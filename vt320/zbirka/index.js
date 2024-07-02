@@ -144,7 +144,8 @@ const pomoc2 = () => {
     izpisi(center(banner) + (slo ? helpTextSlo : helpTextEn));
 }
 
-izpisi('\033[2J');
+izpisi(vt320drcs());
+pomoc2();
 
 readlineSync.promptCLLoop(self = {
     najdi: function najdi(...geslo) {
