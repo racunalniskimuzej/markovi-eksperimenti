@@ -11,6 +11,7 @@
   "dependencies": {
     "@sigodenjs/fswebcam": "^0.1.4",
     "@vitalets/google-translate-api": "git+https://github.com/vkedwardli/google-translate-api.git#batchexecute",
+    "await-sleep": "0.0.1",
     "canvas": "^2.6.1",
     "deasync": "^0.1.20",
     "image-to-ascii": "^3.0.12",
