@@ -25,4 +25,5 @@ stty intr undef; stty susp undef; stty quit undef
 while :
 do
  node muzej.si/vt320/zbirka/index.js
+ node muzej.si/vt320/zbirka/screensaver.js
 done
