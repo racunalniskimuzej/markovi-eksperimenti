@@ -12,6 +12,7 @@ static ip_address=192.168.51.1/24
 4. PAP2T Line 1 & 2 (under advanced view!): Echo Canc Enable: No, Echo Canc Adapt Enable: No, Echo Supp Enable: No, Preferred Codec: G711u, Use Pref Codec Only: Yes, Network Jitter Level: Low, Jitter Buffer Adjustment: Disable, FAX CED Detect Enable: no, FAX CNG Detect Enable: no, FAX Process NSE: no
 
 ### a) Without Asterisk (to keep it simple - RECOMMENDED)
+IMPORTANT: Even without actually using networking, PAP2T's LAN port must be connected to something or it will not allow a connection between the two lines to be established! Since I'm using 2 PAP2Ts in this mode, I just set the other one's IP to 192.168.51.3 to avoid IP conflicts and connected them together using a crossover UTP cable.
 5. PAP2T Line 1: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `100`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:101>S0<:@127.0.0.1:5061>|)`
 6. PAP2T Line 2: Make Call Without Reg: yes, Ans Call Without Reg: yes, User ID: `101`, Dialplan: `(*xx|[3469]11|0|00|[2-9]xxxxxx|1xxx[2-9]xxxxxxS0|xxxxxxxxxxxx.|<1337:100>S0<:@127.0.0.1:5060>|)`
 7. Continue with instructions for The Dial-in Server at https://dogemicrosystems.ca/wiki/Dial_up_server - replace `ttyUSB0` with `ttyACM0` and `eth0` with `wlan0`!
