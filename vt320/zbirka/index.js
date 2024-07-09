@@ -267,8 +267,8 @@ readlineSync.promptCLLoop(self = {
                                 'Prosimo, oglasi se na blagajni, nato se vrni in za tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
                                 '\nSupport our museum with a donation of 2 EUR for 1 printout, thank you! :-)\n' +
                                 'Please go to the cashier, then come back and press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
-                            if (fs.existsSync('/var/www/html/razstava/print1.txt')) {
-                                fs.unlinkSync('/var/www/html/razstava/print1.txt');
+                            if (fs.existsSync('/tmp/print1.txt')) {
+                                fs.unlinkSync('/tmp/print1.txt');
                                 break;
                             } else {
                                 if (vprasaj((slo ? 'Tiskanje ni na voljo. Želite prekiniti? (n = poizkusi znova)' : 'Printing is not available. Cancel? (n = try again)'))) return;
