@@ -250,22 +250,33 @@ readlineSync.promptCLLoop(self = {
                     }
                 });
 
+                var asciiRev = img2ascii(data, {
+                    colored: false,
+                    reverse: true,
+                    pixels: " .,:;i1tfLCG08",
+                    size_options: {
+                        screen_size: {
+                            height: 48
+                        }
+                    }
+                });
+
                 izpisi(ascii);
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
 
                     var printMode = false;
                     if (printerEnabled) {
-                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail ali T za tiskanje (z donacijo)' :
-                            'Press E to send via e-mail or P to print (donation suggested)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
+                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail ali T za tiskanje (plačljivo)' :
+                            'Press E to send via e-mail or P to print (paid)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
                     }
 
                     if (printMode) {
 
                         while (true) {
-                            pocakaj((slo ? '\nPodpri naš muzej z donacijo 2 EUR za 1 tisk, hvala! :-)\n' +
+                            pocakaj((slo ? '\nPodpri naš muzej s plačilom 2 EUR za 1 tisk, hvala! :-)\n' +
                                 'Prosimo, oglasi se na blagajni, nato se vrni in za tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
-                                '\nSupport our museum with a donation of 2 EUR for 1 printout, thank you! :-)\n' +
+                                '\nSupport our museum by paying 2 EUR for 1 printout, thank you! :-)\n' +
                                 'Please go to the cashier, then come back and press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
                             if (fs.existsSync('/tmp/print1.txt')) {
                                 fs.unlinkSync('/tmp/print1.txt');
@@ -275,8 +286,8 @@ readlineSync.promptCLLoop(self = {
                             }
                         }
 
-                        fs.writeFileSync("/tmp/webcam.txt", center(tiskalnik(ascii + banner +
-                            "Računalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si\n")));
+                        fs.writeFileSync("/tmp/webcam.txt", Buffer.from(center(tiskalnik(asciiRev + "\n" + banner +
+                            "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")), 'latin1'));
                         while (true) {
                             izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
                             execSync('lp /tmp/webcam.txt');
