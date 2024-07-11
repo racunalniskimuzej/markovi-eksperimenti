@@ -24,8 +24,8 @@ global.translate = require('@vitalets/google-translate-api');
 const ttyname = require('ttyname');
 global.tty = 'ssh';
 try {
-if (fs.existsSync('/dev/vt320') && fs.realpathSync('/dev/vt320') == ttyname()) global.tty = 'vt320';
-if (fs.existsSync('/dev/paka3000') && fs.realpathSync('/dev/paka3000') == ttyname()) global.tty = 'paka3000';
+    if (fs.existsSync('/dev/vt320') && fs.realpathSync('/dev/vt320') == ttyname()) global.tty = 'vt320';
+    if (fs.existsSync('/dev/paka3000') && fs.realpathSync('/dev/paka3000') == ttyname()) global.tty = 'paka3000';
 } catch (e) {}
 
 global.zaslon = function(str) {
@@ -35,7 +35,7 @@ global.tipkovnica = function(str) {
     return str;
 }
 global.tiskalnik = function(str) {
-    return zamenjaj(fujitsu, str);
+    return zamenjaj(pc852, str);
 }
 
 if (tty == "vt320") {
@@ -91,7 +91,7 @@ global.center = function center(str, pad = false) {
 }
 
 global.vprasaj = function vprasaj(query, da = (slo ? 'd' : 'y'), ne = (slo ? 'n' : 'n')) {
-    return readlineSync.keyIn(zaslon(query + " [" + da + "/" + ne + "]: " ), {
+    return readlineSync.keyIn(zaslon(query + " [" + da + "/" + ne + "]: "), {
         hideEchoBack: false,
         limit: da + ne,
         trueValue: da,
@@ -156,6 +156,19 @@ fujitsu = {
     'ć': ']',
     'č': '^',
     'ž': '`'
+};
+
+pc852 = {
+    'Š': '\xe6',
+    'Đ': '\xd1',
+    'Ć': '\x8f',
+    'Č': '\xac',
+    'Ž': '\xa6',
+    'š': '\xe7',
+    'đ': '\xd0',
+    'ć': '\x86',
+    'č': '\x9f',
+    'ž': '\xa7'
 };
 
 vt320 = {
