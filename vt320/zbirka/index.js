@@ -274,20 +274,21 @@ readlineSync.promptCLLoop(self = {
                     if (printMode) {
 
                         while (true) {
-                            pocakaj((slo ? '\nPodpri naš muzej s plačilom 2 EUR za 1 tisk, hvala! :-)\n' +
+                            pocakaj((slo ? '\nPodpri naš muzej s plačilom 3 EUR za 1 tisk, hvala! :-)\n' +
                                 'Prosimo, oglasi se na blagajni, nato se vrni in za tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
-                                '\nSupport our museum by paying 2 EUR for 1 printout, thank you! :-)\n' +
+                                '\nSupport our museum by paying 3 EUR for 1 printout, thank you! :-)\n' +
                                 'Please go to the cashier, then come back and press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
                             if (fs.existsSync('/tmp/print1.txt')) {
                                 fs.unlinkSync('/tmp/print1.txt');
                                 break;
                             } else {
-                                if (vprasaj((slo ? 'Tiskanje ni na voljo. Želite prekiniti? (n = poizkusi znova)' : 'Printing is not available. Cancel? (n = try again)'))) return;
+                                if (vprasaj((slo ? '\nTiskanje ni na voljo. Želite prekiniti? (n = poizkusi znova)' : '\nPrinting is not available. Cancel? (n = try again)'))) return;
                             }
                         }
 
                         fs.writeFileSync("/tmp/webcam.txt", Buffer.from(center(tiskalnik(asciiRev + "\n" + banner +
-                            "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si")), 'latin1'));
+                            (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
+                            "https://racunalniski-muzej.si/ - https://fb.me/muzej.si")), 'latin1'));
                         while (true) {
                             izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
                             execSync('lp /tmp/webcam.txt');
@@ -307,7 +308,9 @@ readlineSync.promptCLLoop(self = {
                             izpisi(slo ? 'Pošiljam... prosim, počakaj...' : 'Sending... please wait...');
 
                             try {
-                                asciiText = center(ascii + "\n" + banner + "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\nhttps://racunalniski-muzej.si/ - https://fb.me/muzej.si");
+                                asciiText = center(ascii + "\n" + banner +
+                                    (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
+                                    "https://racunalniski-muzej.si/ - https://fb.me/muzej.si");
 
                                 const {
                                     createCanvas,
