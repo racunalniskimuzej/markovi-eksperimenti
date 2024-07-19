@@ -267,8 +267,8 @@ readlineSync.promptCLLoop(self = {
 
                     var printMode = false;
                     if (printerEnabled) {
-                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail ali T za tiskanje (plačljivo)' :
-                            'Press E to send via e-mail or P to print (paid)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
+                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail (brezplačno) ali T za tisk (3 EUR)' :
+                            'Press E to send via e-mail (free) or P to print (3 EUR)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
                     }
 
                     if (printMode) {
