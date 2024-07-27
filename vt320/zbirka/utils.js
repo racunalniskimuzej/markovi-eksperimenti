@@ -91,13 +91,15 @@ global.center = function center(str, pad = false) {
 }
 
 global.vprasaj = function vprasaj(query, da = (slo ? 'd' : 'y'), ne = (slo ? 'n' : 'n')) {
-    return readlineSync.keyIn(zaslon(query + " [" + da + "/" + ne + "]: "), {
+    let ret = readlineSync.keyIn(zaslon(query + " [" + da + "/" + ne + "]: "), {
         hideEchoBack: false,
         limit: da + ne,
         trueValue: da,
         falseValue: ne,
         caseSensitive: false
     });
+    screensaverTimeout();
+    return ret;
 }
 
 global.pocakaj = function pocakaj(query) {
@@ -105,6 +107,7 @@ global.pocakaj = function pocakaj(query) {
         hideEchoBack: true,
         mask: ''
     });
+    screensaverTimeout();
 }
 
 global.zamenjaj = function zamenjaj(chars, str) {
@@ -233,4 +236,9 @@ global.vt320drcs = function vt320drcs() {
         "?????____oOwwwO/??AFFLGGGGDNNN?\033\\" + '\033[1$}\033[7m\r' +
         zaslon(center((slo ? 'Dostop do zbirk Računalniškega muzeja - https://zbirka.muzej.si/' :
             'Slovenian computer museum collection - https://zbirka.muzej.si/'), true)) + '\033[0$}';
+}
+
+global.screensaverTimeout = function screensaverTimeout() {
+    if (global.screensaver != undefined) global.screensaver.kill('SIGKILL');
+    global.screensaver = require('child_process').exec('sleep 300; pkill -s 0 -x node');
 }
