@@ -1,5 +1,5 @@
 require('./utils');
-var printerEnabled = fs.existsSync('/dev/usb/lp0');
+var printerEnabled = true;
 
 var banner = ` 
 
@@ -289,12 +289,9 @@ readlineSync.promptCLLoop(self = {
                         fs.writeFileSync("/tmp/webcam.txt", Buffer.from(center(tiskalnik(asciiRev + "\n" + banner +
                             (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
                             "https://racunalniski-muzej.si/ - https://fb.me/muzej.si")), 'latin1'));
-                        while (true) {
-                            izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
-                            execSync('lp /tmp/webcam.txt');
-                            //if (vprasaj((slo ? 'Je bil tisk uspešen? (n = ponovno tiskanje)' : 'Did it print okay? (n = prints again)'))) break;
-                            break;
-                        }
+
+                        izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
+                        execSync('lp /tmp/webcam.txt');
                         return;
                     }
 
@@ -304,6 +301,8 @@ readlineSync.promptCLLoop(self = {
                             limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
                             defaultInput: 'cancel@cancel'
                         });
+                        screensaverTimeout();
+
                         if (email != 'cancel@cancel') {
                             izpisi(slo ? 'Pošiljam... prosim, počakaj...' : 'Sending... please wait...');
 
@@ -439,8 +438,7 @@ readlineSync.promptCLLoop(self = {
 }, {
     prompt: {
         toString: function() {
-            if (global.screensaver != undefined) global.screensaver.kill('SIGKILL');
-            global.screensaver = require('child_process').exec('sleep 300; pkill -s 0 -x node');
+            screensaverTimeout();
             return vt320drcs() + '$ > ';
         }
     },
