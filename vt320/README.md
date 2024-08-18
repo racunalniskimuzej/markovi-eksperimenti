@@ -58,5 +58,5 @@ Viri:
 - https://dvdmuckle.xyz/index.php/2016/10/25/hooking-up-a-vt420-terminal-to-a-raspberry-pi/
 - https://www.vt100.net/docs/vt320-uu/appendixe.html
 - https://www.vt100.net/dec/vt320/soft_characters
-- https://gist.github.com/markostamcar/cddbe8d0e6216c26f865e66dbba890e2
+- https://gist.github.com/saitoha/2959955
 - https://github.com/mofosyne/arduino-gameboy-printer-emulator
