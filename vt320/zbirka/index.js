@@ -1,5 +1,5 @@
 require('./utils');
-var printerEnabled = true;
+var printerEnabled = fs.existsSync('/dev/usb/lp0');
 
 var banner = ` 
 
@@ -265,85 +265,66 @@ readlineSync.promptCLLoop(self = {
 
                 if (vprasaj((slo ? 'Si zadovoljen s fotko? (n = ponovno fotkanje)' : 'Are you happy with your photo? (n = takes another one)'))) {
 
-                    var printMode = false;
-                    if (printerEnabled) {
-                        printMode = !vprasaj((slo ? 'Pritisni E za pošiljanje na e-mail (brezplačno) ali T za tisk (3 EUR)' :
-                            'Press E to send via e-mail (free) or P to print (3 EUR)'), (slo ? 'e' : 'e'), (slo ? 't' : 'p'));
+                    email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Ali samo ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' za preskočiti pošiljanje na e-mail.):\n' :
+                        'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Or just press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to skip sending to e-mail.):\n'), {
+                        limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
+                        defaultInput: 'cancel@cancel'
+                    });
+                    screensaverTimeout();
+
+                    if (email != 'cancel@cancel') {
+                        izpisi(slo ? 'Pošiljam... prosim, počakaj...' : 'Sending... please wait...');
+
+                        try {
+                            asciiText = center(ascii + "\n" + banner +
+                                (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
+                                "https://racunalniski-muzej.si/ - https://fb.me/muzej.si");
+
+                            const {
+                                createCanvas,
+                                loadImage,
+                                registerFont
+                            } = require('canvas')
+                            registerFont(__dirname + '/Glass_TTY_VT220.ttf', {
+                                family: 'VT220'
+                            })
+                            var canvas = createCanvas(1124, 1920)
+                            var ctx = canvas.getContext('2d')
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            ctx.fillStyle = (tty == "vt320") ? '#FFBF00' : '#00ff00';
+                            ctx.shadowColor = (tty == "vt320") ? '#FFBF00' : '#00ff00';
+                            ctx.font = '21pt VT220'
+                            ctx.shadowBlur = 5;
+                            ctx.fillText(asciiText, 10, 25);
+                            ctx.shadowBlur = 10;
+                            ctx.fillText(asciiText, 10, 25);
+                            ctx.shadowBlur = 15;
+                            ctx.fillText(asciiText, 10, 25);
+
+                            posljimejl(email, canvas.toBuffer('image/jpeg', {
+                                quality: 0.90
+                            }), (slo ? "⌨️🔠 ASCII Art iz mojega obraza" : "⌨️🔠 ASCII Art of my face"), (slo ? "Računalniški muzej, Celovška 111, 1000 Ljubljana" : "Slovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia"));
+                            izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
+                        } catch (e) {
+                            izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
+                        }
+                    } else {
+                        izpisi(slo ? 'Pošiljanje na e-mail ste preskočili.' : 'Sending to e-mail was skipped.');
                     }
 
-                    if (printMode) {
+                    izpisi(slo ? '\nSvoj ASCII art lahko tudi natisnete na iglični tiskalnik na neskončen papir!\nTisk je plačljiv in z njim še dodatno podprete naš muzej!' :
+                        '\nYou can print your ASCII art on continuous paper using a dot matrix printer!\nBy paying for this option you help support our museum!');
 
-                        while (true) {
-                            pocakaj((slo ? '\nPodpri naš muzej s plačilom 3 EUR za 1 tisk, hvala! :-)\n' +
-                                'Prosimo, oglasi se na blagajni, nato se vrni in za tiskanje pritisni ' + (tty != "paka3000" ? 'ENTER' : 'RET') + '...' :
-                                '\nSupport our museum by paying 3 EUR for 1 printout, thank you! :-)\n' +
-                                'Please go to the cashier, then come back and press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to print...'));
-                            if (fs.existsSync('/tmp/print1.txt')) {
-                                fs.unlinkSync('/tmp/print1.txt');
-                                break;
-                            } else {
-                                if (vprasaj((slo ? '\nTiskanje ni na voljo. Želite prekiniti? (n = poizkusi znova)' : '\nPrinting is not available. Cancel? (n = try again)'))) return;
-                            }
-                        }
+                    if (vprasaj((slo ? 'Ali ga želite natisniti?' : 'Do you want to print it?'))) {
 
                         fs.writeFileSync("/tmp/webcam.txt", Buffer.from(center(tiskalnik(asciiRev + "\n" + banner +
                             (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
                             "https://racunalniski-muzej.si/ - https://fb.me/muzej.si")), 'latin1'));
 
-                        izpisi((slo ? '\nTiskam... :)' : '\nPrinting... :)'));
-                        execSync('lp /tmp/webcam.txt');
-                        return;
+                        izpisi(slo ? 'Pripravljeno za tisk! Prosimo, oglasite se na blagajni.' : 'Ready to print! Please go to the cashier.');
                     }
 
-                    if (!printMode) {
-                        email = readlineSync.questionEMail(zaslon(slo ? 'E-naslov (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Ali samo ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' za preklic.):\n' :
-                            'E-mail (@ = ' + (tty != "paka3000" ? 'Shift+2' : 'Shift+Ž') + ') (Or just press ' + (tty != "paka3000" ? 'ENTER' : 'RET') + ' to cancel.):\n'), {
-                            limitMessage: zaslon(slo ? 'Prosim, vnesi veljaven e-naslov.' : 'Please enter a valid e-mail address.'),
-                            defaultInput: 'cancel@cancel'
-                        });
-                        screensaverTimeout();
-
-                        if (email != 'cancel@cancel') {
-                            izpisi(slo ? 'Pošiljam... prosim, počakaj...' : 'Sending... please wait...');
-
-                            try {
-                                asciiText = center(ascii + "\n" + banner +
-                                    (slo ? "\nRačunalniški muzej, Celovška 111, 1000 Ljubljana\n" : "\nSlovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia\n") +
-                                    "https://racunalniski-muzej.si/ - https://fb.me/muzej.si");
-
-                                const {
-                                    createCanvas,
-                                    loadImage,
-                                    registerFont
-                                } = require('canvas')
-                                registerFont(__dirname + '/Glass_TTY_VT220.ttf', {
-                                    family: 'VT220'
-                                })
-                                var canvas = createCanvas(1124, 1920)
-                                var ctx = canvas.getContext('2d')
-                                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                                ctx.fillStyle = (tty == "vt320") ? '#FFBF00' : '#00ff00';
-                                ctx.shadowColor = (tty == "vt320") ? '#FFBF00' : '#00ff00';
-                                ctx.font = '21pt VT220'
-                                ctx.shadowBlur = 5;
-                                ctx.fillText(asciiText, 10, 25);
-                                ctx.shadowBlur = 10;
-                                ctx.fillText(asciiText, 10, 25);
-                                ctx.shadowBlur = 15;
-                                ctx.fillText(asciiText, 10, 25);
-
-                                posljimejl(email, canvas.toBuffer('image/jpeg', {
-                                    quality: 0.90
-                                }), (slo ? "⌨️🔠 ASCII Art iz mojega obraza" : "⌨️🔠 ASCII Art of my face"), (slo ? "Računalniški muzej, Celovška 111, 1000 Ljubljana" : "Slovenian Computer History Museum, Celovška 111, 1000 Ljubljana, Slovenia"));
-                                izpisi((slo ? 'Fotka uspešno poslana na mejl! (Je niste prejeli? Preverite mapo spam.)' : 'The photo was e-mailed successfully! (Not received? Check your spam folder.)'));
-                            } catch (e) {
-                                izpisi(slo ? 'Pri pošiljanju e-maila je prišlo do napake :(' : 'There was an error sending your e-mail :(');
-                            }
-                        } else {
-                            izpisi(slo ? 'Pošiljanje preklicano.' : 'Cancelled sending.');
-                        }
-                        return;
-                    }
+                    return;
                 }
 
             }
