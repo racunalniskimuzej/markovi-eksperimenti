@@ -128,7 +128,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
         port: 587,
         secure: false,
         auth: {
-            user: "helloworld@racunalniski-muzej.si",
+            user: "helloascii@racunalniski-muzej.si",
             pass: "------------",
         },
     });
@@ -137,7 +137,7 @@ global.posljimejl = function posljimejl(email, gbp, title, body) {
 
     sendm = deasync(transporter.sendMail);
     let info = sendm({
-        from: '"Računalniški muzej" <helloworld@racunalniski-muzej.si>',
+        from: '"Računalniški muzej" <helloascii@racunalniski-muzej.si>',
         to: email,
         subject: title,
         html: body,
